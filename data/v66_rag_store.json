@@ -1,0 +1,35 @@
+{
+  "version": "v66_local_rag",
+  "documents": [
+    {
+      "id": "77a112ff-ddc2-46a8-a816-3bb945657dcb",
+      "title": "thông tư test ",
+      "filename": "test_rag.txt",
+      "document_type": "thong_",
+      "category": "che_do_ke_toan",
+      "source": "admin_upload",
+      "tags": [],
+      "storage_path": "C:\\Users\\phú\\Desktop\\finiip\\data\\rag_uploads\\20260609111820_test_rag.txt",
+      "created_at": "2026-06-09T11:18:20Z",
+      "content_length": 403,
+      "chunk_count": 1
+    }
+  ],
+  "chunks": [
+    {
+      "id": "e8266d8b-716d-4ff1-a51e-35c08112763a",
+      "document_id": "77a112ff-ddc2-46a8-a816-3bb945657dcb",
+      "chunk_index": 0,
+      "title": "thông tư test ",
+      "content": "Thông tư test kế toán.\n\nKhi doanh nghiệp mua hàng hóa chưa thanh toán, kế toán ghi:\nNợ TK 156: Giá trị hàng hóa chưa thuế\nNợ TK 1331: Thuế giá trị gia tăng được khấu trừ\nCó TK 331: Tổng giá thanh toán phải trả người bán\n\nKhi bán hàng chưa thu tiền, kế toán ghi:\nNợ TK 131: Tổng giá thanh toán phải thu khách hàng\nCó TK 511: Doanh thu bán hàng chưa thuế\nCó TK 3331: Thuế giá trị gia tăng đầu ra",
+      "metadata": {
+        "filename": "test_rag.txt",
+        "category": "che_do_ke_toan",
+        "document_type": "thong_",
+        "source": "admin_upload",
+        "tags": []
+      },
+      "created_at": "2026-06-09T11:18:20Z"
+    }
+  ]
+}

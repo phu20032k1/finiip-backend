@@ -1,0 +1,83 @@
+{
+  "version": "v5",
+  "rules": [
+    {
+      "id": "98e01d2f-124b-439b-bc58-2b93503c5b79",
+      "keyword": "toán",
+      "category": "Chi phí dịch vụ mua ngoài",
+      "debit_account": "642",
+      "credit_account": "112",
+      "confidence_boost": 0.08,
+      "hits": 1,
+      "created_at": "2026-06-02T13:46:43.803819Z",
+      "updated_at": "2026-06-02T13:46:43.803819Z"
+    },
+    {
+      "id": "774c90e0-3f5f-471f-a3ae-13b4f2b36e51",
+      "keyword": "aws",
+      "category": "Chi phí dịch vụ mua ngoài",
+      "debit_account": "642",
+      "credit_account": "112",
+      "confidence_boost": 0.08,
+      "hits": 1,
+      "created_at": "2026-06-02T13:46:43.803819Z",
+      "updated_at": "2026-06-02T13:46:43.803819Z"
+    },
+    {
+      "id": "924d0c25-1449-4dd4-bcd6-08ab18913a19",
+      "keyword": "hosting",
+      "category": "Chi phí dịch vụ mua ngoài",
+      "debit_account": "642",
+      "credit_account": "112",
+      "confidence_boost": 0.08,
+      "hits": 1,
+      "created_at": "2026-06-02T13:46:43.803819Z",
+      "updated_at": "2026-06-02T13:46:43.803819Z"
+    },
+    {
+      "id": "c9c2c07b-0002-43fd-a10f-0a09ede0ea4d",
+      "keyword": "chuyển",
+      "category": "Chi phí dịch vụ mua ngoài",
+      "debit_account": "642",
+      "credit_account": "112",
+      "confidence_boost": 0.08,
+      "hits": 1,
+      "created_at": "2026-06-02T13:46:43.803819Z",
+      "updated_at": "2026-06-02T13:46:43.803819Z"
+    },
+    {
+      "id": "129d803b-39ec-4a41-9b22-257fcb38919c",
+      "keyword": "khoản",
+      "category": "Chi phí dịch vụ mua ngoài",
+      "debit_account": "642",
+      "credit_account": "112",
+      "confidence_boost": 0.08,
+      "hits": 1,
+      "created_at": "2026-06-02T13:46:43.803819Z",
+      "updated_at": "2026-06-02T13:46:43.803819Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "4ebe80a6-61bb-4f64-91f0-133b34c73114",
+      "created_at": "2026-06-02T13:46:43.803819Z",
+      "description": "Thanh toán AWS hosting bằng chuyển khoản",
+      "amount": 3000000,
+      "ai_result": {},
+      "correction": {
+        "category": "Chi phí dịch vụ mua ngoài",
+        "debit_account": "642",
+        "credit_account": "112"
+      },
+      "user_note": "test",
+      "user_id": "anonymous",
+      "keywords": [
+        "toán",
+        "aws",
+        "hosting",
+        "chuyển",
+        "khoản"
+      ]
+    }
+  ]
+}

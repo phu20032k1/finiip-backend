@@ -1,0 +1,255 @@
+{"ts": "2026-06-11T10:20:09Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "document_add", "payload": {"workspace_id": "demo", "document_id": "doc_606d84e4e29f4a", "chunk_count": 1}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "journal_create", "payload": {"workspace_id": "demo", "entry_id": "je_3d9b346af8f745"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "journal_export_csv", "payload": {"workspace_id": "demo", "path": "/mnt/data/v100_work/copy/data/exports/journal_demo_20260611102009.csv"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "review_create", "payload": {"workspace_id": "demo", "review_id": "rev_0e508887f6ad40"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "review_update", "payload": {"review_id": "rev_0e508887f6ad40", "status": "corrected"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "document_add", "payload": {"workspace_id": "demo", "document_id": "doc_1d879d53b45f45", "chunk_count": 1}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "journal_create", "payload": {"workspace_id": "demo", "entry_id": "je_c549ebe748bb4d"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "review_create", "payload": {"workspace_id": "demo", "review_id": "rev_289a6bf59c5c48"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "company_memory_add", "payload": {"workspace_id": "demo", "memory_id": "mem_87af794ea31841"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "journal_create", "payload": {"workspace_id": "demo", "entry_id": "je_e094315d98aa4f"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "evaluation_run", "payload": {"workspace_id": "demo", "run_id": "eval_2fedac1ef7f345", "score": 1.0}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_6bff1e8367a244", "chunk_count": 1}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_6bff1e8367a244", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_6bff1e8367a244", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_5989acbcb6e44f", "chunk_count": 1}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_5989acbcb6e44f", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-11T10:20:09Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_5989acbcb6e44f", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-11T10:36:43Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-11T10:36:43Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_70fe3d8c55da4a", "chunk_count": 1}}
+{"ts": "2026-06-11T10:36:43Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_70fe3d8c55da4a", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-11T10:36:43Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_70fe3d8c55da4a", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-11T10:36:43Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-11T10:36:43Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_3cb52f410ff54b", "chunk_count": 1}}
+{"ts": "2026-06-11T10:36:43Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_3cb52f410ff54b", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-11T10:36:43Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_3cb52f410ff54b", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-11T10:36:43Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-11T10:36:43Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_82a89dbb689e48", "chunk_count": 1}}
+{"ts": "2026-06-11T10:36:43Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_82a89dbb689e48", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-11T10:37:05Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-11T10:37:05Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_036448ab10ec4a", "chunk_count": 1}}
+{"ts": "2026-06-11T10:37:05Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_036448ab10ec4a", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-11T10:37:05Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_036448ab10ec4a", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-11T10:37:05Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-11T10:37:05Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_87f84d0a981440", "chunk_count": 1}}
+{"ts": "2026-06-11T10:37:05Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_87f84d0a981440", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-11T10:37:05Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_87f84d0a981440", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-11T10:37:05Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-11T10:37:05Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_af3c8985557440", "chunk_count": 1}}
+{"ts": "2026-06-11T10:37:05Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_af3c8985557440", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "document_add", "payload": {"workspace_id": "demo", "document_id": "doc_53e8a055b8c34b", "chunk_count": 1}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "journal_create", "payload": {"workspace_id": "demo", "entry_id": "je_9929d66ac0a544"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "journal_export_csv", "payload": {"workspace_id": "demo", "path": "/mnt/data/v101_work/copy/data/exports/journal_demo_20260611103727.csv"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "review_create", "payload": {"workspace_id": "demo", "review_id": "rev_9e706ec4c73b44"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "review_update", "payload": {"review_id": "rev_9e706ec4c73b44", "status": "corrected"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "document_add", "payload": {"workspace_id": "demo", "document_id": "doc_9f581dfcbb704b", "chunk_count": 1}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "journal_create", "payload": {"workspace_id": "demo", "entry_id": "je_1c195251172744"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "review_create", "payload": {"workspace_id": "demo", "review_id": "rev_7d14a2d5387549"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "company_memory_add", "payload": {"workspace_id": "demo", "memory_id": "mem_1cf9851b89dc4a"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "journal_create", "payload": {"workspace_id": "demo", "entry_id": "je_0d8d567d7f8540"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "evaluation_run", "payload": {"workspace_id": "demo", "run_id": "eval_4cf928cff01544", "score": 1.0}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_4313b0a0308046", "chunk_count": 1}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_4313b0a0308046", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_4313b0a0308046", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_e446b96dc8274d", "chunk_count": 1}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_e446b96dc8274d", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_e446b96dc8274d", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_cb59e02988a146", "chunk_count": 1}}
+{"ts": "2026-06-11T10:37:27Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_cb59e02988a146", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "document_add", "payload": {"workspace_id": "demo", "document_id": "doc_63211dd2af8b4a", "chunk_count": 1}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "journal_create", "payload": {"workspace_id": "demo", "entry_id": "je_ed85b1ad2cca4c"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "journal_export_csv", "payload": {"workspace_id": "demo", "path": "/mnt/data/v101_work/copy/data/exports/journal_demo_20260611103811.csv"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "review_create", "payload": {"workspace_id": "demo", "review_id": "rev_daeca455f6494d"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "review_update", "payload": {"review_id": "rev_daeca455f6494d", "status": "corrected"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "document_add", "payload": {"workspace_id": "demo", "document_id": "doc_77980654b43941", "chunk_count": 1}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "journal_create", "payload": {"workspace_id": "demo", "entry_id": "je_57773f630d3b42"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "review_create", "payload": {"workspace_id": "demo", "review_id": "rev_198d153c37de46"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "company_memory_add", "payload": {"workspace_id": "demo", "memory_id": "mem_56ec15ce90a346"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "journal_create", "payload": {"workspace_id": "demo", "entry_id": "je_218f7c7401624b"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "evaluation_run", "payload": {"workspace_id": "demo", "run_id": "eval_c3d5628998844e", "score": 1.0}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_b26f3d3ac8f148", "chunk_count": 1}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_b26f3d3ac8f148", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_b26f3d3ac8f148", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_40c922e4ac814a", "chunk_count": 1}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_40c922e4ac814a", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_40c922e4ac814a", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_280f25696b094c", "chunk_count": 1}}
+{"ts": "2026-06-11T10:38:11Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_280f25696b094c", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T11:11:48Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T11:11:48Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_d39367b80e064c", "chunk_count": 1}}
+{"ts": "2026-06-12T11:11:48Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_d39367b80e064c", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T11:11:48Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_d39367b80e064c", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T11:11:48Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T11:11:48Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_d9dc288796e04c", "chunk_count": 1}}
+{"ts": "2026-06-12T11:11:48Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_d9dc288796e04c", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T11:11:48Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_d9dc288796e04c", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T11:11:48Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T11:11:48Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_f4d8bbe3e74d42", "chunk_count": 1}}
+{"ts": "2026-06-12T11:11:48Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_f4d8bbe3e74d42", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T11:12:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T11:12:11Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_b60863f230fa45", "chunk_count": 1}}
+{"ts": "2026-06-12T11:12:11Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_b60863f230fa45", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T11:12:11Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_b60863f230fa45", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T11:12:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T11:12:11Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_734aa22c0a1e49", "chunk_count": 1}}
+{"ts": "2026-06-12T11:12:11Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_734aa22c0a1e49", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T11:12:11Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_734aa22c0a1e49", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T11:12:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T11:12:11Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_db969d24f0ee4e", "chunk_count": 1}}
+{"ts": "2026-06-12T11:12:11Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_db969d24f0ee4e", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T11:12:40Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T11:12:40Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_08a8bf2567d24b", "chunk_count": 1}}
+{"ts": "2026-06-12T11:12:40Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_08a8bf2567d24b", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T11:12:40Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_08a8bf2567d24b", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T11:12:40Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T11:12:40Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_d883dbe8b16f4c", "chunk_count": 1}}
+{"ts": "2026-06-12T11:12:40Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_d883dbe8b16f4c", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T11:12:40Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_d883dbe8b16f4c", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T11:12:40Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T11:12:40Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_37a28503af3c47", "chunk_count": 1}}
+{"ts": "2026-06-12T11:12:40Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_37a28503af3c47", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:25:48Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T13:25:48Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_d4096adf84d84c", "chunk_count": 1}}
+{"ts": "2026-06-12T13:25:48Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_d4096adf84d84c", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T13:25:48Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_d4096adf84d84c", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:25:48Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T13:25:48Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_d5c85edb80a743", "chunk_count": 1}}
+{"ts": "2026-06-12T13:25:48Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_d5c85edb80a743", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:25:48Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_d5c85edb80a743", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:25:48Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T13:25:48Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_bc1deb7de7584a", "chunk_count": 1}}
+{"ts": "2026-06-12T13:25:48Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_bc1deb7de7584a", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:27:18Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T13:27:18Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_4260d5f4278f4f", "chunk_count": 1}}
+{"ts": "2026-06-12T13:27:18Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_4260d5f4278f4f", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T13:27:18Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_4260d5f4278f4f", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:27:18Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T13:27:18Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_d96b3f583fc94d", "chunk_count": 1}}
+{"ts": "2026-06-12T13:27:18Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_d96b3f583fc94d", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:27:18Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_d96b3f583fc94d", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:27:18Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T13:27:18Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_8ec191d07ff347", "chunk_count": 1}}
+{"ts": "2026-06-12T13:27:18Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_8ec191d07ff347", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:40:53Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T13:40:53Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_17662787c19047", "chunk_count": 1}}
+{"ts": "2026-06-12T13:40:53Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_17662787c19047", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T13:40:53Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_17662787c19047", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:40:53Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T13:40:53Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_d5a8252eabaa42", "chunk_count": 1}}
+{"ts": "2026-06-12T13:40:53Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_d5a8252eabaa42", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:40:53Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_d5a8252eabaa42", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:40:53Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T13:40:53Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_86526494008c44", "chunk_count": 1}}
+{"ts": "2026-06-12T13:40:53Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_86526494008c44", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:43:19Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T13:43:19Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_c323c6f662ff49", "chunk_count": 1}}
+{"ts": "2026-06-12T13:43:19Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_c323c6f662ff49", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T13:43:19Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_c323c6f662ff49", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:43:19Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T13:43:19Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_59541e55e27747", "chunk_count": 1}}
+{"ts": "2026-06-12T13:43:19Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_59541e55e27747", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:43:19Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_59541e55e27747", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:43:19Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T13:43:19Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_713920977ceb4e", "chunk_count": 1}}
+{"ts": "2026-06-12T13:43:19Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_713920977ceb4e", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:50:16Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T13:50:16Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_0b87f8b5183541", "chunk_count": 1}}
+{"ts": "2026-06-12T13:50:16Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_0b87f8b5183541", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T13:50:16Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_0b87f8b5183541", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:50:16Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T13:50:16Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_81c2955a3b8f4b", "chunk_count": 1}}
+{"ts": "2026-06-12T13:50:16Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_81c2955a3b8f4b", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:50:16Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_81c2955a3b8f4b", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:50:16Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T13:50:16Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_5511a57a735541", "chunk_count": 1}}
+{"ts": "2026-06-12T13:50:16Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_5511a57a735541", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:59:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T13:59:11Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_3864abcf68094f", "chunk_count": 1}}
+{"ts": "2026-06-12T13:59:11Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_3864abcf68094f", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T13:59:11Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_3864abcf68094f", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:59:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T13:59:11Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_1f973b31e4a246", "chunk_count": 1}}
+{"ts": "2026-06-12T13:59:11Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_1f973b31e4a246", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:59:11Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_1f973b31e4a246", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:59:11Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T13:59:11Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_2a48847c08c04e", "chunk_count": 1}}
+{"ts": "2026-06-12T13:59:11Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_2a48847c08c04e", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:59:31Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T13:59:31Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_ffae6f2d1a654c", "chunk_count": 1}}
+{"ts": "2026-06-12T13:59:31Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_ffae6f2d1a654c", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T13:59:31Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_ffae6f2d1a654c", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:59:31Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T13:59:31Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_2270ef94d6f34a", "chunk_count": 1}}
+{"ts": "2026-06-12T13:59:31Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_2270ef94d6f34a", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:59:31Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_2270ef94d6f34a", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:59:32Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T13:59:32Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_91347d9b968d43", "chunk_count": 1}}
+{"ts": "2026-06-12T13:59:32Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_91347d9b968d43", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:59:49Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T13:59:49Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_a38f0db7148b4d", "chunk_count": 1}}
+{"ts": "2026-06-12T13:59:49Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_a38f0db7148b4d", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T13:59:49Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_a38f0db7148b4d", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:59:49Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T13:59:49Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_1e87d5f2ddba42", "chunk_count": 1}}
+{"ts": "2026-06-12T13:59:49Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_1e87d5f2ddba42", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T13:59:49Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_1e87d5f2ddba42", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T13:59:49Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T13:59:49Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_6fa7daaca76c46", "chunk_count": 1}}
+{"ts": "2026-06-12T13:59:49Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_6fa7daaca76c46", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T14:00:10Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T14:00:10Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_9147e3277c8f4e", "chunk_count": 1}}
+{"ts": "2026-06-12T14:00:10Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_9147e3277c8f4e", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T14:00:10Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_9147e3277c8f4e", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T14:00:10Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T14:00:10Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_d0e5a6a1d71643", "chunk_count": 1}}
+{"ts": "2026-06-12T14:00:10Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_d0e5a6a1d71643", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T14:00:10Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_d0e5a6a1d71643", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T14:00:10Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T14:00:10Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_43e22fd15bad47", "chunk_count": 1}}
+{"ts": "2026-06-12T14:00:10Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_43e22fd15bad47", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T14:03:46Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T14:03:46Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_03aea188b99444", "chunk_count": 1}}
+{"ts": "2026-06-12T14:03:46Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_03aea188b99444", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T14:03:46Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_03aea188b99444", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T14:03:46Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T14:03:46Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_f5dfbc21cbd84c", "chunk_count": 1}}
+{"ts": "2026-06-12T14:03:46Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_f5dfbc21cbd84c", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T14:03:46Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_f5dfbc21cbd84c", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T14:03:46Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T14:03:46Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_e334876fbadd42", "chunk_count": 1}}
+{"ts": "2026-06-12T14:03:46Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_e334876fbadd42", "filename": "vat_v101.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T14:03:53Z", "event_type": "v67_admin_file_process", "payload": {"workspace_id": "default", "job_id": "file_b10eca6b2c90bec9", "filename": "43_2026.pdf", "task_type": "qa", "output_format": "docx"}}
+{"ts": "2026-06-12T14:13:12Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "demo_company"}}
+{"ts": "2026-06-12T14:13:12Z", "event_type": "document_add", "payload": {"workspace_id": "demo_company", "document_id": "doc_5f81fb7e8a7e4e", "chunk_count": 1}}
+{"ts": "2026-06-12T14:13:12Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "demo_company", "document_id": "doc_5f81fb7e8a7e4e", "filename": "quy_trinh_thanh_toan.md", "source_type": "internal_process"}}
+{"ts": "2026-06-12T14:13:12Z", "event_type": "v100_admin_rag_delete", "payload": {"document_id": "doc_5f81fb7e8a7e4e", "hard_delete": false, "chunks_removed": 1}}
+{"ts": "2026-06-12T14:13:12Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "default"}}
+{"ts": "2026-06-12T14:13:12Z", "event_type": "document_add", "payload": {"workspace_id": "default", "document_id": "doc_7e121b7db1c749", "chunk_count": 1}}
+{"ts": "2026-06-12T14:13:12Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "default", "document_id": "doc_7e121b7db1c749", "filename": "vat.txt", "source_type": "tax_legal"}}
+{"ts": "2026-06-12T14:13:12Z", "event_type": "v100_admin_rag_reindex", "payload": {"document_id": "doc_7e121b7db1c749", "chunks_added": 1, "chunks_removed": 1}}
+{"ts": "2026-06-12T14:13:12Z", "event_type": "workspace_upsert", "payload": {"workspace_id": "v101_demo"}}
+{"ts": "2026-06-12T14:13:12Z", "event_type": "document_add", "payload": {"workspace_id": "v101_demo", "document_id": "doc_26e3ae646e8a40", "chunk_count": 1}}
+{"ts": "2026-06-12T14:13:12Z", "event_type": "v100_admin_rag_upload", "payload": {"workspace_id": "v101_demo", "document_id": "doc_26e3ae646e8a40", "filename": "vat_v101.txt", "source_type": "tax_legal"}}

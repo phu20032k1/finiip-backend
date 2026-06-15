@@ -1,0 +1,1644 @@
+{
+  "version": "finiip-ai-training-v1",
+  "count": 182,
+  "items": [
+    {
+      "description": "Thanh toán quảng cáo Facebook tháng 1",
+      "amount": 1200000,
+      "user_category": "Chi phí marketing",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí chạy Google Ads cho sản phẩm mới",
+      "amount": 2500000,
+      "user_category": "Chi phí marketing",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nạp tiền quảng cáo TikTok Shop",
+      "amount": 5000000,
+      "user_category": "Chi phí marketing",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán Zalo Ads chiến dịch tháng 4",
+      "amount": 8500000,
+      "user_category": "Chi phí marketing",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí KOL review sản phẩm",
+      "amount": 1200000,
+      "user_category": "Chi phí marketing",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "In banner quảng cáo khai trương",
+      "amount": 2500000,
+      "user_category": "Chi phí marketing",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí thiết kế poster marketing",
+      "amount": 5000000,
+      "user_category": "Chi phí marketing",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chạy quảng cáo remarketing Facebook",
+      "amount": 8500000,
+      "user_category": "Chi phí marketing",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Phí thuê agency marketing tháng 9",
+      "amount": 1200000,
+      "user_category": "Chi phí marketing",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí quay video quảng cáo",
+      "amount": 2500000,
+      "user_category": "Chi phí marketing",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán tiền điện EVN văn phòng tháng 1",
+      "amount": 800000,
+      "user_category": "Chi phí điện nước",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Trả tiền nước văn phòng tháng 2",
+      "amount": 1200000,
+      "user_category": "Chi phí điện nước",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí internet Viettel tháng 3",
+      "amount": 1800000,
+      "user_category": "Chi phí điện nước",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán hóa đơn điện nước cửa hàng",
+      "amount": 2500000,
+      "user_category": "Chi phí điện nước",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Phí điện sản xuất tháng 5",
+      "amount": 800000,
+      "user_category": "Chi phí điện nước",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Trả tiền cước wifi FPT văn phòng",
+      "amount": 1200000,
+      "user_category": "Chi phí điện nước",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán nước sinh hoạt công ty",
+      "amount": 1800000,
+      "user_category": "Chi phí điện nước",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí điện điều hòa văn phòng",
+      "amount": 2500000,
+      "user_category": "Chi phí điện nước",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán tiền điện nhà xưởng",
+      "amount": 800000,
+      "user_category": "Chi phí điện nước",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Phí viễn thông điện thoại công ty",
+      "amount": 1200000,
+      "user_category": "Chi phí điện nước",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Tính lương nhân viên văn phòng tháng 1",
+      "amount": 8000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "334",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi lương bộ phận kế toán tháng 2",
+      "amount": 15000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "334",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Trả phụ cấp ăn trưa nhân viên",
+      "amount": 25000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "334",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán thưởng KPI cho nhân viên",
+      "amount": 50000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "334",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Tạm ứng lương nhân viên",
+      "amount": 8000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "334",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi tiền làm thêm giờ",
+      "amount": 15000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "334",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Tính lương quản lý cửa hàng",
+      "amount": 25000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "334",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán hoa hồng sales",
+      "amount": 50000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "334",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi thưởng lễ cho nhân viên",
+      "amount": 8000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "334",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Trả lương nhân viên kinh doanh",
+      "amount": 15000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "334",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Trích bảo hiểm xã hội cho nhân viên tháng 1",
+      "amount": 2000000,
+      "user_category": "Chi phí bảo hiểm",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "3383",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nộp BHXH công ty tháng 2",
+      "amount": 3500000,
+      "user_category": "Chi phí bảo hiểm",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "3383",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí bảo hiểm bắt buộc nhân viên",
+      "amount": 6000000,
+      "user_category": "Chi phí bảo hiểm",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "3383",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Trích bảo hiểm y tế và xã hội",
+      "amount": 2000000,
+      "user_category": "Chi phí bảo hiểm",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "3383",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nộp tiền bảo hiểm lao động",
+      "amount": 3500000,
+      "user_category": "Chi phí bảo hiểm",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "3383",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Hạch toán bảo hiểm nhân sự",
+      "amount": 6000000,
+      "user_category": "Chi phí bảo hiểm",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "3383",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí BHXH bộ phận văn phòng",
+      "amount": 2000000,
+      "user_category": "Chi phí bảo hiểm",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "3383",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nộp bảo hiểm theo bảng lương",
+      "amount": 3500000,
+      "user_category": "Chi phí bảo hiểm",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "3383",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhập kho hàng hóa từ nhà cung cấp A",
+      "amount": 5000000,
+      "user_category": "Mua hàng hóa",
+      "user_type": "asset",
+      "user_debit_account_code": "156",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua hàng hóa bán lại chưa thanh toán",
+      "amount": 12000000,
+      "user_category": "Mua hàng hóa",
+      "user_type": "asset",
+      "user_debit_account_code": "156",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhận hóa đơn mua hàng nhập kho",
+      "amount": 25000000,
+      "user_category": "Mua hàng hóa",
+      "user_type": "asset",
+      "user_debit_account_code": "156",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua lô hàng điện tử từ nhà cung cấp",
+      "amount": 60000000,
+      "user_category": "Mua hàng hóa",
+      "user_type": "asset",
+      "user_debit_account_code": "156",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhập kho mỹ phẩm để bán",
+      "amount": 5000000,
+      "user_category": "Mua hàng hóa",
+      "user_type": "asset",
+      "user_debit_account_code": "156",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua hàng hóa theo đơn PO",
+      "amount": 12000000,
+      "user_category": "Mua hàng hóa",
+      "user_type": "asset",
+      "user_debit_account_code": "156",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhập kho phụ kiện điện thoại",
+      "amount": 25000000,
+      "user_category": "Mua hàng hóa",
+      "user_type": "asset",
+      "user_debit_account_code": "156",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua sản phẩm tồn kho tháng 8",
+      "amount": 60000000,
+      "user_category": "Mua hàng hóa",
+      "user_type": "asset",
+      "user_debit_account_code": "156",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhận hàng từ nhà cung cấp chưa trả tiền",
+      "amount": 5000000,
+      "user_category": "Mua hàng hóa",
+      "user_type": "asset",
+      "user_debit_account_code": "156",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua nguyên kiện hàng để kinh doanh",
+      "amount": 12000000,
+      "user_category": "Mua hàng hóa",
+      "user_type": "asset",
+      "user_debit_account_code": "156",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua nguyên vật liệu sản xuất",
+      "amount": 3000000,
+      "user_category": "Nguyên vật liệu",
+      "user_type": "asset",
+      "user_debit_account_code": "152",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhập kho vải may sản phẩm",
+      "amount": 9000000,
+      "user_category": "Nguyên vật liệu",
+      "user_type": "asset",
+      "user_debit_account_code": "152",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua linh kiện phục vụ sản xuất",
+      "amount": 22000000,
+      "user_category": "Nguyên vật liệu",
+      "user_type": "asset",
+      "user_debit_account_code": "152",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhập kho bao bì đóng gói",
+      "amount": 3000000,
+      "user_category": "Nguyên vật liệu",
+      "user_type": "asset",
+      "user_debit_account_code": "152",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua vật tư cho xưởng",
+      "amount": 9000000,
+      "user_category": "Nguyên vật liệu",
+      "user_type": "asset",
+      "user_debit_account_code": "152",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhận hóa đơn mua nguyên liệu",
+      "amount": 22000000,
+      "user_category": "Nguyên vật liệu",
+      "user_type": "asset",
+      "user_debit_account_code": "152",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua giấy in sản xuất",
+      "amount": 3000000,
+      "user_category": "Nguyên vật liệu",
+      "user_type": "asset",
+      "user_debit_account_code": "152",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhập kho vật liệu phụ tháng 8",
+      "amount": 9000000,
+      "user_category": "Nguyên vật liệu",
+      "user_type": "asset",
+      "user_debit_account_code": "152",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua bàn ghế văn phòng",
+      "amount": 800000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua máy in nhỏ cho phòng kế toán",
+      "amount": 1500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua công cụ dụng cụ văn phòng",
+      "amount": 3500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua kệ trưng bày cửa hàng",
+      "amount": 800000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua thiết bị văn phòng giá trị nhỏ",
+      "amount": 1500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua dụng cụ sửa chữa",
+      "amount": 3500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua máy quét mã vạch",
+      "amount": 800000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua ghế xoay nhân viên",
+      "amount": 1500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua tủ hồ sơ văn phòng",
+      "amount": 3500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua bộ dụng cụ vệ sinh",
+      "amount": 800000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua máy tính xách tay cho nhân viên",
+      "amount": 22000000,
+      "user_category": "Tài sản cố định",
+      "user_type": "asset",
+      "user_debit_account_code": "211",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua xe tải giao hàng",
+      "amount": 35000000,
+      "user_category": "Tài sản cố định",
+      "user_type": "asset",
+      "user_debit_account_code": "211",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua máy móc sản xuất mới",
+      "amount": 80000000,
+      "user_category": "Tài sản cố định",
+      "user_type": "asset",
+      "user_debit_account_code": "211",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua điều hòa văn phòng giá trị lớn",
+      "amount": 150000000,
+      "user_category": "Tài sản cố định",
+      "user_type": "asset",
+      "user_debit_account_code": "211",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua máy chủ server công ty",
+      "amount": 22000000,
+      "user_category": "Tài sản cố định",
+      "user_type": "asset",
+      "user_debit_account_code": "211",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua thiết bị dây chuyền sản xuất",
+      "amount": 35000000,
+      "user_category": "Tài sản cố định",
+      "user_type": "asset",
+      "user_debit_account_code": "211",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua máy photocopy văn phòng",
+      "amount": 80000000,
+      "user_category": "Tài sản cố định",
+      "user_type": "asset",
+      "user_debit_account_code": "211",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua tài sản cố định hữu hình",
+      "amount": 150000000,
+      "user_category": "Tài sản cố định",
+      "user_type": "asset",
+      "user_debit_account_code": "211",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán mua laptop cấu hình cao",
+      "amount": 22000000,
+      "user_category": "Tài sản cố định",
+      "user_type": "asset",
+      "user_debit_account_code": "211",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua máy CNC cho xưởng",
+      "amount": 35000000,
+      "user_category": "Tài sản cố định",
+      "user_type": "asset",
+      "user_debit_account_code": "211",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua phần mềm kế toán bản quyền",
+      "amount": 5000000,
+      "user_category": "Phần mềm bản quyền",
+      "user_type": "asset",
+      "user_debit_account_code": "213",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán license phần mềm CRM",
+      "amount": 12000000,
+      "user_category": "Phần mềm bản quyền",
+      "user_type": "asset",
+      "user_debit_account_code": "213",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua bản quyền Microsoft Office",
+      "amount": 30000000,
+      "user_category": "Phần mềm bản quyền",
+      "user_type": "asset",
+      "user_debit_account_code": "213",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí mua phần mềm quản lý kho",
+      "amount": 5000000,
+      "user_category": "Phần mềm bản quyền",
+      "user_type": "asset",
+      "user_debit_account_code": "213",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua license phần mềm thiết kế",
+      "amount": 12000000,
+      "user_category": "Phần mềm bản quyền",
+      "user_type": "asset",
+      "user_debit_account_code": "213",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán phần mềm ERP",
+      "amount": 30000000,
+      "user_category": "Phần mềm bản quyền",
+      "user_type": "asset",
+      "user_debit_account_code": "213",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua quyền sử dụng phần mềm bán hàng",
+      "amount": 5000000,
+      "user_category": "Phần mềm bản quyền",
+      "user_type": "asset",
+      "user_debit_account_code": "213",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua phần mềm quản trị doanh nghiệp",
+      "amount": 12000000,
+      "user_category": "Phần mềm bản quyền",
+      "user_type": "asset",
+      "user_debit_account_code": "213",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Trả trước tiền thuê văn phòng 6 tháng",
+      "amount": 6000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán bảo hiểm tài sản trả trước",
+      "amount": 12000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Trả trước chi phí hosting một năm",
+      "amount": 24000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán thuê server 12 tháng",
+      "amount": 6000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Trả trước tiền thuê kho",
+      "amount": 12000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán gói phần mềm sử dụng một năm",
+      "amount": 24000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Trả trước phí dịch vụ bảo trì",
+      "amount": 6000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí thuê mặt bằng trả trước",
+      "amount": 12000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Xuất hóa đơn bán hàng cho khách A",
+      "amount": 3000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "511",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Ghi nhận doanh thu bán sản phẩm",
+      "amount": 15000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "511",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Bán hàng cho khách chưa thu tiền",
+      "amount": 45000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "511",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Doanh thu đơn hàng online tháng 4",
+      "amount": 90000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "511",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Xuất hóa đơn cung cấp dịch vụ",
+      "amount": 3000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "511",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Bán lô hàng điện tử cho khách",
+      "amount": 15000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "511",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Doanh thu bán lẻ tại cửa hàng",
+      "amount": 45000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "511",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Ghi nhận doanh thu hợp đồng dịch vụ",
+      "amount": 90000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "511",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Bán hàng qua Shopee",
+      "amount": 3000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "511",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Doanh thu bán hàng đại lý",
+      "amount": 15000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "511",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Khách hàng chuyển khoản thanh toán công nợ",
+      "amount": 3000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thu tiền khách A qua ngân hàng",
+      "amount": 15000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhận tiền thanh toán hóa đơn bán hàng",
+      "amount": 45000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Khách thanh toán đơn hàng online",
+      "amount": 3000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thu hồi công nợ khách hàng",
+      "amount": 15000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhận chuyển khoản từ khách B",
+      "amount": 45000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Khách hàng trả tiền còn nợ",
+      "amount": 3000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thu tiền bán hàng qua POS",
+      "amount": 15000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Kết chuyển giá vốn hàng bán",
+      "amount": 2000000,
+      "user_category": "Giá vốn hàng bán",
+      "user_type": "expense",
+      "user_debit_account_code": "632",
+      "user_credit_account_code": "156",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Xuất kho hàng hóa bán cho khách",
+      "amount": 9000000,
+      "user_category": "Giá vốn hàng bán",
+      "user_type": "expense",
+      "user_debit_account_code": "632",
+      "user_credit_account_code": "156",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Ghi nhận giá vốn đơn hàng",
+      "amount": 30000000,
+      "user_category": "Giá vốn hàng bán",
+      "user_type": "expense",
+      "user_debit_account_code": "632",
+      "user_credit_account_code": "156",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Xuất kho theo hóa đơn bán hàng",
+      "amount": 2000000,
+      "user_category": "Giá vốn hàng bán",
+      "user_type": "expense",
+      "user_debit_account_code": "632",
+      "user_credit_account_code": "156",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Giá vốn hàng bán tháng 5",
+      "amount": 9000000,
+      "user_category": "Giá vốn hàng bán",
+      "user_type": "expense",
+      "user_debit_account_code": "632",
+      "user_credit_account_code": "156",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Kết chuyển tồn kho đã bán",
+      "amount": 30000000,
+      "user_category": "Giá vốn hàng bán",
+      "user_type": "expense",
+      "user_debit_account_code": "632",
+      "user_credit_account_code": "156",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Xuất kho sản phẩm giao khách",
+      "amount": 2000000,
+      "user_category": "Giá vốn hàng bán",
+      "user_type": "expense",
+      "user_debit_account_code": "632",
+      "user_credit_account_code": "156",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Hạch toán giá vốn lô hàng",
+      "amount": 9000000,
+      "user_category": "Giá vốn hàng bán",
+      "user_type": "expense",
+      "user_debit_account_code": "632",
+      "user_credit_account_code": "156",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Trả lãi vay ngân hàng tháng 1",
+      "amount": 500000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Phí chuyển khoản ngân hàng",
+      "amount": 1500000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí lãi vay ngắn hạn",
+      "amount": 5000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Lỗ chênh lệch tỷ giá",
+      "amount": 500000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán phí bảo lãnh ngân hàng",
+      "amount": 1500000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí tài chính khoản vay",
+      "amount": 5000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Trả phí mở L/C",
+      "amount": 500000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Hạch toán lãi vay phải trả",
+      "amount": 1500000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhận lãi tiền gửi ngân hàng",
+      "amount": 100000,
+      "user_category": "Doanh thu tài chính",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "515",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Doanh thu lãi tiền gửi tháng 2",
+      "amount": 500000,
+      "user_category": "Doanh thu tài chính",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "515",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Lãi chênh lệch tỷ giá",
+      "amount": 2000000,
+      "user_category": "Doanh thu tài chính",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "515",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhận cổ tức bằng chuyển khoản",
+      "amount": 100000,
+      "user_category": "Doanh thu tài chính",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "515",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thu nhập tài chính từ tiền gửi",
+      "amount": 500000,
+      "user_category": "Doanh thu tài chính",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "515",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Ngân hàng trả lãi tài khoản",
+      "amount": 2000000,
+      "user_category": "Doanh thu tài chính",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "515",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Ghi nhận lãi đầu tư ngắn hạn",
+      "amount": 100000,
+      "user_category": "Doanh thu tài chính",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "515",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Doanh thu hoạt động tài chính",
+      "amount": 500000,
+      "user_category": "Doanh thu tài chính",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "515",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Ghi nhận thuế GTGT đầu ra hóa đơn bán hàng",
+      "amount": 300000,
+      "user_category": "Thuế GTGT đầu ra",
+      "user_type": "liability",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "33311",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thuế VAT đầu ra của đơn hàng",
+      "amount": 1500000,
+      "user_category": "Thuế GTGT đầu ra",
+      "user_type": "liability",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "33311",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Hạch toán VAT phải nộp từ doanh thu",
+      "amount": 4500000,
+      "user_category": "Thuế GTGT đầu ra",
+      "user_type": "liability",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "33311",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thuế GTGT đầu ra tháng 4",
+      "amount": 300000,
+      "user_category": "Thuế GTGT đầu ra",
+      "user_type": "liability",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "33311",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "VAT đầu ra hóa đơn dịch vụ",
+      "amount": 1500000,
+      "user_category": "Thuế GTGT đầu ra",
+      "user_type": "liability",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "33311",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Ghi nhận thuế bán hàng phải nộp",
+      "amount": 4500000,
+      "user_category": "Thuế GTGT đầu ra",
+      "user_type": "liability",
+      "user_debit_account_code": "131",
+      "user_credit_account_code": "33311",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thuế VAT đầu vào hóa đơn mua hàng",
+      "amount": 300000,
+      "user_category": "Thuế GTGT được khấu trừ",
+      "user_type": "asset",
+      "user_debit_account_code": "1331",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Ghi nhận thuế GTGT được khấu trừ",
+      "amount": 1200000,
+      "user_category": "Thuế GTGT được khấu trừ",
+      "user_type": "asset",
+      "user_debit_account_code": "1331",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "VAT đầu vào mua nguyên vật liệu",
+      "amount": 3500000,
+      "user_category": "Thuế GTGT được khấu trừ",
+      "user_type": "asset",
+      "user_debit_account_code": "1331",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thuế GTGT đầu vào dịch vụ",
+      "amount": 300000,
+      "user_category": "Thuế GTGT được khấu trừ",
+      "user_type": "asset",
+      "user_debit_account_code": "1331",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Hạch toán VAT mua hàng tháng 5",
+      "amount": 1200000,
+      "user_category": "Thuế GTGT được khấu trừ",
+      "user_type": "asset",
+      "user_debit_account_code": "1331",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thuế đầu vào từ nhà cung cấp",
+      "amount": 3500000,
+      "user_category": "Thuế GTGT được khấu trừ",
+      "user_type": "asset",
+      "user_debit_account_code": "1331",
+      "user_credit_account_code": "331",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua văn phòng phẩm cho công ty",
+      "amount": 300000,
+      "user_category": "Chi phí quản lý",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí tiếp khách văn phòng",
+      "amount": 900000,
+      "user_category": "Chi phí quản lý",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán phí chuyển phát hồ sơ",
+      "amount": 2500000,
+      "user_category": "Chi phí quản lý",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua nước uống cho văn phòng",
+      "amount": 300000,
+      "user_category": "Chi phí quản lý",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí vệ sinh văn phòng",
+      "amount": 900000,
+      "user_category": "Chi phí quản lý",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán phí công chứng giấy tờ",
+      "amount": 2500000,
+      "user_category": "Chi phí quản lý",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí taxi đi gặp khách hàng",
+      "amount": 300000,
+      "user_category": "Chi phí quản lý",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua đồ dùng hành chính",
+      "amount": 900000,
+      "user_category": "Chi phí quản lý",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí đào tạo nhân viên",
+      "amount": 2500000,
+      "user_category": "Chi phí quản lý",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán dịch vụ kế toán thuê ngoài",
+      "amount": 300000,
+      "user_category": "Chi phí quản lý",
+      "user_type": "expense",
+      "user_debit_account_code": "642",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí đóng gói giao hàng",
+      "amount": 400000,
+      "user_category": "Chi phí bán hàng",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán phí vận chuyển cho khách",
+      "amount": 1200000,
+      "user_category": "Chi phí bán hàng",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí hoa hồng đại lý bán hàng",
+      "amount": 4000000,
+      "user_category": "Chi phí bán hàng",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua túi giấy cho cửa hàng",
+      "amount": 400000,
+      "user_category": "Chi phí bán hàng",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí livestream bán hàng",
+      "amount": 1200000,
+      "user_category": "Chi phí bán hàng",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Phí sàn thương mại điện tử",
+      "amount": 4000000,
+      "user_category": "Chi phí bán hàng",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí khuyến mãi khách hàng",
+      "amount": 400000,
+      "user_category": "Chi phí bán hàng",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thanh toán phí ship COD",
+      "amount": 1200000,
+      "user_category": "Chi phí bán hàng",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí trưng bày sản phẩm",
+      "amount": 4000000,
+      "user_category": "Chi phí bán hàng",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Mua vật phẩm quảng cáo bán hàng",
+      "amount": 400000,
+      "user_category": "Chi phí bán hàng",
+      "user_type": "expense",
+      "user_debit_account_code": "641",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thu tiền thanh lý tài sản cũ",
+      "amount": 500000,
+      "user_category": "Thu nhập khác",
+      "user_type": "revenue",
+      "user_debit_account_code": "111",
+      "user_credit_account_code": "711",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Nhận tiền phạt vi phạm hợp đồng",
+      "amount": 3000000,
+      "user_category": "Thu nhập khác",
+      "user_type": "revenue",
+      "user_debit_account_code": "111",
+      "user_credit_account_code": "711",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thu nhập khác từ bán phế liệu",
+      "amount": 10000000,
+      "user_category": "Thu nhập khác",
+      "user_type": "revenue",
+      "user_debit_account_code": "111",
+      "user_credit_account_code": "711",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thu bồi thường bảo hiểm",
+      "amount": 500000,
+      "user_category": "Thu nhập khác",
+      "user_type": "revenue",
+      "user_debit_account_code": "111",
+      "user_credit_account_code": "711",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thu khoản nợ đã xóa nay thu được",
+      "amount": 3000000,
+      "user_category": "Thu nhập khác",
+      "user_type": "revenue",
+      "user_debit_account_code": "111",
+      "user_credit_account_code": "711",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thu nhập bất thường khác",
+      "amount": 10000000,
+      "user_category": "Thu nhập khác",
+      "user_type": "revenue",
+      "user_debit_account_code": "111",
+      "user_credit_account_code": "711",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Bán thanh lý bàn ghế cũ",
+      "amount": 500000,
+      "user_category": "Thu nhập khác",
+      "user_type": "revenue",
+      "user_debit_account_code": "111",
+      "user_credit_account_code": "711",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Thu tiền bồi thường từ nhà cung cấp",
+      "amount": 3000000,
+      "user_category": "Thu nhập khác",
+      "user_type": "revenue",
+      "user_debit_account_code": "111",
+      "user_credit_account_code": "711",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi tiền phạt chậm nộp hợp đồng",
+      "amount": 500000,
+      "user_category": "Chi phí khác",
+      "user_type": "expense",
+      "user_debit_account_code": "811",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí thanh lý tài sản cũ",
+      "amount": 2000000,
+      "user_category": "Chi phí khác",
+      "user_type": "expense",
+      "user_debit_account_code": "811",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Khoản phạt vi phạm hành chính",
+      "amount": 7000000,
+      "user_category": "Chi phí khác",
+      "user_type": "expense",
+      "user_debit_account_code": "811",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi bồi thường cho khách hàng",
+      "amount": 500000,
+      "user_category": "Chi phí khác",
+      "user_type": "expense",
+      "user_debit_account_code": "811",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí khác ngoài hoạt động kinh doanh",
+      "amount": 2000000,
+      "user_category": "Chi phí khác",
+      "user_type": "expense",
+      "user_debit_account_code": "811",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Lỗ thanh lý tài sản",
+      "amount": 7000000,
+      "user_category": "Chi phí khác",
+      "user_type": "expense",
+      "user_debit_account_code": "811",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi phí xử lý hàng hỏng",
+      "amount": 500000,
+      "user_category": "Chi phí khác",
+      "user_type": "expense",
+      "user_debit_account_code": "811",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    },
+    {
+      "description": "Chi tiền phạt do giao hàng chậm",
+      "amount": 2000000,
+      "user_category": "Chi phí khác",
+      "user_type": "expense",
+      "user_debit_account_code": "811",
+      "user_credit_account_code": "111",
+      "note": "Seed V10: dữ liệu học mẫu cho AI kế toán Finiip"
+    }
+  ]
+}

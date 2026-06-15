@@ -1,0 +1,2742 @@
+{
+  "version": "v16-curated-priority",
+  "count": 304,
+  "items": [
+    {
+      "description": "Mua bàn ghế văn phòng tháng 6",
+      "amount": 5500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bàn ghế văn phòng tháng 11",
+      "amount": 1200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bàn ghế văn phòng tháng 9",
+      "amount": 3500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bàn ghế văn phòng tháng 10",
+      "amount": 10000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bàn ghế văn phòng tháng 4",
+      "amount": 1200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bàn ghế văn phòng tháng 7",
+      "amount": 1200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua ghế xoay nhân viên tháng 4",
+      "amount": 10000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua ghế xoay nhân viên tháng 7",
+      "amount": 22000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua ghế xoay nhân viên tháng 10",
+      "amount": 2200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua ghế xoay nhân viên tháng 11",
+      "amount": 10000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua ghế xoay nhân viên tháng 1",
+      "amount": 10000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua ghế xoay nhân viên tháng 7",
+      "amount": 2200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bàn làm việc tháng 1",
+      "amount": 22000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bàn làm việc tháng 3",
+      "amount": 5500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bàn làm việc tháng 3",
+      "amount": 1200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bàn làm việc tháng 10",
+      "amount": 10000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bàn làm việc tháng 11",
+      "amount": 1200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bàn làm việc tháng 10",
+      "amount": 15000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua kệ tài liệu tháng 4",
+      "amount": 1200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua kệ tài liệu tháng 9",
+      "amount": 1200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua kệ tài liệu tháng 10",
+      "amount": 10000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua kệ tài liệu tháng 4",
+      "amount": 15000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua kệ tài liệu tháng 9",
+      "amount": 22000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua kệ tài liệu tháng 6",
+      "amount": 10000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua tủ hồ sơ tháng 8",
+      "amount": 3500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua tủ hồ sơ tháng 4",
+      "amount": 2200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua tủ hồ sơ tháng 12",
+      "amount": 2200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua tủ hồ sơ tháng 2",
+      "amount": 3500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua tủ hồ sơ tháng 9",
+      "amount": 3500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua tủ hồ sơ tháng 12",
+      "amount": 3500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua tai nghe cho nhân viên tháng 10",
+      "amount": 1200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua tai nghe cho nhân viên tháng 9",
+      "amount": 2200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua tai nghe cho nhân viên tháng 6",
+      "amount": 5500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua tai nghe cho nhân viên tháng 7",
+      "amount": 15000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua tai nghe cho nhân viên tháng 2",
+      "amount": 10000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua tai nghe cho nhân viên tháng 10",
+      "amount": 22000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua máy scan nhỏ tháng 6",
+      "amount": 15000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua máy scan nhỏ tháng 6",
+      "amount": 5500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua máy scan nhỏ tháng 10",
+      "amount": 5500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua máy scan nhỏ tháng 2",
+      "amount": 1200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua máy scan nhỏ tháng 5",
+      "amount": 15000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua máy scan nhỏ tháng 11",
+      "amount": 1200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua máy chấm công tháng 12",
+      "amount": 3500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua máy chấm công tháng 11",
+      "amount": 15000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua máy chấm công tháng 8",
+      "amount": 15000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua máy chấm công tháng 7",
+      "amount": 3500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua máy chấm công tháng 1",
+      "amount": 3500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua máy chấm công tháng 3",
+      "amount": 1200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua thiết bị văn phòng giá trị nhỏ tháng 8",
+      "amount": 2200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua thiết bị văn phòng giá trị nhỏ tháng 5",
+      "amount": 15000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua thiết bị văn phòng giá trị nhỏ tháng 4",
+      "amount": 5500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua thiết bị văn phòng giá trị nhỏ tháng 8",
+      "amount": 2200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua thiết bị văn phòng giá trị nhỏ tháng 8",
+      "amount": 10000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua thiết bị văn phòng giá trị nhỏ tháng 5",
+      "amount": 22000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua ổ cứng di động tháng 7",
+      "amount": 10000000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua ổ cứng di động tháng 5",
+      "amount": 5500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua ổ cứng di động tháng 6",
+      "amount": 5500000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua ổ cứng di động tháng 4",
+      "amount": 1200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua ổ cứng di động tháng 3",
+      "amount": 2200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua ổ cứng di động tháng 11",
+      "amount": 1200000,
+      "user_category": "Công cụ dụng cụ",
+      "user_type": "asset",
+      "user_debit_account_code": "153",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua giấy in A4 tháng 8",
+      "amount": 10000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua giấy in A4 tháng 3",
+      "amount": 3500000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua giấy in A4 tháng 1",
+      "amount": 5500000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua giấy in A4 tháng 9",
+      "amount": 10000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua giấy in A4 tháng 10",
+      "amount": 2200000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua giấy in A4 tháng 12",
+      "amount": 10000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bút bi tháng 10",
+      "amount": 15000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bút bi tháng 12",
+      "amount": 5500000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bút bi tháng 11",
+      "amount": 10000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bút bi tháng 7",
+      "amount": 5500000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bút bi tháng 7",
+      "amount": 5500000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua bút bi tháng 11",
+      "amount": 1200000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua mực máy in tháng 4",
+      "amount": 2200000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua mực máy in tháng 8",
+      "amount": 1200000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua mực máy in tháng 6",
+      "amount": 1200000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua mực máy in tháng 2",
+      "amount": 10000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua mực máy in tháng 3",
+      "amount": 1200000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua mực máy in tháng 6",
+      "amount": 1200000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua hồ sơ kẹp giấy tháng 2",
+      "amount": 2200000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua hồ sơ kẹp giấy tháng 10",
+      "amount": 2200000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua hồ sơ kẹp giấy tháng 11",
+      "amount": 3500000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua hồ sơ kẹp giấy tháng 10",
+      "amount": 5500000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua hồ sơ kẹp giấy tháng 2",
+      "amount": 22000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua hồ sơ kẹp giấy tháng 8",
+      "amount": 5500000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua văn phòng phẩm tháng 8",
+      "amount": 1200000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua văn phòng phẩm tháng 3",
+      "amount": 15000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua văn phòng phẩm tháng 6",
+      "amount": 3500000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua văn phòng phẩm tháng 8",
+      "amount": 15000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua văn phòng phẩm tháng 3",
+      "amount": 1200000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua văn phòng phẩm tháng 4",
+      "amount": 3500000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua phong bì tem thư tháng 3",
+      "amount": 10000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua phong bì tem thư tháng 1",
+      "amount": 10000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua phong bì tem thư tháng 5",
+      "amount": 22000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua phong bì tem thư tháng 2",
+      "amount": 22000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua phong bì tem thư tháng 5",
+      "amount": 3500000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua phong bì tem thư tháng 3",
+      "amount": 22000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua sổ sách văn phòng tháng 4",
+      "amount": 10000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua sổ sách văn phòng tháng 9",
+      "amount": 15000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua sổ sách văn phòng tháng 4",
+      "amount": 22000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua sổ sách văn phòng tháng 4",
+      "amount": 2200000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua sổ sách văn phòng tháng 7",
+      "amount": 22000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Mua sổ sách văn phòng tháng 4",
+      "amount": 10000000,
+      "user_category": "Chi phí văn phòng phẩm",
+      "user_type": "expense",
+      "user_debit_account_code": "6423",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNDN quý 8",
+      "amount": 15000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNDN quý 1",
+      "amount": 22000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNDN quý 5",
+      "amount": 3500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNDN quý 4",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNDN quý 6",
+      "amount": 22000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNDN quý 12",
+      "amount": 3500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNDN quý 2",
+      "amount": 1200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNDN quý 4",
+      "amount": 2200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập doanh nghiệp",
+      "amount": 5500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập doanh nghiệp",
+      "amount": 22000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập doanh nghiệp",
+      "amount": 15000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập doanh nghiệp",
+      "amount": 15000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập doanh nghiệp",
+      "amount": 15000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập doanh nghiệp",
+      "amount": 22000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập doanh nghiệp",
+      "amount": 2200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập doanh nghiệp",
+      "amount": 5500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán thuế TNDN tạm tính",
+      "amount": 1200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán thuế TNDN tạm tính",
+      "amount": 5500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán thuế TNDN tạm tính",
+      "amount": 1200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán thuế TNDN tạm tính",
+      "amount": 2200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán thuế TNDN tạm tính",
+      "amount": 2200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán thuế TNDN tạm tính",
+      "amount": 22000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán thuế TNDN tạm tính",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán thuế TNDN tạm tính",
+      "amount": 15000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3334",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế GTGT",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế GTGT",
+      "amount": 1200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế GTGT",
+      "amount": 15000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế GTGT",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế GTGT",
+      "amount": 5500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế GTGT",
+      "amount": 22000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế GTGT",
+      "amount": 3500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế GTGT",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế giá trị gia tăng",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế giá trị gia tăng",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế giá trị gia tăng",
+      "amount": 2200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế giá trị gia tăng",
+      "amount": 3500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế giá trị gia tăng",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế giá trị gia tăng",
+      "amount": 22000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế giá trị gia tăng",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế giá trị gia tăng",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3331",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNCN",
+      "amount": 5500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNCN",
+      "amount": 1200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNCN",
+      "amount": 2200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNCN",
+      "amount": 15000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNCN",
+      "amount": 1200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNCN",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNCN",
+      "amount": 5500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế TNCN",
+      "amount": 1200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập cá nhân",
+      "amount": 3500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập cá nhân",
+      "amount": 1200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập cá nhân",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập cá nhân",
+      "amount": 1200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập cá nhân",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập cá nhân",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập cá nhân",
+      "amount": 3500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp thuế thu nhập cá nhân",
+      "amount": 10000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3335",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp lệ phí môn bài",
+      "amount": 2200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3338",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp lệ phí môn bài",
+      "amount": 3500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3338",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp lệ phí môn bài",
+      "amount": 22000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3338",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp lệ phí môn bài",
+      "amount": 5500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3338",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp lệ phí môn bài",
+      "amount": 5500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3338",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp lệ phí môn bài",
+      "amount": 15000000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3338",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp lệ phí môn bài",
+      "amount": 1200000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3338",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Nộp lệ phí môn bài",
+      "amount": 3500000,
+      "user_category": "Thuế và phí",
+      "user_type": "liability",
+      "user_debit_account_code": "3338",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Tính lương nhân viên tháng 2",
+      "amount": 2200000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Tính lương nhân viên tháng 12",
+      "amount": 15000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Tính lương nhân viên tháng 6",
+      "amount": 3500000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Tính lương nhân viên tháng 3",
+      "amount": 2200000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Tính lương nhân viên tháng 12",
+      "amount": 5500000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Tính lương nhân viên tháng 8",
+      "amount": 15000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hạch toán lương phải trả",
+      "amount": 15000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hạch toán lương phải trả",
+      "amount": 5500000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hạch toán lương phải trả",
+      "amount": 2200000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hạch toán lương phải trả",
+      "amount": 1200000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hạch toán lương phải trả",
+      "amount": 1200000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hạch toán lương phải trả",
+      "amount": 5500000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận tiền lương bộ phận quản lý",
+      "amount": 1200000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận tiền lương bộ phận quản lý",
+      "amount": 10000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận tiền lương bộ phận quản lý",
+      "amount": 10000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận tiền lương bộ phận quản lý",
+      "amount": 22000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận tiền lương bộ phận quản lý",
+      "amount": 1200000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận tiền lương bộ phận quản lý",
+      "amount": 1200000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả lương nhân viên qua ngân hàng",
+      "amount": 22000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả lương nhân viên qua ngân hàng",
+      "amount": 5500000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả lương nhân viên qua ngân hàng",
+      "amount": 3500000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả lương nhân viên qua ngân hàng",
+      "amount": 10000000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả lương nhân viên qua ngân hàng",
+      "amount": 5500000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả lương nhân viên qua ngân hàng",
+      "amount": 1200000,
+      "user_category": "Chi phí nhân sự",
+      "user_type": "expense",
+      "user_debit_account_code": "6421",
+      "user_credit_account_code": "334",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả trước tiền thuê văn phòng 12 tháng",
+      "amount": 22000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả trước tiền thuê văn phòng 12 tháng",
+      "amount": 5500000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả trước tiền thuê văn phòng 12 tháng",
+      "amount": 1200000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả trước tiền thuê văn phòng 12 tháng",
+      "amount": 22000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả trước tiền thuê văn phòng 12 tháng",
+      "amount": 10000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả trước tiền thuê văn phòng 12 tháng",
+      "amount": 3500000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả trước tiền thuê văn phòng 12 tháng",
+      "amount": 1200000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Trả trước tiền thuê văn phòng 12 tháng",
+      "amount": 5500000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng trả trước",
+      "amount": 2200000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng trả trước",
+      "amount": 15000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng trả trước",
+      "amount": 2200000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng trả trước",
+      "amount": 2200000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng trả trước",
+      "amount": 15000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng trả trước",
+      "amount": 22000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng trả trước",
+      "amount": 5500000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng trả trước",
+      "amount": 2200000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận chi phí trả trước thuê văn phòng",
+      "amount": 22000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận chi phí trả trước thuê văn phòng",
+      "amount": 1200000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận chi phí trả trước thuê văn phòng",
+      "amount": 15000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận chi phí trả trước thuê văn phòng",
+      "amount": 2200000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận chi phí trả trước thuê văn phòng",
+      "amount": 2200000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận chi phí trả trước thuê văn phòng",
+      "amount": 15000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận chi phí trả trước thuê văn phòng",
+      "amount": 15000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Ghi nhận chi phí trả trước thuê văn phòng",
+      "amount": 22000000,
+      "user_category": "Chi phí trả trước",
+      "user_type": "asset",
+      "user_debit_account_code": "242",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng tháng 7",
+      "amount": 3500000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng tháng 12",
+      "amount": 2200000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng tháng 6",
+      "amount": 22000000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng tháng 12",
+      "amount": 15000000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng tháng 3",
+      "amount": 3500000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng tháng 1",
+      "amount": 2200000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng tháng 1",
+      "amount": 15000000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thanh toán tiền thuê văn phòng tháng 12",
+      "amount": 5500000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Chi phí thuê mặt bằng tháng 3",
+      "amount": 1200000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Chi phí thuê mặt bằng tháng 11",
+      "amount": 5500000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Chi phí thuê mặt bằng tháng 9",
+      "amount": 3500000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Chi phí thuê mặt bằng tháng 10",
+      "amount": 15000000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Chi phí thuê mặt bằng tháng 5",
+      "amount": 5500000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Chi phí thuê mặt bằng tháng 3",
+      "amount": 3500000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Chi phí thuê mặt bằng tháng 8",
+      "amount": 3500000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Chi phí thuê mặt bằng tháng 6",
+      "amount": 10000000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hóa đơn thuê văn phòng tháng 6",
+      "amount": 1200000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hóa đơn thuê văn phòng tháng 5",
+      "amount": 3500000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hóa đơn thuê văn phòng tháng 3",
+      "amount": 3500000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hóa đơn thuê văn phòng tháng 7",
+      "amount": 5500000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hóa đơn thuê văn phòng tháng 5",
+      "amount": 15000000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hóa đơn thuê văn phòng tháng 4",
+      "amount": 10000000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hóa đơn thuê văn phòng tháng 1",
+      "amount": 3500000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Hóa đơn thuê văn phòng tháng 2",
+      "amount": 5500000,
+      "user_category": "Chi phí thuê văn phòng",
+      "user_type": "expense",
+      "user_debit_account_code": "6427",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Phí chuyển khoản ngân hàng",
+      "amount": 5500000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Phí chuyển khoản ngân hàng",
+      "amount": 3500000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Phí chuyển khoản ngân hàng",
+      "amount": 1200000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Phí chuyển khoản ngân hàng",
+      "amount": 22000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Phí chuyển khoản ngân hàng",
+      "amount": 15000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Phí chuyển khoản ngân hàng",
+      "amount": 22000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Phí duy trì tài khoản ngân hàng",
+      "amount": 5500000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Phí duy trì tài khoản ngân hàng",
+      "amount": 15000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Phí duy trì tài khoản ngân hàng",
+      "amount": 2200000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Phí duy trì tài khoản ngân hàng",
+      "amount": 22000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Phí duy trì tài khoản ngân hàng",
+      "amount": 15000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Phí duy trì tài khoản ngân hàng",
+      "amount": 15000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Lãi vay ngân hàng tháng 9",
+      "amount": 10000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Lãi vay ngân hàng tháng 9",
+      "amount": 22000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Lãi vay ngân hàng tháng 1",
+      "amount": 15000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Lãi vay ngân hàng tháng 10",
+      "amount": 15000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Lãi vay ngân hàng tháng 11",
+      "amount": 15000000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Lãi vay ngân hàng tháng 4",
+      "amount": 1200000,
+      "user_category": "Chi phí tài chính",
+      "user_type": "expense",
+      "user_debit_account_code": "635",
+      "user_credit_account_code": "112",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Bán hàng thu tiền ngay",
+      "amount": 15000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Bán hàng thu tiền ngay",
+      "amount": 5500000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Bán hàng thu tiền ngay",
+      "amount": 1200000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Bán hàng thu tiền ngay",
+      "amount": 15000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Bán hàng thu tiền ngay",
+      "amount": 2200000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Bán hàng thu tiền ngay",
+      "amount": 1200000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Bán hàng thu tiền ngay",
+      "amount": 1200000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Bán hàng thu tiền ngay",
+      "amount": 10000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Doanh thu bán hàng khách thanh toán chuyển khoản",
+      "amount": 10000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Doanh thu bán hàng khách thanh toán chuyển khoản",
+      "amount": 15000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Doanh thu bán hàng khách thanh toán chuyển khoản",
+      "amount": 22000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Doanh thu bán hàng khách thanh toán chuyển khoản",
+      "amount": 3500000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Doanh thu bán hàng khách thanh toán chuyển khoản",
+      "amount": 22000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Doanh thu bán hàng khách thanh toán chuyển khoản",
+      "amount": 15000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Doanh thu bán hàng khách thanh toán chuyển khoản",
+      "amount": 5500000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Doanh thu bán hàng khách thanh toán chuyển khoản",
+      "amount": 5500000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Xuất hóa đơn bán hàng thu tiền mặt",
+      "amount": 22000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Xuất hóa đơn bán hàng thu tiền mặt",
+      "amount": 15000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Xuất hóa đơn bán hàng thu tiền mặt",
+      "amount": 1200000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Xuất hóa đơn bán hàng thu tiền mặt",
+      "amount": 3500000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Xuất hóa đơn bán hàng thu tiền mặt",
+      "amount": 15000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Xuất hóa đơn bán hàng thu tiền mặt",
+      "amount": 10000000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Xuất hóa đơn bán hàng thu tiền mặt",
+      "amount": 1200000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Xuất hóa đơn bán hàng thu tiền mặt",
+      "amount": 5500000,
+      "user_category": "Doanh thu bán hàng",
+      "user_type": "income",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "511",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách hàng thanh toán công nợ",
+      "amount": 1200000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách hàng thanh toán công nợ",
+      "amount": 15000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách hàng thanh toán công nợ",
+      "amount": 15000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách hàng thanh toán công nợ",
+      "amount": 5500000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách hàng thanh toán công nợ",
+      "amount": 22000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách hàng thanh toán công nợ",
+      "amount": 2200000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách hàng thanh toán công nợ",
+      "amount": 5500000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách hàng thanh toán công nợ",
+      "amount": 5500000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thu tiền công nợ khách hàng",
+      "amount": 10000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thu tiền công nợ khách hàng",
+      "amount": 5500000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thu tiền công nợ khách hàng",
+      "amount": 1200000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thu tiền công nợ khách hàng",
+      "amount": 2200000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thu tiền công nợ khách hàng",
+      "amount": 3500000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thu tiền công nợ khách hàng",
+      "amount": 10000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thu tiền công nợ khách hàng",
+      "amount": 3500000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Thu tiền công nợ khách hàng",
+      "amount": 3500000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách chuyển khoản trả nợ",
+      "amount": 5500000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách chuyển khoản trả nợ",
+      "amount": 2200000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách chuyển khoản trả nợ",
+      "amount": 15000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách chuyển khoản trả nợ",
+      "amount": 3500000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách chuyển khoản trả nợ",
+      "amount": 5500000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách chuyển khoản trả nợ",
+      "amount": 3500000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách chuyển khoản trả nợ",
+      "amount": 3500000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    },
+    {
+      "description": "Khách chuyển khoản trả nợ",
+      "amount": 22000000,
+      "user_category": "Thu tiền khách hàng",
+      "user_type": "revenue",
+      "user_debit_account_code": "112",
+      "user_credit_account_code": "131",
+      "note": "Seed V16 curated: mẫu ưu tiên để giảm nhầm lẫn nghiệp vụ"
+    }
+  ]
+}

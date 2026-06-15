@@ -1,0 +1,6 @@
+ngày giao dịch,nội dung,số tiền,mã giao dịch,đối tác
+2026-06-01,Thu tiền bán hàng từ khách hàng A,12000000,GD001,Khách hàng A
+2026-06-01,Thanh toán quảng cáo Facebook bằng chuyển khoản,5000000,GD002,Meta Platforms
+2026-06-02,Thanh toán tiền điện EVN,2300000,GD003,EVN
+2026-06-02,Rút tiền mặt 80000000 chi dịch vụ tư vấn,80000000,GD004,Công ty tư vấn B
+2026-06-02,Thanh toán tiền điện EVN,2300000,GD003-DUP,EVN

@@ -1,0 +1,1 @@
+VAT đầu vào được khấu trừ khi có hóa đơn hợp lệ và đủ điều kiện theo quy định.

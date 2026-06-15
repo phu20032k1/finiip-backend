@@ -1,0 +1,5829 @@
+{
+  "journal_drafts": [
+    {
+      "id": "DRAFT-00001",
+      "version": "V25",
+      "created_at": "2026-05-28T07:10:26Z",
+      "updated_at": "2026-05-28T07:10:26Z",
+      "status": "posted",
+      "source": "manual",
+      "description": "Mua máy tính văn phòng 20 triệu có VAT",
+      "amount": 20000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": null,
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 22000000.0,
+      "credit_total": 22000000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "approval_note": "ok",
+      "posted_entry_id": "JE-00001"
+    },
+    {
+      "id": "DRAFT-00002",
+      "version": "V25",
+      "created_at": "2026-05-28T07:10:26Z",
+      "updated_at": "2026-05-28T07:10:26Z",
+      "status": "draft",
+      "source": "v35_invoice_to_journal",
+      "description": "Hóa đơn thu CÔNG TY TNHH ABC",
+      "amount": 112233444.55,
+      "vat_rate": 0.1,
+      "payment_method": "payable",
+      "category": null,
+      "lines": [
+        {
+          "account": "642",
+          "debit": 112233444.55,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 11223344.46,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 123456789.01,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 123456789.01,
+      "credit_total": 123456789.01,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ."
+    },
+    {
+      "id": "DRAFT-00003",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:10:26Z",
+      "updated_at": "2026-05-28T07:10:26Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00001",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "amount": 52000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Doanh thu",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "112",
+          "debit": 52000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 5200000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 57200000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 57200000.0,
+      "credit_total": 57200000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00002"
+    },
+    {
+      "id": "DRAFT-00004",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:10:26Z",
+      "updated_at": "2026-05-28T07:10:26Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00001",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "amount": 6500000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Chi phí marketing",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "641",
+          "debit": 6500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 650000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 7150000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 7150000.0,
+      "credit_total": 7150000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00003"
+    },
+    {
+      "id": "DRAFT-00005",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:10:26Z",
+      "updated_at": "2026-05-28T07:10:26Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00001",
+      "description": "Mua máy tính cho phòng kế toán",
+      "amount": 20000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Tài sản cố định",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 22000000.0,
+      "credit_total": 22000000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00004"
+    },
+    {
+      "id": "DRAFT-00006",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:10:26Z",
+      "updated_at": "2026-05-28T07:10:26Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00001",
+      "description": "Chi tiền điện văn phòng",
+      "amount": 1800000.0,
+      "vat_rate": 0.1,
+      "payment_method": "cash",
+      "category": "Chi phí quản lý",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "642",
+          "debit": 1800000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 180000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 1980000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 1980000.0,
+      "credit_total": 1980000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00005"
+    },
+    {
+      "id": "DRAFT-00007",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:10:26Z",
+      "updated_at": "2026-05-28T07:10:26Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00001",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "amount": 38000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Doanh thu",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "112",
+          "debit": 38000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 3800000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 41800000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 41800000.0,
+      "credit_total": 41800000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00006"
+    },
+    {
+      "id": "DRAFT-00008",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:10:26Z",
+      "updated_at": "2026-05-28T07:10:26Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00001",
+      "description": "Trả lương nhân viên tháng 5",
+      "amount": 24000000.0,
+      "vat_rate": 0.0,
+      "payment_method": "bank",
+      "category": "Chi phí nhân sự",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "642",
+          "debit": 24000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 24000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 24000000.0,
+      "credit_total": 24000000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00007"
+    },
+    {
+      "id": "DRAFT-00009",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:10:26Z",
+      "updated_at": "2026-05-28T07:10:26Z",
+      "status": "posted",
+      "source": "bulk_manual",
+      "batch_id": "BATCH-00002",
+      "description": "Bán hàng test bulk chuyển khoản",
+      "amount": 1000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Doanh thu",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "112",
+          "debit": 1000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 100000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 1100000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 1100000.0,
+      "credit_total": 1100000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00008"
+    },
+    {
+      "id": "DRAFT-00010",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:10:26Z",
+      "updated_at": "2026-05-28T07:10:26Z",
+      "status": "posted",
+      "source": "bulk_manual",
+      "batch_id": "BATCH-00002",
+      "description": "Chi phí marketing test bulk",
+      "amount": 500000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Chi phí marketing",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "641",
+          "debit": 500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 50000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 550000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 550000.0,
+      "credit_total": 550000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00009"
+    },
+    {
+      "id": "DRAFT-00011",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:15Z",
+      "updated_at": "2026-05-28T07:15:15Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00003",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "amount": 52000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Doanh thu",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "112",
+          "debit": 52000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 5200000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 57200000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 57200000.0,
+      "credit_total": 57200000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00010"
+    },
+    {
+      "id": "DRAFT-00012",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:15Z",
+      "updated_at": "2026-05-28T07:15:15Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00003",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "amount": 6500000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Chi phí marketing",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "641",
+          "debit": 6500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 650000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 7150000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 7150000.0,
+      "credit_total": 7150000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00011"
+    },
+    {
+      "id": "DRAFT-00013",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:15Z",
+      "updated_at": "2026-05-28T07:15:15Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00003",
+      "description": "Mua máy tính cho phòng kế toán",
+      "amount": 20000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Tài sản cố định",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 22000000.0,
+      "credit_total": 22000000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00012"
+    },
+    {
+      "id": "DRAFT-00014",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:15Z",
+      "updated_at": "2026-05-28T07:15:15Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00003",
+      "description": "Chi tiền điện văn phòng",
+      "amount": 1800000.0,
+      "vat_rate": 0.1,
+      "payment_method": "cash",
+      "category": "Chi phí quản lý",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "642",
+          "debit": 1800000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 180000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 1980000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 1980000.0,
+      "credit_total": 1980000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00013"
+    },
+    {
+      "id": "DRAFT-00015",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:15Z",
+      "updated_at": "2026-05-28T07:15:15Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00003",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "amount": 38000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Doanh thu",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "112",
+          "debit": 38000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 3800000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 41800000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 41800000.0,
+      "credit_total": 41800000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00014"
+    },
+    {
+      "id": "DRAFT-00016",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:15Z",
+      "updated_at": "2026-05-28T07:15:15Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00003",
+      "description": "Trả lương nhân viên tháng 5",
+      "amount": 24000000.0,
+      "vat_rate": 0.0,
+      "payment_method": "bank",
+      "category": "Chi phí nhân sự",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "642",
+          "debit": 24000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 24000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 24000000.0,
+      "credit_total": 24000000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00015"
+    },
+    {
+      "id": "DRAFT-00017",
+      "version": "V25",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "manual",
+      "description": "Mua máy tính văn phòng 20 triệu có VAT",
+      "amount": 20000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": null,
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 22000000.0,
+      "credit_total": 22000000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "approval_note": "ok",
+      "posted_entry_id": "JE-00016"
+    },
+    {
+      "id": "DRAFT-00018",
+      "version": "V25",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "draft",
+      "source": "v35_invoice_to_journal",
+      "description": "Hóa đơn thu CÔNG TY TNHH ABC",
+      "amount": 112233444.55,
+      "vat_rate": 0.1,
+      "payment_method": "payable",
+      "category": null,
+      "lines": [
+        {
+          "account": "642",
+          "debit": 112233444.55,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 11223344.46,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 123456789.01,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 123456789.01,
+      "credit_total": 123456789.01,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ."
+    },
+    {
+      "id": "DRAFT-00019",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00004",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "amount": 52000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Doanh thu",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "112",
+          "debit": 52000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 5200000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 57200000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 57200000.0,
+      "credit_total": 57200000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00017"
+    },
+    {
+      "id": "DRAFT-00020",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00004",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "amount": 6500000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Chi phí marketing",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "641",
+          "debit": 6500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 650000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 7150000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 7150000.0,
+      "credit_total": 7150000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00018"
+    },
+    {
+      "id": "DRAFT-00021",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00004",
+      "description": "Mua máy tính cho phòng kế toán",
+      "amount": 20000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Tài sản cố định",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 22000000.0,
+      "credit_total": 22000000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00019"
+    },
+    {
+      "id": "DRAFT-00022",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00004",
+      "description": "Chi tiền điện văn phòng",
+      "amount": 1800000.0,
+      "vat_rate": 0.1,
+      "payment_method": "cash",
+      "category": "Chi phí quản lý",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "642",
+          "debit": 1800000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 180000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 1980000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 1980000.0,
+      "credit_total": 1980000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00020"
+    },
+    {
+      "id": "DRAFT-00023",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00004",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "amount": 38000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Doanh thu",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "112",
+          "debit": 38000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 3800000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 41800000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 41800000.0,
+      "credit_total": 41800000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00021"
+    },
+    {
+      "id": "DRAFT-00024",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00004",
+      "description": "Trả lương nhân viên tháng 5",
+      "amount": 24000000.0,
+      "vat_rate": 0.0,
+      "payment_method": "bank",
+      "category": "Chi phí nhân sự",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "642",
+          "debit": 24000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 24000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 24000000.0,
+      "credit_total": 24000000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00022"
+    },
+    {
+      "id": "DRAFT-00025",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "bulk_manual",
+      "batch_id": "BATCH-00005",
+      "description": "Bán hàng test bulk chuyển khoản",
+      "amount": 1000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Doanh thu",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "112",
+          "debit": 1000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 100000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 1100000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 1100000.0,
+      "credit_total": 1100000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00023"
+    },
+    {
+      "id": "DRAFT-00026",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "bulk_manual",
+      "batch_id": "BATCH-00005",
+      "description": "Chi phí marketing test bulk",
+      "amount": 500000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Chi phí marketing",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "641",
+          "debit": 500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 50000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 550000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 550000.0,
+      "credit_total": 550000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00024"
+    },
+    {
+      "id": "DRAFT-00027",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00006",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "amount": 52000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Doanh thu",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "112",
+          "debit": 52000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 5200000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 57200000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 57200000.0,
+      "credit_total": 57200000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00025"
+    },
+    {
+      "id": "DRAFT-00028",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00006",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "amount": 6500000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Chi phí marketing",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "641",
+          "debit": 6500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 650000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 7150000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 7150000.0,
+      "credit_total": 7150000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00026"
+    },
+    {
+      "id": "DRAFT-00029",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00006",
+      "description": "Mua máy tính cho phòng kế toán",
+      "amount": 20000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Tài sản cố định",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 22000000.0,
+      "credit_total": 22000000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00027"
+    },
+    {
+      "id": "DRAFT-00030",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00006",
+      "description": "Chi tiền điện văn phòng",
+      "amount": 1800000.0,
+      "vat_rate": 0.1,
+      "payment_method": "cash",
+      "category": "Chi phí quản lý",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "642",
+          "debit": 1800000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 180000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 1980000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 1980000.0,
+      "credit_total": 1980000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00028"
+    },
+    {
+      "id": "DRAFT-00031",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00006",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "amount": 38000000.0,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "category": "Doanh thu",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "112",
+          "debit": 38000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 3800000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 41800000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 41800000.0,
+      "credit_total": 41800000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00029"
+    },
+    {
+      "id": "DRAFT-00032",
+      "version": "V40.5/V25+",
+      "created_at": "2026-05-28T07:15:31Z",
+      "updated_at": "2026-05-28T07:15:31Z",
+      "status": "posted",
+      "source": "sample_seed",
+      "batch_id": "BATCH-00006",
+      "description": "Trả lương nhân viên tháng 5",
+      "amount": 24000000.0,
+      "vat_rate": 0.0,
+      "payment_method": "bank",
+      "category": "Chi phí nhân sự",
+      "ai_confidence": 0.98,
+      "lines": [
+        {
+          "account": "642",
+          "debit": 24000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 24000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 24000000.0,
+      "credit_total": 24000000.0,
+      "balanced": true,
+      "risk_flags": [],
+      "safe_policy": "AI chỉ tạo nháp. Kế toán phải approve/post trước khi vào sổ.",
+      "posted_entry_id": "JE-00030"
+    }
+  ],
+  "journal_entries": [
+    {
+      "id": "JE-00001",
+      "version": "V26",
+      "posted_at": "2026-05-28T07:10:26Z",
+      "description": "Mua máy tính văn phòng 20 triệu có VAT",
+      "source_draft_id": "DRAFT-00001",
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 22000000.0,
+      "credit_total": 22000000.0,
+      "note": null
+    },
+    {
+      "id": "JE-00002",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:10:26Z",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "source_draft_id": "DRAFT-00003",
+      "lines": [
+        {
+          "account": "112",
+          "debit": 52000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 5200000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 57200000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 57200000.0,
+      "credit_total": 57200000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00003",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:10:26Z",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "source_draft_id": "DRAFT-00004",
+      "lines": [
+        {
+          "account": "641",
+          "debit": 6500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 650000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 7150000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 7150000.0,
+      "credit_total": 7150000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00004",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:10:26Z",
+      "description": "Mua máy tính cho phòng kế toán",
+      "source_draft_id": "DRAFT-00005",
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 22000000.0,
+      "credit_total": 22000000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00005",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:10:26Z",
+      "description": "Chi tiền điện văn phòng",
+      "source_draft_id": "DRAFT-00006",
+      "lines": [
+        {
+          "account": "642",
+          "debit": 1800000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 180000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 1980000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 1980000.0,
+      "credit_total": 1980000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00006",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:10:26Z",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "source_draft_id": "DRAFT-00007",
+      "lines": [
+        {
+          "account": "112",
+          "debit": 38000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 3800000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 41800000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 41800000.0,
+      "credit_total": 41800000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00007",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:10:26Z",
+      "description": "Trả lương nhân viên tháng 5",
+      "source_draft_id": "DRAFT-00008",
+      "lines": [
+        {
+          "account": "642",
+          "debit": 24000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 24000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 24000000.0,
+      "credit_total": 24000000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00008",
+      "version": "V42/V26+",
+      "posted_at": "2026-05-28T07:10:26Z",
+      "description": "Bán hàng test bulk chuyển khoản",
+      "source_draft_id": "DRAFT-00009",
+      "lines": [
+        {
+          "account": "112",
+          "debit": 1000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 100000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 1100000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 1100000.0,
+      "credit_total": 1100000.0,
+      "note": "Posted by V42 confirmed chatbot action"
+    },
+    {
+      "id": "JE-00009",
+      "version": "V42/V26+",
+      "posted_at": "2026-05-28T07:10:26Z",
+      "description": "Chi phí marketing test bulk",
+      "source_draft_id": "DRAFT-00010",
+      "lines": [
+        {
+          "account": "641",
+          "debit": 500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 50000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 550000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 550000.0,
+      "credit_total": 550000.0,
+      "note": "Posted by V42 confirmed chatbot action"
+    },
+    {
+      "id": "JE-00010",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:15Z",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "source_draft_id": "DRAFT-00011",
+      "lines": [
+        {
+          "account": "112",
+          "debit": 52000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 5200000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 57200000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 57200000.0,
+      "credit_total": 57200000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00011",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:15Z",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "source_draft_id": "DRAFT-00012",
+      "lines": [
+        {
+          "account": "641",
+          "debit": 6500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 650000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 7150000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 7150000.0,
+      "credit_total": 7150000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00012",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:15Z",
+      "description": "Mua máy tính cho phòng kế toán",
+      "source_draft_id": "DRAFT-00013",
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 22000000.0,
+      "credit_total": 22000000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00013",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:15Z",
+      "description": "Chi tiền điện văn phòng",
+      "source_draft_id": "DRAFT-00014",
+      "lines": [
+        {
+          "account": "642",
+          "debit": 1800000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 180000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 1980000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 1980000.0,
+      "credit_total": 1980000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00014",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:15Z",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "source_draft_id": "DRAFT-00015",
+      "lines": [
+        {
+          "account": "112",
+          "debit": 38000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 3800000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 41800000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 41800000.0,
+      "credit_total": 41800000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00015",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:15Z",
+      "description": "Trả lương nhân viên tháng 5",
+      "source_draft_id": "DRAFT-00016",
+      "lines": [
+        {
+          "account": "642",
+          "debit": 24000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 24000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 24000000.0,
+      "credit_total": 24000000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00016",
+      "version": "V26",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Mua máy tính văn phòng 20 triệu có VAT",
+      "source_draft_id": "DRAFT-00017",
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 22000000.0,
+      "credit_total": 22000000.0,
+      "note": null
+    },
+    {
+      "id": "JE-00017",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "source_draft_id": "DRAFT-00019",
+      "lines": [
+        {
+          "account": "112",
+          "debit": 52000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 5200000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 57200000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 57200000.0,
+      "credit_total": 57200000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00018",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "source_draft_id": "DRAFT-00020",
+      "lines": [
+        {
+          "account": "641",
+          "debit": 6500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 650000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 7150000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 7150000.0,
+      "credit_total": 7150000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00019",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Mua máy tính cho phòng kế toán",
+      "source_draft_id": "DRAFT-00021",
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 22000000.0,
+      "credit_total": 22000000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00020",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Chi tiền điện văn phòng",
+      "source_draft_id": "DRAFT-00022",
+      "lines": [
+        {
+          "account": "642",
+          "debit": 1800000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 180000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 1980000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 1980000.0,
+      "credit_total": 1980000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00021",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "source_draft_id": "DRAFT-00023",
+      "lines": [
+        {
+          "account": "112",
+          "debit": 38000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 3800000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 41800000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 41800000.0,
+      "credit_total": 41800000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00022",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Trả lương nhân viên tháng 5",
+      "source_draft_id": "DRAFT-00024",
+      "lines": [
+        {
+          "account": "642",
+          "debit": 24000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 24000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 24000000.0,
+      "credit_total": 24000000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00023",
+      "version": "V42/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Bán hàng test bulk chuyển khoản",
+      "source_draft_id": "DRAFT-00025",
+      "lines": [
+        {
+          "account": "112",
+          "debit": 1000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 100000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 1100000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 1100000.0,
+      "credit_total": 1100000.0,
+      "note": "Posted by V42 confirmed chatbot action"
+    },
+    {
+      "id": "JE-00024",
+      "version": "V42/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Chi phí marketing test bulk",
+      "source_draft_id": "DRAFT-00026",
+      "lines": [
+        {
+          "account": "641",
+          "debit": 500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 50000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 550000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 550000.0,
+      "credit_total": 550000.0,
+      "note": "Posted by V42 confirmed chatbot action"
+    },
+    {
+      "id": "JE-00025",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "source_draft_id": "DRAFT-00027",
+      "lines": [
+        {
+          "account": "112",
+          "debit": 52000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 5200000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 57200000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 57200000.0,
+      "credit_total": 57200000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00026",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "source_draft_id": "DRAFT-00028",
+      "lines": [
+        {
+          "account": "641",
+          "debit": 6500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 650000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 7150000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 7150000.0,
+      "credit_total": 7150000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00027",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Mua máy tính cho phòng kế toán",
+      "source_draft_id": "DRAFT-00029",
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 22000000.0,
+      "credit_total": 22000000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00028",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Chi tiền điện văn phòng",
+      "source_draft_id": "DRAFT-00030",
+      "lines": [
+        {
+          "account": "642",
+          "debit": 1800000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 180000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 1980000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 1980000.0,
+      "credit_total": 1980000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00029",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "source_draft_id": "DRAFT-00031",
+      "lines": [
+        {
+          "account": "112",
+          "debit": 38000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 3800000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 41800000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 41800000.0,
+      "credit_total": 41800000.0,
+      "note": "Auto posted sample data for demo/testing"
+    },
+    {
+      "id": "JE-00030",
+      "version": "V40.5/V26+",
+      "posted_at": "2026-05-28T07:15:31Z",
+      "description": "Trả lương nhân viên tháng 5",
+      "source_draft_id": "DRAFT-00032",
+      "lines": [
+        {
+          "account": "642",
+          "debit": 24000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 24000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "debit_total": 24000000.0,
+      "credit_total": 24000000.0,
+      "note": "Auto posted sample data for demo/testing"
+    }
+  ],
+  "raw_transactions": [
+    {
+      "date": "2026-05-01",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "amount": 52000000.0,
+      "transaction_type": "income",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00001",
+      "batch_id": "BATCH-00001",
+      "created_at": "2026-05-28T07:10:26Z",
+      "category_inferred": "Doanh thu"
+    },
+    {
+      "date": "2026-05-03",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "amount": 6500000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00002",
+      "batch_id": "BATCH-00001",
+      "created_at": "2026-05-28T07:10:26Z",
+      "category_inferred": "Chi phí marketing"
+    },
+    {
+      "date": "2026-05-07",
+      "description": "Mua máy tính cho phòng kế toán",
+      "amount": 20000000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00003",
+      "batch_id": "BATCH-00001",
+      "created_at": "2026-05-28T07:10:26Z",
+      "category_inferred": "Tài sản cố định"
+    },
+    {
+      "date": "2026-05-12",
+      "description": "Chi tiền điện văn phòng",
+      "amount": 1800000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "cash",
+      "source": "sample_seed",
+      "id": "RAW-00004",
+      "batch_id": "BATCH-00001",
+      "created_at": "2026-05-28T07:10:26Z",
+      "category_inferred": "Chi phí quản lý"
+    },
+    {
+      "date": "2026-05-18",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "amount": 38000000.0,
+      "transaction_type": "income",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00005",
+      "batch_id": "BATCH-00001",
+      "created_at": "2026-05-28T07:10:26Z",
+      "category_inferred": "Doanh thu"
+    },
+    {
+      "date": "2026-05-22",
+      "description": "Trả lương nhân viên tháng 5",
+      "amount": 24000000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.0,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00006",
+      "batch_id": "BATCH-00001",
+      "created_at": "2026-05-28T07:10:26Z",
+      "category_inferred": "Chi phí nhân sự"
+    },
+    {
+      "date": null,
+      "description": "Bán hàng test bulk chuyển khoản",
+      "amount": 1000000.0,
+      "transaction_type": null,
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "bulk_manual",
+      "id": "RAW-00007",
+      "batch_id": "BATCH-00002",
+      "created_at": "2026-05-28T07:10:26Z",
+      "category_inferred": "Doanh thu"
+    },
+    {
+      "date": null,
+      "description": "Chi phí marketing test bulk",
+      "amount": 500000.0,
+      "transaction_type": null,
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "bulk_manual",
+      "id": "RAW-00008",
+      "batch_id": "BATCH-00002",
+      "created_at": "2026-05-28T07:10:26Z",
+      "category_inferred": "Chi phí marketing"
+    },
+    {
+      "date": "2026-05-01",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "amount": 52000000.0,
+      "transaction_type": "income",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00009",
+      "batch_id": "BATCH-00003",
+      "created_at": "2026-05-28T07:15:15Z",
+      "category_inferred": "Doanh thu"
+    },
+    {
+      "date": "2026-05-03",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "amount": 6500000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00010",
+      "batch_id": "BATCH-00003",
+      "created_at": "2026-05-28T07:15:15Z",
+      "category_inferred": "Chi phí marketing"
+    },
+    {
+      "date": "2026-05-07",
+      "description": "Mua máy tính cho phòng kế toán",
+      "amount": 20000000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00011",
+      "batch_id": "BATCH-00003",
+      "created_at": "2026-05-28T07:15:15Z",
+      "category_inferred": "Tài sản cố định"
+    },
+    {
+      "date": "2026-05-12",
+      "description": "Chi tiền điện văn phòng",
+      "amount": 1800000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "cash",
+      "source": "sample_seed",
+      "id": "RAW-00012",
+      "batch_id": "BATCH-00003",
+      "created_at": "2026-05-28T07:15:15Z",
+      "category_inferred": "Chi phí quản lý"
+    },
+    {
+      "date": "2026-05-18",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "amount": 38000000.0,
+      "transaction_type": "income",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00013",
+      "batch_id": "BATCH-00003",
+      "created_at": "2026-05-28T07:15:15Z",
+      "category_inferred": "Doanh thu"
+    },
+    {
+      "date": "2026-05-22",
+      "description": "Trả lương nhân viên tháng 5",
+      "amount": 24000000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.0,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00014",
+      "batch_id": "BATCH-00003",
+      "created_at": "2026-05-28T07:15:15Z",
+      "category_inferred": "Chi phí nhân sự"
+    },
+    {
+      "date": "2026-05-01",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "amount": 52000000.0,
+      "transaction_type": "income",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00015",
+      "batch_id": "BATCH-00004",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Doanh thu"
+    },
+    {
+      "date": "2026-05-03",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "amount": 6500000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00016",
+      "batch_id": "BATCH-00004",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Chi phí marketing"
+    },
+    {
+      "date": "2026-05-07",
+      "description": "Mua máy tính cho phòng kế toán",
+      "amount": 20000000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00017",
+      "batch_id": "BATCH-00004",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Tài sản cố định"
+    },
+    {
+      "date": "2026-05-12",
+      "description": "Chi tiền điện văn phòng",
+      "amount": 1800000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "cash",
+      "source": "sample_seed",
+      "id": "RAW-00018",
+      "batch_id": "BATCH-00004",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Chi phí quản lý"
+    },
+    {
+      "date": "2026-05-18",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "amount": 38000000.0,
+      "transaction_type": "income",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00019",
+      "batch_id": "BATCH-00004",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Doanh thu"
+    },
+    {
+      "date": "2026-05-22",
+      "description": "Trả lương nhân viên tháng 5",
+      "amount": 24000000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.0,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00020",
+      "batch_id": "BATCH-00004",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Chi phí nhân sự"
+    },
+    {
+      "date": null,
+      "description": "Bán hàng test bulk chuyển khoản",
+      "amount": 1000000.0,
+      "transaction_type": null,
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "bulk_manual",
+      "id": "RAW-00021",
+      "batch_id": "BATCH-00005",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Doanh thu"
+    },
+    {
+      "date": null,
+      "description": "Chi phí marketing test bulk",
+      "amount": 500000.0,
+      "transaction_type": null,
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "bulk_manual",
+      "id": "RAW-00022",
+      "batch_id": "BATCH-00005",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Chi phí marketing"
+    },
+    {
+      "date": "2026-05-01",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "amount": 52000000.0,
+      "transaction_type": "income",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00023",
+      "batch_id": "BATCH-00006",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Doanh thu"
+    },
+    {
+      "date": "2026-05-03",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "amount": 6500000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00024",
+      "batch_id": "BATCH-00006",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Chi phí marketing"
+    },
+    {
+      "date": "2026-05-07",
+      "description": "Mua máy tính cho phòng kế toán",
+      "amount": 20000000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00025",
+      "batch_id": "BATCH-00006",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Tài sản cố định"
+    },
+    {
+      "date": "2026-05-12",
+      "description": "Chi tiền điện văn phòng",
+      "amount": 1800000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "cash",
+      "source": "sample_seed",
+      "id": "RAW-00026",
+      "batch_id": "BATCH-00006",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Chi phí quản lý"
+    },
+    {
+      "date": "2026-05-18",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "amount": 38000000.0,
+      "transaction_type": "income",
+      "category": null,
+      "vat_rate": 0.1,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00027",
+      "batch_id": "BATCH-00006",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Doanh thu"
+    },
+    {
+      "date": "2026-05-22",
+      "description": "Trả lương nhân viên tháng 5",
+      "amount": 24000000.0,
+      "transaction_type": "expense",
+      "category": null,
+      "vat_rate": 0.0,
+      "payment_method": "bank",
+      "source": "sample_seed",
+      "id": "RAW-00028",
+      "batch_id": "BATCH-00006",
+      "created_at": "2026-05-28T07:15:31Z",
+      "category_inferred": "Chi phí nhân sự"
+    }
+  ],
+  "import_batches": [
+    {
+      "id": "BATCH-00001",
+      "version": "V40.5",
+      "created_at": "2026-05-28T07:10:26Z",
+      "source": "sample_seed",
+      "raw_count": 6,
+      "draft_count": 6,
+      "posted_count": 6
+    },
+    {
+      "id": "BATCH-00002",
+      "version": "V40.5",
+      "created_at": "2026-05-28T07:10:26Z",
+      "source": "pytest_bulk",
+      "raw_count": 2,
+      "draft_count": 2,
+      "auto_create_drafts": true,
+      "auto_approve_safe": true
+    },
+    {
+      "id": "BATCH-00003",
+      "version": "V40.5",
+      "created_at": "2026-05-28T07:15:15Z",
+      "source": "sample_seed",
+      "raw_count": 6,
+      "draft_count": 6,
+      "posted_count": 6
+    },
+    {
+      "id": "BATCH-00004",
+      "version": "V40.5",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed",
+      "raw_count": 6,
+      "draft_count": 6,
+      "posted_count": 6
+    },
+    {
+      "id": "BATCH-00005",
+      "version": "V40.5",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "pytest_bulk",
+      "raw_count": 2,
+      "draft_count": 2,
+      "auto_create_drafts": true,
+      "auto_approve_safe": true
+    },
+    {
+      "id": "BATCH-00006",
+      "version": "V40.5",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed",
+      "raw_count": 6,
+      "draft_count": 6,
+      "posted_count": 6
+    }
+  ],
+  "learning_examples": [
+    {
+      "id": "LEARN-00001",
+      "created_at": "2026-05-28T07:10:26Z",
+      "source": "v25_approve",
+      "label": "approved",
+      "description": "Mua máy tính văn phòng 20 triệu có VAT",
+      "category": "Tài sản cố định",
+      "accounts": [
+        "211",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": "ok",
+      "keywords": [
+        "20",
+        "có",
+        "mua",
+        "máy",
+        "phòng",
+        "triệu",
+        "tính",
+        "vat",
+        "văn"
+      ]
+    },
+    {
+      "id": "LEARN-00002",
+      "created_at": "2026-05-28T07:10:26Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "category": "Doanh thu",
+      "accounts": [
+        "112",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "112",
+          "debit": 52000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 5200000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 57200000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "a",
+        "bán",
+        "cho",
+        "chuyển",
+        "hàng",
+        "khoản",
+        "khách"
+      ]
+    },
+    {
+      "id": "LEARN-00003",
+      "created_at": "2026-05-28T07:10:26Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "category": "Chi phí marketing",
+      "accounts": [
+        "641",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "641",
+          "debit": 6500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 650000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 7150000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "5",
+        "cáo",
+        "facebook",
+        "quảng",
+        "thanh",
+        "tháng",
+        "toán"
+      ]
+    },
+    {
+      "id": "LEARN-00004",
+      "created_at": "2026-05-28T07:10:26Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Mua máy tính cho phòng kế toán",
+      "category": "Tài sản cố định",
+      "accounts": [
+        "211",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "cho",
+        "kế",
+        "mua",
+        "máy",
+        "phòng",
+        "toán",
+        "tính"
+      ]
+    },
+    {
+      "id": "LEARN-00005",
+      "created_at": "2026-05-28T07:10:26Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Chi tiền điện văn phòng",
+      "category": "Chi phí quản lý",
+      "accounts": [
+        "642",
+        "1331",
+        "111"
+      ],
+      "lines": [
+        {
+          "account": "642",
+          "debit": 1800000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 180000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 1980000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "chi",
+        "phòng",
+        "tiền",
+        "văn",
+        "điện"
+      ]
+    },
+    {
+      "id": "LEARN-00006",
+      "created_at": "2026-05-28T07:10:26Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "category": "Doanh thu",
+      "accounts": [
+        "112",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "112",
+          "debit": 38000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 3800000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 41800000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "b",
+        "bán",
+        "cho",
+        "dịch",
+        "khách",
+        "tư",
+        "vấn",
+        "vụ"
+      ]
+    },
+    {
+      "id": "LEARN-00007",
+      "created_at": "2026-05-28T07:10:26Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Trả lương nhân viên tháng 5",
+      "category": "Chi phí nhân sự",
+      "accounts": [
+        "642",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "642",
+          "debit": 24000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 24000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "5",
+        "lương",
+        "nhân",
+        "tháng",
+        "trả",
+        "viên"
+      ]
+    },
+    {
+      "id": "LEARN-00008",
+      "created_at": "2026-05-28T07:10:26Z",
+      "source": "v42_post",
+      "label": "posted",
+      "description": "Bán hàng test bulk chuyển khoản",
+      "category": "Doanh thu",
+      "accounts": [
+        "112",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "112",
+          "debit": 1000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 100000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 1100000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "bulk",
+        "bán",
+        "chuyển",
+        "hàng",
+        "khoản",
+        "test"
+      ]
+    },
+    {
+      "id": "LEARN-00009",
+      "created_at": "2026-05-28T07:10:26Z",
+      "source": "v42_post",
+      "label": "posted",
+      "description": "Chi phí marketing test bulk",
+      "category": "Chi phí marketing",
+      "accounts": [
+        "641",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "641",
+          "debit": 500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 50000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 550000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "bulk",
+        "chi",
+        "marketing",
+        "phí",
+        "test"
+      ]
+    },
+    {
+      "id": "LEARN-00010",
+      "created_at": "2026-05-28T07:15:15Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "category": "Doanh thu",
+      "accounts": [
+        "112",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "112",
+          "debit": 52000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 5200000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 57200000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "a",
+        "bán",
+        "cho",
+        "chuyển",
+        "hàng",
+        "khoản",
+        "khách"
+      ]
+    },
+    {
+      "id": "LEARN-00011",
+      "created_at": "2026-05-28T07:15:15Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "category": "Chi phí marketing",
+      "accounts": [
+        "641",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "641",
+          "debit": 6500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 650000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 7150000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "5",
+        "cáo",
+        "facebook",
+        "quảng",
+        "thanh",
+        "tháng",
+        "toán"
+      ]
+    },
+    {
+      "id": "LEARN-00012",
+      "created_at": "2026-05-28T07:15:15Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Mua máy tính cho phòng kế toán",
+      "category": "Tài sản cố định",
+      "accounts": [
+        "211",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "cho",
+        "kế",
+        "mua",
+        "máy",
+        "phòng",
+        "toán",
+        "tính"
+      ]
+    },
+    {
+      "id": "LEARN-00013",
+      "created_at": "2026-05-28T07:15:15Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Chi tiền điện văn phòng",
+      "category": "Chi phí quản lý",
+      "accounts": [
+        "642",
+        "1331",
+        "111"
+      ],
+      "lines": [
+        {
+          "account": "642",
+          "debit": 1800000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 180000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 1980000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "chi",
+        "phòng",
+        "tiền",
+        "văn",
+        "điện"
+      ]
+    },
+    {
+      "id": "LEARN-00014",
+      "created_at": "2026-05-28T07:15:15Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "category": "Doanh thu",
+      "accounts": [
+        "112",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "112",
+          "debit": 38000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 3800000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 41800000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "b",
+        "bán",
+        "cho",
+        "dịch",
+        "khách",
+        "tư",
+        "vấn",
+        "vụ"
+      ]
+    },
+    {
+      "id": "LEARN-00015",
+      "created_at": "2026-05-28T07:15:15Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Trả lương nhân viên tháng 5",
+      "category": "Chi phí nhân sự",
+      "accounts": [
+        "642",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "642",
+          "debit": 24000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 24000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "5",
+        "lương",
+        "nhân",
+        "tháng",
+        "trả",
+        "viên"
+      ]
+    },
+    {
+      "id": "LEARN-00016",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "v25_approve",
+      "label": "approved",
+      "description": "Mua máy tính văn phòng 20 triệu có VAT",
+      "category": "Tài sản cố định",
+      "accounts": [
+        "211",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": "ok",
+      "keywords": [
+        "20",
+        "có",
+        "mua",
+        "máy",
+        "phòng",
+        "triệu",
+        "tính",
+        "vat",
+        "văn"
+      ]
+    },
+    {
+      "id": "LEARN-00017",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "category": "Doanh thu",
+      "accounts": [
+        "112",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "112",
+          "debit": 52000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 5200000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 57200000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "a",
+        "bán",
+        "cho",
+        "chuyển",
+        "hàng",
+        "khoản",
+        "khách"
+      ]
+    },
+    {
+      "id": "LEARN-00018",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "category": "Chi phí marketing",
+      "accounts": [
+        "641",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "641",
+          "debit": 6500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 650000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 7150000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "5",
+        "cáo",
+        "facebook",
+        "quảng",
+        "thanh",
+        "tháng",
+        "toán"
+      ]
+    },
+    {
+      "id": "LEARN-00019",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Mua máy tính cho phòng kế toán",
+      "category": "Tài sản cố định",
+      "accounts": [
+        "211",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "cho",
+        "kế",
+        "mua",
+        "máy",
+        "phòng",
+        "toán",
+        "tính"
+      ]
+    },
+    {
+      "id": "LEARN-00020",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Chi tiền điện văn phòng",
+      "category": "Chi phí quản lý",
+      "accounts": [
+        "642",
+        "1331",
+        "111"
+      ],
+      "lines": [
+        {
+          "account": "642",
+          "debit": 1800000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 180000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 1980000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "chi",
+        "phòng",
+        "tiền",
+        "văn",
+        "điện"
+      ]
+    },
+    {
+      "id": "LEARN-00021",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "category": "Doanh thu",
+      "accounts": [
+        "112",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "112",
+          "debit": 38000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 3800000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 41800000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "b",
+        "bán",
+        "cho",
+        "dịch",
+        "khách",
+        "tư",
+        "vấn",
+        "vụ"
+      ]
+    },
+    {
+      "id": "LEARN-00022",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Trả lương nhân viên tháng 5",
+      "category": "Chi phí nhân sự",
+      "accounts": [
+        "642",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "642",
+          "debit": 24000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 24000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "5",
+        "lương",
+        "nhân",
+        "tháng",
+        "trả",
+        "viên"
+      ]
+    },
+    {
+      "id": "LEARN-00023",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "v42_post",
+      "label": "posted",
+      "description": "Bán hàng test bulk chuyển khoản",
+      "category": "Doanh thu",
+      "accounts": [
+        "112",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "112",
+          "debit": 1000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 100000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 1100000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "bulk",
+        "bán",
+        "chuyển",
+        "hàng",
+        "khoản",
+        "test"
+      ]
+    },
+    {
+      "id": "LEARN-00024",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "v42_post",
+      "label": "posted",
+      "description": "Chi phí marketing test bulk",
+      "category": "Chi phí marketing",
+      "accounts": [
+        "641",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "641",
+          "debit": 500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 50000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 550000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "bulk",
+        "chi",
+        "marketing",
+        "phí",
+        "test"
+      ]
+    },
+    {
+      "id": "LEARN-00025",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Bán hàng cho khách A chuyển khoản",
+      "category": "Doanh thu",
+      "accounts": [
+        "112",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "112",
+          "debit": 52000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 5200000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 57200000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "a",
+        "bán",
+        "cho",
+        "chuyển",
+        "hàng",
+        "khoản",
+        "khách"
+      ]
+    },
+    {
+      "id": "LEARN-00026",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Thanh toán quảng cáo Facebook tháng 5",
+      "category": "Chi phí marketing",
+      "accounts": [
+        "641",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "641",
+          "debit": 6500000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 650000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 7150000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "5",
+        "cáo",
+        "facebook",
+        "quảng",
+        "thanh",
+        "tháng",
+        "toán"
+      ]
+    },
+    {
+      "id": "LEARN-00027",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Mua máy tính cho phòng kế toán",
+      "category": "Tài sản cố định",
+      "accounts": [
+        "211",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "211",
+          "debit": 20000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 2000000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 22000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "cho",
+        "kế",
+        "mua",
+        "máy",
+        "phòng",
+        "toán",
+        "tính"
+      ]
+    },
+    {
+      "id": "LEARN-00028",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Chi tiền điện văn phòng",
+      "category": "Chi phí quản lý",
+      "accounts": [
+        "642",
+        "1331",
+        "111"
+      ],
+      "lines": [
+        {
+          "account": "642",
+          "debit": 1800000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 180000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "111",
+          "debit": 0,
+          "credit": 1980000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "chi",
+        "phòng",
+        "tiền",
+        "văn",
+        "điện"
+      ]
+    },
+    {
+      "id": "LEARN-00029",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Bán dịch vụ tư vấn cho khách B",
+      "category": "Doanh thu",
+      "accounts": [
+        "112",
+        "1331",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "112",
+          "debit": 38000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "1331",
+          "debit": 3800000.0,
+          "credit": 0,
+          "memo": "VAT đầu vào được khấu trừ"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 41800000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "b",
+        "bán",
+        "cho",
+        "dịch",
+        "khách",
+        "tư",
+        "vấn",
+        "vụ"
+      ]
+    },
+    {
+      "id": "LEARN-00030",
+      "created_at": "2026-05-28T07:15:31Z",
+      "source": "sample_seed_auto_post",
+      "label": "approved_sample",
+      "description": "Trả lương nhân viên tháng 5",
+      "category": "Chi phí nhân sự",
+      "accounts": [
+        "642",
+        "112"
+      ],
+      "lines": [
+        {
+          "account": "642",
+          "debit": 24000000.0,
+          "credit": 0,
+          "memo": "Chi phí/tài sản chưa VAT"
+        },
+        {
+          "account": "112",
+          "debit": 0,
+          "credit": 24000000.0,
+          "memo": "Thanh toán hoặc công nợ"
+        }
+      ],
+      "note": null,
+      "keywords": [
+        "5",
+        "lương",
+        "nhân",
+        "tháng",
+        "trả",
+        "viên"
+      ]
+    }
+  ],
+  "ai_feedback": [],
+  "chat_confirmations": [
+    {
+      "id": "CONFIRM-00001",
+      "created_at": "2026-05-28T07:10:26Z",
+      "intent": "post_approved_drafts",
+      "plan": {
+        "steps": [
+          "Tìm 2 draft đã approved",
+          "Ghi từng draft vào journal_entries",
+          "Đổi trạng thái draft sang posted"
+        ],
+        "draft_ids": [
+          "DRAFT-00009",
+          "DRAFT-00010"
+        ]
+      },
+      "status": "confirmed",
+      "message": "Ghi sổ các bút toán đã duyệt",
+      "confirmed_at": "2026-05-28T07:10:26Z",
+      "result": {
+        "posted_count": 2,
+        "entry_ids": [
+          "JE-00008",
+          "JE-00009"
+        ]
+      }
+    },
+    {
+      "id": "CONFIRM-00002",
+      "created_at": "2026-05-28T07:15:31Z",
+      "intent": "post_approved_drafts",
+      "plan": {
+        "steps": [
+          "Tìm 2 draft đã approved",
+          "Ghi từng draft vào journal_entries",
+          "Đổi trạng thái draft sang posted"
+        ],
+        "draft_ids": [
+          "DRAFT-00025",
+          "DRAFT-00026"
+        ]
+      },
+      "status": "confirmed",
+      "message": "Ghi sổ các bút toán đã duyệt",
+      "confirmed_at": "2026-05-28T07:15:31Z",
+      "result": {
+        "posted_count": 2,
+        "entry_ids": [
+          "JE-00023",
+          "JE-00024"
+        ]
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": "USER-00001",
+      "created_at": "2026-05-28T07:10:26Z",
+      "name": "Test Accountant",
+      "email": "v25v40@example.com",
+      "role": "accountant",
+      "permissions": [
+        "journal.create",
+        "journal.review",
+        "reports.read"
+      ],
+      "salt": "270a4178332ff557",
+      "password_hash": "1474e9b4f05c16a89d6642ef2a6f44e02becaa43eb9c146b5c54a02cf0e9eb6a"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "HzwELZoA8wfg5pQsgoW8PAK9Jn8Z5j1f",
+      "user_id": "USER-00001",
+      "email": "v25v40@example.com",
+      "role": "accountant",
+      "created_at": "2026-05-28T07:10:26Z"
+    },
+    {
+      "token": "Vw4D0tI1IQKvANLjp0xmnXrYdO7z5oWt",
+      "user_id": "USER-00001",
+      "email": "v25v40@example.com",
+      "role": "accountant",
+      "created_at": "2026-05-28T07:15:31Z"
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": "AUDIT-00001",
+      "created_at": "2026-05-28T07:09:47Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "formula",
+        "question": "Công thức tính VAT phải nộp là gì?"
+      }
+    },
+    {
+      "id": "AUDIT-00002",
+      "created_at": "2026-05-28T07:09:47Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "account_lookup",
+        "question": "Tài khoản 642 là gì?"
+      }
+    },
+    {
+      "id": "AUDIT-00003",
+      "created_at": "2026-05-28T07:09:47Z",
+      "actor": "system",
+      "action": "upload",
+      "entity": "rag_document",
+      "entity_id": "DOC-00001",
+      "detail": {
+        "title": "Quy định nội bộ chi phí quảng cáo",
+        "source": "pytest_manual"
+      }
+    },
+    {
+      "id": "AUDIT-00004",
+      "created_at": "2026-05-28T07:09:47Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "account_lookup",
+        "question": "Chi phí quảng cáo Facebook hạch toán tài khoản nào?"
+      }
+    },
+    {
+      "id": "AUDIT-00005",
+      "created_at": "2026-05-28T07:09:47Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "accounting_problem_solver",
+        "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hà"
+      }
+    },
+    {
+      "id": "AUDIT-00006",
+      "created_at": "2026-05-28T07:09:47Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "check_answer",
+        "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hà"
+      }
+    },
+    {
+      "id": "AUDIT-00007",
+      "created_at": "2026-05-28T07:10:06Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "formula",
+        "question": "Công thức tính VAT phải nộp là gì?"
+      }
+    },
+    {
+      "id": "AUDIT-00008",
+      "created_at": "2026-05-28T07:10:06Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "account_lookup",
+        "question": "Tài khoản 642 là gì?"
+      }
+    },
+    {
+      "id": "AUDIT-00009",
+      "created_at": "2026-05-28T07:10:06Z",
+      "actor": "system",
+      "action": "upload",
+      "entity": "rag_document",
+      "entity_id": "DOC-00002",
+      "detail": {
+        "title": "Quy định nội bộ chi phí quảng cáo",
+        "source": "pytest_manual"
+      }
+    },
+    {
+      "id": "AUDIT-00010",
+      "created_at": "2026-05-28T07:10:06Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "account_lookup",
+        "question": "Chi phí quảng cáo Facebook hạch toán tài khoản nào?"
+      }
+    },
+    {
+      "id": "AUDIT-00011",
+      "created_at": "2026-05-28T07:10:06Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "accounting_problem_solver",
+        "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hà"
+      }
+    },
+    {
+      "id": "AUDIT-00012",
+      "created_at": "2026-05-28T07:10:06Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "check_answer",
+        "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hà"
+      }
+    },
+    {
+      "id": "AUDIT-00013",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "create",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00001",
+      "detail": {
+        "description": "Mua máy tính văn phòng 20 triệu có VAT"
+      }
+    },
+    {
+      "id": "AUDIT-00014",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "approve",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00001",
+      "detail": {
+        "note": "ok"
+      }
+    },
+    {
+      "id": "AUDIT-00015",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "post",
+      "entity": "journal_entry",
+      "entity_id": "JE-00001",
+      "detail": {
+        "source_draft_id": "DRAFT-00001"
+      }
+    },
+    {
+      "id": "AUDIT-00016",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "create",
+      "entity": "backup",
+      "entity_id": "finiip_backup_20260528_071026.zip",
+      "detail": {
+        "path": "/mnt/data/work_finiip/copy/data/backups/finiip_backup_20260528_071026.zip"
+      }
+    },
+    {
+      "id": "AUDIT-00017",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "create",
+      "entity": "user",
+      "entity_id": "USER-00001",
+      "detail": {
+        "email": "v25v40@example.com",
+        "role": "accountant"
+      }
+    },
+    {
+      "id": "AUDIT-00018",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "USER-00001",
+      "detail": {
+        "email": "v25v40@example.com"
+      }
+    },
+    {
+      "id": "AUDIT-00019",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "create",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00002",
+      "detail": {
+        "description": "Hóa đơn thu CÔNG TY TNHH ABC"
+      }
+    },
+    {
+      "id": "AUDIT-00020",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00003",
+      "detail": {
+        "batch_id": "BATCH-00001",
+        "description": "Bán hàng cho khách A chuyển khoản"
+      }
+    },
+    {
+      "id": "AUDIT-00021",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00004",
+      "detail": {
+        "batch_id": "BATCH-00001",
+        "description": "Thanh toán quảng cáo Facebook tháng 5"
+      }
+    },
+    {
+      "id": "AUDIT-00022",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00005",
+      "detail": {
+        "batch_id": "BATCH-00001",
+        "description": "Mua máy tính cho phòng kế toán"
+      }
+    },
+    {
+      "id": "AUDIT-00023",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00006",
+      "detail": {
+        "batch_id": "BATCH-00001",
+        "description": "Chi tiền điện văn phòng"
+      }
+    },
+    {
+      "id": "AUDIT-00024",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00007",
+      "detail": {
+        "batch_id": "BATCH-00001",
+        "description": "Bán dịch vụ tư vấn cho khách B"
+      }
+    },
+    {
+      "id": "AUDIT-00025",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00008",
+      "detail": {
+        "batch_id": "BATCH-00001",
+        "description": "Trả lương nhân viên tháng 5"
+      }
+    },
+    {
+      "id": "AUDIT-00026",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "seed_sample_data",
+      "entity": "import_batch",
+      "entity_id": "BATCH-00001",
+      "detail": {
+        "auto_post": true,
+        "draft_count": 6,
+        "posted_count": 6
+      }
+    },
+    {
+      "id": "AUDIT-00027",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00001",
+      "detail": {
+        "message": "Tính VAT tháng này",
+        "intent": "vat_report",
+        "called": [
+          "GET /reports/vat"
+        ]
+      }
+    },
+    {
+      "id": "AUDIT-00028",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00002",
+      "detail": {
+        "message": "Làm báo cáo tổng hợp tháng này",
+        "intent": "summary_report",
+        "called": [
+          "GET /dashboard/v30/financial",
+          "GET /reports/vat",
+          "GET /reports/income-statement"
+        ]
+      }
+    },
+    {
+      "id": "AUDIT-00029",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00009",
+      "detail": {
+        "batch_id": "BATCH-00002",
+        "description": "Bán hàng test bulk chuyển khoản"
+      }
+    },
+    {
+      "id": "AUDIT-00030",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00010",
+      "detail": {
+        "batch_id": "BATCH-00002",
+        "description": "Chi phí marketing test bulk"
+      }
+    },
+    {
+      "id": "AUDIT-00031",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "import_bulk",
+      "entity": "import_batch",
+      "entity_id": "BATCH-00002",
+      "detail": {
+        "raw_count": 2,
+        "draft_count": 2
+      }
+    },
+    {
+      "id": "AUDIT-00032",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "prepare_action",
+      "entity": "v42_confirmation",
+      "entity_id": "CONFIRM-00001",
+      "detail": {
+        "intent": "post_approved_drafts"
+      }
+    },
+    {
+      "id": "AUDIT-00033",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "confirm_action",
+      "entity": "v42_confirmation",
+      "entity_id": "CONFIRM-00001",
+      "detail": {
+        "intent": "post_approved_drafts",
+        "result": {
+          "posted_count": 2,
+          "entry_ids": [
+            "JE-00008",
+            "JE-00009"
+          ]
+        }
+      }
+    },
+    {
+      "id": "AUDIT-00034",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "formula",
+        "question": "Công thức tính VAT phải nộp là gì?"
+      }
+    },
+    {
+      "id": "AUDIT-00035",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "account_lookup",
+        "question": "Tài khoản 642 là gì?"
+      }
+    },
+    {
+      "id": "AUDIT-00036",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "upload",
+      "entity": "rag_document",
+      "entity_id": "DOC-00003",
+      "detail": {
+        "title": "Quy định nội bộ chi phí quảng cáo",
+        "source": "pytest_manual"
+      }
+    },
+    {
+      "id": "AUDIT-00037",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "account_lookup",
+        "question": "Chi phí quảng cáo Facebook hạch toán tài khoản nào?"
+      }
+    },
+    {
+      "id": "AUDIT-00038",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "accounting_problem_solver",
+        "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hà"
+      }
+    },
+    {
+      "id": "AUDIT-00039",
+      "created_at": "2026-05-28T07:10:26Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "check_answer",
+        "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hà"
+      }
+    },
+    {
+      "id": "AUDIT-00040",
+      "created_at": "2026-05-28T07:15:15Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00011",
+      "detail": {
+        "batch_id": "BATCH-00003",
+        "description": "Bán hàng cho khách A chuyển khoản"
+      }
+    },
+    {
+      "id": "AUDIT-00041",
+      "created_at": "2026-05-28T07:15:15Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00012",
+      "detail": {
+        "batch_id": "BATCH-00003",
+        "description": "Thanh toán quảng cáo Facebook tháng 5"
+      }
+    },
+    {
+      "id": "AUDIT-00042",
+      "created_at": "2026-05-28T07:15:15Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00013",
+      "detail": {
+        "batch_id": "BATCH-00003",
+        "description": "Mua máy tính cho phòng kế toán"
+      }
+    },
+    {
+      "id": "AUDIT-00043",
+      "created_at": "2026-05-28T07:15:15Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00014",
+      "detail": {
+        "batch_id": "BATCH-00003",
+        "description": "Chi tiền điện văn phòng"
+      }
+    },
+    {
+      "id": "AUDIT-00044",
+      "created_at": "2026-05-28T07:15:15Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00015",
+      "detail": {
+        "batch_id": "BATCH-00003",
+        "description": "Bán dịch vụ tư vấn cho khách B"
+      }
+    },
+    {
+      "id": "AUDIT-00045",
+      "created_at": "2026-05-28T07:15:15Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00016",
+      "detail": {
+        "batch_id": "BATCH-00003",
+        "description": "Trả lương nhân viên tháng 5"
+      }
+    },
+    {
+      "id": "AUDIT-00046",
+      "created_at": "2026-05-28T07:15:15Z",
+      "actor": "system",
+      "action": "seed_sample_data",
+      "entity": "import_batch",
+      "entity_id": "BATCH-00003",
+      "detail": {
+        "auto_post": true,
+        "draft_count": 6,
+        "posted_count": 6
+      }
+    },
+    {
+      "id": "AUDIT-00047",
+      "created_at": "2026-05-28T07:15:15Z",
+      "actor": "system",
+      "action": "upload",
+      "entity": "v47_document",
+      "entity_id": "VDOC-00001",
+      "detail": {
+        "title": "Quy trình chi phí quảng cáo",
+        "chunks": 1,
+        "file_type": "text"
+      }
+    },
+    {
+      "id": "AUDIT-00048",
+      "created_at": "2026-05-28T07:15:15Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "vector_rag_qa",
+        "question": "Chi phí quảng cáo Facebook hạch toán tài khoản nào?"
+      }
+    },
+    {
+      "id": "AUDIT-00049",
+      "created_at": "2026-05-28T07:15:15Z",
+      "actor": "system",
+      "action": "upload",
+      "entity": "v47_document",
+      "entity_id": "VDOC-00002",
+      "detail": {
+        "title": "vat_policy.csv",
+        "chunks": 1,
+        "file_type": "csv"
+      }
+    },
+    {
+      "id": "AUDIT-00050",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "create",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00017",
+      "detail": {
+        "description": "Mua máy tính văn phòng 20 triệu có VAT"
+      }
+    },
+    {
+      "id": "AUDIT-00051",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "approve",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00017",
+      "detail": {
+        "note": "ok"
+      }
+    },
+    {
+      "id": "AUDIT-00052",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "post",
+      "entity": "journal_entry",
+      "entity_id": "JE-00016",
+      "detail": {
+        "source_draft_id": "DRAFT-00017"
+      }
+    },
+    {
+      "id": "AUDIT-00053",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "create",
+      "entity": "backup",
+      "entity_id": "finiip_backup_20260528_071531.zip",
+      "detail": {
+        "path": "/mnt/data/work_v44_v46_v47/copy/data/backups/finiip_backup_20260528_071531.zip"
+      }
+    },
+    {
+      "id": "AUDIT-00054",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "USER-00001",
+      "detail": {
+        "email": "v25v40@example.com"
+      }
+    },
+    {
+      "id": "AUDIT-00055",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "create",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00018",
+      "detail": {
+        "description": "Hóa đơn thu CÔNG TY TNHH ABC"
+      }
+    },
+    {
+      "id": "AUDIT-00056",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00019",
+      "detail": {
+        "batch_id": "BATCH-00004",
+        "description": "Bán hàng cho khách A chuyển khoản"
+      }
+    },
+    {
+      "id": "AUDIT-00057",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00020",
+      "detail": {
+        "batch_id": "BATCH-00004",
+        "description": "Thanh toán quảng cáo Facebook tháng 5"
+      }
+    },
+    {
+      "id": "AUDIT-00058",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00021",
+      "detail": {
+        "batch_id": "BATCH-00004",
+        "description": "Mua máy tính cho phòng kế toán"
+      }
+    },
+    {
+      "id": "AUDIT-00059",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00022",
+      "detail": {
+        "batch_id": "BATCH-00004",
+        "description": "Chi tiền điện văn phòng"
+      }
+    },
+    {
+      "id": "AUDIT-00060",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00023",
+      "detail": {
+        "batch_id": "BATCH-00004",
+        "description": "Bán dịch vụ tư vấn cho khách B"
+      }
+    },
+    {
+      "id": "AUDIT-00061",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00024",
+      "detail": {
+        "batch_id": "BATCH-00004",
+        "description": "Trả lương nhân viên tháng 5"
+      }
+    },
+    {
+      "id": "AUDIT-00062",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "seed_sample_data",
+      "entity": "import_batch",
+      "entity_id": "BATCH-00004",
+      "detail": {
+        "auto_post": true,
+        "draft_count": 6,
+        "posted_count": 6
+      }
+    },
+    {
+      "id": "AUDIT-00063",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00003",
+      "detail": {
+        "message": "Tính VAT tháng này",
+        "intent": "vat_report",
+        "called": [
+          "GET /reports/vat"
+        ]
+      }
+    },
+    {
+      "id": "AUDIT-00064",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00004",
+      "detail": {
+        "message": "Làm báo cáo tổng hợp tháng này",
+        "intent": "summary_report",
+        "called": [
+          "GET /dashboard/v30/financial",
+          "GET /reports/vat",
+          "GET /reports/income-statement"
+        ]
+      }
+    },
+    {
+      "id": "AUDIT-00065",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00025",
+      "detail": {
+        "batch_id": "BATCH-00005",
+        "description": "Bán hàng test bulk chuyển khoản"
+      }
+    },
+    {
+      "id": "AUDIT-00066",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00026",
+      "detail": {
+        "batch_id": "BATCH-00005",
+        "description": "Chi phí marketing test bulk"
+      }
+    },
+    {
+      "id": "AUDIT-00067",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "import_bulk",
+      "entity": "import_batch",
+      "entity_id": "BATCH-00005",
+      "detail": {
+        "raw_count": 2,
+        "draft_count": 2
+      }
+    },
+    {
+      "id": "AUDIT-00068",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "prepare_action",
+      "entity": "v42_confirmation",
+      "entity_id": "CONFIRM-00002",
+      "detail": {
+        "intent": "post_approved_drafts"
+      }
+    },
+    {
+      "id": "AUDIT-00069",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "confirm_action",
+      "entity": "v42_confirmation",
+      "entity_id": "CONFIRM-00002",
+      "detail": {
+        "intent": "post_approved_drafts",
+        "result": {
+          "posted_count": 2,
+          "entry_ids": [
+            "JE-00023",
+            "JE-00024"
+          ]
+        }
+      }
+    },
+    {
+      "id": "AUDIT-00070",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "formula",
+        "question": "Công thức tính VAT phải nộp là gì?"
+      }
+    },
+    {
+      "id": "AUDIT-00071",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "account_lookup",
+        "question": "Tài khoản 642 là gì?"
+      }
+    },
+    {
+      "id": "AUDIT-00072",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "upload",
+      "entity": "rag_document",
+      "entity_id": "DOC-00004",
+      "detail": {
+        "title": "Quy định nội bộ chi phí quảng cáo",
+        "source": "pytest_manual"
+      }
+    },
+    {
+      "id": "AUDIT-00073",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "account_lookup",
+        "question": "Chi phí quảng cáo Facebook hạch toán tài khoản nào?"
+      }
+    },
+    {
+      "id": "AUDIT-00074",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "accounting_problem_solver",
+        "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hà"
+      }
+    },
+    {
+      "id": "AUDIT-00075",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "check_answer",
+        "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hà"
+      }
+    },
+    {
+      "id": "AUDIT-00076",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00027",
+      "detail": {
+        "batch_id": "BATCH-00006",
+        "description": "Bán hàng cho khách A chuyển khoản"
+      }
+    },
+    {
+      "id": "AUDIT-00077",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00028",
+      "detail": {
+        "batch_id": "BATCH-00006",
+        "description": "Thanh toán quảng cáo Facebook tháng 5"
+      }
+    },
+    {
+      "id": "AUDIT-00078",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00029",
+      "detail": {
+        "batch_id": "BATCH-00006",
+        "description": "Mua máy tính cho phòng kế toán"
+      }
+    },
+    {
+      "id": "AUDIT-00079",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00030",
+      "detail": {
+        "batch_id": "BATCH-00006",
+        "description": "Chi tiền điện văn phòng"
+      }
+    },
+    {
+      "id": "AUDIT-00080",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00031",
+      "detail": {
+        "batch_id": "BATCH-00006",
+        "description": "Bán dịch vụ tư vấn cho khách B"
+      }
+    },
+    {
+      "id": "AUDIT-00081",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "bulk_create_draft",
+      "entity": "journal_draft",
+      "entity_id": "DRAFT-00032",
+      "detail": {
+        "batch_id": "BATCH-00006",
+        "description": "Trả lương nhân viên tháng 5"
+      }
+    },
+    {
+      "id": "AUDIT-00082",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "seed_sample_data",
+      "entity": "import_batch",
+      "entity_id": "BATCH-00006",
+      "detail": {
+        "auto_post": true,
+        "draft_count": 6,
+        "posted_count": 6
+      }
+    },
+    {
+      "id": "AUDIT-00083",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "upload",
+      "entity": "v47_document",
+      "entity_id": "VDOC-00003",
+      "detail": {
+        "title": "Quy trình chi phí quảng cáo",
+        "chunks": 1,
+        "file_type": "text"
+      }
+    },
+    {
+      "id": "AUDIT-00084",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "learn_qa",
+      "entity": "qa_learning",
+      "entity_id": "latest",
+      "detail": {
+        "intent": "vector_rag_qa",
+        "question": "Chi phí quảng cáo Facebook hạch toán tài khoản nào?"
+      }
+    },
+    {
+      "id": "AUDIT-00085",
+      "created_at": "2026-05-28T07:15:31Z",
+      "actor": "system",
+      "action": "upload",
+      "entity": "v47_document",
+      "entity_id": "VDOC-00004",
+      "detail": {
+        "title": "vat_policy.csv",
+        "chunks": 1,
+        "file_type": "csv"
+      }
+    },
+    {
+      "id": "AUDIT-00086",
+      "created_at": "2026-06-01T13:41:55Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00005",
+      "detail": {
+        "message": "xin chào",
+        "intent": "greeting",
+        "called": []
+      }
+    },
+    {
+      "id": "AUDIT-00087",
+      "created_at": "2026-06-01T13:41:55Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00006",
+      "detail": {
+        "message": "Bạn làm được gì?",
+        "intent": "general",
+        "called": []
+      }
+    },
+    {
+      "id": "AUDIT-00088",
+      "created_at": "2026-06-01T13:41:55Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00007",
+      "detail": {
+        "message": "Thanh toán tiền điện 2 triệu bằng chuyển khoản",
+        "intent": "journal_entry",
+        "called": [
+          "accounting_rules.json"
+        ]
+      }
+    },
+    {
+      "id": "AUDIT-00089",
+      "created_at": "2026-06-01T13:41:55Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00008",
+      "detail": {
+        "message": "Chi tiền mặt 30 triệu có rủi ro không?",
+        "intent": "greeting",
+        "called": []
+      }
+    },
+    {
+      "id": "AUDIT-00090",
+      "created_at": "2026-06-01T13:41:55Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00009",
+      "detail": {
+        "message": "Tài khoản 641 dùng khi nào?",
+        "intent": "greeting",
+        "called": []
+      }
+    },
+    {
+      "id": "AUDIT-00091",
+      "created_at": "2026-06-01T13:41:55Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00010",
+      "detail": {
+        "message": "VAT tháng này bao nhiêu?",
+        "intent": "greeting",
+        "called": []
+      }
+    },
+    {
+      "id": "AUDIT-00092",
+      "created_at": "2026-06-01T13:42:11Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00011",
+      "detail": {
+        "message": "xin chào",
+        "intent": "greeting",
+        "called": []
+      }
+    },
+    {
+      "id": "AUDIT-00093",
+      "created_at": "2026-06-01T13:42:11Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00012",
+      "detail": {
+        "message": "Bạn làm được gì?",
+        "intent": "help",
+        "called": [
+          "ai_intents.json"
+        ]
+      }
+    },
+    {
+      "id": "AUDIT-00094",
+      "created_at": "2026-06-01T13:42:11Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00013",
+      "detail": {
+        "message": "Thanh toán tiền điện 2 triệu bằng chuyển khoản",
+        "intent": "journal_entry",
+        "called": [
+          "accounting_rules.json"
+        ]
+      }
+    },
+    {
+      "id": "AUDIT-00095",
+      "created_at": "2026-06-01T13:42:11Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00014",
+      "detail": {
+        "message": "Chi tiền mặt 30 triệu có rủi ro không?",
+        "intent": "tax_risk_check",
+        "called": [
+          "accounting_rules.json"
+        ]
+      }
+    },
+    {
+      "id": "AUDIT-00096",
+      "created_at": "2026-06-01T13:42:11Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00015",
+      "detail": {
+        "message": "Tài khoản 641 dùng khi nào?",
+        "intent": "knowledge_question",
+        "called": [
+          "knowledge_base/cau_hoi_thuong_gap.md"
+        ]
+      }
+    },
+    {
+      "id": "AUDIT-00097",
+      "created_at": "2026-06-01T13:42:11Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00016",
+      "detail": {
+        "message": "VAT tháng này bao nhiêu?",
+        "intent": "vat_report",
+        "called": [
+          "GET /reports/vat"
+        ]
+      }
+    },
+    {
+      "id": "AUDIT-00098",
+      "created_at": "2026-06-01T13:42:31Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00017",
+      "detail": {
+        "message": "Chi tiền mặt 30 triệu có rủi ro không?",
+        "intent": "tax_risk_check",
+        "called": [
+          "accounting_rules.json",
+          "generic_tax_risk_rule"
+        ]
+      }
+    },
+    {
+      "id": "AUDIT-00102",
+      "created_at": "2026-06-01T14:27:33Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00019",
+      "detail": {
+        "message": "xin chào",
+        "intent": "greeting",
+        "called": []
+      }
+    },
+    {
+      "id": "AUDIT-00103",
+      "created_at": "2026-06-01T14:28:00Z",
+      "actor": "system",
+      "action": "chat",
+      "entity": "v41",
+      "entity_id": "CHAT-00020",
+      "detail": {
+        "message": "Mua máy tính 20 triệu VAT 10% chuyển khoản",
+        "intent": "journal_entry",
+        "called": [
+          "accounting_rules.json"
+        ]
+      }
+    }
+  ],
+  "counters": {
+    "QA": 22,
+    "AUDIT": 103,
+    "DOC": 4,
+    "DRAFT": 33,
+    "LEARN": 31,
+    "JE": 30,
+    "USER": 1,
+    "BATCH": 6,
+    "RAW": 28,
+    "CHAT": 20,
+    "CONFIRM": 2,
+    "VDOC": 4,
+    "FB": 2
+  },
+  "qa_learning_examples": [
+    {
+      "id": "QA-00001",
+      "created_at": "2026-05-28T07:09:47Z",
+      "intent": "formula",
+      "question": "Công thức tính VAT phải nộp là gì?",
+      "answer_preview": "VAT phải nộp: VAT phải nộp = VAT đầu ra - VAT đầu vào. Ví dụ: VAT đầu ra 8.000.000, VAT đầu vào 10.000.000 → còn được khấu trừ 2.000.000",
+      "sources": []
+    },
+    {
+      "id": "QA-00002",
+      "created_at": "2026-05-28T07:09:47Z",
+      "intent": "account_lookup",
+      "question": "Tài khoản 642 là gì?",
+      "answer_preview": "Tài khoản 642: Chi phí quản lý doanh nghiệp.",
+      "sources": []
+    },
+    {
+      "id": "QA-00003",
+      "created_at": "2026-05-28T07:09:47Z",
+      "intent": "account_lookup",
+      "question": "Chi phí quảng cáo Facebook hạch toán tài khoản nào?",
+      "answer_preview": "Tài khoản thường dùng cho nội dung này là 211: Tài sản cố định hữu hình.",
+      "sources": []
+    },
+    {
+      "id": "QA-00004",
+      "created_at": "2026-05-28T07:09:47Z",
+      "intent": "accounting_problem_solver",
+      "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hàng chưa trả tiền. Hãy định khoản, tính VAT phải nộp và lợi nhuận.",
+      "answer_preview": "Mình đã tách đề thành các nghiệp vụ và giải từng bước:\n\n1. Mua hàng/tài sản\n- Nợ 156 Hàng hóa: 100,000,000đ\n- Nợ 1331 Thuế GTGT được khấu trừ của hàng hóa, dịch vụ: 10,000,000đ\n- Có 331 Phải trả cho người bán: 110,000,000đ\nGiải thích: Ghi nhận giá trị mua chưa VAT và VAT đầu vào; Có 331 theo phương thức thanh toán/công nợ.\n\n2. Bán hàng/ghi nhận doanh thu\n- Nợ 131 Phải thu của khách hàng: 88,000,000đ\n- Có 511 Doanh thu bán hàng và cung cấp dịch vụ: 80,000,000đ\n- Có 3331 Thuế GTGT phải nộp: 8,000,000đ\nGiải thích: Ghi nhận doanh thu bán hàng và VAT đầu ra.\n\n3. Ghi nhận giá vốn\n- Nợ 632 Giá vốn hàng bán: 50,000,000đ\n- Có 156 Hàng hóa: 50,000,000đ\nGiải thích: Giả định giá vốn theo tỷ lệ hàng đã bán: 50% của giá mua.\n\nTính toán chính:\n- VAT đầu vào: 10,000,000đ\n- VAT đầu ra: 8,000,000đ\n- VAT phả",
+      "sources": []
+    },
+    {
+      "id": "QA-00005",
+      "created_at": "2026-05-28T07:09:47Z",
+      "intent": "check_answer",
+      "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hàng chưa trả tiền. Hãy định khoản, tính VAT phải nộp và lợi nhuận.",
+      "answer_preview": "Check answer score 100.0",
+      "sources": []
+    },
+    {
+      "id": "QA-00006",
+      "created_at": "2026-05-28T07:10:06Z",
+      "intent": "formula",
+      "question": "Công thức tính VAT phải nộp là gì?",
+      "answer_preview": "VAT phải nộp: VAT phải nộp = VAT đầu ra - VAT đầu vào. Ví dụ: VAT đầu ra 8.000.000, VAT đầu vào 10.000.000 → còn được khấu trừ 2.000.000",
+      "sources": []
+    },
+    {
+      "id": "QA-00007",
+      "created_at": "2026-05-28T07:10:06Z",
+      "intent": "account_lookup",
+      "question": "Tài khoản 642 là gì?",
+      "answer_preview": "Tài khoản 642: Chi phí quản lý doanh nghiệp.",
+      "sources": []
+    },
+    {
+      "id": "QA-00008",
+      "created_at": "2026-05-28T07:10:06Z",
+      "intent": "account_lookup",
+      "question": "Chi phí quảng cáo Facebook hạch toán tài khoản nào?",
+      "answer_preview": "Tài khoản thường dùng là 641: Chi phí bán hàng. Nếu đây là chi phí quản lý chung, có thể cân nhắc 642 theo quy định nội bộ.",
+      "sources": []
+    },
+    {
+      "id": "QA-00009",
+      "created_at": "2026-05-28T07:10:06Z",
+      "intent": "accounting_problem_solver",
+      "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hàng chưa trả tiền. Hãy định khoản, tính VAT phải nộp và lợi nhuận.",
+      "answer_preview": "Mình đã tách đề thành các nghiệp vụ và giải từng bước:\n\n1. Mua hàng/tài sản\n- Nợ 156 Hàng hóa: 100,000,000đ\n- Nợ 1331 Thuế GTGT được khấu trừ của hàng hóa, dịch vụ: 10,000,000đ\n- Có 331 Phải trả cho người bán: 110,000,000đ\nGiải thích: Ghi nhận giá trị mua chưa VAT và VAT đầu vào; Có 331 theo phương thức thanh toán/công nợ.\n\n2. Bán hàng/ghi nhận doanh thu\n- Nợ 131 Phải thu của khách hàng: 88,000,000đ\n- Có 511 Doanh thu bán hàng và cung cấp dịch vụ: 80,000,000đ\n- Có 3331 Thuế GTGT phải nộp: 8,000,000đ\nGiải thích: Ghi nhận doanh thu bán hàng và VAT đầu ra.\n\n3. Ghi nhận giá vốn\n- Nợ 632 Giá vốn hàng bán: 50,000,000đ\n- Có 156 Hàng hóa: 50,000,000đ\nGiải thích: Giả định giá vốn theo tỷ lệ hàng đã bán: 50% của giá mua.\n\nTính toán chính:\n- VAT đầu vào: 10,000,000đ\n- VAT đầu ra: 8,000,000đ\n- VAT phả",
+      "sources": []
+    },
+    {
+      "id": "QA-00010",
+      "created_at": "2026-05-28T07:10:06Z",
+      "intent": "check_answer",
+      "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hàng chưa trả tiền. Hãy định khoản, tính VAT phải nộp và lợi nhuận.",
+      "answer_preview": "Check answer score 100.0",
+      "sources": []
+    },
+    {
+      "id": "QA-00011",
+      "created_at": "2026-05-28T07:10:26Z",
+      "intent": "formula",
+      "question": "Công thức tính VAT phải nộp là gì?",
+      "answer_preview": "VAT phải nộp: VAT phải nộp = VAT đầu ra - VAT đầu vào. Ví dụ: VAT đầu ra 8.000.000, VAT đầu vào 10.000.000 → còn được khấu trừ 2.000.000",
+      "sources": []
+    },
+    {
+      "id": "QA-00012",
+      "created_at": "2026-05-28T07:10:26Z",
+      "intent": "account_lookup",
+      "question": "Tài khoản 642 là gì?",
+      "answer_preview": "Tài khoản 642: Chi phí quản lý doanh nghiệp.",
+      "sources": []
+    },
+    {
+      "id": "QA-00013",
+      "created_at": "2026-05-28T07:10:26Z",
+      "intent": "account_lookup",
+      "question": "Chi phí quảng cáo Facebook hạch toán tài khoản nào?",
+      "answer_preview": "Tài khoản thường dùng là 641: Chi phí bán hàng. Nếu đây là chi phí quản lý chung, có thể cân nhắc 642 theo quy định nội bộ.",
+      "sources": []
+    },
+    {
+      "id": "QA-00014",
+      "created_at": "2026-05-28T07:10:26Z",
+      "intent": "accounting_problem_solver",
+      "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hàng chưa trả tiền. Hãy định khoản, tính VAT phải nộp và lợi nhuận.",
+      "answer_preview": "Mình đã tách đề thành các nghiệp vụ và giải từng bước:\n\n1. Mua hàng/tài sản\n- Nợ 156 Hàng hóa: 100,000,000đ\n- Nợ 1331 Thuế GTGT được khấu trừ của hàng hóa, dịch vụ: 10,000,000đ\n- Có 331 Phải trả cho người bán: 110,000,000đ\nGiải thích: Ghi nhận giá trị mua chưa VAT và VAT đầu vào; Có 331 theo phương thức thanh toán/công nợ.\n\n2. Bán hàng/ghi nhận doanh thu\n- Nợ 131 Phải thu của khách hàng: 88,000,000đ\n- Có 511 Doanh thu bán hàng và cung cấp dịch vụ: 80,000,000đ\n- Có 3331 Thuế GTGT phải nộp: 8,000,000đ\nGiải thích: Ghi nhận doanh thu bán hàng và VAT đầu ra.\n\n3. Ghi nhận giá vốn\n- Nợ 632 Giá vốn hàng bán: 50,000,000đ\n- Có 156 Hàng hóa: 50,000,000đ\nGiải thích: Giả định giá vốn theo tỷ lệ hàng đã bán: 50% của giá mua.\n\nTính toán chính:\n- VAT đầu vào: 10,000,000đ\n- VAT đầu ra: 8,000,000đ\n- VAT phả",
+      "sources": []
+    },
+    {
+      "id": "QA-00015",
+      "created_at": "2026-05-28T07:10:26Z",
+      "intent": "check_answer",
+      "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hàng chưa trả tiền. Hãy định khoản, tính VAT phải nộp và lợi nhuận.",
+      "answer_preview": "Check answer score 100.0",
+      "sources": []
+    },
+    {
+      "id": "QA-00016",
+      "created_at": "2026-05-28T07:15:15Z",
+      "intent": "vector_rag_qa",
+      "question": "Chi phí quảng cáo Facebook hạch toán tài khoản nào?",
+      "answer_preview": "Mình tìm thấy các đoạn tài liệu liên quan nhất:\n- Quy trình chi phí quảng cáo [score 0.8132]: Chi phí quảng cáo Facebook phục vụ bán hàng thường hạch toán vào tài khoản 641. Cần có hóa đơn hợp lệ và chứng từ thanh toán.\n\nKết luận tham khảo: hãy đối chiếu chứng từ và quy định hiện hành trước khi ghi sổ/quyết toán.",
+      "sources": [
+        {
+          "chunk_id": "VDOC-00001-CHUNK-0001",
+          "doc_id": "VDOC-00001",
+          "title": "Quy trình chi phí quảng cáo",
+          "source": "internal_policy",
+          "file_type": "text",
+          "chunk_index": 1,
+          "score": 0.8132,
+          "matched_terms": [
+            "chi",
+            "cáo",
+            "facebook",
+            "hạch",
+            "khoản",
+            "phí",
+            "quảng",
+            "toán",
+            "tài"
+          ],
+          "snippet": "Chi phí quảng cáo Facebook phục vụ bán hàng thường hạch toán vào tài khoản 641. Cần có hóa đơn hợp lệ và chứng từ thanh toán."
+        }
+      ]
+    },
+    {
+      "id": "QA-00017",
+      "created_at": "2026-05-28T07:15:31Z",
+      "intent": "formula",
+      "question": "Công thức tính VAT phải nộp là gì?",
+      "answer_preview": "VAT phải nộp: VAT phải nộp = VAT đầu ra - VAT đầu vào. Ví dụ: VAT đầu ra 8.000.000, VAT đầu vào 10.000.000 → còn được khấu trừ 2.000.000",
+      "sources": []
+    },
+    {
+      "id": "QA-00018",
+      "created_at": "2026-05-28T07:15:31Z",
+      "intent": "account_lookup",
+      "question": "Tài khoản 642 là gì?",
+      "answer_preview": "Tài khoản 642: Chi phí quản lý doanh nghiệp.",
+      "sources": []
+    },
+    {
+      "id": "QA-00019",
+      "created_at": "2026-05-28T07:15:31Z",
+      "intent": "account_lookup",
+      "question": "Chi phí quảng cáo Facebook hạch toán tài khoản nào?",
+      "answer_preview": "Tài khoản thường dùng là 641: Chi phí bán hàng. Nếu đây là chi phí quản lý chung, có thể cân nhắc 642 theo quy định nội bộ.",
+      "sources": []
+    },
+    {
+      "id": "QA-00020",
+      "created_at": "2026-05-28T07:15:31Z",
+      "intent": "accounting_problem_solver",
+      "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hàng chưa trả tiền. Hãy định khoản, tính VAT phải nộp và lợi nhuận.",
+      "answer_preview": "Mình đã tách đề thành các nghiệp vụ và giải từng bước:\n\n1. Mua hàng/tài sản\n- Nợ 156 Hàng hóa: 100,000,000đ\n- Nợ 1331 Thuế GTGT được khấu trừ của hàng hóa, dịch vụ: 10,000,000đ\n- Có 331 Phải trả cho người bán: 110,000,000đ\nGiải thích: Ghi nhận giá trị mua chưa VAT và VAT đầu vào; Có 331 theo phương thức thanh toán/công nợ.\n\n2. Bán hàng/ghi nhận doanh thu\n- Nợ 131 Phải thu của khách hàng: 88,000,000đ\n- Có 511 Doanh thu bán hàng và cung cấp dịch vụ: 80,000,000đ\n- Có 3331 Thuế GTGT phải nộp: 8,000,000đ\nGiải thích: Ghi nhận doanh thu bán hàng và VAT đầu ra.\n\n3. Ghi nhận giá vốn\n- Nợ 632 Giá vốn hàng bán: 50,000,000đ\n- Có 156 Hàng hóa: 50,000,000đ\nGiải thích: Giả định giá vốn theo tỷ lệ hàng đã bán: 50% của giá mua.\n\nTính toán chính:\n- VAT đầu vào: 10,000,000đ\n- VAT đầu ra: 8,000,000đ\n- VAT phả",
+      "sources": []
+    },
+    {
+      "id": "QA-00021",
+      "created_at": "2026-05-28T07:15:31Z",
+      "intent": "check_answer",
+      "question": "Công ty mua hàng hóa 100 triệu, VAT 10%, chưa thanh toán. Sau đó bán một nửa số hàng với giá 80 triệu, VAT 10%, khách hàng chưa trả tiền. Hãy định khoản, tính VAT phải nộp và lợi nhuận.",
+      "answer_preview": "Check answer score 100.0",
+      "sources": []
+    },
+    {
+      "id": "QA-00022",
+      "created_at": "2026-05-28T07:15:31Z",
+      "intent": "vector_rag_qa",
+      "question": "Chi phí quảng cáo Facebook hạch toán tài khoản nào?",
+      "answer_preview": "Mình tìm thấy các đoạn tài liệu liên quan nhất:\n- Quy trình chi phí quảng cáo [score 0.8132]: Chi phí quảng cáo Facebook phục vụ bán hàng thường hạch toán vào tài khoản 641. Cần có hóa đơn hợp lệ và chứng từ thanh toán.\n- Quy trình chi phí quảng cáo [score 0.8132]: Chi phí quảng cáo Facebook phục vụ bán hàng thường hạch toán vào tài khoản 641. Cần có hóa đơn hợp lệ và chứng từ thanh toán.\n\nKết luận tham khảo: hãy đối chiếu chứng từ và quy định hiện hành trước khi ghi sổ/quyết toán.",
+      "sources": [
+        {
+          "chunk_id": "VDOC-00001-CHUNK-0001",
+          "doc_id": "VDOC-00001",
+          "title": "Quy trình chi phí quảng cáo",
+          "source": "internal_policy",
+          "file_type": "text",
+          "chunk_index": 1,
+          "score": 0.8132,
+          "matched_terms": [
+            "chi",
+            "cáo",
+            "facebook",
+            "hạch",
+            "khoản",
+            "phí",
+            "quảng",
+            "toán",
+            "tài"
+          ],
+          "snippet": "Chi phí quảng cáo Facebook phục vụ bán hàng thường hạch toán vào tài khoản 641. Cần có hóa đơn hợp lệ và chứng từ thanh toán."
+        },
+        {
+          "chunk_id": "VDOC-00003-CHUNK-0001",
+          "doc_id": "VDOC-00003",
+          "title": "Quy trình chi phí quảng cáo",
+          "source": "internal_policy",
+          "file_type": "text",
+          "chunk_index": 1,
+          "score": 0.8132,
+          "matched_terms": [
+            "chi",
+            "cáo",
+            "facebook",
+            "hạch",
+            "khoản",
+            "phí",
+            "quảng",
+            "toán",
+            "tài"
+          ],
+          "snippet": "Chi phí quảng cáo Facebook phục vụ bán hàng thường hạch toán vào tài khoản 641. Cần có hóa đơn hợp lệ và chứng từ thanh toán."
+        }
+      ]
+    }
+  ],
+  "rag_documents": [
+    {
+      "id": "DOC-00001",
+      "title": "Quy định nội bộ chi phí quảng cáo",
+      "content": "Chi phí quảng cáo Facebook phục vụ bán hàng được hạch toán vào tài khoản 641 nếu có hóa đơn chứng từ hợp lệ và phục vụ hoạt động kinh doanh.",
+      "source": "pytest_manual",
+      "tags": [
+        "chi phí",
+        "quảng cáo"
+      ],
+      "created_at": "2026-05-28T07:09:47Z"
+    },
+    {
+      "id": "DOC-00002",
+      "title": "Quy định nội bộ chi phí quảng cáo",
+      "content": "Chi phí quảng cáo Facebook phục vụ bán hàng được hạch toán vào tài khoản 641 nếu có hóa đơn chứng từ hợp lệ và phục vụ hoạt động kinh doanh.",
+      "source": "pytest_manual",
+      "tags": [
+        "chi phí",
+        "quảng cáo"
+      ],
+      "created_at": "2026-05-28T07:10:06Z"
+    },
+    {
+      "id": "DOC-00003",
+      "title": "Quy định nội bộ chi phí quảng cáo",
+      "content": "Chi phí quảng cáo Facebook phục vụ bán hàng được hạch toán vào tài khoản 641 nếu có hóa đơn chứng từ hợp lệ và phục vụ hoạt động kinh doanh.",
+      "source": "pytest_manual",
+      "tags": [
+        "chi phí",
+        "quảng cáo"
+      ],
+      "created_at": "2026-05-28T07:10:26Z"
+    },
+    {
+      "id": "VDOC-00001",
+      "title": "Quy trình chi phí quảng cáo",
+      "content": "Chi phí quảng cáo Facebook phục vụ bán hàng thường hạch toán vào tài khoản 641. Cần có hóa đơn hợp lệ và chứng từ thanh toán.",
+      "source": "internal_policy",
+      "tags": [
+        "marketing",
+        "tax"
+      ],
+      "created_at": "2026-05-28T07:15:15Z",
+      "upgraded_by": "V47"
+    },
+    {
+      "id": "VDOC-00002",
+      "title": "vat_policy.csv",
+      "content": "title,content\nVAT,VAT phai nop = VAT dau ra - VAT dau vao",
+      "source": "upload",
+      "tags": [],
+      "created_at": "2026-05-28T07:15:15Z",
+      "upgraded_by": "V47"
+    },
+    {
+      "id": "DOC-00004",
+      "title": "Quy định nội bộ chi phí quảng cáo",
+      "content": "Chi phí quảng cáo Facebook phục vụ bán hàng được hạch toán vào tài khoản 641 nếu có hóa đơn chứng từ hợp lệ và phục vụ hoạt động kinh doanh.",
+      "source": "pytest_manual",
+      "tags": [
+        "chi phí",
+        "quảng cáo"
+      ],
+      "created_at": "2026-05-28T07:15:31Z"
+    },
+    {
+      "id": "VDOC-00003",
+      "title": "Quy trình chi phí quảng cáo",
+      "content": "Chi phí quảng cáo Facebook phục vụ bán hàng thường hạch toán vào tài khoản 641. Cần có hóa đơn hợp lệ và chứng từ thanh toán.",
+      "source": "internal_policy",
+      "tags": [
+        "marketing",
+        "tax"
+      ],
+      "created_at": "2026-05-28T07:15:31Z",
+      "upgraded_by": "V47"
+    },
+    {
+      "id": "VDOC-00004",
+      "title": "vat_policy.csv",
+      "content": "title,content\nVAT,VAT phai nop = VAT dau ra - VAT dau vao",
+      "source": "upload",
+      "tags": [],
+      "created_at": "2026-05-28T07:15:31Z",
+      "upgraded_by": "V47"
+    }
+  ],
+  "v47_documents": [
+    {
+      "id": "VDOC-00001",
+      "version": "V47",
+      "title": "Quy trình chi phí quảng cáo",
+      "source": "internal_policy",
+      "tags": [
+        "marketing",
+        "tax"
+      ],
+      "file_type": "text",
+      "extraction": "manual_text",
+      "created_at": "2026-05-28T07:15:15Z",
+      "content": "Chi phí quảng cáo Facebook phục vụ bán hàng thường hạch toán vào tài khoản 641. Cần có hóa đơn hợp lệ và chứng từ thanh toán.",
+      "content_length": 125,
+      "chunk_count": 1
+    },
+    {
+      "id": "VDOC-00002",
+      "version": "V47",
+      "title": "vat_policy.csv",
+      "source": "upload",
+      "tags": [],
+      "file_type": "csv",
+      "extraction": "plain_text",
+      "created_at": "2026-05-28T07:15:15Z",
+      "content": "title,content\nVAT,VAT phai nop = VAT dau ra - VAT dau vao",
+      "content_length": 57,
+      "chunk_count": 1
+    },
+    {
+      "id": "VDOC-00003",
+      "version": "V47",
+      "title": "Quy trình chi phí quảng cáo",
+      "source": "internal_policy",
+      "tags": [
+        "marketing",
+        "tax"
+      ],
+      "file_type": "text",
+      "extraction": "manual_text",
+      "created_at": "2026-05-28T07:15:31Z",
+      "content": "Chi phí quảng cáo Facebook phục vụ bán hàng thường hạch toán vào tài khoản 641. Cần có hóa đơn hợp lệ và chứng từ thanh toán.",
+      "content_length": 125,
+      "chunk_count": 1
+    },
+    {
+      "id": "VDOC-00004",
+      "version": "V47",
+      "title": "vat_policy.csv",
+      "source": "upload",
+      "tags": [],
+      "file_type": "csv",
+      "extraction": "plain_text",
+      "created_at": "2026-05-28T07:15:31Z",
+      "content": "title,content\nVAT,VAT phai nop = VAT dau ra - VAT dau vao",
+      "content_length": 57,
+      "chunk_count": 1
+    }
+  ],
+  "v46_vector_chunks": [
+    {
+      "id": "VDOC-00001-CHUNK-0001",
+      "doc_id": "VDOC-00001",
+      "title": "Quy trình chi phí quảng cáo",
+      "source": "internal_policy",
+      "tags": [
+        "marketing",
+        "tax"
+      ],
+      "file_type": "text",
+      "chunk_index": 1,
+      "content": "Chi phí quảng cáo Facebook phục vụ bán hàng thường hạch toán vào tài khoản 641. Cần có hóa đơn hợp lệ và chứng từ thanh toán.",
+      "tokens": [
+        "641",
+        "bán",
+        "chi",
+        "chứng",
+        "cáo",
+        "cần",
+        "facebook",
+        "hàng",
+        "hóa",
+        "hạch",
+        "hợp",
+        "khoản",
+        "lệ",
+        "phí",
+        "phục",
+        "quy",
+        "quảng",
+        "thanh",
+        "thường",
+        "toán",
+        "trình",
+        "tài",
+        "từ",
+        "vào",
+        "vụ",
+        "đơn"
+      ],
+      "vector": {
+        "quy": 1.0,
+        "trình": 1.0,
+        "chi": 1.6931471805599454,
+        "phí": 1.6931471805599454,
+        "quảng": 1.6931471805599454,
+        "cáo": 1.6931471805599454,
+        "facebook": 1.0,
+        "phục": 1.0,
+        "vụ": 1.0,
+        "bán": 1.0,
+        "hàng": 1.0,
+        "thường": 1.0,
+        "hạch": 1.0,
+        "toán": 1.6931471805599454,
+        "vào": 1.0,
+        "tài": 1.0,
+        "khoản": 1.0,
+        "641": 1.0,
+        "cần": 1.0,
+        "hóa": 1.0,
+        "đơn": 1.0,
+        "hợp": 1.0,
+        "lệ": 1.0,
+        "chứng": 1.0,
+        "từ": 1.0,
+        "thanh": 1.0
+      },
+      "created_at": "2026-05-28T07:15:15Z"
+    },
+    {
+      "id": "VDOC-00002-CHUNK-0001",
+      "doc_id": "VDOC-00002",
+      "title": "vat_policy.csv",
+      "source": "upload",
+      "tags": [],
+      "file_type": "csv",
+      "chunk_index": 1,
+      "content": "title,content\nVAT,VAT phai nop = VAT dau ra - VAT dau vao",
+      "tokens": [
+        "content",
+        "csv",
+        "dau",
+        "nop",
+        "phai",
+        "policy",
+        "ra",
+        "title",
+        "vao",
+        "vat"
+      ],
+      "vector": {
+        "vat": 2.6094379124341005,
+        "policy": 1.0,
+        "csv": 1.0,
+        "title": 1.0,
+        "content": 1.0,
+        "phai": 1.0,
+        "nop": 1.0,
+        "dau": 1.6931471805599454,
+        "ra": 1.0,
+        "vao": 1.0
+      },
+      "created_at": "2026-05-28T07:15:15Z"
+    },
+    {
+      "id": "VDOC-00003-CHUNK-0001",
+      "doc_id": "VDOC-00003",
+      "title": "Quy trình chi phí quảng cáo",
+      "source": "internal_policy",
+      "tags": [
+        "marketing",
+        "tax"
+      ],
+      "file_type": "text",
+      "chunk_index": 1,
+      "content": "Chi phí quảng cáo Facebook phục vụ bán hàng thường hạch toán vào tài khoản 641. Cần có hóa đơn hợp lệ và chứng từ thanh toán.",
+      "tokens": [
+        "641",
+        "bán",
+        "chi",
+        "chứng",
+        "cáo",
+        "cần",
+        "facebook",
+        "hàng",
+        "hóa",
+        "hạch",
+        "hợp",
+        "khoản",
+        "lệ",
+        "phí",
+        "phục",
+        "quy",
+        "quảng",
+        "thanh",
+        "thường",
+        "toán",
+        "trình",
+        "tài",
+        "từ",
+        "vào",
+        "vụ",
+        "đơn"
+      ],
+      "vector": {
+        "quy": 1.0,
+        "trình": 1.0,
+        "chi": 1.6931471805599454,
+        "phí": 1.6931471805599454,
+        "quảng": 1.6931471805599454,
+        "cáo": 1.6931471805599454,
+        "facebook": 1.0,
+        "phục": 1.0,
+        "vụ": 1.0,
+        "bán": 1.0,
+        "hàng": 1.0,
+        "thường": 1.0,
+        "hạch": 1.0,
+        "toán": 1.6931471805599454,
+        "vào": 1.0,
+        "tài": 1.0,
+        "khoản": 1.0,
+        "641": 1.0,
+        "cần": 1.0,
+        "hóa": 1.0,
+        "đơn": 1.0,
+        "hợp": 1.0,
+        "lệ": 1.0,
+        "chứng": 1.0,
+        "từ": 1.0,
+        "thanh": 1.0
+      },
+      "created_at": "2026-05-28T07:15:31Z"
+    },
+    {
+      "id": "VDOC-00004-CHUNK-0001",
+      "doc_id": "VDOC-00004",
+      "title": "vat_policy.csv",
+      "source": "upload",
+      "tags": [],
+      "file_type": "csv",
+      "chunk_index": 1,
+      "content": "title,content\nVAT,VAT phai nop = VAT dau ra - VAT dau vao",
+      "tokens": [
+        "content",
+        "csv",
+        "dau",
+        "nop",
+        "phai",
+        "policy",
+        "ra",
+        "title",
+        "vao",
+        "vat"
+      ],
+      "vector": {
+        "vat": 2.6094379124341005,
+        "policy": 1.0,
+        "csv": 1.0,
+        "title": 1.0,
+        "content": 1.0,
+        "phai": 1.0,
+        "nop": 1.0,
+        "dau": 1.6931471805599454,
+        "ra": 1.0,
+        "vao": 1.0
+      },
+      "created_at": "2026-05-28T07:15:31Z"
+    }
+  ]
+}

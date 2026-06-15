@@ -1,0 +1,4 @@
+﻿entry_id,date,description,side,account_code,account_name,amount,status,risk_level
+je_ed85b1ad2cca4c,2026-06-11,Mua hàng hóa nhập kho chuyển khoản VAT 10%,debit,156,Hàng hóa,10000000.0,draft,
+je_ed85b1ad2cca4c,2026-06-11,Mua hàng hóa nhập kho chuyển khoản VAT 10%,debit,1331,"Thuế GTGT được khấu trừ của hàng hóa, dịch vụ",1000000.0,draft,
+je_ed85b1ad2cca4c,2026-06-11,Mua hàng hóa nhập kho chuyển khoản VAT 10%,credit,112,Tiền gửi ngân hàng,11000000.0,draft,

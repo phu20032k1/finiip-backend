@@ -1,0 +1,11 @@
+Thông tư test kế toán.
+
+Khi doanh nghiệp mua hàng hóa chưa thanh toán, kế toán ghi:
+Nợ TK 156: Giá trị hàng hóa chưa thuế
+Nợ TK 1331: Thuế giá trị gia tăng được khấu trừ
+Có TK 331: Tổng giá thanh toán phải trả người bán
+
+Khi bán hàng chưa thu tiền, kế toán ghi:
+Nợ TK 131: Tổng giá thanh toán phải thu khách hàng
+Có TK 511: Doanh thu bán hàng chưa thuế
+Có TK 3331: Thuế giá trị gia tăng đầu ra
