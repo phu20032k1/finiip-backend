@@ -1,0 +1,2249 @@
+[
+  {
+    "rule_id": "R001",
+    "keywords": [
+      "tiền điện",
+      "evn",
+      "điện nước",
+      "tiền nước"
+    ],
+    "category": "Chi phí điện nước",
+    "debit_account": "642",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_account_options": [
+      "111",
+      "112",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "Cần có hóa đơn/chứng từ hợp lệ nếu đưa vào chi phí được trừ.",
+    "confidence": 0.86
+  },
+  {
+    "rule_id": "R002",
+    "keywords": [
+      "facebook",
+      "google ads",
+      "quảng cáo",
+      "marketing",
+      "tiktok ads"
+    ],
+    "category": "Chi phí marketing/bán hàng",
+    "debit_account": "641",
+    "debit_name": "Chi phí bán hàng",
+    "credit_account_options": [
+      "111",
+      "112",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "Cần kiểm tra hóa đơn, hợp đồng, nội dung quảng cáo và chứng từ thanh toán.",
+    "confidence": 0.88
+  },
+  {
+    "rule_id": "R003",
+    "keywords": [
+      "lương",
+      "tiền công",
+      "nhân viên",
+      "bảng lương"
+    ],
+    "category": "Chi phí nhân sự",
+    "debit_account": "642",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_account_options": [
+      "334",
+      "111",
+      "112"
+    ],
+    "default_credit_account": "334",
+    "risk": "Cần bảng lương, hợp đồng lao động, chấm công và chứng từ chi trả.",
+    "confidence": 0.85
+  },
+  {
+    "rule_id": "R004",
+    "keywords": [
+      "mua máy tính",
+      "laptop",
+      "thiết bị",
+      "tài sản cố định",
+      "máy in"
+    ],
+    "category": "Mua tài sản/công cụ dụng cụ",
+    "debit_account": "211",
+    "debit_name": "Tài sản cố định hữu hình",
+    "credit_account_options": [
+      "111",
+      "112",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "Cần kiểm tra giá trị, thời gian sử dụng, hóa đơn VAT và phân biệt TSCĐ với công cụ dụng cụ.",
+    "confidence": 0.82
+  },
+  {
+    "rule_id": "R005",
+    "keywords": [
+      "văn phòng phẩm",
+      "giấy in",
+      "mực in",
+      "đồ dùng văn phòng"
+    ],
+    "category": "Chi phí văn phòng",
+    "debit_account": "642",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_account_options": [
+      "111",
+      "112",
+      "331"
+    ],
+    "default_credit_account": "111",
+    "risk": "Cần hóa đơn/chứng từ mua hàng, đặc biệt nếu giá trị lớn.",
+    "confidence": 0.84
+  },
+  {
+    "rule_id": "R006",
+    "keywords": [
+      "bán hàng",
+      "doanh thu",
+      "xuất hóa đơn",
+      "bán cho khách"
+    ],
+    "category": "Doanh thu bán hàng",
+    "debit_account": "111",
+    "debit_name": "Tiền mặt/tiền gửi/phải thu",
+    "credit_account_options": [
+      "511",
+      "3331"
+    ],
+    "default_credit_account": "511",
+    "risk": "Cần khớp giữa đơn hàng, hóa đơn, hàng giao và tiền thu.",
+    "confidence": 0.83
+  },
+  {
+    "rule_id": "R007",
+    "keywords": [
+      "thu tiền khách",
+      "khách chuyển khoản",
+      "thu công nợ",
+      "khách thanh toán"
+    ],
+    "category": "Thu tiền khách hàng",
+    "debit_account": "112",
+    "debit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "131"
+    ],
+    "default_credit_account": "131",
+    "risk": "Cần đối soát với công nợ, hóa đơn và đơn hàng liên quan.",
+    "confidence": 0.87
+  },
+  {
+    "rule_id": "R008",
+    "keywords": [
+      "trả tiền nhà cung cấp",
+      "thanh toán nhà cung cấp",
+      "trả công nợ nhà cung cấp"
+    ],
+    "category": "Thanh toán nhà cung cấp",
+    "debit_account": "331",
+    "debit_name": "Phải trả người bán",
+    "credit_account_options": [
+      "111",
+      "112"
+    ],
+    "default_credit_account": "112",
+    "risk": "Cần đối chiếu hợp đồng, hóa đơn đầu vào và phiếu nhập/kết quả nghiệm thu.",
+    "confidence": 0.86
+  },
+  {
+    "rule_id": "R009",
+    "keywords": [
+      "vay ngân hàng",
+      "nhận tiền vay",
+      "giải ngân"
+    ],
+    "category": "Nhận tiền vay",
+    "debit_account": "112",
+    "debit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "341"
+    ],
+    "default_credit_account": "341",
+    "risk": "Cần hợp đồng vay, lịch trả nợ, lãi suất và chứng từ ngân hàng.",
+    "confidence": 0.84
+  },
+  {
+    "rule_id": "R010",
+    "keywords": [
+      "trả lãi vay",
+      "lãi ngân hàng",
+      "chi phí lãi vay"
+    ],
+    "category": "Chi phí tài chính",
+    "debit_account": "635",
+    "debit_name": "Chi phí tài chính",
+    "credit_account_options": [
+      "112",
+      "111"
+    ],
+    "default_credit_account": "112",
+    "risk": "Cần kiểm tra giới hạn chi phí lãi vay được trừ và chứng từ ngân hàng.",
+    "confidence": 0.82
+  },
+  {
+    "rule_id": "R011",
+    "keywords": [
+      "mua hàng nhập kho",
+      "nhập kho",
+      "mua nguyên vật liệu",
+      "mua hàng hóa"
+    ],
+    "category": "Mua hàng nhập kho",
+    "debit_account": "156",
+    "debit_name": "Hàng hóa",
+    "credit_account_options": [
+      "111",
+      "112",
+      "331"
+    ],
+    "default_credit_account": "331",
+    "risk": "Cần khớp hóa đơn đầu vào, phiếu nhập kho và công nợ nhà cung cấp.",
+    "confidence": 0.85
+  },
+  {
+    "rule_id": "R012",
+    "keywords": [
+      "tiếp khách",
+      "ăn uống",
+      "nhà hàng",
+      "chi tiếp khách"
+    ],
+    "category": "Chi phí tiếp khách",
+    "debit_account": "642",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_account_options": [
+      "111",
+      "112"
+    ],
+    "default_credit_account": "111",
+    "risk": "Cần hóa đơn hợp lệ và chứng từ chứng minh liên quan đến hoạt động kinh doanh.",
+    "confidence": 0.78
+  },
+  {
+    "rule_id": "R013",
+    "keywords": [
+      "vận chuyển",
+      "ship hàng",
+      "cước vận tải",
+      "logistics",
+      "giao hàng"
+    ],
+    "category": "Chi phí vận chuyển",
+    "debit_account": "641",
+    "debit_name": "Chi phí bán hàng",
+    "credit_account_options": [
+      "111",
+      "112",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "Cần hợp đồng/vận đơn/biên bản giao nhận và hóa đơn dịch vụ vận chuyển.",
+    "confidence": 0.82
+  },
+  {
+    "rule_id": "R014",
+    "keywords": [
+      "thuê văn phòng",
+      "tiền thuê nhà",
+      "mặt bằng",
+      "thuê kho"
+    ],
+    "category": "Chi phí thuê văn phòng/kho",
+    "debit_account": "642",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_account_options": [
+      "111",
+      "112",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "Cần hợp đồng thuê, hóa đơn/chứng từ thanh toán và phân bổ nếu trả trước nhiều kỳ.",
+    "confidence": 0.84
+  },
+  {
+    "rule_id": "R015",
+    "keywords": [
+      "nộp thuế",
+      "nộp vat",
+      "nộp thuế gtgt",
+      "nộp thuế tndn"
+    ],
+    "category": "Nộp thuế",
+    "debit_account": "3331",
+    "debit_name": "Thuế GTGT phải nộp",
+    "credit_account_options": [
+      "112"
+    ],
+    "default_credit_account": "112",
+    "risk": "Cần đối chiếu tờ khai thuế, giấy nộp tiền và kỳ tính thuế.",
+    "confidence": 0.81
+  },
+  {
+    "rule_id": "R016",
+    "keywords": [
+      "dịch vụ",
+      "dich vu",
+      "mua dịch vụ",
+      "chi dịch vụ",
+      "dịch vụ ngoài"
+    ],
+    "category": "Chi phí dịch vụ mua ngoài",
+    "debit_account": "642",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_account_options": [
+      "111",
+      "112",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "Cần hợp đồng/biên bản nghiệm thu/hóa đơn. Nếu thanh toán tiền mặt giá trị lớn cần kiểm tra kỹ điều kiện chứng từ.",
+    "confidence": 0.76
+  },
+  {
+    "rule_id": "SALES_001",
+    "category": "Bán hàng thu tiền ngay",
+    "transaction_type": "income",
+    "keywords": [
+      "ban hang",
+      "ban san pham",
+      "xuat hoa don ban hang",
+      "thu tien ban hang"
+    ],
+    "debit_account": "111",
+    "credit_account": "511",
+    "confidence": 0.88,
+    "required_docs": [
+      "Hóa đơn/chứng từ hợp lệ nếu ghi nhận chi phí/thuế",
+      "Hợp đồng/đề nghị thanh toán/phiếu nhập-xuất nếu có",
+      "Chứng từ thanh toán: ủy nhiệm chi, sao kê ngân hàng hoặc phiếu thu/chi"
+    ],
+    "risk_flags": "Cần tách VAT đầu ra nếu hóa đơn có thuế suất.",
+    "missing_fields": [
+      "customer",
+      "vat_rate"
+    ],
+    "tax_notes": "Doanh thu thường ghi Có 511; VAT đầu ra ghi Có 3331.",
+    "alternative_debit_accounts": [
+      "112",
+      "131"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Tiền mặt",
+    "credit_name": "Doanh thu bán hàng và cung cấp dịch vụ",
+    "credit_account_options": [
+      "511"
+    ],
+    "default_credit_account": "511",
+    "risk": "C; ầ; n;  ; t; á; c; h;  ; V; A; T;  ; đ; ầ; u;  ; r; a;  ; n; ế; u;  ; h; ó; a;  ; đ; ơ; n;  ; c; ó;  ; t; h; u; ế;  ; s; u; ấ; t; ."
+  },
+  {
+    "rule_id": "SALES_002",
+    "category": "Bán hàng chưa thu tiền",
+    "transaction_type": "income",
+    "keywords": [
+      "ban chiu",
+      "khach hang no",
+      "cong no khach hang",
+      "xuat hoa don chua thu tien"
+    ],
+    "debit_account": "131",
+    "credit_account": "511",
+    "confidence": 0.9,
+    "required_docs": [
+      "Hóa đơn/chứng từ hợp lệ nếu ghi nhận chi phí/thuế",
+      "Hợp đồng/đề nghị thanh toán/phiếu nhập-xuất nếu có",
+      "Chứng từ thanh toán: ủy nhiệm chi, sao kê ngân hàng hoặc phiếu thu/chi"
+    ],
+    "risk_flags": "Cần theo dõi tuổi nợ và đối chiếu công nợ.",
+    "missing_fields": [
+      "customer",
+      "vat_rate"
+    ],
+    "tax_notes": "Nếu có VAT, ghi Nợ 131 tổng thanh toán, Có 511 giá chưa thuế, Có 3331 VAT.",
+    "alternative_debit_accounts": [
+      "111",
+      "112"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Phải thu khách hàng",
+    "credit_name": "Doanh thu bán hàng và cung cấp dịch vụ",
+    "credit_account_options": [
+      "511"
+    ],
+    "default_credit_account": "511",
+    "risk": "C; ầ; n;  ; t; h; e; o;  ; d; õ; i;  ; t; u; ổ; i;  ; n; ợ;  ; v; à;  ; đ; ố; i;  ; c; h; i; ế; u;  ; c; ô; n; g;  ; n; ợ; ."
+  },
+  {
+    "rule_id": "SALES_003",
+    "category": "Khách hàng thanh toán công nợ",
+    "transaction_type": "income",
+    "keywords": [
+      "khach thanh toan",
+      "thu cong no",
+      "khach hang chuyen tien",
+      "thu tien khach no"
+    ],
+    "debit_account": "112",
+    "credit_account": "131",
+    "confidence": 0.91,
+    "required_docs": [
+      "Sao kê/phiếu thu",
+      "Biên bản đối chiếu công nợ nếu cần"
+    ],
+    "risk_flags": "Cần đối chiếu đúng khách hàng và hóa đơn được thanh toán.",
+    "missing_fields": [
+      "customer"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "111"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Tiền gửi ngân hàng",
+    "credit_name": "Phải thu khách hàng",
+    "credit_account_options": [
+      "131"
+    ],
+    "default_credit_account": "131",
+    "risk": "C; ầ; n;  ; đ; ố; i;  ; c; h; i; ế; u;  ; đ; ú; n; g;  ; k; h; á; c; h;  ; h; à; n; g;  ; v; à;  ; h; ó; a;  ; đ; ơ; n;  ; đ; ư; ợ; c;  ; t; h; a; n; h;  ; t; o; á; n; ."
+  },
+  {
+    "rule_id": "SALES_004",
+    "category": "Hàng bán bị trả lại/giảm trừ doanh thu",
+    "transaction_type": "expense",
+    "keywords": [
+      "hang ban bi tra lai",
+      "khach tra hang",
+      "giam gia hang ban",
+      "chiet khau thuong mai",
+      "hoan tien khach"
+    ],
+    "debit_account": "521",
+    "credit_account": "131",
+    "confidence": 0.86,
+    "required_docs": [
+      "Biên bản trả hàng/điều chỉnh",
+      "Hóa đơn điều chỉnh/thay thế nếu áp dụng"
+    ],
+    "risk_flags": "Cần xử lý VAT điều chỉnh và nhập lại hàng nếu hàng quay về kho.",
+    "missing_fields": [
+      "invoice",
+      "customer",
+      "vat_rate"
+    ],
+    "tax_notes": "Giảm trừ doanh thu thường dùng 521; phần tiền hoàn/giảm công nợ tùy tình huống.",
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [
+      "111",
+      "112"
+    ],
+    "department_hint": "general",
+    "debit_name": "Các khoản giảm trừ doanh thu",
+    "credit_name": "Phải thu khách hàng",
+    "credit_account_options": [
+      "131",
+      "111",
+      "112"
+    ],
+    "default_credit_account": "131",
+    "risk": "C; ầ; n;  ; x; ử;  ; l; ý;  ; V; A; T;  ; đ; i; ề; u;  ; c; h; ỉ; n; h;  ; v; à;  ; n; h; ậ; p;  ; l; ạ; i;  ; h; à; n; g;  ; n; ế; u;  ; h; à; n; g;  ; q; u; a; y;  ; v; ề;  ; k; h; o; ."
+  },
+  {
+    "rule_id": "SALES_005",
+    "category": "Giá vốn hàng bán",
+    "transaction_type": "expense",
+    "keywords": [
+      "gia von",
+      "xuat kho ban hang",
+      "ket chuyen gia von",
+      "cogs"
+    ],
+    "debit_account": "632",
+    "credit_account": "156",
+    "confidence": 0.87,
+    "required_docs": [
+      "Phiếu xuất kho",
+      "Bảng tính giá vốn/FIFO/bình quân"
+    ],
+    "risk_flags": "Cần nhất quán phương pháp tính giá xuất kho.",
+    "missing_fields": [
+      "inventory_method"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [
+      "155",
+      "154"
+    ],
+    "department_hint": "general",
+    "debit_name": "Giá vốn hàng bán",
+    "credit_name": "Hàng hóa",
+    "credit_account_options": [
+      "156",
+      "155",
+      "154"
+    ],
+    "default_credit_account": "156",
+    "risk": "C; ầ; n;  ; n; h; ấ; t;  ; q; u; á; n;  ; p; h; ư; ơ; n; g;  ; p; h; á; p;  ; t; í; n; h;  ; g; i; á;  ; x; u; ấ; t;  ; k; h; o; ."
+  },
+  {
+    "rule_id": "PUR_001",
+    "category": "Mua hàng nhập kho trả tiền ngay",
+    "transaction_type": "expense",
+    "keywords": [
+      "mua hang",
+      "nhap kho",
+      "mua hang hoa",
+      "mua vat tu",
+      "mua nguyen vat lieu"
+    ],
+    "debit_account": "156",
+    "credit_account": "112",
+    "confidence": 0.86,
+    "required_docs": [
+      "Hóa đơn/chứng từ hợp lệ nếu ghi nhận chi phí/thuế",
+      "Hợp đồng/đề nghị thanh toán/phiếu nhập-xuất nếu có",
+      "Chứng từ thanh toán: ủy nhiệm chi, sao kê ngân hàng hoặc phiếu thu/chi"
+    ],
+    "risk_flags": "Nếu có VAT đầu vào đủ điều kiện, tách Nợ 1331.",
+    "missing_fields": [
+      "supplier",
+      "vat_rate",
+      "payment_method"
+    ],
+    "tax_notes": "Hàng hóa thường Nợ 156; nguyên vật liệu có thể Nợ 152.",
+    "alternative_debit_accounts": [
+      "152",
+      "153",
+      "611"
+    ],
+    "alternative_credit_accounts": [
+      "111",
+      "331"
+    ],
+    "department_hint": "general",
+    "debit_name": "Hàng hóa",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "N; ế; u;  ; c; ó;  ; V; A; T;  ; đ; ầ; u;  ; v; à; o;  ; đ; ủ;  ; đ; i; ề; u;  ; k; i; ệ; n; ,;  ; t; á; c; h;  ; N; ợ;  ; 1; 3; 3; 1; ."
+  },
+  {
+    "rule_id": "PUR_002",
+    "category": "Mua hàng chưa thanh toán",
+    "transaction_type": "expense",
+    "keywords": [
+      "mua chiu",
+      "nhap hang chua thanh toan",
+      "cong no nha cung cap",
+      "mua hang no nha cung cap"
+    ],
+    "debit_account": "156",
+    "credit_account": "331",
+    "confidence": 0.89,
+    "required_docs": [
+      "Hóa đơn/chứng từ hợp lệ nếu ghi nhận chi phí/thuế",
+      "Hợp đồng/đề nghị thanh toán/phiếu nhập-xuất nếu có",
+      "Chứng từ thanh toán: ủy nhiệm chi, sao kê ngân hàng hoặc phiếu thu/chi"
+    ],
+    "risk_flags": "Cần đối chiếu công nợ nhà cung cấp.",
+    "missing_fields": [
+      "supplier",
+      "vat_rate"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "152",
+      "153",
+      "611"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Hàng hóa",
+    "credit_name": "Phải trả người bán",
+    "credit_account_options": [
+      "331"
+    ],
+    "default_credit_account": "331",
+    "risk": "C; ầ; n;  ; đ; ố; i;  ; c; h; i; ế; u;  ; c; ô; n; g;  ; n; ợ;  ; n; h; à;  ; c; u; n; g;  ; c; ấ; p; ."
+  },
+  {
+    "rule_id": "PUR_003",
+    "category": "Thanh toán nhà cung cấp",
+    "transaction_type": "expense",
+    "keywords": [
+      "tra nha cung cap",
+      "thanh toan cong no",
+      "thanh toan ncc",
+      "chuyen tien nha cung cap"
+    ],
+    "debit_account": "331",
+    "credit_account": "112",
+    "confidence": 0.92,
+    "required_docs": [
+      "Ủy nhiệm chi/sao kê",
+      "Đối chiếu công nợ/hóa đơn thanh toán"
+    ],
+    "risk_flags": "Cần đối chiếu đúng hóa đơn và công nợ.",
+    "missing_fields": [
+      "supplier"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [
+      "111"
+    ],
+    "department_hint": "general",
+    "debit_name": "Phải trả người bán",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111"
+    ],
+    "default_credit_account": "112",
+    "risk": "C; ầ; n;  ; đ; ố; i;  ; c; h; i; ế; u;  ; đ; ú; n; g;  ; h; ó; a;  ; đ; ơ; n;  ; v; à;  ; c; ô; n; g;  ; n; ợ; ."
+  },
+  {
+    "rule_id": "PUR_004",
+    "category": "Ứng trước cho nhà cung cấp",
+    "transaction_type": "expense",
+    "keywords": [
+      "ung truoc cho nha cung cap",
+      "tam ung nha cung cap",
+      "dat coc nha cung cap",
+      "coc tien hang"
+    ],
+    "debit_account": "331",
+    "credit_account": "112",
+    "confidence": 0.86,
+    "required_docs": [
+      "Hợp đồng/đơn hàng",
+      "Chứng từ chuyển tiền"
+    ],
+    "risk_flags": "Theo dõi khoản ứng trước để bù trừ khi nhận hàng/hóa đơn.",
+    "missing_fields": [
+      "supplier",
+      "contract"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [
+      "111"
+    ],
+    "department_hint": "general",
+    "debit_name": "Phải trả người bán",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111"
+    ],
+    "default_credit_account": "112",
+    "risk": "T; h; e; o;  ; d; õ; i;  ; k; h; o; ả; n;  ; ứ; n; g;  ; t; r; ư; ớ; c;  ; đ; ể;  ; b; ù;  ; t; r; ừ;  ; k; h; i;  ; n; h; ậ; n;  ; h; à; n; g; /; h; ó; a;  ; đ; ơ; n; ."
+  },
+  {
+    "rule_id": "PUR_005",
+    "category": "Nhà cung cấp hoàn tiền",
+    "transaction_type": "income",
+    "keywords": [
+      "nha cung cap hoan tien",
+      "refund nha cung cap",
+      "duoc hoan tien mua hang"
+    ],
+    "debit_account": "112",
+    "credit_account": "331",
+    "confidence": 0.82,
+    "required_docs": [
+      "Biên bản hoàn tiền",
+      "Sao kê"
+    ],
+    "risk_flags": "Cần xác định hoàn tiền do giảm giá, trả hàng hay thanh toán thừa.",
+    "missing_fields": [
+      "supplier",
+      "reason"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "111"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Tiền gửi ngân hàng",
+    "credit_name": "Phải trả người bán",
+    "credit_account_options": [
+      "331"
+    ],
+    "default_credit_account": "331",
+    "risk": "C; ầ; n;  ; x; á; c;  ; đ; ị; n; h;  ; h; o; à; n;  ; t; i; ề; n;  ; d; o;  ; g; i; ả; m;  ; g; i; á; ,;  ; t; r; ả;  ; h; à; n; g;  ; h; a; y;  ; t; h; a; n; h;  ; t; o; á; n;  ; t; h; ừ; a; ."
+  },
+  {
+    "rule_id": "CASH_001",
+    "category": "Rút tiền gửi ngân hàng nhập quỹ",
+    "transaction_type": "transfer",
+    "keywords": [
+      "rut tien ngan hang",
+      "rut tien ve quy",
+      "rut tien mat tu ngan hang"
+    ],
+    "debit_account": "111",
+    "credit_account": "112",
+    "confidence": 0.9,
+    "required_docs": [
+      "Phiếu thu",
+      "Sao kê/giấy báo nợ"
+    ],
+    "risk_flags": [],
+    "missing_fields": [],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Tiền mặt",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112"
+    ],
+    "default_credit_account": "112",
+    "risk": ""
+  },
+  {
+    "rule_id": "CASH_002",
+    "category": "Nộp tiền mặt vào ngân hàng",
+    "transaction_type": "transfer",
+    "keywords": [
+      "nop tien vao ngan hang",
+      "gui tien mat vao ngan hang",
+      "nop tien mat"
+    ],
+    "debit_account": "112",
+    "credit_account": "111",
+    "confidence": 0.9,
+    "required_docs": [
+      "Phiếu chi",
+      "Giấy nộp tiền/sao kê"
+    ],
+    "risk_flags": [],
+    "missing_fields": [],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Tiền gửi ngân hàng",
+    "credit_name": "Tiền mặt",
+    "credit_account_options": [
+      "111"
+    ],
+    "default_credit_account": "111",
+    "risk": ""
+  },
+  {
+    "rule_id": "CASH_003",
+    "category": "Phí ngân hàng",
+    "transaction_type": "expense",
+    "keywords": [
+      "phi ngan hang",
+      "phi chuyen khoan",
+      "bank fee",
+      "phi duy tri tai khoan"
+    ],
+    "debit_account": "642",
+    "credit_account": "112",
+    "confidence": 0.88,
+    "required_docs": [
+      "Sao kê ngân hàng",
+      "Chứng từ phí"
+    ],
+    "risk_flags": "Có thể hạch toán 635 nếu là chi phí tài chính liên quan vay vốn.",
+    "missing_fields": [],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "635"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112"
+    ],
+    "default_credit_account": "112",
+    "risk": "C; ó;  ; t; h; ể;  ; h; ạ; c; h;  ; t; o; á; n;  ; 6; 3; 5;  ; n; ế; u;  ; l; à;  ; c; h; i;  ; p; h; í;  ; t; à; i;  ; c; h; í; n; h;  ; l; i; ê; n;  ; q; u; a; n;  ; v; a; y;  ; v; ố; n; ."
+  },
+  {
+    "rule_id": "CASH_004",
+    "category": "Lãi tiền gửi ngân hàng",
+    "transaction_type": "income",
+    "keywords": [
+      "lai tien gui",
+      "lai ngan hang",
+      "nhan lai tien gui"
+    ],
+    "debit_account": "112",
+    "credit_account": "515",
+    "confidence": 0.88,
+    "required_docs": "Sao kê/giấy báo có",
+    "risk_flags": [],
+    "missing_fields": [],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Tiền gửi ngân hàng",
+    "credit_name": "Doanh thu hoạt động tài chính",
+    "credit_account_options": [
+      "515"
+    ],
+    "default_credit_account": "515",
+    "risk": ""
+  },
+  {
+    "rule_id": "EXP_001",
+    "category": "Chi phí điện nước",
+    "transaction_type": "expense",
+    "keywords": [
+      "tien dien",
+      "evn",
+      "tien nuoc",
+      "dien nuoc"
+    ],
+    "debit_account": "642",
+    "credit_account": "112",
+    "confidence": 0.88,
+    "required_docs": [
+      "Hóa đơn/chứng từ hợp lệ nếu ghi nhận chi phí/thuế",
+      "Hợp đồng/đề nghị thanh toán/phiếu nhập-xuất nếu có",
+      "Chứng từ thanh toán: ủy nhiệm chi, sao kê ngân hàng hoặc phiếu thu/chi"
+    ],
+    "risk_flags": "Nếu dùng cho bán hàng/sản xuất có thể phân bổ 641/627.",
+    "missing_fields": [
+      "department",
+      "invoice"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "641",
+      "627"
+    ],
+    "alternative_credit_accounts": [
+      "111",
+      "331"
+    ],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "N; ế; u;  ; d; ù; n; g;  ; c; h; o;  ; b; á; n;  ; h; à; n; g; /; s; ả; n;  ; x; u; ấ; t;  ; c; ó;  ; t; h; ể;  ; p; h; â; n;  ; b; ổ;  ; 6; 4; 1; /; 6; 2; 7; ."
+  },
+  {
+    "rule_id": "EXP_002",
+    "category": "Chi phí thuê văn phòng/nhà xưởng",
+    "transaction_type": "expense",
+    "keywords": [
+      "thue van phong",
+      "tien thue nha",
+      "thue mat bang",
+      "thue nha xuong"
+    ],
+    "debit_account": "642",
+    "credit_account": "112",
+    "confidence": 0.87,
+    "required_docs": [
+      "Hợp đồng thuê",
+      "Hóa đơn/chứng từ",
+      "Chứng từ thanh toán"
+    ],
+    "risk_flags": "Nếu trả trước nhiều kỳ nên ghi Nợ 242 rồi phân bổ.",
+    "missing_fields": [
+      "contract",
+      "period",
+      "invoice"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "242",
+      "641",
+      "627"
+    ],
+    "alternative_credit_accounts": [
+      "111",
+      "331"
+    ],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "N; ế; u;  ; t; r; ả;  ; t; r; ư; ớ; c;  ; n; h; i; ề; u;  ; k; ỳ;  ; n; ê; n;  ; g; h; i;  ; N; ợ;  ; 2; 4; 2;  ; r; ồ; i;  ; p; h; â; n;  ; b; ổ; ."
+  },
+  {
+    "rule_id": "EXP_003",
+    "category": "Chi phí marketing/quảng cáo",
+    "transaction_type": "expense",
+    "keywords": [
+      "facebook ads",
+      "google ads",
+      "tiktok ads",
+      "quang cao",
+      "marketing",
+      "booking kols"
+    ],
+    "debit_account": "641",
+    "credit_account": "112",
+    "confidence": 0.87,
+    "required_docs": [
+      "Hóa đơn/chứng từ",
+      "Hợp đồng/đơn đặt hàng",
+      "Bằng chứng chạy quảng cáo"
+    ],
+    "risk_flags": "Kiểm tra nhà cung cấp nước ngoài, thuế nhà thầu nếu có.",
+    "missing_fields": [
+      "supplier",
+      "invoice",
+      "campaign"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "642"
+    ],
+    "alternative_credit_accounts": [
+      "111",
+      "331"
+    ],
+    "department_hint": "general",
+    "debit_name": "Chi phí bán hàng",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "K; i; ể; m;  ; t; r; a;  ; n; h; à;  ; c; u; n; g;  ; c; ấ; p;  ; n; ư; ớ; c;  ; n; g; o; à; i; ,;  ; t; h; u; ế;  ; n; h; à;  ; t; h; ầ; u;  ; n; ế; u;  ; c; ó; ."
+  },
+  {
+    "rule_id": "EXP_004",
+    "category": "Chi phí tiếp khách/hội nghị",
+    "transaction_type": "expense",
+    "keywords": [
+      "tiep khach",
+      "an uong tiep khach",
+      "hoi nghi",
+      "khach san tiep khach"
+    ],
+    "debit_account": "642",
+    "credit_account": "112",
+    "confidence": 0.8,
+    "required_docs": [
+      "Hóa đơn",
+      "Đề nghị thanh toán",
+      "Danh sách/nội dung tiếp khách nếu nội bộ yêu cầu"
+    ],
+    "risk_flags": "Rủi ro chi phí không được trừ nếu thiếu chứng từ hoặc không phục vụ hoạt động kinh doanh.",
+    "missing_fields": [
+      "business_purpose",
+      "invoice"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [
+      "111",
+      "331"
+    ],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "R; ủ; i;  ; r; o;  ; c; h; i;  ; p; h; í;  ; k; h; ô; n; g;  ; đ; ư; ợ; c;  ; t; r; ừ;  ; n; ế; u;  ; t; h; i; ế; u;  ; c; h; ứ; n; g;  ; t; ừ;  ; h; o; ặ; c;  ; k; h; ô; n; g;  ; p; h; ụ; c;  ; v; ụ;  ; h; o; ạ; t;  ; đ; ộ; n; g;  ; k; i; n; h;  ; d; o; a; n; h; ."
+  },
+  {
+    "rule_id": "EXP_005",
+    "category": "Công tác phí",
+    "transaction_type": "expense",
+    "keywords": [
+      "cong tac phi",
+      "di cong tac",
+      "ve may bay",
+      "khach san cong tac",
+      "taxi cong tac"
+    ],
+    "debit_account": "642",
+    "credit_account": "112",
+    "confidence": 0.84,
+    "required_docs": [
+      "Quyết định/đề nghị công tác",
+      "Hóa đơn/vé/bảng kê",
+      "Chứng từ thanh toán"
+    ],
+    "risk_flags": "Cần theo quy chế công tác phí nội bộ.",
+    "missing_fields": [
+      "employee",
+      "business_purpose"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "641",
+      "627"
+    ],
+    "alternative_credit_accounts": [
+      "111",
+      "141"
+    ],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111",
+      "141"
+    ],
+    "default_credit_account": "112",
+    "risk": "C; ầ; n;  ; t; h; e; o;  ; q; u; y;  ; c; h; ế;  ; c; ô; n; g;  ; t; á; c;  ; p; h; í;  ; n; ộ; i;  ; b; ộ; ."
+  },
+  {
+    "rule_id": "EXP_006",
+    "category": "Chi phí văn phòng phẩm",
+    "transaction_type": "expense",
+    "keywords": [
+      "van phong pham",
+      "muc in",
+      "giay in",
+      "do dung van phong"
+    ],
+    "debit_account": "642",
+    "credit_account": "111",
+    "confidence": 0.84,
+    "required_docs": [
+      "Hóa đơn/chứng từ hợp lệ nếu ghi nhận chi phí/thuế",
+      "Hợp đồng/đề nghị thanh toán/phiếu nhập-xuất nếu có",
+      "Chứng từ thanh toán: ủy nhiệm chi, sao kê ngân hàng hoặc phiếu thu/chi"
+    ],
+    "risk_flags": [],
+    "missing_fields": [
+      "invoice"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [
+      "112",
+      "331"
+    ],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Tiền mặt",
+    "credit_account_options": [
+      "111",
+      "112",
+      "331"
+    ],
+    "default_credit_account": "111",
+    "risk": ""
+  },
+  {
+    "rule_id": "EXP_007",
+    "category": "Chi phí sửa chữa/bảo trì",
+    "transaction_type": "expense",
+    "keywords": [
+      "sua chua",
+      "bao tri",
+      "bao duong",
+      "sua may",
+      "sua xe",
+      "sua van phong"
+    ],
+    "debit_account": "642",
+    "credit_account": "112",
+    "confidence": 0.82,
+    "required_docs": [
+      "Hợp đồng/báo giá",
+      "Biên bản nghiệm thu",
+      "Hóa đơn"
+    ],
+    "risk_flags": "Nếu làm tăng năng lực/thời gian sử dụng TSCĐ có thể phải ghi tăng nguyên giá.",
+    "missing_fields": [
+      "asset",
+      "invoice"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "241",
+      "627",
+      "641"
+    ],
+    "alternative_credit_accounts": [
+      "111",
+      "331"
+    ],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "N; ế; u;  ; l; à; m;  ; t; ă; n; g;  ; n; ă; n; g;  ; l; ự; c; /; t; h; ờ; i;  ; g; i; a; n;  ; s; ử;  ; d; ụ; n; g;  ; T; S; C; Đ;  ; c; ó;  ; t; h; ể;  ; p; h; ả; i;  ; g; h; i;  ; t; ă; n; g;  ; n; g; u; y; ê; n;  ; g; i; á; ."
+  },
+  {
+    "rule_id": "EXP_008",
+    "category": "Chi phí vận chuyển",
+    "transaction_type": "expense",
+    "keywords": [
+      "van chuyen",
+      "cuoc van chuyen",
+      "phi ship",
+      "logistics",
+      "giao hang"
+    ],
+    "debit_account": "641",
+    "credit_account": "112",
+    "confidence": 0.82,
+    "required_docs": [
+      "Hóa đơn/chứng từ hợp lệ nếu ghi nhận chi phí/thuế",
+      "Hợp đồng/đề nghị thanh toán/phiếu nhập-xuất nếu có",
+      "Chứng từ thanh toán: ủy nhiệm chi, sao kê ngân hàng hoặc phiếu thu/chi"
+    ],
+    "risk_flags": "Nếu liên quan mua hàng có thể cộng vào giá nhập kho.",
+    "missing_fields": [
+      "purpose",
+      "invoice"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "156",
+      "152",
+      "642"
+    ],
+    "alternative_credit_accounts": [
+      "111",
+      "331"
+    ],
+    "department_hint": "general",
+    "debit_name": "Chi phí bán hàng",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "N; ế; u;  ; l; i; ê; n;  ; q; u; a; n;  ; m; u; a;  ; h; à; n; g;  ; c; ó;  ; t; h; ể;  ; c; ộ; n; g;  ; v; à; o;  ; g; i; á;  ; n; h; ậ; p;  ; k; h; o; ."
+  },
+  {
+    "rule_id": "PAY_001",
+    "category": "Ghi nhận lương phải trả",
+    "transaction_type": "expense",
+    "keywords": [
+      "tinh luong",
+      "trich luong",
+      "ghi nhan luong",
+      "luong phai tra",
+      "bang luong"
+    ],
+    "debit_account": "642",
+    "credit_account": "334",
+    "confidence": 0.9,
+    "required_docs": [
+      "Bảng lương",
+      "Hợp đồng lao động",
+      "Bảng chấm công"
+    ],
+    "risk_flags": "Cần tách bộ phận 622/627/641/642 nếu có.",
+    "missing_fields": [
+      "department",
+      "payroll_period"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "622",
+      "627",
+      "641"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Phải trả người lao động",
+    "credit_account_options": [
+      "334"
+    ],
+    "default_credit_account": "334",
+    "risk": "C; ầ; n;  ; t; á; c; h;  ; b; ộ;  ; p; h; ậ; n;  ; 6; 2; 2; /; 6; 2; 7; /; 6; 4; 1; /; 6; 4; 2;  ; n; ế; u;  ; c; ó; ."
+  },
+  {
+    "rule_id": "PAY_002",
+    "category": "Thanh toán lương",
+    "transaction_type": "expense",
+    "keywords": [
+      "tra luong",
+      "thanh toan luong",
+      "chuyen khoan luong",
+      "chi luong"
+    ],
+    "debit_account": "334",
+    "credit_account": "112",
+    "confidence": 0.92,
+    "required_docs": [
+      "Bảng lương đã duyệt",
+      "Sao kê/ủy nhiệm chi"
+    ],
+    "risk_flags": [],
+    "missing_fields": [
+      "employee",
+      "payroll_period"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [
+      "111"
+    ],
+    "department_hint": "general",
+    "debit_name": "Phải trả người lao động",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111"
+    ],
+    "default_credit_account": "112",
+    "risk": ""
+  },
+  {
+    "rule_id": "PAY_003",
+    "category": "Trích bảo hiểm phần doanh nghiệp",
+    "transaction_type": "expense",
+    "keywords": [
+      "trich bhxh",
+      "bao hiem xa hoi",
+      "bhyt",
+      "bhtn",
+      "kinh phi cong doan"
+    ],
+    "debit_account": "642",
+    "credit_account": "338",
+    "confidence": 0.86,
+    "required_docs": [
+      "Bảng tính BHXH/BHYT/BHTN/KPCĐ",
+      "Bảng lương"
+    ],
+    "risk_flags": "Cần tách phần NLĐ khấu trừ vào 334 và phần DN tính vào chi phí.",
+    "missing_fields": [
+      "rates",
+      "payroll_period"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "622",
+      "627",
+      "641"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Phải trả, phải nộp khác",
+    "credit_account_options": [
+      "338"
+    ],
+    "default_credit_account": "338",
+    "risk": "C; ầ; n;  ; t; á; c; h;  ; p; h; ầ; n;  ; N; L; Đ;  ; k; h; ấ; u;  ; t; r; ừ;  ; v; à; o;  ; 3; 3; 4;  ; v; à;  ; p; h; ầ; n;  ; D; N;  ; t; í; n; h;  ; v; à; o;  ; c; h; i;  ; p; h; í; ."
+  },
+  {
+    "rule_id": "PAY_004",
+    "category": "Khấu trừ thuế TNCN",
+    "transaction_type": "liability",
+    "keywords": [
+      "thue tncn",
+      "thue thu nhap ca nhan",
+      "khau tru thue ca nhan"
+    ],
+    "debit_account": "334",
+    "credit_account": "3335",
+    "confidence": 0.86,
+    "required_docs": [
+      "Bảng tính thuế TNCN",
+      "Bảng lương"
+    ],
+    "risk_flags": "Cần kiểm tra giảm trừ gia cảnh, cư trú và biểu thuế áp dụng.",
+    "missing_fields": [
+      "employee",
+      "payroll_period"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Phải trả người lao động",
+    "credit_name": "Thuế thu nhập cá nhân",
+    "credit_account_options": [
+      "3335"
+    ],
+    "default_credit_account": "3335",
+    "risk": "C; ầ; n;  ; k; i; ể; m;  ; t; r; a;  ; g; i; ả; m;  ; t; r; ừ;  ; g; i; a;  ; c; ả; n; h; ,;  ; c; ư;  ; t; r; ú;  ; v; à;  ; b; i; ể; u;  ; t; h; u; ế;  ; á; p;  ; d; ụ; n; g; ."
+  },
+  {
+    "rule_id": "PAY_005",
+    "category": "Nộp bảo hiểm/thuế TNCN",
+    "transaction_type": "expense",
+    "keywords": [
+      "nop bhxh",
+      "nop bao hiem",
+      "nop thue tncn",
+      "thanh toan bao hiem"
+    ],
+    "debit_account": "338",
+    "credit_account": "112",
+    "confidence": 0.86,
+    "required_docs": [
+      "Giấy nộp tiền/sao kê",
+      "Thông báo cơ quan BHXH/thuế"
+    ],
+    "risk_flags": "Nếu nộp TNCN thì dùng Nợ 3335/Có 112.",
+    "missing_fields": [
+      "payment_type"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "3335"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Phải trả, phải nộp khác",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112"
+    ],
+    "default_credit_account": "112",
+    "risk": "N; ế; u;  ; n; ộ; p;  ; T; N; C; N;  ; t; h; ì;  ; d; ù; n; g;  ; N; ợ;  ; 3; 3; 3; 5; /; C; ó;  ; 1; 1; 2; ."
+  },
+  {
+    "rule_id": "ADV_001",
+    "category": "Tạm ứng nhân viên",
+    "transaction_type": "asset",
+    "keywords": [
+      "tam ung nhan vien",
+      "ung tien cho nhan vien",
+      "ung cong tac phi",
+      "tam ung cong tac"
+    ],
+    "debit_account": "141",
+    "credit_account": "112",
+    "confidence": 0.88,
+    "required_docs": [
+      "Đề nghị tạm ứng",
+      "Phiếu chi/ủy nhiệm chi"
+    ],
+    "risk_flags": "Cần quyết toán/hoàn ứng đúng hạn.",
+    "missing_fields": [
+      "employee",
+      "purpose"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [
+      "111"
+    ],
+    "department_hint": "general",
+    "debit_name": "Tạm ứng",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111"
+    ],
+    "default_credit_account": "112",
+    "risk": "C; ầ; n;  ; q; u; y; ế; t;  ; t; o; á; n; /; h; o; à; n;  ; ứ; n; g;  ; đ; ú; n; g;  ; h; ạ; n; ."
+  },
+  {
+    "rule_id": "ADV_002",
+    "category": "Hoàn ứng/quyết toán tạm ứng",
+    "transaction_type": "expense",
+    "keywords": [
+      "hoan ung",
+      "quyet toan tam ung",
+      "nhan vien hoan ung",
+      "thanh toan bang tam ung"
+    ],
+    "debit_account": "642",
+    "credit_account": "141",
+    "confidence": 0.84,
+    "required_docs": [
+      "Bảng quyết toán tạm ứng",
+      "Hóa đơn/chứng từ liên quan"
+    ],
+    "risk_flags": "Nếu nhân viên nộp lại tiền thừa: Nợ 111/112, Có 141.",
+    "missing_fields": [
+      "employee",
+      "invoice",
+      "purpose"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "111",
+      "112",
+      "641",
+      "627"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Tạm ứng",
+    "credit_account_options": [
+      "141"
+    ],
+    "default_credit_account": "141",
+    "risk": "N; ế; u;  ; n; h; â; n;  ; v; i; ê; n;  ; n; ộ; p;  ; l; ạ; i;  ; t; i; ề; n;  ; t; h; ừ; a; :;  ; N; ợ;  ; 1; 1; 1; /; 1; 1; 2; ,;  ; C; ó;  ; 1; 4; 1; ."
+  },
+  {
+    "rule_id": "ASSET_001",
+    "category": "Mua tài sản cố định",
+    "transaction_type": "asset",
+    "keywords": [
+      "mua tai san co dinh",
+      "mua may moc",
+      "mua oto",
+      "mua xe",
+      "mua laptop gia tri lon",
+      "mua thiet bi gia tri lon"
+    ],
+    "debit_account": "211",
+    "credit_account": "112",
+    "confidence": 0.86,
+    "required_docs": [
+      "Hóa đơn",
+      "Hợp đồng",
+      "Biên bản bàn giao/nghiệm thu",
+      "Hồ sơ tài sản"
+    ],
+    "risk_flags": "Cần xác định đủ điều kiện ghi nhận TSCĐ và thời gian khấu hao.",
+    "missing_fields": [
+      "asset_name",
+      "useful_life",
+      "department",
+      "vat_rate"
+    ],
+    "tax_notes": "VAT đầu vào của TSCĐ đủ điều kiện thường ghi Nợ 1332.",
+    "alternative_debit_accounts": [
+      "213",
+      "241"
+    ],
+    "alternative_credit_accounts": [
+      "331",
+      "111"
+    ],
+    "department_hint": "general",
+    "debit_name": "Tài sản cố định hữu hình",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "331",
+      "111"
+    ],
+    "default_credit_account": "112",
+    "risk": "C; ầ; n;  ; x; á; c;  ; đ; ị; n; h;  ; đ; ủ;  ; đ; i; ề; u;  ; k; i; ệ; n;  ; g; h; i;  ; n; h; ậ; n;  ; T; S; C; Đ;  ; v; à;  ; t; h; ờ; i;  ; g; i; a; n;  ; k; h; ấ; u;  ; h; a; o; ."
+  },
+  {
+    "rule_id": "ASSET_002",
+    "category": "Trích khấu hao TSCĐ",
+    "transaction_type": "expense",
+    "keywords": [
+      "khau hao",
+      "trich khau hao",
+      "hao mon tai san"
+    ],
+    "debit_account": "642",
+    "credit_account": "214",
+    "confidence": 0.88,
+    "required_docs": [
+      "Bảng tính khấu hao",
+      "Danh mục TSCĐ"
+    ],
+    "risk_flags": "Cần phân bổ theo bộ phận sử dụng 627/641/642.",
+    "missing_fields": [
+      "asset",
+      "months",
+      "department"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "627",
+      "641"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Hao mòn tài sản cố định",
+    "credit_account_options": [
+      "214"
+    ],
+    "default_credit_account": "214",
+    "risk": "C; ầ; n;  ; p; h; â; n;  ; b; ổ;  ; t; h; e; o;  ; b; ộ;  ; p; h; ậ; n;  ; s; ử;  ; d; ụ; n; g;  ; 6; 2; 7; /; 6; 4; 1; /; 6; 4; 2; ."
+  },
+  {
+    "rule_id": "ASSET_003",
+    "category": "Mua công cụ dụng cụ",
+    "transaction_type": "asset",
+    "keywords": [
+      "mua cong cu dung cu",
+      "mua ccdc",
+      "mua thiet bi nho",
+      "mua laptop",
+      "mua ban ghe"
+    ],
+    "debit_account": "153",
+    "credit_account": "112",
+    "confidence": 0.82,
+    "required_docs": [
+      "Hóa đơn/chứng từ hợp lệ nếu ghi nhận chi phí/thuế",
+      "Hợp đồng/đề nghị thanh toán/phiếu nhập-xuất nếu có",
+      "Chứng từ thanh toán: ủy nhiệm chi, sao kê ngân hàng hoặc phiếu thu/chi"
+    ],
+    "risk_flags": "Nếu dùng ngay/phân bổ nhiều kỳ có thể qua 242 hoặc chi phí trực tiếp.",
+    "missing_fields": [
+      "asset_name",
+      "allocation_months",
+      "department",
+      "vat_rate"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "242",
+      "642"
+    ],
+    "alternative_credit_accounts": [
+      "111",
+      "331"
+    ],
+    "department_hint": "general",
+    "debit_name": "Công cụ, dụng cụ",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111",
+      "331"
+    ],
+    "default_credit_account": "112",
+    "risk": "N; ế; u;  ; d; ù; n; g;  ; n; g; a; y; /; p; h; â; n;  ; b; ổ;  ; n; h; i; ề; u;  ; k; ỳ;  ; c; ó;  ; t; h; ể;  ; q; u; a;  ; 2; 4; 2;  ; h; o; ặ; c;  ; c; h; i;  ; p; h; í;  ; t; r; ự; c;  ; t; i; ế; p; ."
+  },
+  {
+    "rule_id": "ASSET_004",
+    "category": "Phân bổ công cụ dụng cụ/chi phí trả trước",
+    "transaction_type": "expense",
+    "keywords": [
+      "phan bo ccdc",
+      "phan bo chi phi tra truoc",
+      "phan bo 242",
+      "phan bo cong cu"
+    ],
+    "debit_account": "642",
+    "credit_account": "242",
+    "confidence": 0.88,
+    "required_docs": [
+      "Bảng phân bổ",
+      "Hồ sơ CCDC/chi phí trả trước"
+    ],
+    "risk_flags": "Cần nhất quán thời gian phân bổ.",
+    "missing_fields": [
+      "allocation_months",
+      "department"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "627",
+      "641"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Chi phí trả trước",
+    "credit_account_options": [
+      "242"
+    ],
+    "default_credit_account": "242",
+    "risk": "C; ầ; n;  ; n; h; ấ; t;  ; q; u; á; n;  ; t; h; ờ; i;  ; g; i; a; n;  ; p; h; â; n;  ; b; ổ; ."
+  },
+  {
+    "rule_id": "ASSET_005",
+    "category": "Thanh lý/nhượng bán tài sản",
+    "transaction_type": "mixed",
+    "keywords": [
+      "thanh ly tai san",
+      "ban tai san co dinh",
+      "nhuong ban tai san"
+    ],
+    "debit_account": "811",
+    "credit_account": "211",
+    "confidence": 0.78,
+    "required_docs": [
+      "Quyết định thanh lý",
+      "Biên bản thanh lý",
+      "Hóa đơn bán tài sản",
+      "Bảng khấu hao"
+    ],
+    "risk_flags": "Nghiệp vụ nhiều bút toán: xóa nguyên giá, xóa hao mòn, ghi thu nhập, VAT nếu có.",
+    "missing_fields": [
+      "asset",
+      "accumulated_depreciation",
+      "selling_price",
+      "vat_rate"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Chi phí khác",
+    "credit_name": "Tài sản cố định hữu hình",
+    "credit_account_options": [
+      "211"
+    ],
+    "default_credit_account": "211",
+    "risk": "N; g; h; i; ệ; p;  ; v; ụ;  ; n; h; i; ề; u;  ; b; ú; t;  ; t; o; á; n; :;  ; x; ó; a;  ; n; g; u; y; ê; n;  ; g; i; á; ,;  ; x; ó; a;  ; h; a; o;  ; m; ò; n; ,;  ; g; h; i;  ; t; h; u;  ; n; h; ậ; p; ,;  ; V; A; T;  ; n; ế; u;  ; c; ó; ."
+  },
+  {
+    "rule_id": "FIN_001",
+    "category": "Nhận tiền vay",
+    "transaction_type": "liability",
+    "keywords": [
+      "vay ngan hang",
+      "nhan tien vay",
+      "giai ngan khoan vay",
+      "vay von"
+    ],
+    "debit_account": "112",
+    "credit_account": "341",
+    "confidence": 0.9,
+    "required_docs": [
+      "Hợp đồng tín dụng",
+      "Sao kê/giấy báo có"
+    ],
+    "risk_flags": "Theo dõi gốc vay, lãi vay và kỳ hạn.",
+    "missing_fields": [
+      "loan_contract"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Tiền gửi ngân hàng",
+    "credit_name": "Vay và nợ thuê tài chính",
+    "credit_account_options": [
+      "341"
+    ],
+    "default_credit_account": "341",
+    "risk": "T; h; e; o;  ; d; õ; i;  ; g; ố; c;  ; v; a; y; ,;  ; l; ã; i;  ; v; a; y;  ; v; à;  ; k; ỳ;  ; h; ạ; n; ."
+  },
+  {
+    "rule_id": "FIN_002",
+    "category": "Trả gốc vay",
+    "transaction_type": "expense",
+    "keywords": [
+      "tra goc vay",
+      "tra no vay",
+      "thanh toan goc vay"
+    ],
+    "debit_account": "341",
+    "credit_account": "112",
+    "confidence": 0.9,
+    "required_docs": [
+      "Lịch trả nợ",
+      "Sao kê/ủy nhiệm chi"
+    ],
+    "risk_flags": [],
+    "missing_fields": [
+      "loan_contract"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Vay và nợ thuê tài chính",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112"
+    ],
+    "default_credit_account": "112",
+    "risk": ""
+  },
+  {
+    "rule_id": "FIN_003",
+    "category": "Chi phí lãi vay",
+    "transaction_type": "expense",
+    "keywords": [
+      "lai vay",
+      "tra lai vay",
+      "chi phi lai vay"
+    ],
+    "debit_account": "635",
+    "credit_account": "112",
+    "confidence": 0.88,
+    "required_docs": [
+      "Bảng tính lãi",
+      "Hợp đồng vay",
+      "Chứng từ thanh toán"
+    ],
+    "risk_flags": "Kiểm tra điều kiện khống chế/được trừ khi quyết toán thuế nếu áp dụng.",
+    "missing_fields": [
+      "loan_contract",
+      "interest_period"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [
+      "335",
+      "341"
+    ],
+    "department_hint": "general",
+    "debit_name": "Chi phí tài chính",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "335",
+      "341"
+    ],
+    "default_credit_account": "112",
+    "risk": "K; i; ể; m;  ; t; r; a;  ; đ; i; ề; u;  ; k; i; ệ; n;  ; k; h; ố; n; g;  ; c; h; ế; /; đ; ư; ợ; c;  ; t; r; ừ;  ; k; h; i;  ; q; u; y; ế; t;  ; t; o; á; n;  ; t; h; u; ế;  ; n; ế; u;  ; á; p;  ; d; ụ; n; g; ."
+  },
+  {
+    "rule_id": "FIN_004",
+    "category": "Góp vốn chủ sở hữu",
+    "transaction_type": "equity",
+    "keywords": [
+      "gop von",
+      "chu so huu gop von",
+      "co dong gop von",
+      "nhan von gop"
+    ],
+    "debit_account": "112",
+    "credit_account": "411",
+    "confidence": 0.9,
+    "required_docs": [
+      "Hồ sơ góp vốn",
+      "Sao kê/phiếu thu"
+    ],
+    "risk_flags": "Cần theo dõi đúng thành viên/cổ đông và thời hạn góp vốn.",
+    "missing_fields": [
+      "owner"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "111"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Tiền gửi ngân hàng",
+    "credit_name": "Vốn đầu tư của chủ sở hữu",
+    "credit_account_options": [
+      "411"
+    ],
+    "default_credit_account": "411",
+    "risk": "C; ầ; n;  ; t; h; e; o;  ; d; õ; i;  ; đ; ú; n; g;  ; t; h; à; n; h;  ; v; i; ê; n; /; c; ổ;  ; đ; ô; n; g;  ; v; à;  ; t; h; ờ; i;  ; h; ạ; n;  ; g; ó; p;  ; v; ố; n; ."
+  },
+  {
+    "rule_id": "FIN_005",
+    "category": "Rút/hoàn trả vốn góp",
+    "transaction_type": "equity",
+    "keywords": [
+      "rut von",
+      "hoan tra von gop",
+      "tra von cho chu so huu"
+    ],
+    "debit_account": "411",
+    "credit_account": "112",
+    "confidence": 0.78,
+    "required_docs": [
+      "Nghị quyết/quyết định",
+      "Hồ sơ pháp lý liên quan",
+      "Chứng từ thanh toán"
+    ],
+    "risk_flags": "Rủi ro pháp lý cao, cần kiểm tra điều kiện giảm vốn/hoàn vốn.",
+    "missing_fields": [
+      "legal_approval"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [
+      "111"
+    ],
+    "department_hint": "general",
+    "debit_name": "Vốn đầu tư của chủ sở hữu",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112",
+      "111"
+    ],
+    "default_credit_account": "112",
+    "risk": "R; ủ; i;  ; r; o;  ; p; h; á; p;  ; l; ý;  ; c; a; o; ,;  ; c; ầ; n;  ; k; i; ể; m;  ; t; r; a;  ; đ; i; ề; u;  ; k; i; ệ; n;  ; g; i; ả; m;  ; v; ố; n; /; h; o; à; n;  ; v; ố; n; ."
+  },
+  {
+    "rule_id": "FIN_006",
+    "category": "Cổ tức/lợi nhuận phải trả",
+    "transaction_type": "equity",
+    "keywords": [
+      "chia co tuc",
+      "chia loi nhuan",
+      "loi nhuan phai tra"
+    ],
+    "debit_account": "421",
+    "credit_account": "338",
+    "confidence": 0.78,
+    "required_docs": [
+      "Nghị quyết phân phối lợi nhuận",
+      "Danh sách cổ đông/thành viên"
+    ],
+    "risk_flags": "Cần kiểm tra thuế TNCN/khấu trừ nếu trả cho cá nhân.",
+    "missing_fields": [
+      "approval",
+      "recipient"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Lợi nhuận sau thuế chưa phân phối",
+    "credit_name": "Phải trả, phải nộp khác",
+    "credit_account_options": [
+      "338"
+    ],
+    "default_credit_account": "338",
+    "risk": "C; ầ; n;  ; k; i; ể; m;  ; t; r; a;  ; t; h; u; ế;  ; T; N; C; N; /; k; h; ấ; u;  ; t; r; ừ;  ; n; ế; u;  ; t; r; ả;  ; c; h; o;  ; c; á;  ; n; h; â; n; ."
+  },
+  {
+    "rule_id": "TAX_001",
+    "category": "Nộp thuế GTGT",
+    "transaction_type": "expense",
+    "keywords": [
+      "nop thue gtgt",
+      "nop vat",
+      "thanh toan thue gtgt"
+    ],
+    "debit_account": "3331",
+    "credit_account": "112",
+    "confidence": 0.9,
+    "required_docs": [
+      "Giấy nộp tiền",
+      "Tờ khai VAT"
+    ],
+    "risk_flags": [],
+    "missing_fields": [
+      "tax_period"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Thuế GTGT phải nộp",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112"
+    ],
+    "default_credit_account": "112",
+    "risk": ""
+  },
+  {
+    "rule_id": "TAX_002",
+    "category": "Thuế TNDN tạm tính/phải nộp",
+    "transaction_type": "expense",
+    "keywords": [
+      "thue tndn",
+      "thue thu nhap doanh nghiep",
+      "tndn tam tinh"
+    ],
+    "debit_account": "821",
+    "credit_account": "3334",
+    "confidence": 0.86,
+    "required_docs": [
+      "Tờ khai/tính thuế TNDN",
+      "Bảng xác định thu nhập chịu thuế"
+    ],
+    "risk_flags": "Cần phân biệt lợi nhuận kế toán và thu nhập tính thuế.",
+    "missing_fields": [
+      "taxable_income",
+      "tax_rate"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Chi phí thuế thu nhập doanh nghiệp",
+    "credit_name": "Thuế thu nhập doanh nghiệp",
+    "credit_account_options": [
+      "3334"
+    ],
+    "default_credit_account": "3334",
+    "risk": "C; ầ; n;  ; p; h; â; n;  ; b; i; ệ; t;  ; l; ợ; i;  ; n; h; u; ậ; n;  ; k; ế;  ; t; o; á; n;  ; v; à;  ; t; h; u;  ; n; h; ậ; p;  ; t; í; n; h;  ; t; h; u; ế; ."
+  },
+  {
+    "rule_id": "TAX_003",
+    "category": "Nộp thuế TNDN",
+    "transaction_type": "expense",
+    "keywords": [
+      "nop thue tndn",
+      "thanh toan thue tndn"
+    ],
+    "debit_account": "3334",
+    "credit_account": "112",
+    "confidence": 0.9,
+    "required_docs": [
+      "Giấy nộp tiền",
+      "Tờ khai/quyết toán"
+    ],
+    "risk_flags": [],
+    "missing_fields": [
+      "tax_period"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Thuế thu nhập doanh nghiệp",
+    "credit_name": "Tiền gửi ngân hàng",
+    "credit_account_options": [
+      "112"
+    ],
+    "default_credit_account": "112",
+    "risk": ""
+  },
+  {
+    "rule_id": "TAX_004",
+    "category": "Thuế môn bài/lệ phí môn bài",
+    "transaction_type": "expense",
+    "keywords": [
+      "le phi mon bai",
+      "thue mon bai",
+      "nop mon bai"
+    ],
+    "debit_account": "642",
+    "credit_account": "3338",
+    "confidence": 0.82,
+    "required_docs": [
+      "Tờ khai/thông báo",
+      "Giấy nộp tiền"
+    ],
+    "risk_flags": [],
+    "missing_fields": [
+      "tax_period"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [
+      "112"
+    ],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Thuế khác",
+    "credit_account_options": [
+      "3338",
+      "112"
+    ],
+    "default_credit_account": "3338",
+    "risk": ""
+  },
+  {
+    "rule_id": "INV_001",
+    "category": "Xuất nguyên vật liệu sản xuất",
+    "transaction_type": "expense",
+    "keywords": [
+      "xuat nguyen vat lieu",
+      "xuat vat tu san xuat",
+      "dua vao san xuat"
+    ],
+    "debit_account": "621",
+    "credit_account": "152",
+    "confidence": 0.86,
+    "required_docs": [
+      "Phiếu xuất kho",
+      "Lệnh sản xuất/định mức"
+    ],
+    "risk_flags": "Cần theo dõi định mức và sản phẩm/công trình.",
+    "missing_fields": [
+      "product",
+      "quantity"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Chi phí nguyên vật liệu trực tiếp",
+    "credit_name": "Nguyên liệu, vật liệu",
+    "credit_account_options": [
+      "152"
+    ],
+    "default_credit_account": "152",
+    "risk": "C; ầ; n;  ; t; h; e; o;  ; d; õ; i;  ; đ; ị; n; h;  ; m; ứ; c;  ; v; à;  ; s; ả; n;  ; p; h; ẩ; m; /; c; ô; n; g;  ; t; r; ì; n; h; ."
+  },
+  {
+    "rule_id": "INV_002",
+    "category": "Nhập kho thành phẩm",
+    "transaction_type": "asset",
+    "keywords": [
+      "nhap kho thanh pham",
+      "hoan thanh san xuat",
+      "ket chuyen gia thanh"
+    ],
+    "debit_account": "155",
+    "credit_account": "154",
+    "confidence": 0.84,
+    "required_docs": [
+      "Phiếu nhập kho",
+      "Bảng tính giá thành"
+    ],
+    "risk_flags": "Cần tính đủ 621/622/627 vào giá thành.",
+    "missing_fields": [
+      "product",
+      "costing_period"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Thành phẩm",
+    "credit_name": "Chi phí sản xuất, kinh doanh dở dang",
+    "credit_account_options": [
+      "154"
+    ],
+    "default_credit_account": "154",
+    "risk": "C; ầ; n;  ; t; í; n; h;  ; đ; ủ;  ; 6; 2; 1; /; 6; 2; 2; /; 6; 2; 7;  ; v; à; o;  ; g; i; á;  ; t; h; à; n; h; ."
+  },
+  {
+    "rule_id": "INV_003",
+    "category": "Kiểm kê thiếu/hư hỏng hàng tồn kho",
+    "transaction_type": "expense",
+    "keywords": [
+      "thieu kho",
+      "hao hut",
+      "hang hong",
+      "mat hang",
+      "kiem ke thieu"
+    ],
+    "debit_account": "632",
+    "credit_account": "156",
+    "confidence": 0.78,
+    "required_docs": [
+      "Biên bản kiểm kê",
+      "Quyết định xử lý"
+    ],
+    "risk_flags": "Cần xác định trách nhiệm bồi thường hoặc chi phí khác.",
+    "missing_fields": [
+      "reason",
+      "approval"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "138",
+      "811"
+    ],
+    "alternative_credit_accounts": [
+      "152",
+      "155"
+    ],
+    "department_hint": "general",
+    "debit_name": "Giá vốn hàng bán",
+    "credit_name": "Hàng hóa",
+    "credit_account_options": [
+      "156",
+      "152",
+      "155"
+    ],
+    "default_credit_account": "156",
+    "risk": "C; ầ; n;  ; x; á; c;  ; đ; ị; n; h;  ; t; r; á; c; h;  ; n; h; i; ệ; m;  ; b; ồ; i;  ; t; h; ư; ờ; n; g;  ; h; o; ặ; c;  ; c; h; i;  ; p; h; í;  ; k; h; á; c; ."
+  },
+  {
+    "rule_id": "INV_004",
+    "category": "Kiểm kê thừa hàng tồn kho",
+    "transaction_type": "income",
+    "keywords": [
+      "thua kho",
+      "kiem ke thua",
+      "phat hien thua hang"
+    ],
+    "debit_account": "156",
+    "credit_account": "711",
+    "confidence": 0.78,
+    "required_docs": [
+      "Biên bản kiểm kê",
+      "Quyết định xử lý"
+    ],
+    "risk_flags": "Cần xác định nguyên nhân và quyền sở hữu.",
+    "missing_fields": [
+      "reason"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "152",
+      "155"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Hàng hóa",
+    "credit_name": "Thu nhập khác",
+    "credit_account_options": [
+      "711"
+    ],
+    "default_credit_account": "711",
+    "risk": "C; ầ; n;  ; x; á; c;  ; đ; ị; n; h;  ; n; g; u; y; ê; n;  ; n; h; â; n;  ; v; à;  ; q; u; y; ề; n;  ; s; ở;  ; h; ữ; u; ."
+  },
+  {
+    "rule_id": "CLOSE_001",
+    "category": "Trích trước chi phí",
+    "transaction_type": "liability",
+    "keywords": [
+      "trich truoc chi phi",
+      "chi phi phai tra",
+      "accrual"
+    ],
+    "debit_account": "642",
+    "credit_account": "335",
+    "confidence": 0.82,
+    "required_docs": [
+      "Căn cứ ước tính",
+      "Hợp đồng/nghĩa vụ phát sinh"
+    ],
+    "risk_flags": "Cần hoàn nhập/điều chỉnh khi có hóa đơn thực tế.",
+    "missing_fields": [
+      "basis",
+      "period"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [
+      "641",
+      "627",
+      "635"
+    ],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Chi phí quản lý doanh nghiệp",
+    "credit_name": "Chi phí phải trả",
+    "credit_account_options": [
+      "335"
+    ],
+    "default_credit_account": "335",
+    "risk": "C; ầ; n;  ; h; o; à; n;  ; n; h; ậ; p; /; đ; i; ề; u;  ; c; h; ỉ; n; h;  ; k; h; i;  ; c; ó;  ; h; ó; a;  ; đ; ơ; n;  ; t; h; ự; c;  ; t; ế; ."
+  },
+  {
+    "rule_id": "CLOSE_002",
+    "category": "Kết chuyển doanh thu",
+    "transaction_type": "closing",
+    "keywords": [
+      "ket chuyen doanh thu",
+      "ket chuyen 511",
+      "cuoi ky doanh thu"
+    ],
+    "debit_account": "511",
+    "credit_account": "911",
+    "confidence": 0.9,
+    "required_docs": "Bảng tổng hợp doanh thu",
+    "risk_flags": [],
+    "missing_fields": [
+      "period"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Doanh thu bán hàng và cung cấp dịch vụ",
+    "credit_name": "Xác định kết quả kinh doanh",
+    "credit_account_options": [
+      "911"
+    ],
+    "default_credit_account": "911",
+    "risk": ""
+  },
+  {
+    "rule_id": "CLOSE_003",
+    "category": "Kết chuyển chi phí",
+    "transaction_type": "closing",
+    "keywords": [
+      "ket chuyen chi phi",
+      "ket chuyen 632",
+      "ket chuyen 641",
+      "ket chuyen 642"
+    ],
+    "debit_account": "911",
+    "credit_account": "632",
+    "confidence": 0.86,
+    "required_docs": "Bảng tổng hợp chi phí",
+    "risk_flags": "Có nhiều bút toán cho 632/635/641/642/811/821.",
+    "missing_fields": [
+      "period"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [
+      "635",
+      "641",
+      "642",
+      "811",
+      "821"
+    ],
+    "department_hint": "general",
+    "debit_name": "Xác định kết quả kinh doanh",
+    "credit_name": "Giá vốn hàng bán",
+    "credit_account_options": [
+      "632",
+      "635",
+      "641",
+      "642",
+      "811",
+      "821"
+    ],
+    "default_credit_account": "632",
+    "risk": "C; ó;  ; n; h; i; ề; u;  ; b; ú; t;  ; t; o; á; n;  ; c; h; o;  ; 6; 3; 2; /; 6; 3; 5; /; 6; 4; 1; /; 6; 4; 2; /; 8; 1; 1; /; 8; 2; 1; ."
+  },
+  {
+    "rule_id": "CLOSE_004",
+    "category": "Kết chuyển lãi/lỗ",
+    "transaction_type": "closing",
+    "keywords": [
+      "ket chuyen lai lo",
+      "xac dinh ket qua kinh doanh",
+      "ket chuyen 911"
+    ],
+    "debit_account": "911",
+    "credit_account": "421",
+    "confidence": 0.84,
+    "required_docs": "Bảng xác định kết quả kinh doanh",
+    "risk_flags": "Nếu lỗ thì bút toán đảo chiều: Nợ 421/Có 911.",
+    "missing_fields": [
+      "period",
+      "profit_or_loss"
+    ],
+    "tax_notes": [],
+    "alternative_debit_accounts": [],
+    "alternative_credit_accounts": [],
+    "department_hint": "general",
+    "debit_name": "Xác định kết quả kinh doanh",
+    "credit_name": "Lợi nhuận sau thuế chưa phân phối",
+    "credit_account_options": [
+      "421"
+    ],
+    "default_credit_account": "421",
+    "risk": "N; ế; u;  ; l; ỗ;  ; t; h; ì;  ; b; ú; t;  ; t; o; á; n;  ; đ; ả; o;  ; c; h; i; ề; u; :;  ; N; ợ;  ; 4; 2; 1; /; C; ó;  ; 9; 1; 1; ."
+  }
+]

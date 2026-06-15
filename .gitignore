@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local secrets / environment
+.env
+.env.local
+.env.*.local
+
+# Local database and runtime data
+finiip.db
+*.sqlite
+*.sqlite3
+
+# RAG uploads / generated stores / audit logs
+# Keep source sample knowledge files, ignore runtime generated files.
+data/rag_uploads/
+data/*.jsonl
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

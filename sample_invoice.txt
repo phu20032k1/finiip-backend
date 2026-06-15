@@ -1,0 +1,11 @@
+HÓA ĐƠN GIÁ TRỊ GIA TĂNG
+Số hóa đơn: 0000123
+Ngày 31/05/2026
+Người bán: Công ty ABC
+Mã số thuế: 0101234567
+Người mua: Công ty Finiip
+Cộng tiền hàng: 5.000.000
+Thuế GTGT 10%: 500.000
+Tổng cộng thanh toán: 5.500.000
+Hình thức thanh toán: Chuyển khoản
+Nội dung: Dịch vụ quảng cáo Facebook tháng 5

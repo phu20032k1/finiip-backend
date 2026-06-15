@@ -1,0 +1,736 @@
+[
+  {
+    "intent": "greeting",
+    "description": "V101 simple intent - action=reply_greeting, admin_only=False",
+    "examples": [
+      "xin chao",
+      "chao",
+      "hello",
+      "hi",
+      "alo",
+      "hey"
+    ],
+    "action": "reply_greeting",
+    "route_hint": null,
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "thanks",
+    "description": "V101 simple intent - action=reply_polite, admin_only=False",
+    "examples": [
+      "cam on",
+      "thank",
+      "thanks",
+      "ok cam on",
+      "cảm ơn"
+    ],
+    "action": "reply_polite",
+    "route_hint": null,
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "goodbye",
+    "description": "V101 simple intent - action=reply_goodbye, admin_only=False",
+    "examples": [
+      "tam biet",
+      "bye",
+      "hen gap",
+      "xong roi"
+    ],
+    "action": "reply_goodbye",
+    "route_hint": null,
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "help",
+    "description": "V101 simple intent - action=reply_capabilities, admin_only=False",
+    "examples": [
+      "giup",
+      "huong dan",
+      "lam duoc gi",
+      "co chuc nang gi",
+      "cach dung",
+      "test sao"
+    ],
+    "action": "reply_capabilities",
+    "route_hint": "/ai/accounting/full-capabilities",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "admin_rag_upload",
+    "description": "V101 simple intent - action=open_admin_rag_upload, admin_only=True",
+    "examples": [
+      "up rag",
+      "upload rag",
+      "nap rag",
+      "tai lieu rag",
+      "them tai lieu",
+      "upload thong tu",
+      "nap thong tu",
+      "knowledge",
+      "tri thuc",
+      "quan ly rag",
+      "index tai lieu"
+    ],
+    "action": "open_admin_rag_upload",
+    "route_hint": "/admin/rag-ui",
+    "requires_admin": true,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "admin_rag_list",
+    "description": "V101 simple intent - action=list_admin_rag_documents, admin_only=True",
+    "examples": [
+      "danh sach tai lieu",
+      "tai lieu da up",
+      "xem tai lieu rag",
+      "co nhung tai lieu nao",
+      "list docs",
+      "documents"
+    ],
+    "action": "list_admin_rag_documents",
+    "route_hint": "/admin/rag-ui/api/documents",
+    "requires_admin": true,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "admin_rag_delete",
+    "description": "V101 simple intent - action=delete_admin_rag_document, admin_only=True",
+    "examples": [
+      "xoa tai lieu rag",
+      "xoa tai lieu",
+      "xoa rag",
+      "delete document",
+      "bo khoi rag",
+      "remove rag"
+    ],
+    "action": "delete_admin_rag_document",
+    "route_hint": "/admin/rag-ui/delete",
+    "requires_admin": true,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "admin_rag_reindex",
+    "description": "V101 simple intent - action=reindex_admin_rag_document, admin_only=True",
+    "examples": [
+      "reindex",
+      "index lai",
+      "lap chi muc lai",
+      "cap nhat index",
+      "quét lại"
+    ],
+    "action": "reindex_admin_rag_document",
+    "route_hint": "/admin/rag-ui/reindex",
+    "requires_admin": true,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "admin_rag_search",
+    "description": "V101 simple intent - action=search_admin_rag_chunks, admin_only=True",
+    "examples": [
+      "search chunk",
+      "tim chunk",
+      "tim trong rag",
+      "tim tai lieu",
+      "truy xuat nguon"
+    ],
+    "action": "search_admin_rag_chunks",
+    "route_hint": "/admin/rag-ui/search",
+    "requires_admin": true,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "admin_rag_ask",
+    "description": "V101 simple intent - action=ask_admin_rag, admin_only=True",
+    "examples": [
+      "hoi rag",
+      "hoi thu rag",
+      "tra loi theo tai lieu",
+      "dua vao tai lieu",
+      "theo thong tu",
+      "theo quy dinh"
+    ],
+    "action": "ask_admin_rag",
+    "route_hint": "/admin/rag-ui/ask",
+    "requires_admin": true,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "supabase_status",
+    "description": "V101 simple intent - action=check_supabase_status, admin_only=True",
+    "examples": [
+      "supabase",
+      "da noi supabase",
+      "storage mode",
+      "bucket",
+      "schema",
+      "postgres",
+      "pgvector"
+    ],
+    "action": "check_supabase_status",
+    "route_hint": "/ai/v101/supabase/status",
+    "requires_admin": true,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "user_file_upload",
+    "description": "V101 simple intent - action=upload_user_file_for_processing, admin_only=False",
+    "examples": [
+      "up file",
+      "upload file",
+      "tai file",
+      "bao cao",
+      "sao ke",
+      "excel",
+      "chung tu",
+      "file ben ngoai",
+      "orc",
+      "ocr",
+      "anh hoa don"
+    ],
+    "action": "upload_user_file_for_processing",
+    "route_hint": "/user/files/upload",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "ocr_invoice",
+    "description": "V101 simple intent - action=parse_invoice_ocr, admin_only=False",
+    "examples": [
+      "ocr",
+      "doc hoa don",
+      "quét hóa đơn",
+      "scan hoa don",
+      "trich xuat hoa don",
+      "parse invoice"
+    ],
+    "action": "parse_invoice_ocr",
+    "route_hint": "/ai/v87/invoices/parse",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "report_analyze",
+    "description": "V101 simple intent - action=analyze_uploaded_report, admin_only=False",
+    "examples": [
+      "phan tich bao cao",
+      "doc bao cao",
+      "bao cao tai chinh",
+      "bang can doi",
+      "ket qua kinh doanh",
+      "luu chuyen tien te"
+    ],
+    "action": "analyze_uploaded_report",
+    "route_hint": "/user/reports/analyze",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "accounting_entry",
+    "description": "V101 simple intent - action=suggest_accounting_entry, admin_only=False",
+    "examples": [
+      "hach toan",
+      "dinh khoan",
+      "but toan",
+      "no co",
+      "no tk",
+      "co tk",
+      "ghi so",
+      "mua laptop",
+      "mua may tinh",
+      "ban hang",
+      "mua hang",
+      "thanh toan nha cung cap",
+      "khach thanh toan"
+    ],
+    "action": "suggest_accounting_entry",
+    "route_hint": "/ai/accounting/suggest-entry",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "transaction_classification",
+    "description": "V101 simple intent - action=classify_transaction, admin_only=False",
+    "examples": [
+      "phan loai",
+      "giao dich nay",
+      "khoan nay",
+      "chi phi gi",
+      "thu tien",
+      "chi tien",
+      "tam ung",
+      "hoan ung",
+      "chuyen khoan",
+      "tien mat"
+    ],
+    "action": "classify_transaction",
+    "route_hint": "/ai/accounting/analyze-transaction",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "journal_check",
+    "description": "V101 simple intent - action=check_journal_balance, admin_only=False",
+    "examples": [
+      "kiem tra but toan",
+      "but toan can khong",
+      "no co can",
+      "sai but toan",
+      "check journal"
+    ],
+    "action": "check_journal_balance",
+    "route_hint": "/ai/accounting/check-journal",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "tax_risk_check",
+    "description": "V101 simple intent - action=check_tax_risk, admin_only=False",
+    "examples": [
+      "rui ro thue",
+      "co rui ro khong",
+      "hop le khong",
+      "thieu hoa don",
+      "khong co hoa don",
+      "tien mat 20 trieu",
+      "duoc tru",
+      "khong duoc tru",
+      "chung tu can gi"
+    ],
+    "action": "check_tax_risk",
+    "route_hint": "/ai/v90/risk-check",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "followup_questions",
+    "description": "V101 simple intent - action=ask_missing_info, admin_only=False",
+    "examples": [
+      "can hoi gi",
+      "thieu thong tin",
+      "can bo sung",
+      "hoi lai",
+      "chua du du lieu"
+    ],
+    "action": "ask_missing_info",
+    "route_hint": "/ai/v91/followup-questions",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "vat_question",
+    "description": "V101 simple intent - action=vat_answer_or_calculate, admin_only=False",
+    "examples": [
+      "vat",
+      "gtgt",
+      "thue dau vao",
+      "thue dau ra",
+      "khau tru vat",
+      "vat nguoc",
+      "gia chua thue",
+      "tong thanh toan"
+    ],
+    "action": "vat_answer_or_calculate",
+    "route_hint": "/ai/accounting/solve",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "invoice_question",
+    "description": "V101 simple intent - action=invoice_policy_answer, admin_only=False",
+    "examples": [
+      "hoa don",
+      "hoa don dien tu",
+      "so hoa don",
+      "ky hieu",
+      "mau so",
+      "xuat hoa don",
+      "dieu chinh hoa don",
+      "huy hoa don"
+    ],
+    "action": "invoice_policy_answer",
+    "route_hint": "/ai/v86/rag/ask",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "expense_deductibility",
+    "description": "V101 simple intent - action=deductible_expense_answer, admin_only=False",
+    "examples": [
+      "chi phi duoc tru",
+      "khong duoc tru",
+      "tie p khach",
+      "tiep khach",
+      "cong tac phi",
+      "marketing",
+      "quang cao",
+      "phuc loi",
+      "hoa don hop le"
+    ],
+    "action": "deductible_expense_answer",
+    "route_hint": "/ai/v86/rag/ask",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "account_lookup",
+    "description": "V101 simple intent - action=lookup_account, admin_only=False",
+    "examples": [
+      "tai khoan",
+      "tk 111",
+      "tk 112",
+      "tk 131",
+      "tk 331",
+      "tk 133",
+      "tk 333",
+      "tk 156",
+      "tk 211",
+      "tk 242",
+      "tk 641",
+      "tk 642",
+      "642 la gi",
+      "641 la gi"
+    ],
+    "action": "lookup_account",
+    "route_hint": "/ai/accounting/ask",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "payroll_question",
+    "description": "V101 simple intent - action=payroll_accounting_answer, admin_only=False",
+    "examples": [
+      "luong",
+      "bang luong",
+      "bhxh",
+      "bhyt",
+      "bhtn",
+      "tncn",
+      "bao hiem",
+      "cham cong",
+      "trich luong"
+    ],
+    "action": "payroll_accounting_answer",
+    "route_hint": "/ai/accounting/ask",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "asset_question",
+    "description": "V101 simple intent - action=asset_accounting_answer, admin_only=False",
+    "examples": [
+      "tai san co dinh",
+      "tscd",
+      "khau hao",
+      "nguyen gia",
+      "thanh ly tai san",
+      "mua oto",
+      "mua may moc"
+    ],
+    "action": "asset_accounting_answer",
+    "route_hint": "/ai/accounting/ask",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "ccdc_prepaid_question",
+    "description": "V101 simple intent - action=prepaid_ccdc_answer, admin_only=False",
+    "examples": [
+      "ccdc",
+      "cong cu dung cu",
+      "phan bo",
+      "chi phi tra truoc",
+      "242",
+      "153",
+      "phan bo may tinh",
+      "phan bo chi phi"
+    ],
+    "action": "prepaid_ccdc_answer",
+    "route_hint": "/ai/accounting/solve",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "inventory_question",
+    "description": "V101 simple intent - action=inventory_answer, admin_only=False",
+    "examples": [
+      "hang ton kho",
+      "nhap kho",
+      "xuat kho",
+      "gia von",
+      "fifo",
+      "binh quan gia quyen",
+      "ton kho",
+      "156",
+      "632"
+    ],
+    "action": "inventory_answer",
+    "route_hint": "/ai/accounting/solve",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "bank_cash_question",
+    "description": "V101 simple intent - action=cash_bank_answer, admin_only=False",
+    "examples": [
+      "tien mat",
+      "ngan hang",
+      "sao ke",
+      "chuyen khoan",
+      "phi ngan hang",
+      "uy nhiem chi",
+      "thu chi",
+      "111",
+      "112"
+    ],
+    "action": "cash_bank_answer",
+    "route_hint": "/ai/accounting/ask",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "receivable_payable_question",
+    "description": "V101 simple intent - action=ar_ap_answer, admin_only=False",
+    "examples": [
+      "cong no",
+      "phai thu",
+      "phai tra",
+      "khach no",
+      "nha cung cap",
+      "131",
+      "331",
+      "doi chieu cong no",
+      "qua han"
+    ],
+    "action": "ar_ap_answer",
+    "route_hint": "/ai/accounting/ask",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "closing_books",
+    "description": "V101 simple intent - action=period_closing_checklist, admin_only=False",
+    "examples": [
+      "khoa so",
+      "cuoi ky",
+      "cuoi thang",
+      "ket chuyen",
+      "911",
+      "421",
+      "chot so",
+      "lap bctc"
+    ],
+    "action": "period_closing_checklist",
+    "route_hint": "/ai/v97/reports/closing-checklist",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "financial_report",
+    "description": "V101 simple intent - action=financial_report_summary, admin_only=False",
+    "examples": [
+      "bao cao",
+      "bao cao thang",
+      "bctc",
+      "bang can doi",
+      "ket qua kinh doanh",
+      "tai san no phai tra"
+    ],
+    "action": "financial_report_summary",
+    "route_hint": "/ai/v97/reports/monthly-summary",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "profit_question",
+    "description": "V101 simple intent - action=profit_report, admin_only=False",
+    "examples": [
+      "loi nhuan",
+      "lai lo",
+      "ket qua kinh doanh",
+      "lai gop",
+      "lai rong",
+      "bien loi nhuan"
+    ],
+    "action": "profit_report",
+    "route_hint": "/reports/income-statement",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "revenue_question",
+    "description": "V101 simple intent - action=revenue_report, admin_only=False",
+    "examples": [
+      "doanh thu",
+      "ban duoc bao nhieu",
+      "doanh so",
+      "511",
+      "doanh thu thang"
+    ],
+    "action": "revenue_report",
+    "route_hint": "/reports/income-statement",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "cost_question",
+    "description": "V101 simple intent - action=cost_report, admin_only=False",
+    "examples": [
+      "chi phi",
+      "tong chi",
+      "chi phi thang",
+      "641",
+      "642",
+      "635",
+      "632"
+    ],
+    "action": "cost_report",
+    "route_hint": "/reports/income-statement",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "cashflow_question",
+    "description": "V101 simple intent - action=cashflow_report, admin_only=False",
+    "examples": [
+      "dong tien",
+      "cashflow",
+      "luu chuyen tien",
+      "tien ve",
+      "tien ra",
+      "thieu tien"
+    ],
+    "action": "cashflow_report",
+    "route_hint": "/reports/cashflow",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "review_queue",
+    "description": "V101 simple intent - action=open_review_queue, admin_only=False",
+    "examples": [
+      "review",
+      "duyet",
+      "hang doi",
+      "cho duyet",
+      "ke toan duyet",
+      "pending",
+      "approved",
+      "rejected"
+    ],
+    "action": "open_review_queue",
+    "route_hint": "/ai/v89/review-queue",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "export_excel",
+    "description": "V101 simple intent - action=export_excel, admin_only=False",
+    "examples": [
+      "xuat excel",
+      "export",
+      "tai excel",
+      "xuat csv",
+      "file excel",
+      "nhat ky chung excel"
+    ],
+    "action": "export_excel",
+    "route_hint": "/ai/v88/journal/export",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "import_data",
+    "description": "V101 simple intent - action=import_data, admin_only=False",
+    "examples": [
+      "import",
+      "nhap du lieu",
+      "upload excel",
+      "seed data",
+      "du lieu mau"
+    ],
+    "action": "import_data",
+    "route_hint": "/import/excel",
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "workspace_settings",
+    "description": "V101 simple intent - action=workspace_settings, admin_only=True",
+    "examples": [
+      "workspace",
+      "cong ty",
+      "company",
+      "thiet lap cong ty",
+      "danh muc tai khoan",
+      "chinh sach cong ty"
+    ],
+    "action": "workspace_settings",
+    "route_hint": "/ai/v93/workspaces",
+    "requires_admin": true,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "company_memory",
+    "description": "V101 simple intent - action=company_memory, admin_only=True",
+    "examples": [
+      "memory",
+      "nho cong ty",
+      "ghi nho chinh sach",
+      "chinh sach phan bo",
+      "nguong tai san"
+    ],
+    "action": "company_memory",
+    "route_hint": "/ai/v98/company-memory",
+    "requires_admin": true,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "database_setup",
+    "description": "V101 simple intent - action=database_schema, admin_only=True",
+    "examples": [
+      "database",
+      "db",
+      "schema",
+      "bang du lieu",
+      "postgres",
+      "migration",
+      "supabase sql"
+    ],
+    "action": "database_schema",
+    "route_hint": "/ai/v95/database-schema",
+    "requires_admin": true,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "security_production",
+    "description": "V101 simple intent - action=production_readiness, admin_only=True",
+    "examples": [
+      "production",
+      "bao mat",
+      "deploy",
+      "admin key",
+      "secret",
+      "rate limit",
+      "docker",
+      "health check"
+    ],
+    "action": "production_readiness",
+    "route_hint": "/ai/v99/production-readiness",
+    "requires_admin": true,
+    "version": "v101_simple_intent_router"
+  },
+  {
+    "intent": "unknown",
+    "description": "Không đủ tín hiệu để phân loại.",
+    "examples": [],
+    "action": "ask_clarifying_question",
+    "route_hint": null,
+    "requires_admin": false,
+    "version": "v101_simple_intent_router"
+  }
+]

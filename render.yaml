@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: finiip-api
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: CORS_ORIGINS
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: FINIIP_API_KEY
+        sync: false
+      - key: FINIIP_ADMIN_KEY
+        sync: false
+      - key: RAG_STORAGE_MODE
+        value: local

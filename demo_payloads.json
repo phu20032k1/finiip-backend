@@ -1,0 +1,19 @@
+{
+  "ai_analyze": {
+    "description": "Mua máy tính văn phòng 22 triệu có VAT 10% chuyển khoản",
+    "amount": 22000000
+  },
+  "ai_create_transaction": {
+    "description": "Chi phí quảng cáo Facebook Ads có VAT 10%",
+    "amount": 5500000,
+    "auto_create_journal": true,
+    "note": "Demo tạo giao dịch và bút toán từ AI"
+  },
+  "batch_analyze": {
+    "items": [
+      {"description": "Thanh toán tiền điện EVN tháng 5", "amount": 2500000},
+      {"description": "Trả lương nhân viên tháng 5 qua ngân hàng", "amount": 35000000},
+      {"description": "Thu tiền bán hàng từ khách hàng A có VAT 10%", "amount": 11000000}
+    ]
+  }
+}

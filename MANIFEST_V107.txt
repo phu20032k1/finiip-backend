@@ -1,0 +1,21 @@
+V107 Full Knowledge Upgrade
+
+Runtime code:
+- main.py
+- ai_engine.py
+- ai_quality.py
+- ai_v5_v9.py
+- finiip_v25_v40.py
+- services/accounting_ai_full.py
+- services/rag_storage_v101.py
+- services/simple_intents_v101.py
+
+Knowledge/index:
+- knowledge_base/**
+- data/rag_index.json
+- scripts/index_global_knowledge.py
+- scripts/sync_knowledge_base_v107.py
+
+Test/guide:
+- tests/test_v107_full_knowledge.py
+- HUONG_DAN_NANG_KIEN_THUC_V107.md

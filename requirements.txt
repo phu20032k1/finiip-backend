@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+python-multipart
+openpyxl
+pypdf
+pillow
+pytesseract
+psycopg2-binary
+python-dotenv
+
+pytest
+httpx
+python-docx
+openai

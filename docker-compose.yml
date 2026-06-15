@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: finiip-iip-postgres
+    environment:
+      POSTGRES_DB: finiip
+      POSTGRES_USER: finiip
+      POSTGRES_PASSWORD: finiip_dev_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - finiip_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U finiip -d finiip"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    container_name: finiip-iip-backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+psycopg2://finiip:finiip_dev_password@db:5432/finiip
+      IIP_JWT_SECRET: change-this-secret-before-production
+      CORS_ORIGINS: "*"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+
+volumes:
+  finiip_pgdata:
