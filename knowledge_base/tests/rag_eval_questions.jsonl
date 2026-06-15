@@ -1,0 +1,20 @@
+{"id": "ACC-001", "question": "Khách hàng thanh toán khoản nợ đã ghi nhận tháng trước thì hạch toán thế nào?", "expected_topics": ["Nợ 111/112", "Có 131", "không ghi lại 511"], "must_not": ["Có 511 lần nữa"]}
+{"id": "ACC-002", "question": "Mua hàng hóa nhập kho chưa thanh toán, VAT đủ điều kiện", "expected_topics": ["156", "1331", "331"], "must_not": ["mặc định 642"]}
+{"id": "ACC-003", "question": "Rút tiền ngân hàng về quỹ", "expected_topics": ["Nợ 111", "Có 112"], "must_not": []}
+{"id": "ACC-004", "question": "Nhận tiền đặt cọc của khách có ghi doanh thu không?", "expected_topics": ["chưa tự động ghi doanh thu", "kiểm tra hợp đồng"], "must_not": ["Có 511 chắc chắn"]}
+{"id": "VAT-001", "question": "Hóa đơn 6 triệu thanh toán tiền mặt ngày 10/06/2026 có được khấu trừ VAT không?", "expected_topics": ["ngưỡng 5 triệu", "thanh toán không dùng tiền mặt", "needs_review"], "must_not": ["ngưỡng 20 triệu"]}
+{"id": "VAT-002", "question": "Nghị định 144/2026/NĐ-CP đã áp dụng ngày 13/06/2026 chưa?", "expected_topics": ["chưa", "20/06/2026", "future_effective"], "must_not": ["đang có hiệu lực"]}
+{"id": "VAT-003", "question": "Mua trả chậm 8 triệu chưa đến hạn có được khấu trừ VAT?", "expected_topics": ["hợp đồng", "chưa đến hạn", "điều kiện"], "must_not": ["luôn bị loại"]}
+{"id": "VAT-004", "question": "Nhân viên dùng tài khoản cá nhân trả tiền nhà cung cấp rồi công ty hoàn tiền mặt", "expected_topics": ["ủy quyền/quy chế", "thanh toán không dùng tiền mặt", "rủi ro"], "must_not": ["chắc chắn khấu trừ"]}
+{"id": "CIT-001", "question": "Có hóa đơn là chắc chắn được trừ TNDN đúng không?", "expected_topics": ["không", "liên quan kinh doanh", "hóa đơn chứng từ", "thanh toán"], "must_not": []}
+{"id": "CIT-002", "question": "Chi quảng cáo Facebook cần hồ sơ gì?", "expected_topics": ["mục đích kinh doanh", "báo cáo chiến dịch", "thanh toán", "thuế nhà thầu"], "must_not": []}
+{"id": "FA-001", "question": "Laptop 18 triệu dùng 3 năm có phải TSCĐ?", "expected_topics": ["30 triệu", "CCDC/242", "nguyên giá", "hệ thống đồng bộ"], "must_not": ["chắc chắn 211"]}
+{"id": "FA-002", "question": "Mua máy 40 triệu nhưng chưa lắp đặt xong", "expected_topics": ["241", "chưa sẵn sàng sử dụng", "chưa khấu hao"], "must_not": ["khấu hao ngay"]}
+{"id": "CCDC-001", "question": "CCDC nhập kho rồi đưa vào dùng nhiều kỳ", "expected_topics": ["153", "242", "phân bổ 627/641/642"], "must_not": ["giữ đồng thời toàn bộ ở 153 và 242"]}
+{"id": "PAY-001", "question": "Hạch toán lương và bảo hiểm", "expected_topics": ["334", "338", "3335", "không đoán tỷ lệ"], "must_not": []}
+{"id": "INV-001", "question": "Hệ thống đang âm kho thì AI có tự tạo phiếu nhập không?", "expected_topics": ["không", "kiểm tra chứng từ", "sai ngày/mã/đơn vị"], "must_not": ["tạo phiếu nhập giả"]}
+{"id": "CLOSE-001", "question": "Trước khóa sổ cần kiểm tra gì?", "expected_topics": ["tiền", "công nợ", "kho", "tài sản", "thuế"], "must_not": []}
+{"id": "TT58-001", "question": "Thông tư 58/2026 áp dụng ngày 15/06/2026 chưa?", "expected_topics": ["chưa", "01/07/2026"], "must_not": ["đã áp dụng"]}
+{"id": "TT58-002", "question": "Doanh nghiệp siêu nhỏ có bắt buộc kế toán trưởng theo TT58?", "expected_topics": ["không bắt buộc", "đúng đối tượng", "từ ngày hiệu lực"], "must_not": ["mọi doanh nghiệp"]}
+{"id": "RAG-001", "question": "Nguồn FAQ nói 20 triệu nhưng văn bản hiện hành nói 5 triệu, chọn gì?", "expected_topics": ["nguồn chính thức", "5 triệu", "ngày hiệu lực"], "must_not": ["theo FAQ"]}
+{"id": "RAG-002", "question": "Tìm được 5 chunk giống nhau thì confidence có tự high không?", "expected_topics": ["không", "authority", "temporal_fit", "đúng điều kiện"], "must_not": []}

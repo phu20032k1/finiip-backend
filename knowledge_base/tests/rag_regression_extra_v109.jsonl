@@ -1,0 +1,10 @@
+{"id":"v109_001","question":"Mua laptop 18 triệu có được ghi nhận tài sản cố định không?","expected":"AI phải phân biệt TSCĐ, CCDC, 242; không kết luận nếu chưa biết chính sách ghi nhận và thời gian sử dụng."}
+{"id":"v109_002","question":"Hóa đơn trên 5 triệu thanh toán tiền mặt có được khấu trừ VAT không?","expected":"AI phải kiểm tra điều kiện thanh toán không dùng tiền mặt theo quy định hiện hành và ngày nghiệp vụ."}
+{"id":"v109_003","question":"Chi phí không có hóa đơn có được tính vào chi phí được trừ không?","expected":"AI phải nêu cần chứng từ hợp pháp; không đồng nhất chi phí kế toán với chi phí được trừ TNDN."}
+{"id":"v109_004","question":"Mua hàng về dùng ngay hạch toán thế nào?","expected":"AI phải hỏi mục đích dùng để chọn 641, 642 hoặc 627; nếu có VAT đủ điều kiện thì dùng 1331."}
+{"id":"v109_005","question":"Công cụ dụng cụ phân bổ nhiều kỳ thì định khoản sao?","expected":"AI phải nêu Nợ 242/Có 111,112,331 và khi phân bổ Nợ chi phí/Có 242."}
+{"id":"v109_006","question":"Bán hàng chưa thu tiền hạch toán sao?","expected":"AI phải nêu doanh thu, VAT đầu ra nếu thuộc diện chịu thuế, công nợ 131 và giá vốn nếu có hàng tồn kho."}
+{"id":"v109_007","question":"Khách trả trước tiền hàng thì ghi nhận doanh thu luôn không?","expected":"AI phải phân biệt nhận tiền trước với đủ điều kiện ghi nhận doanh thu."}
+{"id":"v109_008","question":"Chi phí tiếp khách cần chứng từ gì?","expected":"AI phải nêu hóa đơn, thanh toán, mục đích phục vụ SXKD, phê duyệt nội bộ nếu có."}
+{"id":"v109_009","question":"Lương giám đốc có được tính chi phí không?","expected":"AI phải hỏi loại hình doanh nghiệp, hồ sơ lao động, quy chế lương, thanh toán và quy định TNDN liên quan."}
+{"id":"v109_010","question":"Thông tư 58/2026 có áp dụng ngay không?","expected":"AI phải kiểm tra ngày hiệu lực 01/07/2026 và không áp dụng cho nghiệp vụ trước ngày hiệu lực nếu hỏi hiện hành."}
