@@ -164,19 +164,67 @@ def read_pdf_bytes(raw: bytes) -> str:
 
 
 def read_docx_bytes(raw: bytes) -> str:
+    """Read DOCX content in the same order it appears in Word.
+
+    ``python-docx`` exposes ``document.paragraphs`` and ``document.tables`` as
+    two separate collections. Reading all paragraphs first and all tables later
+    moves legal-document header tables (issuer, document number, issue date) to
+    the end of the extracted text. That made metadata detection pick the first
+    cited law, for example ``88/2015/QH13``, instead of the document's own
+    number ``15/2026/TT-BTC``.
+
+    Iterate top-level XML blocks so paragraphs and tables remain interleaved.
+    This is especially important for Vietnamese circulars and decisions, whose
+    official number/date are commonly stored in the first two-column table.
+    """
     try:
         import docx  # type: ignore
+        from docx.oxml.table import CT_Tbl  # type: ignore
+        from docx.oxml.text.paragraph import CT_P  # type: ignore
+        from docx.table import Table  # type: ignore
+        from docx.text.paragraph import Paragraph  # type: ignore
+
         doc = docx.Document(io.BytesIO(raw))
         lines: List[str] = []
-        for paragraph in doc.paragraphs:
-            if paragraph.text.strip():
-                lines.append(paragraph.text.strip())
-        for table_index, table in enumerate(doc.tables, 1):
-            lines.append(f"# BẢNG {table_index}")
-            for row in table.rows:
-                values = [cell.text.strip().replace("\n", " ") for cell in row.cells]
-                if any(values):
-                    lines.append(" | ".join(values))
+        table_index = 0
+
+        for child in doc.element.body.iterchildren():
+            if isinstance(child, CT_P):
+                paragraph = Paragraph(child, doc)
+                value = paragraph.text.strip()
+                if value:
+                    lines.append(value)
+                continue
+
+            if isinstance(child, CT_Tbl):
+                table_index += 1
+                table = Table(child, doc)
+                # A marker helps humans inspect ordinary data tables, but do not
+                # put one before the first header table because legal metadata
+                # should start as close to the beginning of the text as possible.
+                if table_index > 1:
+                    lines.append(f"# BẢNG {table_index}")
+                for row in table.rows:
+                    values: List[str] = []
+                    for cell in row.cells:
+                        value = re.sub(r"\s+", " ", cell.text or "").strip()
+                        values.append(value)
+                    while values and not values[-1]:
+                        values.pop()
+                    if any(values):
+                        lines.append(" | ".join(values))
+
+        # Headers/footers are not part of body XML. Include non-duplicate text as
+        # a final fallback for templates that store document identity there.
+        seen = {re.sub(r"\s+", " ", line).strip() for line in lines if line.strip()}
+        for section in doc.sections:
+            for container in (section.header, section.footer):
+                for paragraph in container.paragraphs:
+                    value = re.sub(r"\s+", " ", paragraph.text or "").strip()
+                    if value and value not in seen:
+                        lines.append(value)
+                        seen.add(value)
+
         return "\n".join(lines)
     except ImportError as exc:
         raise ValueError("Thiếu thư viện python-docx. Chạy: pip install python-docx") from exc

@@ -343,7 +343,9 @@ def normalize_extracted_text_for_rag(text: str) -> str:
     s = re.sub(r"\s*(CỘNG\s+HÒA\s+XÃ\s+HỘI\s+CHỦ\s+NGHĨA\s+VIỆT\s+NAM)\s*", r"\n\1\n", s, flags=re.I)
     s = re.sub(r"\s*(Độc\s+lập\s*-\s*Tự\s+do\s*-\s*Hạnh\s+phúc)\s*", r"\n\1\n", s, flags=re.I)
     s = re.sub(r"(?<!\n)(Số\s*:\s*\d+)", r"\n\1", s, flags=re.I)
-    s = re.sub(r"(?<!\n)(THÔNG\s+TƯ)\s*", r"\n\n\1\n", s, flags=re.I)
+    # Only the uppercase standalone heading is a structural boundary. Using
+    # IGNORECASE also split ordinary sentences such as "Thông tư này áp dụng".
+    s = re.sub(r"(?<!\n)(THÔNG\s+TƯ)\s*", r"\n\n\1\n", s)
     s = re.sub(r"(?<!\n)(Điều\s+\d+\s*\.)", r"\n\n\1", s, flags=re.I)
     s = re.sub(r"(?<!\n)(PHỤ\s+LỤC\s+[IVXLC\d]+)", r"\n\n\1", s, flags=re.I)
     s = re.sub(r"(?<!\n)(Nơi\s+nhận\s*:)", r"\n\n\1", s, flags=re.I)

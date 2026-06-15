@@ -382,6 +382,98 @@ def _parse_iso_date(value: Any) -> Optional[date]:
     return None
 
 
+
+_LEGAL_NUMBER_PATTERN = re.compile(
+    r"(?<!\d)(\d{1,4})\s*[/_-]\s*(\d{4})\s*[/_-]\s*"
+    r"(TT-[A-ZĐ0-9-]+|NĐ-CP|ND-CP|NQ-CP|QH\s*\d+|QĐ-[A-ZĐ0-9-]+|QD-[A-Z0-9-]+|"
+    r"VBHN-[A-ZĐ0-9-]+|BTC|CP)(?![A-ZĐ0-9-])",
+    flags=re.I,
+)
+
+
+def _canonical_legal_number(value: Any) -> str:
+    """Return a normalized Vietnamese legal document number.
+
+    Accepts numbers from body text, titles and filenames, including filename
+    separators such as ``15_2026_TT-BTC`` and spacing introduced by PDF/DOCX
+    extraction such as ``88/2015/QH 13``.
+    """
+    raw = str(value or "").strip()
+    if not raw:
+        return ""
+    match = _LEGAL_NUMBER_PATTERN.search(raw)
+    if not match:
+        return ""
+    serial, year, suffix = match.groups()
+    suffix = re.sub(r"\s+", "", suffix).upper()
+    suffix = suffix.replace("ND-CP", "NĐ-CP").replace("QD-", "QĐ-")
+    return f"{serial}/{year}/{suffix}"
+
+
+def _legal_number_from_filename(filename: Any) -> str:
+    name = Path(str(filename or "")).name
+    return _canonical_legal_number(name)
+
+
+def _extract_own_document_number(filename: str, title: str, text: str, doc_type: str) -> str:
+    """Extract the number of the uploaded document, not a cited document.
+
+    Legal documents often cite many laws immediately after the heading. A bare
+    first-match regex therefore mislabels a circular as the first law it cites.
+    Strong identity locations are checked first: ``Số:`` in the header, title,
+    filename, then the text before the first ``Căn cứ`` paragraph.
+    """
+    clean = normalize_extracted_text_for_rag(str(text or ""))
+    header = clean[:3500]
+    strong_patterns = [
+        r"(?:^|\n|\|)\s*Số\s*[:：]\s*([^\n|;]{3,80})",
+        r"(?:^|\n)\s*(?:THÔNG\s+TƯ|NGHỊ\s+ĐỊNH|LUẬT|QUYẾT\s+ĐỊNH)\s+SỐ\s+([^\n;]{3,80})",
+    ]
+    for pattern in strong_patterns:
+        match = re.search(pattern, header, flags=re.I)
+        if match:
+            number = _canonical_legal_number(match.group(1))
+            if number:
+                return number
+
+    # An admin-entered title or the original filename is usually a stronger
+    # identity signal than numbers appearing in the legal-basis paragraphs.
+    for candidate in (title, filename):
+        number = _canonical_legal_number(candidate)
+        if number:
+            return number
+
+    preamble = re.split(r"\bCăn\s+cứ\b", header, maxsplit=1, flags=re.I)[0]
+    number = _canonical_legal_number(preamble)
+    if number:
+        return number
+
+    # For non-legal knowledge files, a generic match is still useful. For a
+    # circular/decree/law, returning blank is safer than citing the wrong law.
+    if doc_type not in {"circular", "decree", "legal_document", "law", "decision"}:
+        return _canonical_legal_number(header)
+    return ""
+
+
+def _extract_issue_date_from_header(text: str) -> str:
+    header = normalize_extracted_text_for_rag(str(text or ""))[:3500]
+    patterns = [
+        r"(?:Hà\s+Nội|TP\.?\s*Hồ\s+Chí\s+Minh|[^\n|]{2,40})\s*,?\s*ngày\s*(\d{1,2})\s*tháng\s*(\d{1,2})\s*năm\s*(\d{4})",
+        r"(?:^|\n|\|)\s*ngày\s*(\d{1,2})\s*tháng\s*(\d{1,2})\s*năm\s*(\d{4})",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, header, flags=re.I)
+        if match:
+            return f"{int(match.group(1)):02d}/{int(match.group(2)):02d}/{match.group(3)}"
+    return ""
+
+
+def _query_uses_ambiguous_document_reference(question: str) -> bool:
+    q = _normalized_text(question) if "_normalized_text" in globals() else " ".join(_tokens(question))
+    return any(phrase in q for phrase in [
+        "thong tu nay", "van ban nay", "tai lieu nay", "nghi dinh nay", "luat nay",
+    ]) and not bool(_extract_legal_identifiers(question) if "_extract_legal_identifiers" in globals() else _canonical_legal_number(question))
+
 def _source_knowledge_metadata(source: Dict[str, Any]) -> Dict[str, Any]:
     metadata = source.get("metadata") or {}
     if not isinstance(metadata, dict):
@@ -511,23 +603,8 @@ def _extract_document_intelligence(filename: str, title: str, text: str, source_
     elif source_type in {"accounting_law", "tax_legal"}:
         doc_type = "legal_document"
 
-    number = ""
-    patterns = [
-        r"Số\s*[:：]?\s*([0-9]+/[0-9]{4}/[A-ZĐ\-]+)",
-        r"([0-9]+/[0-9]{4}/TT-BTC)",
-        r"([0-9]+/[0-9]{4}/NĐ-CP)",
-        r"([0-9]+/[0-9]{4}/QH[0-9]+)",
-    ]
-    for pat in patterns:
-        m = re.search(pat, compact, flags=re.I)
-        if m:
-            number = m.group(1).strip()
-            break
-
-    issue_date = ""
-    m = re.search(r"ngày\s*(\d{1,2})\s*tháng\s*(\d{1,2})\s*năm\s*(\d{4})", compact, flags=re.I)
-    if m:
-        issue_date = f"{int(m.group(1)):02d}/{int(m.group(2)):02d}/{m.group(3)}"
+    number = _extract_own_document_number(filename, title, sample, doc_type)
+    issue_date = _extract_issue_date_from_header(sample)
 
     effective_date = ""
     eff_patterns = [
@@ -595,17 +672,55 @@ def _extract_document_intelligence(filename: str, title: str, text: str, source_
 
 
 def _citation_document_title(src: Dict[str, Any]) -> str:
+    """Build a citation label from hard-bound document metadata.
+
+    Prefer identity signals owned by the uploaded file (front matter, explicit
+    title, original filename) before derived intelligence. This also repairs the
+    display of documents indexed by older builds whose intelligence accidentally
+    stored the first cited law as the document number.
+    """
     meta = src.get("metadata") or {}
+    if not isinstance(meta, dict):
+        meta = {}
     front = meta.get("knowledge_front_matter") or meta.get("front_matter") or {}
+    if not isinstance(front, dict):
+        front = {}
     intel = meta.get("document_intelligence") or meta.get("legal_intelligence") or {}
-    number = front.get("doc_no") or front.get("document_number") or intel.get("document_number") or ""
+    if not isinstance(intel, dict):
+        intel = {}
+
+    candidates = [
+        front.get("doc_no"),
+        front.get("document_number"),
+        src.get("document_number"),
+        src.get("title"),
+        meta.get("filename"),
+        src.get("filename"),
+        intel.get("document_number"),
+    ]
+    numbers = [_canonical_legal_number(value) for value in candidates]
+    numbers = [number for number in numbers if number]
+
+    # A legal number encoded in the original filename/title is an ownership
+    # signal and should override stale derived intelligence from previous builds.
+    owned_number = (
+        _canonical_legal_number(src.get("title"))
+        or _legal_number_from_filename(meta.get("filename") or src.get("filename"))
+        or _canonical_legal_number(front.get("doc_no") or front.get("document_number"))
+    )
+    number = owned_number or (numbers[0] if numbers else "")
     if number:
-        if "TT-BTC" in number.upper():
+        upper = number.upper()
+        if "TT-" in upper:
             return f"Thông tư {number}"
-        if "NĐ-CP" in number.upper():
+        if "NĐ-CP" in upper:
             return f"Nghị định {number}"
+        if "/QH" in upper:
+            return f"Luật {number}"
+        if "QĐ-" in upper:
+            return f"Quyết định {number}"
         return number
-    return str(front.get("title") or src.get("title") or "Tài liệu RAG")
+    return str(front.get("title") or intel.get("title_guess") or src.get("title") or "Tài liệu RAG")
 
 
 _FRIENDLY_LOCAL_SOURCE_TITLES = {
@@ -1449,6 +1564,69 @@ def _expand_query_text(query: str, history: str = "") -> str:
     return "\n".join(unique)
 
 
+
+def _split_compound_questions(question: str) -> List[str]:
+    """Split a pasted multi-question string into answerable subquestions.
+
+    The admin test box is often used by pasting several test prompts together.
+    Scoring the whole string as one query can retrieve only one article and make
+    the remaining part look unanswered. This helper is conservative and returns
+    the original text when no clear multi-question structure is detected.
+    """
+    raw = re.sub(r"\s+", " ", str(question or "")).strip()
+    if not raw:
+        return []
+
+    normalized = _normalized_text(raw)
+    parts: List[str] = []
+
+    # Repair the common pasted form:
+    # "Thông tư này áp dụng ... có dùng để xác định nghĩa vụ thuế không? cho
+    # những đối tượng nào?" into two complete questions.
+    if "thong tu nay ap dung" in normalized and "cho nhung doi tuong nao" in normalized:
+        parts.append("Thông tư này áp dụng cho những đối tượng nào?")
+        tax_match = re.search(
+            r"(?:Thông\s+tư\s+này\s+)?có\s+dùng\s+để\s+xác\s+định\s+nghĩa\s+vụ\s+thuế\s+không",
+            raw,
+            flags=re.I,
+        )
+        if tax_match:
+            parts.append("Thông tư này có dùng để xác định nghĩa vụ thuế không?")
+
+    # Standard punctuation/newline separation.
+    for item in re.split(r"[?;\n]+", raw):
+        item = item.strip(" .,:-")
+        if len(item) < 8:
+            continue
+        # Split before a repeated demonstrative document phrase.
+        segments = re.split(
+            r"(?i)(?=\b(?:Thông\s+tư|Nghị\s+định|Văn\s+bản|Tài\s+liệu)\s+này\b)",
+            item,
+        )
+        for segment in segments:
+            segment = segment.strip(" .,:-")
+            if len(segment) >= 8:
+                parts.append(segment + ("?" if not segment.endswith("?") else ""))
+
+    # Keep only complete-looking prompts and stable-deduplicate by normalized text.
+    cleaned: List[str] = []
+    seen: set[str] = set()
+    for part in parts:
+        pn = _normalized_text(part)
+        if not pn or pn in seen:
+            continue
+        # Drop fragments created by malformed paste when a repaired complete
+        # version already exists.
+        if pn in {"thong tu nay ap dung", "cho nhung doi tuong nao"}:
+            continue
+        seen.add(pn)
+        cleaned.append(part)
+
+    if len(cleaned) <= 1:
+        return [raw]
+    return cleaned[:4]
+
+
 def _is_formula_question(question: str) -> bool:
     # Do not let the formula router swallow a request that explicitly asks for
     # hạch toán/định khoản. Journal routing has higher priority.
@@ -1532,7 +1710,8 @@ _CONCEPT_GROUPS: Dict[str, List[str]] = {
     "fixed_asset": ["tai san co dinh", "tscd"],
     "tools": ["cong cu dung cu", "ccdc"],
     "prepaid": ["chi phi tra truoc", "phan bo"],
-    "effective_date": ["hieu luc", "ap dung tu"],
+    "applicable_subjects": ["doi tuong ap dung", "ap dung doi voi", "ap dung cho nhung doi tuong", "cho nhung doi tuong nao"],
+    "effective_date": ["hieu luc", "ap dung tu", "co hieu luc tu"],
     "deadline": ["thoi han", "han nop", "cham nhat", "bao nhieu ngay"],
     "penalty": ["muc phat", "xu phat", "phat bao nhieu"],
     "signer": ["nguoi ky", "ai ky", "ky ban hanh"],
@@ -1760,6 +1939,12 @@ def _source_relevance_metrics(question: str, source: Dict[str, Any]) -> Dict[str
         ))
         accepted = bool(accepted and has_deadline_phrase and has_time_value)
         reason = "deadline_question_requires_deadline_and_duration"
+    if "applicable_subjects" in q_concepts:
+        has_subject_scope = any(x in h_norm for x in [
+            "doi tuong ap dung", "ap dung doi voi", "ap dung cho cac", "ap dung cho nhung",
+        ])
+        accepted = bool(accepted and has_subject_scope)
+        reason = "applicable_subjects_requires_scope_evidence"
     if "effective_date" in q_concepts:
         has_effective_phrase = any(x in h_norm for x in ["hieu luc", "ap dung tu", "co hieu luc tu"])
         has_time_value = bool(re.search(
@@ -2303,7 +2488,8 @@ def _candidate_score(question: str, candidate: str) -> int:
 
     # Intent bonuses for Vietnamese accounting/legal Q&A.
     hint_pairs = [
-        (("hieu luc", "ap dung"), ("hieu luc", "ap dung", "ngay ky", "01 01 2026"), 10),
+        (("doi tuong", "ap dung cho", "cho nhung doi tuong"), ("doi tuong ap dung", "ap dung doi voi"), 16),
+        (("hieu luc", "ap dung tu"), ("hieu luc", "ap dung tu", "ngay ky", "01 01 2026"), 10),
         (("thoi han", "nop", "cham nhat", "bao nhieu ngay"), ("cham nhat", "90 ngay", "ket thuc ky ke toan"), 12),
         (("sua doi", "thong tu nao", "thong tu"), ("202 2014 tt btc", "sua doi bo sung"), 8),
         (("loi ich co dong khong kiem soat", "ma so", "chi tieu"), ("loi ich co dong khong kiem soat", "ma so 429", "von chu so huu"), 12),
@@ -2336,7 +2522,7 @@ def _ranked_excerpts(question: str, sources: List[Dict[str, Any]], max_items: in
                 continue
             ranked.append({
                 "score": score + max(0, 6 - src_index),
-                "text": _clean_rag_text(candidate, max_len=520),
+                "text": _clean_rag_text(candidate, max_len=900),
                 "source": src,
             })
     ranked.sort(key=lambda x: (x["score"], len(x["text"])), reverse=True)
@@ -2395,6 +2581,10 @@ def _direct_answer_from_excerpts(question: str, excerpts: List[Dict[str, Any]]) 
         match = first_matching("thieu hoa don", "khong co hoa don", "chua co hoa don")
         if match:
             return match
+    if "applicable_subjects" in concepts:
+        match = first_matching("doi tuong ap dung", "ap dung doi voi", "ap dung cho cac", "ap dung cho nhung")
+        if match:
+            return match
     if "effective_date" in concepts:
         match = first_matching("hieu luc", "ap dung tu")
         if match:
@@ -2413,10 +2603,24 @@ def _direct_answer_from_excerpts(question: str, excerpts: List[Dict[str, Any]]) 
         if match:
             return match
 
-    # For ordinary short questions, return the highest-ranked sentence only
-    # when it has a meaningful score. This is safer than dumping several chunks.
+    # For ordinary short questions, select the most relevant sentence/numbered
+    # paragraph inside the best excerpt instead of dumping the whole chunk.
     if excerpts and float(excerpts[0].get("score") or 0) >= 3:
-        return str(excerpts[0].get("text") or "")
+        best_text = str(excerpts[0].get("text") or "").strip()
+        sentence_candidates: List[str] = []
+        normalized_block = re.sub(r"\n\s*(\d{1,3})\.\s*\n+", r"\n\1. ", best_text)
+        for piece in re.split(r"(?<=[.!?;])\s+|\n{2,}|(?=\n?\d{1,3}\.\s+)", normalized_block):
+            clean_piece = _clean_rag_text(piece, max_len=900).strip()
+            if len(_tokens(clean_piece)) >= 4:
+                sentence_candidates.append(clean_piece)
+        if sentence_candidates:
+            sentence_candidates.sort(
+                key=lambda piece: (_candidate_score(question, piece), min(len(piece), 900)),
+                reverse=True,
+            )
+            if _candidate_score(question, sentence_candidates[0]) >= 3:
+                return sentence_candidates[0]
+        return best_text
     return None
 
 
@@ -2431,29 +2635,95 @@ def _needs_accounting_human_review_warning(question: str) -> bool:
     return any(t in q for t in risk_terms) and not ("thong tu" in q and any(t in q for t in lookup_terms))
 
 
+def _citation_from_excerpt_item(item: Dict[str, Any], index: int) -> Dict[str, Any]:
+    src = item.get("source") or {}
+    return {
+        "index": index,
+        "title": src.get("title"),
+        "document_title": _citation_document_title(src),
+        "document_id": src.get("document_id"),
+        "chunk_id": src.get("chunk_id"),
+        "chunk_no": src.get("chunk_no"),
+        "heading": src.get("heading"),
+        "page": _source_page(src),
+        "location": _source_location(src, excerpt=item.get("text") or ""),
+        "legal_location": _extract_structural_location(src, excerpt=item.get("text") or ""),
+        "excerpt": item.get("text"),
+        "source_warnings": src.get("source_warnings") or [],
+    }
+
+
+def _strip_repeated_legal_heading(text: Any, legal_location: Any) -> str:
+    clean = _clean_rag_text(text, max_len=1200).strip()
+    legal = _clean_rag_text(legal_location, max_len=240).strip()
+    if not clean or not legal:
+        return clean
+    candidates = [legal]
+    tail = re.sub(r"^Điều\s+\d+[A-Za-zĐđ]?\s*[.:-]?\s*", "", legal, flags=re.I).strip()
+    if tail:
+        candidates.append(tail)
+    for candidate in candidates:
+        if clean.casefold().startswith(candidate.casefold()):
+            clean = clean[len(candidate):].lstrip(" .:-–—\n")
+            break
+    return clean
+
+
 def _build_rag_answer_from_sources(question: str, sources: List[Dict[str, Any]], *, storage_label: str, history: str = "", answer_mode: str = "auto", conflict_warnings: Optional[List[str]] = None) -> Dict[str, Any]:
     formula = _try_formula_answer(question)
     if formula:
         return formula
     selected_mode = _answer_mode_from_question(question, answer_mode)
     long_mode = _wants_long_answer(question, selected_mode)
+
+    subquestions = _split_compound_questions(question)
+    if len(subquestions) > 1 and selected_mode != "source_only":
+        compound_lines = [
+            f"Dựa trên tài liệu đã nạp trong {storage_label}, tớ tách câu hỏi và trả lời từng ý như sau:",
+            "",
+        ]
+        compound_citations: List[Dict[str, Any]] = []
+        answered = 0
+        for sub_index, subquestion in enumerate(subquestions, 1):
+            ordered_sources = sorted(
+                sources,
+                key=lambda src: 1 if src.get("matched_subquery") == subquestion else 0,
+                reverse=True,
+            )
+            sub_excerpts = _ranked_excerpts(subquestion, ordered_sources, max_items=2)
+            direct = _direct_answer_from_excerpts(subquestion, sub_excerpts)
+            compound_lines.append(f"{sub_index}. {subquestion.rstrip('?')}?")
+            if not sub_excerpts or not direct:
+                compound_lines.append("- Chưa tìm thấy đoạn nguồn đủ rõ để kết luận chắc chắn cho ý này.")
+                compound_lines.append("")
+                continue
+            citation = _citation_from_excerpt_item(sub_excerpts[0], len(compound_citations) + 1)
+            compound_citations.append(citation)
+            legal = citation.get("legal_location") or ""
+            prefix = f"Theo {legal}, " if legal else ""
+            direct_text = _strip_repeated_legal_heading(direct, legal)
+            compound_lines.append(
+                f"- {prefix}{_clean_rag_text(direct_text, max_len=760)} [{citation['index']}]"
+            )
+            compound_lines.append("")
+            answered += 1
+        if answered:
+            if _needs_accounting_human_review_warning(question):
+                compound_lines.append(
+                    "Lưu ý: đây là câu trả lời nháp theo tài liệu RAG; trước khi ghi sổ/quyết toán vẫn cần đối chiếu chứng từ, chính sách công ty và người kế toán phụ trách duyệt."
+                )
+            return {
+                "answer": "\n".join(compound_lines).strip(),
+                "citations": compound_citations,
+                "answer_mode": "compound_grounded",
+                "subquestions": subquestions,
+            }
+
     excerpts = _ranked_excerpts(question, sources, max_items=6 if long_mode else 3)
-    citations: List[Dict[str, Any]] = []
-    for idx, item in enumerate(excerpts, 1):
-        src = item.get("source") or {}
-        citations.append({
-            "index": idx,
-            "title": src.get("title"),
-            "document_title": _citation_document_title(src),
-            "document_id": src.get("document_id"),
-            "chunk_id": src.get("chunk_id"),
-            "chunk_no": src.get("chunk_no"),
-            "heading": src.get("heading"),
-            "page": _source_page(src),
-            "location": _source_location(src, excerpt=item.get("text") or ""),
-            "legal_location": _extract_structural_location(src, excerpt=item.get("text") or ""),
-            "excerpt": item.get("text"),
-        })
+    citations: List[Dict[str, Any]] = [
+        _citation_from_excerpt_item(item, idx)
+        for idx, item in enumerate(excerpts, 1)
+    ]
 
     if not excerpts:
         return {
@@ -2474,10 +2744,11 @@ def _build_rag_answer_from_sources(question: str, sources: List[Dict[str, Any]],
         citations = citations[:1]
         legal = citations[0].get("legal_location") if citations else ""
         prefix = f"Theo {legal}, " if legal else ""
+        direct_text = _strip_repeated_legal_heading(direct, legal)
         answer_lines = [
             f"Dựa trên tài liệu đã nạp trong {storage_label}, câu trả lời là:",
             "",
-            f"{prefix}{_clean_rag_text(direct, max_len=700)} [1]",
+            f"{prefix}{_clean_rag_text(direct_text, max_len=700)} [1]",
         ]
     elif long_mode:
         answer_lines = [
@@ -2617,36 +2888,91 @@ def search_documents_supabase(
 ) -> Dict[str, Any]:
     require_supabase_active()
     client = SupabaseRAGClient()
-    retrieval_query = _expand_query_text(query, history=history)
+
+    subqueries = _split_compound_questions(query)
+    expanded_subqueries = [_expand_query_text(item, history=history) for item in subqueries]
+    retrieval_query = "\n--- SUBQUESTION ---\n".join(expanded_subqueries)
+
     # Lightweight hybrid lexical/semantic search in Python. This keeps V101
     # independent of pgvector, while still improving long Vietnamese questions.
-    params: Dict[str, Any] = {"select": "*", "workspace_id": f"eq.{workspace_id}", "order": "created_at.desc", "limit": "3000"}
+    params: Dict[str, Any] = {
+        "select": "*",
+        "workspace_id": f"eq.{workspace_id}",
+        "order": "created_at.desc",
+        "limit": "3000",
+    }
     if source_types:
         joined = ",".join(source_types)
         params["source_type"] = f"in.({joined})"
     chunks = client.rest("GET", RAG_CHUNKS_TABLE, params=params) or []
     doc_ids = sorted({c.get("document_id") for c in chunks if c.get("document_id")})
+
     active_docs: Dict[str, Dict[str, Any]] = {}
+    ordered_active_docs: List[Dict[str, Any]] = []
     if doc_ids:
         safe_ids = ",".join(doc_ids[:1000])
-        docs = client.rest("GET", RAG_DOCUMENTS_TABLE, params={"select": "document_id,status,metadata", "document_id": f"in.({safe_ids})"}) or []
-        active_docs = {d.get("document_id"): d for d in docs if d.get("status") == "active"}
+        docs = client.rest(
+            "GET",
+            RAG_DOCUMENTS_TABLE,
+            params={
+                "select": "document_id,status,metadata,title,source_type,created_at,updated_at",
+                "document_id": f"in.({safe_ids})",
+                "order": "updated_at.desc",
+            },
+        ) or []
+        ordered_active_docs = [d for d in docs if d.get("status") == "active"]
+        active_docs = {d.get("document_id"): d for d in ordered_active_docs}
+
+    # In the Admin RAG tester, "Thông tư này" normally refers to the document
+    # just uploaded/re-indexed. Bind that ambiguous demonstrative reference to
+    # the newest active legal document in the same workspace. Named legal
+    # numbers continue to search the whole workspace.
+    preferred_document_id: Optional[str] = None
+    if _query_uses_ambiguous_document_reference(query):
+        for doc in ordered_active_docs:
+            if str(doc.get("source_type") or "") in {"accounting_law", "tax_legal"}:
+                preferred_document_id = str(doc.get("document_id"))
+                break
+        if preferred_document_id is None and ordered_active_docs:
+            preferred_document_id = str(ordered_active_docs[0].get("document_id"))
 
     results: List[Dict[str, Any]] = []
     for chunk in chunks:
-        if chunk.get("document_id") not in active_docs:
+        document_id = str(chunk.get("document_id") or "")
+        if document_id not in active_docs:
             continue
+        if preferred_document_id and document_id != preferred_document_id:
+            continue
+
         score_chunk = dict(chunk)
-        score_chunk["metadata"] = (active_docs.get(chunk.get("document_id")) or {}).get("metadata", {})
-        breakdown = _hybrid_chunk_score(retrieval_query, score_chunk)
-        score = float(breakdown["score"])
+        doc_meta = active_docs.get(document_id) or {}
+        score_chunk["metadata"] = doc_meta.get("metadata", {})
+
+        per_query: List[Dict[str, Any]] = []
+        for original_subquery, expanded_subquery in zip(subqueries, expanded_subqueries):
+            breakdown = _hybrid_chunk_score(expanded_subquery, score_chunk)
+            per_query.append({
+                "question": original_subquery,
+                "expanded_query": expanded_subquery,
+                "breakdown": breakdown,
+                "score": float(breakdown.get("score") or 0),
+            })
+        if not per_query:
+            continue
+        per_query.sort(key=lambda item: item["score"], reverse=True)
+        best = per_query[0]
+        positive_matches = sum(1 for item in per_query if item["score"] >= 3)
+        score = float(best["score"]) + max(0, positive_matches - 1) * 1.25
         if score <= 0:
             continue
+
         content = chunk.get("content") or ""
         result = {
-            "score": score,
-            "score_breakdown": breakdown,
-            "retrieval_mode": "hybrid_lexical_semantic_v54",
+            "score": round(score, 3),
+            "score_breakdown": best["breakdown"],
+            "subquery_scores": per_query,
+            "matched_subquery": best["question"],
+            "retrieval_mode": "hybrid_lexical_semantic_v111",
             "chunk_id": chunk.get("chunk_id"),
             "document_id": chunk.get("document_id"),
             "title": chunk.get("title"),
@@ -2658,22 +2984,23 @@ def search_documents_supabase(
             "location": _source_location(chunk, excerpt=content[:260]),
             "snippet": _clean_rag_text(content, max_len=700),
             "content": content,
-            "metadata": (active_docs.get(chunk.get("document_id")) or {}).get("metadata", {}),
+            "metadata": doc_meta.get("metadata", {}),
         }
         results.append(result)
 
-    # Rerank top candidates by sentence-level answerability, then reject chunks
-    # that only match generic words such as "doanh nghiệp" or "hàng hóa".
+    # Rerank and relevance-gate against the best matching subquestion rather
+    # than the entire pasted multi-question string.
     relevant_results: List[Dict[str, Any]] = []
     rejected_low_relevance = 0
     for r in results:
-        excerpts = _ranked_excerpts(query, [r], max_items=1)
+        relevance_question = str(r.get("matched_subquery") or query)
+        excerpts = _ranked_excerpts(relevance_question, [r], max_items=1)
         if excerpts:
             r["answerability_score"] = excerpts[0].get("score", 0)
             r["score"] = round(float(r["score"]) + float(r["answerability_score"]) * 0.6, 3)
         else:
             r["answerability_score"] = 0
-        relevance = _source_relevance_metrics(query, r)
+        relevance = _source_relevance_metrics(relevance_question, r)
         r["relevance_coverage"] = relevance["coverage"]
         r["relevance_overlap_count"] = relevance["overlap_count"]
         r["relevance_matched_terms"] = relevance["matched_terms"]
@@ -2695,9 +3022,6 @@ def search_documents_supabase(
         else:
             rejected_low_relevance += 1
 
-    # Relevance must dominate authority. Authority is a quality tie-breaker, not
-    # permission for an unrelated official/legal paragraph to outrank an exact
-    # internal playbook passage. The policy weight is already included in score.
     relevant_results.sort(
         key=lambda r: (
             float(r.get("score") or 0),
@@ -2707,20 +3031,44 @@ def search_documents_supabase(
         ),
         reverse=True,
     )
+
+    # Ensure compound questions can return evidence for each subquestion rather
+    # than allowing one subject to occupy every top-k slot.
+    selected: List[Dict[str, Any]] = []
+    seen_chunks: set[str] = set()
+    if len(subqueries) > 1:
+        for subquery in subqueries:
+            candidates = [r for r in relevant_results if r.get("matched_subquery") == subquery]
+            if candidates:
+                candidate = candidates[0]
+                key = str(candidate.get("chunk_id") or "")
+                if key not in seen_chunks:
+                    selected.append(candidate)
+                    seen_chunks.add(key)
+    for candidate in relevant_results:
+        if len(selected) >= limit:
+            break
+        key = str(candidate.get("chunk_id") or "")
+        if key in seen_chunks:
+            continue
+        selected.append(candidate)
+        seen_chunks.add(key)
+
     return {
         "version": V101_VERSION,
         "storage_backend": "supabase",
         "query": query,
+        "subquestions": subqueries,
         "retrieval_query": retrieval_query,
         "workspace_id": workspace_id,
-        "results": relevant_results[:limit],
-        "count": len(relevant_results[:limit]),
+        "preferred_document_id": preferred_document_id,
+        "results": selected[:limit],
+        "count": len(selected[:limit]),
         "total_candidates": len(results),
         "relevant_candidates": len(relevant_results),
         "rejected_low_relevance": rejected_low_relevance,
-        "retrieval_mode": "grounded_hybrid_v102_strict_relevance_answerability",
+        "retrieval_mode": "grounded_hybrid_v111_document_binding_compound_questions",
     }
-
 
 def _build_curated_accounting_knowledge_answer(question: str) -> Optional[Dict[str, Any]]:
     """Structured answers for workflows, comparisons and checklists."""

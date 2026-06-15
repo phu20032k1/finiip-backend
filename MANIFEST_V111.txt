@@ -1,0 +1,11 @@
+V111 LEGAL RAG CITATION FIX
+
+Changed:
+- services/rag_v66_v67.py
+- services/rag_storage_v101.py
+- services/accounting_ai_enterprise.py
+- tests/test_v111_legal_rag_citation_fix.py
+- docs/V111_LEGAL_RAG_CITATION_FIX.md
+
+Required after deploy:
+- Re-index existing legal DOCX documents from the Admin RAG screen.
