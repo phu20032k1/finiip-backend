@@ -4115,7 +4115,10 @@ def _read_transaction_upload(file: UploadFile, content: bytes) -> List[Dict[str,
 
 
 def _fingerprint_item(item: Dict[str, Any]) -> str:
-    key = f"{str(item.get('transaction_date') or '')[:10]}|{round(float(item.get('amount') or 0), 0)}|{re.sub(r'\s+', ' ', str(item.get('description') or '').lower()).strip()[:80]}"
+    date_part = str(item.get("transaction_date") or "")[:10]
+    amount_part = round(float(item.get("amount") or 0), 0)
+    desc_part = re.sub(r"\s+", " ", str(item.get("description") or "").lower()).strip()[:80]
+    key = f"{date_part}|{amount_part}|{desc_part}"
     return hashlib.sha1(key.encode("utf-8")).hexdigest()[:12]
 
 
