@@ -14,3 +14,7 @@ pytest
 httpx
 python-docx
 openai
+
+reportlab
+
+pymupdf

@@ -1,5 +1,27 @@
 # Finiip AI Accounting Backend API
 
+## V110 - Long Context, Calculation, File Intelligence & Report Export
+
+Bản V110 bổ sung cho Product Chat API:
+
+- nhận câu hỏi đến 100.000 ký tự, tách nhiều đầu việc và hợp nhất câu trả lời;
+- engine tính toán an toàn cho số học, phần trăm, VAT, giá vốn, khấu hao/phân bổ, lợi nhuận, hòa vốn, lãi đơn/lãi kép, khoản vay, NPV/IRR và tỷ số tài chính;
+- đọc PDF/DOCX/XLSX/CSV/JSON/TXT/MD/HTML và OCR ảnh/PDF scan khi máy chủ có Tesseract;
+- tạo báo cáo DOCX/XLSX/PDF/CSV/JSON/TXT/MD và trả `generated_file.download_url`;
+- mở rộng kho kiến thức kế toán, tài chính, kiểm soát nội bộ, Excel/dữ liệu và rà soát hợp đồng;
+- nguồn được trả bằng `source_cards`, không chèn đường dẫn nội bộ vào câu trả lời.
+
+Endpoint mới:
+
+```http
+GET  /api/v1/chat/capabilities
+POST /api/v1/chat/calculate
+POST /api/v1/chat/analyze-request
+GET  /api/v1/chat/generated-files/{job_id}
+```
+
+Xem `docs/V110_LONG_CONTEXT_CALCULATION_FILE_REPORT_GUIDE.md`.
+
 Bản này là **backend-only**. Frontend được tách sang project riêng và gọi API qua HTTP.
 
 ## Mục tiêu

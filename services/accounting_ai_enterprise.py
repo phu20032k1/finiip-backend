@@ -377,44 +377,13 @@ def extract_text_from_bytes(filename: str, content: bytes) -> Dict[str, Any]:
                 break
             except Exception:
                 continue
-    elif suffix == ".pdf":
+    elif suffix in {".pdf", ".docx", ".xlsx", ".xlsm"}:
         try:
-            import pypdf  # type: ignore
-
-            reader = pypdf.PdfReader(io.BytesIO(content))
-            pages = []
-            for idx, page in enumerate(reader.pages):
-                page_text = page.extract_text() or ""
-                pages.append(f"\n--- page {idx + 1} ---\n{page_text}")
-            text = "\n".join(pages)
-            parser = "pypdf"
+            from services.rag_v66_v67 import read_upload_bytes
+            text = read_upload_bytes(filename, content)
+            parser = "finiip-v110-reader"
         except Exception as exc:
-            warnings.append(f"Không đọc được PDF bằng pypdf: {exc}")
-    elif suffix == ".docx":
-        try:
-            from docx import Document  # type: ignore
-
-            doc = Document(io.BytesIO(content))
-            text = "\n".join(p.text for p in doc.paragraphs if p.text)
-            parser = "python-docx"
-        except Exception as exc:
-            warnings.append(f"Không đọc được DOCX: {exc}")
-    elif suffix in {".xlsx", ".xlsm"}:
-        try:
-            import openpyxl  # type: ignore
-
-            wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
-            rows = []
-            for ws in wb.worksheets:
-                rows.append(f"# Sheet: {ws.title}")
-                for row in ws.iter_rows(values_only=True):
-                    values = ["" if v is None else str(v) for v in row]
-                    if any(v.strip() for v in values):
-                        rows.append("\t".join(values))
-            text = "\n".join(rows)
-            parser = "openpyxl"
-        except Exception as exc:
-            warnings.append(f"Không đọc được XLSX: {exc}")
+            warnings.append(f"Không đọc được file bằng Finiip V110 reader: {exc}")
     elif suffix in {".png", ".jpg", ".jpeg", ".webp", ".tif", ".tiff"}:
         try:
             from PIL import Image  # type: ignore

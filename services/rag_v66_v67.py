@@ -100,23 +100,84 @@ def save_local_store(store: Dict[str, Any]) -> None:
     LOCAL_RAG_FILE.write_text(json.dumps(store, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def _ocr_pil_image(image: Any) -> str:
+    try:
+        import pytesseract  # type: ignore
+        return pytesseract.image_to_string(image, lang=os.getenv("FINIIP_OCR_LANG", "vie+eng")) or ""
+    except Exception:
+        return ""
+
+
+def read_image_bytes(raw: bytes) -> str:
+    try:
+        from PIL import Image  # type: ignore
+        image = Image.open(io.BytesIO(raw)).convert("RGB")
+        text = _ocr_pil_image(image)
+        if not text.strip():
+            raise ValueError("OCR không nhận diện được chữ trong ảnh")
+        return text
+    except Exception as exc:
+        raise ValueError(f"Không đọc được ảnh/OCR: {exc}") from exc
+
+
 def read_pdf_bytes(raw: bytes) -> str:
+    """Read text PDFs and OCR scanned pages when PyMuPDF/Tesseract are present."""
+    page_texts: List[str] = []
     try:
         from pypdf import PdfReader
         reader = PdfReader(io.BytesIO(raw))
-        pages = []
-        for page in reader.pages:
-            pages.append(page.extract_text() or "")
-        return "\n\n".join(pages)
-    except Exception as exc:
-        raise ValueError(f"Không đọc được PDF: {exc}") from exc
+        for index, page in enumerate(reader.pages, 1):
+            text = page.extract_text() or ""
+            page_texts.append(f"[TRANG {index}]\n{text}".strip())
+    except Exception:
+        page_texts = []
+
+    extracted = "\n\n".join(page_texts).strip()
+    visible_chars = len(re.sub(r"\s+", "", extracted))
+    if visible_chars >= int(os.getenv("FINIIP_PDF_TEXT_MIN_CHARS", "120")):
+        return extracted
+
+    # Scanned PDF fallback. PyMuPDF renders pages without requiring poppler.
+    try:
+        import fitz  # type: ignore
+        from PIL import Image  # type: ignore
+        doc = fitz.open(stream=raw, filetype="pdf")
+        ocr_pages: List[str] = []
+        max_pages = int(os.getenv("FINIIP_OCR_MAX_PAGES", "80"))
+        for index, page in enumerate(doc, 1):
+            if index > max_pages:
+                ocr_pages.append(f"[CẢNH BÁO] Chỉ OCR {max_pages} trang đầu.")
+                break
+            pix = page.get_pixmap(matrix=fitz.Matrix(2, 2), alpha=False)
+            image = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+            text = _ocr_pil_image(image)
+            ocr_pages.append(f"[TRANG {index} - OCR]\n{text}".strip())
+        ocr_text = "\n\n".join(ocr_pages).strip()
+        if ocr_text:
+            return ocr_text
+    except Exception:
+        pass
+
+    if extracted:
+        return extracted
+    raise ValueError("PDF không có lớp text và OCR chưa đọc được. Hãy kiểm tra Tesseract/PyMuPDF.")
 
 
 def read_docx_bytes(raw: bytes) -> str:
     try:
         import docx  # type: ignore
         doc = docx.Document(io.BytesIO(raw))
-        return "\n".join(p.text for p in doc.paragraphs if p.text)
+        lines: List[str] = []
+        for paragraph in doc.paragraphs:
+            if paragraph.text.strip():
+                lines.append(paragraph.text.strip())
+        for table_index, table in enumerate(doc.tables, 1):
+            lines.append(f"# BẢNG {table_index}")
+            for row in table.rows:
+                values = [cell.text.strip().replace("\n", " ") for cell in row.cells]
+                if any(values):
+                    lines.append(" | ".join(values))
+        return "\n".join(lines)
     except ImportError as exc:
         raise ValueError("Thiếu thư viện python-docx. Chạy: pip install python-docx") from exc
     except Exception as exc:
@@ -126,13 +187,28 @@ def read_docx_bytes(raw: bytes) -> str:
 def read_xlsx_bytes(raw: bytes) -> str:
     try:
         from openpyxl import load_workbook
-        wb = load_workbook(io.BytesIO(raw), read_only=True, data_only=True)
-        lines = []
+        wb = load_workbook(io.BytesIO(raw), read_only=True, data_only=False)
+        lines: List[str] = []
+        max_rows = int(os.getenv("FINIIP_XLSX_MAX_ROWS_PER_SHEET", "20000"))
+        max_cols = int(os.getenv("FINIIP_XLSX_MAX_COLS", "200"))
         for ws in wb.worksheets:
-            lines.append(f"# Sheet: {ws.title}")
-            for row in ws.iter_rows(values_only=True):
-                values = [str(v) for v in row if v is not None]
-                if values:
+            lines.append(f"# SHEET: {ws.title}")
+            for row_index, row in enumerate(ws.iter_rows(values_only=False), 1):
+                if row_index > max_rows:
+                    lines.append(f"[CẢNH BÁO] Sheet {ws.title} chỉ đọc {max_rows} dòng đầu.")
+                    break
+                values: List[str] = []
+                for cell in row[:max_cols]:
+                    value = cell.value
+                    if value is None:
+                        values.append("")
+                    elif isinstance(value, str) and value.startswith("="):
+                        values.append(f"{cell.coordinate}:{value}")
+                    else:
+                        values.append(str(value))
+                while values and not values[-1]:
+                    values.pop()
+                if any(values):
                     lines.append(" | ".join(values))
         return "\n".join(lines)
     except Exception as exc:
@@ -147,6 +223,8 @@ def read_upload_bytes(filename: str, raw: bytes) -> str:
         return read_docx_bytes(raw)
     if ext in {".xlsx", ".xlsm"}:
         return read_xlsx_bytes(raw)
+    if ext in {".png", ".jpg", ".jpeg", ".webp", ".tif", ".tiff"}:
+        return read_image_bytes(raw)
     if ext in {".txt", ".md", ".csv", ".json", ".html", ".xml"}:
         return raw.decode("utf-8", errors="ignore")
     # Best-effort fallback for plain text files with unknown extension.
@@ -456,7 +534,7 @@ EMBEDDING_DIM = int(os.getenv("RAG_EMBEDDING_DIM", "1536"))
 DEFAULT_EMBEDDING_MODEL = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small")
 DEFAULT_CHAT_MODEL = os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini")
 MAX_UPLOAD_BYTES = int(os.getenv("RAG_MAX_UPLOAD_BYTES", str(20 * 1024 * 1024)))
-ALLOWED_RAG_EXTENSIONS = {".txt", ".md", ".csv", ".json", ".pdf", ".docx", ".xlsx", ".xlsm", ".html", ".xml"}
+ALLOWED_RAG_EXTENSIONS = {".txt", ".md", ".csv", ".json", ".pdf", ".docx", ".xlsx", ".xlsm", ".html", ".xml", ".png", ".jpg", ".jpeg", ".webp", ".tif", ".tiff"}
 
 
 def embedding_provider() -> Dict[str, Any]:

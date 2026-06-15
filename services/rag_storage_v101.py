@@ -26,6 +26,7 @@ from typing import Any, Dict, List, Optional
 import httpx
 
 from services.accounting_ai_full import ACCOUNT_NAMES, analyze_transaction, solve_text_question
+from services.smart_orchestrator_v110 import analyze_request
 
 from services.accounting_ai_enterprise import (
     ENTERPRISE_VERSION,
@@ -41,7 +42,7 @@ from services.accounting_ai_enterprise import (
     split_document_into_chunks,
 )
 
-V101_VERSION = "v109_smart_contextual_chat"
+V101_VERSION = "v110_long_context_calculation_file_intelligence"
 
 # V59-V62: persistent local conversation memory is used when Supabase is not
 # active, so follow-up questions also work during local development.
@@ -618,6 +619,12 @@ _FRIENDLY_LOCAL_SOURCE_TITLES = {
     "tai_san_co_dinh.md": "Cẩm nang tài sản cố định",
     "chi_phi_duoc_tru.md": "Cẩm nang chi phí được trừ",
     "cong_cu_dung_cu.md": "Cẩm nang công cụ dụng cụ",
+    "accounting_operations_complete_v110.md": "Sổ tay nghiệp vụ kế toán toàn diện",
+    "financial_analysis_and_planning_v110.md": "Phân tích tài chính và kế hoạch dòng tiền",
+    "business_management_internal_control_v110.md": "Quản trị và kiểm soát nội bộ",
+    "data_excel_reporting_v110.md": "Xử lý dữ liệu, Excel và báo cáo",
+    "contract_review_business_v110.md": "Khung rà soát hợp đồng doanh nghiệp",
+    "long_question_file_report_policy_v110.md": "Chính sách xử lý câu hỏi dài và báo cáo",
 }
 
 
@@ -1269,65 +1276,121 @@ def _source_location(src: Dict[str, Any], excerpt: str = "") -> str:
 
 
 def _split_answer_candidates(text: str) -> List[str]:
-    """Split extracted Markdown/PDF text into answerable passages.
+    """Split Markdown/PDF text into self-contained, answerable passages.
 
-    A heading by itself is rarely an answer. Keep it attached to the first
-    paragraph or list item below it so account definitions and legal sections
-    do not become title-only candidates.
+    V109 split numbered-list markers (``1.``) away from their content and could
+    rank a heading as the whole answer. V110 groups each heading with its body,
+    keeps list items intact and only emits passages that contain real evidence.
     """
-    raw = str(text or "").replace("\r", "\n")
-    raw = re.sub(r"(?<!\n)(#{1,6}\s+)", r"\n\1", raw)
-    raw = re.sub(r"(?<!\n)([-*•]\s+)", r"\n\1", raw)
-    raw = re.sub(r"(?<!\n)(\d+[.)]\s+)", r"\n\1", raw)
-    clean = _clean_rag_text(raw, max_len=30000)
-    rough_parts = re.split(
-        r"\n+|(?=#{1,6}\s)|(?<=\.)\s+(?=[A-ZÀ-Ỹ0-9\-])|(?<=;)\s+(?=[A-ZÀ-Ỹ0-9\-])",
-        clean,
-    )
+    raw = str(text or "").replace("\r\n", "\n").replace("\r", "\n")
+    lines = raw.splitlines()
 
-    prepared: List[str] = []
-    pending_heading = ""
-    for raw_part in rough_parts:
-        original = raw_part.strip()
-        if not original:
+    sections: List[tuple[str, List[str]]] = []
+    heading = ""
+    body: List[str] = []
+
+    def flush() -> None:
+        nonlocal body
+        cleaned = [line for line in body if line.strip()]
+        if cleaned:
+            sections.append((heading, cleaned))
+        body = []
+
+    for raw_line in lines:
+        line = raw_line.strip()
+        if not line:
+            if body and body[-1] != "":
+                body.append("")
             continue
-        is_heading = bool(re.match(r"^#{1,6}\s+", original))
-        part = original.strip(" -\t#*•")
-        if not part:
+        heading_match = re.match(r"^#{1,6}\s+(.+?)\s*#*$", line)
+        if heading_match:
+            flush()
+            heading = re.sub(r"[*_`]+", "", heading_match.group(1)).strip()
             continue
-        if is_heading:
-            # Flush a previous orphan heading only when another heading starts.
-            if pending_heading:
-                prepared.append(pending_heading)
-            pending_heading = part
-            continue
-        if pending_heading:
-            part = f"{pending_heading}. {part}"
-            pending_heading = ""
-        prepared.append(part)
-    if pending_heading:
-        prepared.append(pending_heading)
+        # Keep list item content together; remove only presentation Markdown.
+        line = re.sub(r"^[-*•]\s+", "- ", line)
+        line = re.sub(r"^(\d{1,3})[.)]\s+", r"\1. ", line)
+        line = re.sub(r"[*_`]+", "", line).strip()
+        if line:
+            body.append(line)
+    flush()
+
+    if not sections and raw.strip():
+        sections = [("", [_clean_rag_text(raw, max_len=30000)])]
 
     out: List[str] = []
-    for part in prepared:
-        if len(part) > 520:
-            pieces = re.split(r"(?<=[.;:!?])\s+|(?=##?\s)", part)
+    max_len = 760
+    for section_heading, section_lines in sections:
+        units: List[str] = []
+        prose = ""
+        for line in section_lines + [""]:
+            if not line:
+                if prose:
+                    units.append(prose.strip())
+                    prose = ""
+                continue
+            is_list = bool(re.match(r"^(?:-|\d{1,3}\.)\s+", line))
+            if is_list:
+                if prose:
+                    units.append(prose.strip())
+                    prose = ""
+                units.append(line)
+            else:
+                if len(prose) + len(line) + 1 <= 520:
+                    prose = (prose + " " + line).strip()
+                else:
+                    if prose:
+                        units.append(prose.strip())
+                    prose = line
+
+        expanded: List[str] = []
+        for unit in units:
+            if len(unit) <= 620:
+                expanded.append(unit)
+                continue
+            pieces = re.split(r"(?<=[.;:!?])\s+", unit)
             buf = ""
             for piece in pieces:
-                piece = piece.strip(" -\t#*•")
+                piece = piece.strip()
                 if not piece:
                     continue
-                if len(buf) + len(piece) + 1 <= 520:
+                if len(buf) + len(piece) + 1 <= 620:
                     buf = (buf + " " + piece).strip()
                 else:
                     if buf:
-                        out.append(buf)
-                    buf = piece[:520].strip()
+                        expanded.append(buf)
+                    buf = piece[:620].strip()
             if buf:
-                out.append(buf)
-        else:
-            out.append(part)
-    return out
+                expanded.append(buf)
+
+        prefix = f"{section_heading}. " if section_heading else ""
+        buffer = ""
+        for unit in expanded:
+            candidate_unit = unit.strip()
+            if not candidate_unit:
+                continue
+            if len(prefix) + len(buffer) + len(candidate_unit) + 2 <= max_len:
+                buffer = (buffer + "\n" + candidate_unit).strip()
+            else:
+                candidate = (prefix + buffer).strip()
+                if len(_tokens(candidate)) >= 3 and not re.fullmatch(r"\d+[.)]?", candidate):
+                    out.append(candidate)
+                buffer = candidate_unit
+        candidate = (prefix + buffer).strip()
+        if len(_tokens(candidate)) >= 3 and not re.fullmatch(r"\d+[.)]?", candidate):
+            out.append(candidate)
+
+    # Stable de-duplication after Markdown normalization.
+    deduped: List[str] = []
+    seen: set[str] = set()
+    for candidate in out:
+        clean = _clean_rag_text(candidate, max_len=max_len).strip()
+        key = _normalized_text(clean) if "_normalized_text" in globals() else " ".join(_tokens(clean))
+        if not clean or key in seen:
+            continue
+        seen.add(key)
+        deduped.append(clean)
+    return deduped
 
 
 def _normalized_text(text: str) -> str:
@@ -1393,10 +1456,13 @@ def _is_formula_question(question: str) -> bool:
         return False
     q = _normalized_text(question)
     math_terms = [
-        "tinh", "cong thuc", "vat", "gtgt", "khau hao", "phan bo", "tndn", "thue",
-        "fifo", "binh quan", "loi nhuan", "gross", "net", "payroll", "luong", "npv", "irr", "wacc"
+        "tinh", "cong thuc", "bao nhieu", "vat", "gtgt", "khau hao", "phan bo", "tndn", "thue",
+        "fifo", "binh quan", "loi nhuan", "bien loi nhuan", "gross", "net", "payroll", "luong",
+        "hoa von", "lai suat", "tra gop", "khoan vay", "ty le tang", "roe", "roa", "he so thanh toan",
+        "npv", "irr", "wacc"
     ]
-    return any(t in q for t in math_terms) and bool(re.search(r"\d", question or ""))
+    has_operator_expression = bool(re.search(r"\d\s*[+\-*/^]\s*\d", question or ""))
+    return (any(t in q for t in math_terms) or has_operator_expression) and bool(re.search(r"\d", question or ""))
 
 
 def _try_formula_answer(question: str) -> Optional[Dict[str, Any]]:
@@ -1433,7 +1499,8 @@ def _wants_long_answer(question: str, answer_mode: str = "auto") -> bool:
     q = _normalized_text(question)
     return any(t in q for t in [
         "chi tiet", "noi dai", "giai thich", "quy trinh", "lo trinh", "toan bo",
-        "phan tich", "vi du", "buoc", "ke toan truong", "huong dan"
+        "phan tich", "vi du", "buoc", "ke toan truong", "huong dan",
+        "cach ", "gom nhung", "gom cac", "noi dung nao"
     ]) or len(str(question or "")) >= 180
 
 _JOURNAL_TERMS = (
@@ -2328,10 +2395,6 @@ def _direct_answer_from_excerpts(question: str, excerpts: List[Dict[str, Any]]) 
         match = first_matching("thieu hoa don", "khong co hoa don", "chua co hoa don")
         if match:
             return match
-    if "procedure" in concepts:
-        match = first_matching("quy trinh", "cac buoc", "buoc 1")
-        if match:
-            return match
     if "effective_date" in concepts:
         match = first_matching("hieu luc", "ap dung tu")
         if match:
@@ -2632,7 +2695,18 @@ def search_documents_supabase(
         else:
             rejected_low_relevance += 1
 
-    relevant_results.sort(key=lambda r: (r.get("source_priority", 0), r["score"], r.get("relevance_coverage", 0), r.get("answerability_score", 0)), reverse=True)
+    # Relevance must dominate authority. Authority is a quality tie-breaker, not
+    # permission for an unrelated official/legal paragraph to outrank an exact
+    # internal playbook passage. The policy weight is already included in score.
+    relevant_results.sort(
+        key=lambda r: (
+            float(r.get("score") or 0),
+            float(r.get("answerability_score") or 0),
+            float(r.get("relevance_coverage") or 0),
+            float(r.get("source_priority") or 0),
+        ),
+        reverse=True,
+    )
     return {
         "version": V101_VERSION,
         "storage_backend": "supabase",
@@ -2869,6 +2943,16 @@ def _search_local_grounded_knowledge(question: str, limit: int = 8) -> List[Dict
             continue
         front_matter, text = _parse_markdown_front_matter(raw_text)
         rel = str(path.relative_to(ROOT_DIR))
+        doc_type = str(front_matter.get("doc_type") or "").lower()
+        q_norm = _normalized_text(question)
+        if doc_type in {"knowledge_changelog", "release_notes"} and not any(
+            token in q_norm for token in ["changelog", "thay doi", "phien ban", "v110"]
+        ):
+            continue
+        if path.name.lower().startswith("readme") and not any(
+            token in q_norm for token in ["readme", "huong dan kho kien thuc", "cau truc kho kien thuc"]
+        ):
+            continue
         for index, candidate_text in enumerate(_split_answer_candidates(text)):
             if len(candidate_text) < 12:
                 continue
@@ -2908,10 +2992,10 @@ def _search_local_grounded_knowledge(question: str, limit: int = 8) -> List[Dict
                 rows.append(row)
     rows.sort(
         key=lambda row: (
-            float(row.get("source_priority") or 0),
-            float(row.get("answerability_score") or 0),
             float(row.get("score") or 0),
+            float(row.get("answerability_score") or 0),
             float(row.get("relevance_coverage") or 0),
+            float(row.get("source_priority") or 0),
         ),
         reverse=True,
     )
@@ -3369,11 +3453,15 @@ def _maybe_llm_enhance(
         model = os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini")
         sources = _llm_source_context(citations)
         grounded = bool(sources.strip())
+        request_plan = analyze_request(resolved_question)
+        history_chars = int(os.getenv("FINIIP_LLM_HISTORY_CHARS", os.getenv("FINIIP_CHAT_CONTEXT_CHARS", "16000")))
+        max_output_tokens = int(os.getenv("FINIIP_LLM_MAX_OUTPUT_TOKENS", "4000"))
         system = (
             "Bạn là Finiip, trợ lý AI thuộc CTCP IIP Việt Nam. "
             "Trả lời bằng tiếng Việt tự nhiên, tận tâm, rõ ràng và đúng trọng tâm. "
             "Bạn giỏi kế toán, thuế, báo cáo, tính toán nghiệp vụ, phân tích tài liệu và hỗ trợ kỹ thuật. "
-            "Luôn ghi nhớ ngữ cảnh hội thoại được cung cấp. Với câu hỏi dài, hãy chia kết luận, cách làm, ví dụ và lưu ý. "
+            "Luôn ghi nhớ ngữ cảnh hội thoại được cung cấp. Với câu hỏi dài, hãy lập kế hoạch, trả lời đủ từng phần, "
+            "chia kết luận, cách làm, công thức/số liệu, ví dụ và lưu ý; không được bỏ sót yêu cầu. "
             "Không tự bịa dữ kiện, văn bản, điều khoản, thuế suất, mức phạt hoặc thời hạn. "
             "Không chèn đường dẫn file nội bộ hoặc mục 'Nguồn nội bộ' vào cuối câu trả lời; nguồn sẽ được giao diện hiển thị riêng. "
             "Nếu có nguồn đánh số [1], [2], chỉ dùng thông tin trong nguồn và có thể gắn ký hiệu [n] ngay sau ý quan trọng."
@@ -3394,7 +3482,8 @@ def _maybe_llm_enhance(
         response = client.chat.completions.create(
             model=model,
             messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
-            temperature=0.2,
+            temperature=0.15,
+            max_tokens=max_output_tokens,
         )
         text = str(response.choices[0].message.content or "").strip()
         if not text:
@@ -3409,7 +3498,7 @@ def _maybe_llm_enhance(
         return None
 
 
-def answer_with_supabase_rag(question: str, workspace_id: str = "default", limit: int = 6, history: str = "", answer_mode: str = "auto", conversation_id: str = "admin", save_memory: bool = True) -> Dict[str, Any]:
+def answer_with_supabase_rag(question: str, workspace_id: str = "default", limit: int = 6, history: str = "", answer_mode: str = "auto", conversation_id: str = "admin", save_memory: bool = True, allow_llm: bool = True) -> Dict[str, Any]:
     """Unified conversational answer service for both Supabase and local mode.
 
     V59: persistent context + follow-up resolution
@@ -3511,7 +3600,10 @@ def answer_with_supabase_rag(question: str, workspace_id: str = "default", limit
             save_supabase_chat_message(workspace_id, conversation_id, "assistant", result["answer"], {"confidence": result["confidence"]})
         return result
 
+    request_analysis = analyze_request(resolved_question)
     selected_mode = _answer_mode_from_question(resolved_question, answer_mode)
+    if request_analysis.get("is_complex") and selected_mode == "auto":
+        selected_mode = "chief_accountant"
     base_answer = ask_accounting_ai(resolved_question, limit=max(limit, 8))
     journal_answer = _build_accounting_journal_answer(resolved_question, base_answer)
     curated_answer = _build_curated_accounting_knowledge_answer(resolved_question)
@@ -3627,6 +3719,7 @@ def answer_with_supabase_rag(question: str, workspace_id: str = "default", limit
         "conflict_warnings": conflict_warnings,
         "accounting_rule_id": journal_answer.get("rule_id") if journal_answer else None,
         "account_lookup_codes": _account_codes_from_question(resolved_question) if account_lookup else [],
+        "request_analysis": request_analysis,
     }
     enhanced = _maybe_llm_enhance(
         question=question,
@@ -3636,7 +3729,7 @@ def answer_with_supabase_rag(question: str, workspace_id: str = "default", limit
         answer_mode=result.get("answer_mode") or selected_mode,
         deterministic_answer=result.get("answer") or "",
         citations=result.get("citations") or [],
-    )
+    ) if allow_llm else None
     if enhanced:
         result["answer"] = enhanced
         result["llm_used"] = True

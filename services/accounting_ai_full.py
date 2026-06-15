@@ -20,6 +20,11 @@ from datetime import date, datetime
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
+try:
+    from services.advanced_calculation_v110 import solve_advanced_text_question
+except Exception:  # pragma: no cover - optional compatibility during partial deploys
+    solve_advanced_text_question = None
+
 ROOT_DIR = Path(__file__).resolve().parents[1]
 KNOWLEDGE_DIR = ROOT_DIR / "knowledge_base"
 
@@ -689,6 +694,13 @@ def solve_formula(payload: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def solve_text_question(question: str) -> Dict[str, Any]:
+    # V110: deterministic general arithmetic and finance/accounting formulas run
+    # before the legacy intent rules. This prevents a language model from doing
+    # avoidable arithmetic and returns auditable calculation steps.
+    if solve_advanced_text_question is not None:
+        advanced = solve_advanced_text_question(question)
+        if advanced:
+            return advanced
     q = norm(question)
     amount = parse_money(question)
     pct = parse_percent(question)

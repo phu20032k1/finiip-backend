@@ -16,7 +16,13 @@ services:
       - key: FINIIP_LLM_MODE
         value: auto
       - key: FINIIP_CHAT_CONTEXT_CHARS
-        value: "10000"
+        value: "20000"
+      - key: FINIIP_LLM_MAX_OUTPUT_TOKENS
+        value: "4000"
+      - key: FINIIP_ATTACHMENT_CONTEXT_CHARS
+        value: "60000"
+      - key: FINIIP_FILE_REPORT_CONTEXT_CHARS
+        value: "70000"
       - key: DATABASE_URL
         sync: false
       - key: FINIIP_API_KEY

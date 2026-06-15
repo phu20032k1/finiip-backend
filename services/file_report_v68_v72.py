@@ -20,8 +20,9 @@ import os
 import re
 import shutil
 import unicodedata
+import uuid
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
@@ -30,8 +31,9 @@ from services.accounting_ai_enterprise import (
     extract_text_from_bytes,
     normalize_extracted_text_for_rag,
 )
+from services.smart_orchestrator_v110 import analyze_request, build_attachment_context
 
-FILE_REPORT_VERSION = "v68_v72_frontend_file_report"
+FILE_REPORT_VERSION = "v110_intelligent_file_report"
 FILE_REPORT_ROOT = ROOT_DIR / "data" / "file_report_jobs"
 FILE_REPORT_ROOT.mkdir(parents=True, exist_ok=True)
 HISTORY_FILE = FILE_REPORT_ROOT / "history.json"
@@ -64,6 +66,12 @@ ALLOWED_EXTENSIONS = {
     ".xlsm",
     ".html",
     ".htm",
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".webp",
+    ".tif",
+    ".tiff",
 }
 
 VIETNAMESE_ACCOUNTING_TERMS = [
@@ -87,7 +95,7 @@ class FileReportInput:
 
 
 def _utc_now() -> str:
-    return datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
 def _safe_filename(name: str, fallback: str = "upload.bin") -> str:
@@ -197,7 +205,9 @@ def validate_file_report_inputs(files: List[FileReportInput]) -> None:
 
 def create_job_id(files: List[FileReportInput], workspace_id: str, task_type: str) -> str:
     seed = "|".join([f.filename + ":" + hashlib.sha256(f.content).hexdigest()[:16] for f in files])
-    seed += f"|{workspace_id}|{task_type}|{_utc_now()}"
+    # A random nonce prevents collisions when the same files are exported to
+    # multiple formats within the same second.
+    seed += f"|{workspace_id}|{task_type}|{datetime.now(timezone.utc).isoformat(timespec='microseconds')}|{uuid.uuid4().hex}"
     return "fr_" + hashlib.sha1(seed.encode("utf-8")).hexdigest()[:18]
 
 
@@ -326,15 +336,23 @@ def process_file_report_job(*, job: Dict[str, Any], files: List[FileReportInput]
             "profile": profile,
             "summary": summary,
         })
-    markdown = build_report_markdown(job, extracted_files)
+    deterministic_markdown = build_report_markdown(job, extracted_files)
+    ai_report = _llm_report_markdown(job, extracted_files)
+    markdown = str((ai_report or {}).get("markdown") or deterministic_markdown)
+    analysis_mode = "llm_grounded_file_report" if ai_report else "deterministic_file_report"
     payload = build_report_payload(job, extracted_files, markdown)
+    payload["analysis_mode"] = analysis_mode
+    payload["ai_analysis"] = {k: v for k, v in (ai_report or {}).items() if k != "markdown"}
+    payload.setdefault("report", {})["generated_by"] = analysis_mode
     output_path = write_report_output_file(job, markdown, payload)
     return {
         "output_path": str(output_path),
         "output_filename": output_path.name,
         "download_url": f"/ai/v69/file-report/jobs/{job['job_id']}/download",
-        "preview": markdown[:4000],
+        "preview": markdown[:6000],
         "report": payload.get("report"),
+        "analysis_mode": analysis_mode,
+        "ai_analysis": payload.get("ai_analysis"),
         "files_analyzed": [
             {k: v for k, v in f.items() if k != "text"}
             for f in extracted_files
@@ -438,6 +456,66 @@ def summarize_text(text: str, instruction: str = "") -> Dict[str, Any]:
         "risks": risks,
         "sentence_count": len(sents),
     }
+
+
+def _llm_report_markdown(job: Dict[str, Any], files: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    """Create a grounded long-form report from selected file chunks."""
+    if not os.getenv("OPENAI_API_KEY") or (job.get("task_type") == "extract"):
+        return None
+    try:
+        from openai import OpenAI  # type: ignore
+
+        instruction = str(job.get("instruction") or job.get("question") or "Tóm tắt, phân tích và lập báo cáo từ các tệp.")
+        file_context = build_attachment_context(
+            instruction,
+            [{"filename": f.get("filename"), "text": f.get("text") or ""} for f in files],
+            max_total_chars=int(os.getenv("FINIIP_FILE_REPORT_CONTEXT_CHARS", "70000")),
+        )
+        context = str(file_context.get("context") or "")
+        if not context.strip():
+            return None
+        request_plan = analyze_request(instruction)
+        model = os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini")
+        max_tokens = int(os.getenv("FINIIP_FILE_REPORT_MAX_OUTPUT_TOKENS", "5000"))
+        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        task_type = str(job.get("task_type") or "auto_report")
+        style = str(job.get("report_style") or "detailed")
+        system = (
+            "Bạn là Finiip, trợ lý AI thuộc CTCP IIP Việt Nam, chuyên đọc hồ sơ, kế toán, thuế, tài chính và lập báo cáo. "
+            "Chỉ sử dụng dữ kiện có trong các đoạn tệp được cung cấp. Không bịa số, điều khoản, văn bản hay kết luận. "
+            "Khi dữ liệu thiếu hoặc mâu thuẫn, phải nêu rõ. Viết Markdown tiếng Việt chuyên nghiệp, có tóm tắt điều hành, "
+            "phân tích theo từng yêu cầu, bảng số liệu dạng Markdown khi phù hợp, rủi ro, checklist và kết luận. "
+            "Không đưa đường dẫn file nội bộ và không nói rằng bạn đã đọc phần không được cung cấp."
+        )
+        user = (
+            f"TIÊU ĐỀ: {job.get('title')}\n"
+            f"LOẠI NHIỆM VỤ: {task_type}\n"
+            f"PHONG CÁCH: {style}\n"
+            f"YÊU CẦU: {instruction}\n"
+            f"KẾ HOẠCH YÊU CẦU: {json.dumps(request_plan, ensure_ascii=False)}\n\n"
+            f"CÁC ĐOẠN TỆP ĐÃ CHỌN:\n{context}\n\n"
+            "Hãy tạo báo cáo hoàn chỉnh. Mỗi số liệu quan trọng phải gắn với tên tệp hoặc đoạn tệp tương ứng trong nội dung."
+        )
+        response = client.chat.completions.create(
+            model=model,
+            messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
+            temperature=0.1,
+            max_tokens=max_tokens,
+        )
+        body = str(response.choices[0].message.content or "").strip()
+        if not body:
+            return None
+        if not body.startswith("#"):
+            body = f"# {job.get('title') or 'Báo cáo Finiip'}\n\n" + body
+        return {
+            "markdown": body,
+            "model": model,
+            "context_characters": file_context.get("context_characters"),
+            "manifest": file_context.get("manifest") or [],
+            "request_analysis": request_plan,
+        }
+    except Exception:
+        return None
 
 
 def build_report_markdown(job: Dict[str, Any], files: List[Dict[str, Any]]) -> str:
@@ -634,50 +712,188 @@ def write_report_output_file(job: Dict[str, Any], markdown_text: str, payload: D
     return path
 
 
+def _clean_markdown_inline(text: str) -> str:
+    return str(text or "").replace("**", "").replace("__", "").replace("`", "").strip()
+
+
+def _markdown_table_rows(lines: List[str], start: int) -> tuple[List[List[str]], int]:
+    rows: List[List[str]] = []
+    index = start
+    while index < len(lines) and lines[index].strip().startswith("|"):
+        cells = [_clean_markdown_inline(cell) for cell in lines[index].strip().strip("|").split("|")]
+        if not all(re.fullmatch(r":?-{3,}:?", cell.replace(" ", "")) for cell in cells):
+            rows.append(cells)
+        index += 1
+    return rows, index
+
+
 def _write_docx(path: Path, markdown_text: str) -> None:
     from docx import Document  # type: ignore
+    from docx.enum.text import WD_ALIGN_PARAGRAPH  # type: ignore
+    from docx.shared import Cm, Pt  # type: ignore
+
     doc = Document()
-    for line in markdown_text.splitlines():
-        stripped = line.strip()
+    section = doc.sections[0]
+    section.top_margin = Cm(1.8)
+    section.bottom_margin = Cm(1.8)
+    section.left_margin = Cm(2.0)
+    section.right_margin = Cm(2.0)
+    normal = doc.styles["Normal"]
+    normal.font.name = "Arial"
+    normal.font.size = Pt(10.5)
+    for style_name in ("Title", "Heading 1", "Heading 2", "Heading 3"):
+        if style_name in doc.styles:
+            doc.styles[style_name].font.name = "Arial"
+
+    lines = markdown_text.splitlines()
+    index = 0
+    first_heading = True
+    while index < len(lines):
+        stripped = lines[index].strip()
         if not stripped:
+            index += 1
             continue
+        if stripped.startswith("|"):
+            rows, next_index = _markdown_table_rows(lines, index)
+            if rows:
+                cols = max(len(row) for row in rows)
+                table = doc.add_table(rows=0, cols=cols)
+                table.style = "Table Grid"
+                for row_index, row in enumerate(rows):
+                    cells = table.add_row().cells
+                    for col_index in range(cols):
+                        cells[col_index].text = row[col_index] if col_index < len(row) else ""
+                        for run in cells[col_index].paragraphs[0].runs:
+                            run.font.name = "Arial"
+                            run.font.size = Pt(9.5)
+                            run.bold = row_index == 0
+                index = next_index
+                continue
         if stripped.startswith("# "):
-            doc.add_heading(stripped[2:].strip(), level=1)
+            paragraph = doc.add_heading(_clean_markdown_inline(stripped[2:]), level=0 if first_heading else 1)
+            paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER if first_heading else WD_ALIGN_PARAGRAPH.LEFT
+            first_heading = False
         elif stripped.startswith("## "):
-            doc.add_heading(stripped[3:].strip(), level=2)
+            doc.add_heading(_clean_markdown_inline(stripped[3:]), level=1)
         elif stripped.startswith("### "):
-            doc.add_heading(stripped[4:].strip(), level=3)
+            doc.add_heading(_clean_markdown_inline(stripped[4:]), level=2)
+        elif stripped.startswith("#### "):
+            doc.add_heading(_clean_markdown_inline(stripped[5:]), level=3)
         elif stripped.startswith("- "):
-            doc.add_paragraph(stripped[2:].strip().replace("**", "").replace("`", ""), style="List Bullet")
+            doc.add_paragraph(_clean_markdown_inline(stripped[2:]), style="List Bullet")
         elif re.match(r"^\d+\.\s+", stripped):
-            doc.add_paragraph(re.sub(r"^\d+\.\s+", "", stripped).replace("**", "").replace("`", ""), style="List Number")
+            doc.add_paragraph(_clean_markdown_inline(re.sub(r"^\d+\.\s+", "", stripped)), style="List Number")
         else:
-            doc.add_paragraph(stripped.replace("**", "").replace("`", ""))
+            doc.add_paragraph(_clean_markdown_inline(stripped))
+        index += 1
+
+    footer = section.footer.paragraphs[0]
+    footer.text = "Finiip — CTCP IIP Việt Nam | Báo cáo tạo tự động, cần kiểm tra trước khi sử dụng chính thức"
+    footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    for run in footer.runs:
+        run.font.name = "Arial"
+        run.font.size = Pt(8)
     doc.save(path)
 
 
 def _write_xlsx(path: Path, payload: Dict[str, Any], markdown_text: str) -> None:
     import openpyxl  # type: ignore
+    from openpyxl.styles import Alignment, Border, Font, PatternFill, Side  # type: ignore
+    from openpyxl.utils import get_column_letter  # type: ignore
+
     wb = openpyxl.Workbook()
     ws = wb.active
-    ws.title = "Summary"
-    ws.append(["Field", "Value"])
-    ws.append(["Job ID", payload.get("job_id")])
-    ws.append(["Task", payload.get("task_type")])
-    ws.append(["Workspace", payload.get("workspace_id")])
-    for f in payload.get("files") or []:
-        ws.append(["File", f.get("filename")])
-        ws.append(["Type", (f.get("profile") or {}).get("document_type")])
-        ws.append(["Words", f.get("word_count")])
-    ws2 = wb.create_sheet("Report")
-    ws2.append(["Line"])
-    for line in markdown_text.splitlines()[:10000]:
-        ws2.append([line])
-    ws3 = wb.create_sheet("Files")
-    ws3.append(["filename", "document_type", "document_number", "word_count", "warnings"])
-    for f in payload.get("files") or []:
+    ws.title = "Tong_quan"
+    header_fill = PatternFill("solid", fgColor="365F91")
+    sub_fill = PatternFill("solid", fgColor="D9EAF7")
+    white_font = Font(color="FFFFFF", bold=True)
+    bold_font = Font(bold=True)
+    thin = Side(style="thin", color="D9E1F2")
+    border = Border(left=thin, right=thin, top=thin, bottom=thin)
+
+    ws.merge_cells("A1:F1")
+    ws["A1"] = str((payload.get("report") or {}).get("title") or "Báo cáo Finiip")
+    ws["A1"].font = Font(size=16, bold=True, color="FFFFFF")
+    ws["A1"].fill = header_fill
+    ws["A1"].alignment = Alignment(horizontal="center")
+    summary_rows = [
+        ["Trường", "Giá trị"],
+        ["Job ID", payload.get("job_id")],
+        ["Nhiệm vụ", payload.get("task_type")],
+        ["Workspace", payload.get("workspace_id")],
+        ["Chế độ phân tích", payload.get("analysis_mode")],
+        ["Số file", len(payload.get("files") or [])],
+    ]
+    for row in summary_rows:
+        ws.append(row)
+    for cell in ws[2]:
+        cell.fill = sub_fill; cell.font = bold_font; cell.border = border
+    for row in ws.iter_rows(min_row=3, max_row=ws.max_row, min_col=1, max_col=2):
+        for cell in row:
+            cell.border = border
+    ws.column_dimensions["A"].width = 24
+    ws.column_dimensions["B"].width = 55
+    ws.freeze_panes = "A3"
+
+    files_ws = wb.create_sheet("Danh_sach_file")
+    headers = ["STT", "Tên file", "Loại tài liệu", "Số văn bản", "Số ký tự", "Số từ", "Cảnh báo"]
+    files_ws.append(headers)
+    for cell in files_ws[1]:
+        cell.fill = header_fill; cell.font = white_font; cell.alignment = Alignment(horizontal="center"); cell.border = border
+    for index, f in enumerate(payload.get("files") or [], 1):
         profile = f.get("profile") or {}
-        ws3.append([f.get("filename"), profile.get("document_type"), profile.get("document_number"), f.get("word_count"), "; ".join(f.get("warnings") or [])])
+        files_ws.append([
+            index, f.get("filename"), profile.get("document_type"), profile.get("document_number"),
+            f.get("char_count"), f.get("word_count"), "; ".join(f.get("warnings") or []),
+        ])
+    total_row = files_ws.max_row + 1
+    files_ws.cell(total_row, 5, "Tổng")
+    files_ws.cell(total_row, 6, f"=SUM(F2:F{max(2, total_row - 1)})")
+    files_ws.cell(total_row, 5).font = bold_font
+    files_ws.cell(total_row, 6).font = bold_font
+    files_ws.auto_filter.ref = f"A1:G{max(1, files_ws.max_row - 1)}"
+    files_ws.freeze_panes = "A2"
+    widths = [8, 34, 22, 20, 14, 14, 48]
+    for idx, width in enumerate(widths, 1):
+        files_ws.column_dimensions[get_column_letter(idx)].width = width
+    for row in files_ws.iter_rows():
+        for cell in row:
+            cell.border = border
+            cell.alignment = Alignment(vertical="top", wrap_text=True)
+
+    points_ws = wb.create_sheet("Diem_quan_trong")
+    points_ws.append(["File", "Nhóm", "Nội dung"])
+    for cell in points_ws[1]:
+        cell.fill = header_fill; cell.font = white_font; cell.border = border
+    for f in payload.get("files") or []:
+        summary = f.get("summary") or {}
+        for point in summary.get("key_points") or []:
+            points_ws.append([f.get("filename"), "Điểm quan trọng", point])
+        for risk in summary.get("risks") or []:
+            points_ws.append([f.get("filename"), "Rủi ro/Lưu ý", risk])
+    points_ws.freeze_panes = "A2"
+    points_ws.auto_filter.ref = f"A1:C{points_ws.max_row}"
+    points_ws.column_dimensions["A"].width = 32
+    points_ws.column_dimensions["B"].width = 20
+    points_ws.column_dimensions["C"].width = 100
+    for row in points_ws.iter_rows():
+        for cell in row:
+            cell.border = border
+            cell.alignment = Alignment(vertical="top", wrap_text=True)
+
+    report_ws = wb.create_sheet("Bao_cao")
+    report_ws.append(["Dòng", "Nội dung"])
+    for cell in report_ws[1]:
+        cell.fill = header_fill; cell.font = white_font; cell.border = border
+    for line_no, line in enumerate(markdown_text.splitlines()[:20000], 1):
+        report_ws.append([line_no, line])
+    report_ws.freeze_panes = "A2"
+    report_ws.column_dimensions["A"].width = 10
+    report_ws.column_dimensions["B"].width = 120
+    for row in report_ws.iter_rows():
+        for cell in row:
+            cell.border = border
+            cell.alignment = Alignment(vertical="top", wrap_text=True)
     wb.save(path)
 
 
@@ -689,30 +905,92 @@ def _pdf_escape(text: str) -> str:
 
 
 def _write_pdf(path: Path, markdown_text: str) -> None:
+    """Write a Unicode PDF when reportlab and a system font are available."""
     try:
+        from reportlab.lib import colors  # type: ignore
+        from reportlab.lib.enums import TA_CENTER  # type: ignore
         from reportlab.lib.pagesizes import A4  # type: ignore
-        from reportlab.pdfgen import canvas  # type: ignore
-        c = canvas.Canvas(str(path), pagesize=A4)
-        width, height = A4
-        y = height - 42
-        c.setFont("Helvetica", 10)
-        for raw in markdown_text.splitlines():
-            line = re.sub(r"^#+\s*", "", raw).replace("**", "").replace("`", "")
-            while len(line) > 100:
-                part, line = line[:100], line[100:]
-                c.drawString(42, y, part)
-                y -= 14
-                if y < 42:
-                    c.showPage(); c.setFont("Helvetica", 10); y = height - 42
-            if line.strip():
-                c.drawString(42, y, line[:100])
-            y -= 14
-            if y < 42:
-                c.showPage(); c.setFont("Helvetica", 10); y = height - 42
-        c.save()
+        from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet  # type: ignore
+        from reportlab.lib.units import mm  # type: ignore
+        from reportlab.pdfbase import pdfmetrics  # type: ignore
+        from reportlab.pdfbase.ttfonts import TTFont  # type: ignore
+        from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle  # type: ignore
+
+        font_name = "Helvetica"
+        bold_name = "Helvetica-Bold"
+        font_candidates = [
+            ("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
+            ("/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf", "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf"),
+        ]
+        for regular_path, bold_path in font_candidates:
+            if Path(regular_path).exists():
+                pdfmetrics.registerFont(TTFont("FiniipUnicode", regular_path))
+                font_name = "FiniipUnicode"
+                if Path(bold_path).exists():
+                    pdfmetrics.registerFont(TTFont("FiniipUnicodeBold", bold_path))
+                    bold_name = "FiniipUnicodeBold"
+                else:
+                    bold_name = font_name
+                break
+
+        doc = SimpleDocTemplate(
+            str(path), pagesize=A4, rightMargin=16 * mm, leftMargin=16 * mm,
+            topMargin=15 * mm, bottomMargin=16 * mm,
+            title="Finiip report",
+        )
+        styles = getSampleStyleSheet()
+        body = ParagraphStyle("FiniipBody", parent=styles["BodyText"], fontName=font_name, fontSize=9.5, leading=13, spaceAfter=5)
+        h1 = ParagraphStyle("FiniipH1", parent=styles["Heading1"], fontName=bold_name, fontSize=18, leading=22, alignment=TA_CENTER, textColor=colors.HexColor("#243B64"), spaceAfter=12)
+        h2 = ParagraphStyle("FiniipH2", parent=styles["Heading2"], fontName=bold_name, fontSize=13, leading=17, textColor=colors.HexColor("#365F91"), spaceBefore=8, spaceAfter=6)
+        h3 = ParagraphStyle("FiniipH3", parent=styles["Heading3"], fontName=bold_name, fontSize=11, leading=15, textColor=colors.HexColor("#365F91"), spaceBefore=6, spaceAfter=4)
+        bullet = ParagraphStyle("FiniipBullet", parent=body, leftIndent=12, firstLineIndent=-6, bulletIndent=4)
+        story: List[Any] = []
+        lines = markdown_text.splitlines()
+        index = 0
+        while index < len(lines):
+            stripped = lines[index].strip()
+            if not stripped:
+                story.append(Spacer(1, 3))
+                index += 1
+                continue
+            if stripped.startswith("|"):
+                rows, next_index = _markdown_table_rows(lines, index)
+                if rows:
+                    table_data = [[Paragraph(html.escape(cell), body) for cell in row] for row in rows]
+                    table = Table(table_data, repeatRows=1, hAlign="LEFT")
+                    table.setStyle(TableStyle([
+                        ("FONTNAME", (0, 0), (-1, -1), font_name),
+                        ("FONTNAME", (0, 0), (-1, 0), bold_name),
+                        ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#D9EAF7")),
+                        ("GRID", (0, 0), (-1, -1), 0.4, colors.HexColor("#AAB7C4")),
+                        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+                        ("LEFTPADDING", (0, 0), (-1, -1), 4),
+                        ("RIGHTPADDING", (0, 0), (-1, -1), 4),
+                        ("TOPPADDING", (0, 0), (-1, -1), 3),
+                        ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
+                    ]))
+                    story.extend([table, Spacer(1, 6)])
+                    index = next_index
+                    continue
+            if stripped.startswith("# "):
+                story.append(Paragraph(html.escape(_clean_markdown_inline(stripped[2:])), h1))
+            elif stripped.startswith("## "):
+                story.append(Paragraph(html.escape(_clean_markdown_inline(stripped[3:])), h2))
+            elif stripped.startswith("### "):
+                story.append(Paragraph(html.escape(_clean_markdown_inline(stripped[4:])), h3))
+            elif stripped.startswith("- "):
+                story.append(Paragraph("• " + html.escape(_clean_markdown_inline(stripped[2:])), bullet))
+            elif re.match(r"^\d+\.\s+", stripped):
+                story.append(Paragraph(html.escape(_clean_markdown_inline(stripped)), bullet))
+            else:
+                story.append(Paragraph(html.escape(_clean_markdown_inline(stripped)), body))
+            index += 1
+        doc.build(story)
         return
     except Exception:
         pass
+
+    # Minimal dependency-free fallback. Vietnamese accents may be simplified.
     lines = []
     for raw in markdown_text.splitlines():
         line = re.sub(r"^#+\s*", "", raw).replace("**", "").replace("`", "")
@@ -742,7 +1020,6 @@ def _write_pdf(path: Path, markdown_text: str) -> None:
         page_ids.append(page_id)
     kids = " ".join(f"{pid} 0 R" for pid in page_ids)
     pages_id = add_obj(f"<< /Type /Pages /Kids [{kids}] /Count {len(page_ids)} >>".encode())
-    # Patch page parent IDs.
     for pid in page_ids:
         objects[pid - 1] = objects[pid - 1].replace(b"/Parent 0 0 R", f"/Parent {pages_id} 0 R".encode())
     catalog_id = add_obj(f"<< /Type /Catalog /Pages {pages_id} 0 R >>".encode())
@@ -750,9 +1027,7 @@ def _write_pdf(path: Path, markdown_text: str) -> None:
     offsets = [0]
     for idx, obj in enumerate(objects, 1):
         offsets.append(len(data))
-        data.extend(f"{idx} 0 obj\n".encode())
-        data.extend(obj)
-        data.extend(b"\nendobj\n")
+        data.extend(f"{idx} 0 obj\n".encode()); data.extend(obj); data.extend(b"\nendobj\n")
     xref = len(data)
     data.extend(f"xref\n0 {len(objects)+1}\n0000000000 65535 f \n".encode())
     for off in offsets[1:]:
@@ -849,6 +1124,11 @@ def capabilities() -> Dict[str, Any]:
             "v70_history": True,
             "v71_pdf_export": True,
             "v72_multiple_files": True,
+            "v110_llm_grounded_report": True,
+            "v110_long_file_chunk_selection": True,
+            "v110_unicode_pdf": True,
+            "v110_professional_docx_xlsx": True,
+            "v110_image_ocr": True,
         },
         "endpoints": [
             "POST /ai/v68/file-report/create-sync",

@@ -1,0 +1,48 @@
+FINIIP V110 - CHANGED/ADDED FILES
+Generated: 2026-06-15
+
+CORE CHAT / RAG
+M  chat_api_v1.py
+M  services/rag_storage_v101.py
+A  services/smart_orchestrator_v110.py
+
+CALCULATION
+A  services/advanced_calculation_v110.py  # arithmetic, VAT, COGS, depreciation/allocation, PMT, interest, NPV/IRR, ratios
+M  services/accounting_ai_full.py
+
+FILE READING / REPORTING
+M  services/rag_v66_v67.py
+M  services/accounting_ai_enterprise.py
+M  services/file_report_v68_v72.py
+
+KNOWLEDGE BASE
+A  knowledge_base/global/accounting/accounting_operations_complete_v110.md
+A  knowledge_base/global/finance/financial_analysis_and_planning_v110.md
+A  knowledge_base/global/business/business_management_internal_control_v110.md
+A  knowledge_base/global/technology/data_excel_reporting_v110.md
+A  knowledge_base/global/legal/contract_review_business_v110.md
+A  knowledge_base/policies/long_question_file_report_policy_v110.md
+A  knowledge_base/CHANGELOG_V110.md
+
+CONFIG / DEPLOYMENT
+M  .env.example
+M  render.yaml
+M  requirements.txt
+M  Dockerfile
+M  README.md
+
+DOCS / TESTS
+A  docs/V110_LONG_CONTEXT_CALCULATION_FILE_REPORT_GUIDE.md
+A  tests/test_v110_intelligence.py
+A  MANIFEST_V110.txt
+
+NEW CHAT ENDPOINTS
+GET  /api/v1/chat/capabilities
+POST /api/v1/chat/calculate
+POST /api/v1/chat/analyze-request
+GET  /api/v1/chat/generated-files/{job_id}
+
+VERIFIED TESTS
+- V110 intelligence: 12 passed
+- V109 + V110 + relevant accounting/file/legal suites: 36 passed
+- All tests/: 96 passed, 6 legacy failures already present in V109
