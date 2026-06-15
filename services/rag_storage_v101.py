@@ -41,7 +41,7 @@ from services.accounting_ai_enterprise import (
     split_document_into_chunks,
 )
 
-V101_VERSION = "v107_full_knowledge_governed_rag"
+V101_VERSION = "v109_smart_contextual_chat"
 
 # V59-V62: persistent local conversation memory is used when Supabase is not
 # active, so follow-up questions also work during local development.
@@ -607,6 +607,98 @@ def _citation_document_title(src: Dict[str, Any]) -> str:
     return str(front.get("title") or src.get("title") or "Tài liệu RAG")
 
 
+_FRIENDLY_LOCAL_SOURCE_TITLES = {
+    "accounting_accounts.md": "Hệ thống tài khoản kế toán Finiip",
+    "he_thong_tai_khoan.md": "Hệ thống tài khoản kế toán",
+    "ke_toan_co_ban.md": "Cẩm nang kế toán cơ bản",
+    "accounting_full_playbook_v85.md": "Cẩm nang nghiệp vụ kế toán Finiip",
+    "quy_trinh_ke_toan_noi_bo.md": "Quy trình kế toán nội bộ",
+    "vat_hoa_don.md": "Cẩm nang VAT và hóa đơn",
+    "cau_hoi_thuong_gap.md": "Kho câu hỏi nghiệp vụ thường gặp",
+    "tai_san_co_dinh.md": "Cẩm nang tài sản cố định",
+    "chi_phi_duoc_tru.md": "Cẩm nang chi phí được trừ",
+    "cong_cu_dung_cu.md": "Cẩm nang công cụ dụng cụ",
+}
+
+
+def _friendly_source_title(value: Any) -> str:
+    """Turn an internal path/technical title into a user-facing source label.
+
+    The frontend should never have to show strings such as
+    ``knowledge_base/accounting_accounts.md`` inside the answer bubble.
+    """
+    raw = str(value or "").strip()
+    if not raw:
+        return "Kiến thức nghiệp vụ Finiip"
+    aliases = {
+        "danh mục tài khoản kế toán nội bộ": "Hệ thống tài khoản kế toán Finiip",
+        "danh muc tai khoan ke toan noi bo": "Hệ thống tài khoản kế toán Finiip",
+        "nguồn nội bộ": "Kiến thức nghiệp vụ Finiip",
+        "nguon noi bo": "Kiến thức nghiệp vụ Finiip",
+    }
+    if raw.lower() in aliases:
+        return aliases[raw.lower()]
+    path_like = bool(
+        re.search(r"\.(md|txt|pdf|docx?|xlsx?|csv|json)$", raw, flags=re.I)
+        or raw.replace("\\", "/").lower().startswith(("knowledge_base/", "data/", "docs/", "uploads/"))
+    )
+    filename = (raw.replace("\\", "/").split("/")[-1] if path_like else raw).lower()
+    if filename in _FRIENDLY_LOCAL_SOURCE_TITLES:
+        return _FRIENDLY_LOCAL_SOURCE_TITLES[filename]
+    base = raw.replace("\\", "/").split("/")[-1] if path_like else raw
+    clean = re.sub(r"\.(md|txt|pdf|docx?|xlsx?|csv|json)$", "", base, flags=re.I)
+    clean = clean.replace("_", " ").replace("-", " ")
+    clean = re.sub(r"\s+", " ", clean).strip()
+    return clean[:1].upper() + clean[1:] if clean else "Kiến thức nghiệp vụ Finiip"
+
+
+def _citation_from_local_source(source_name: str, index: int = 1, excerpt: str = "") -> Dict[str, Any]:
+    return {
+        "index": index,
+        "title": _friendly_source_title(source_name),
+        "document_title": _friendly_source_title(source_name),
+        "document_id": source_name or None,
+        "chunk_id": None,
+        "chunk_no": None,
+        "heading": None,
+        "page": None,
+        "location": "Kho kiến thức nghiệp vụ Finiip",
+        "legal_location": "",
+        "excerpt": _clean_rag_text(excerpt, max_len=500) if excerpt else "",
+        "source_kind": "internal_knowledge",
+    }
+
+
+def _source_cards(citations: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Compact, frontend-ready cards; answer text remains clean and readable."""
+    cards: List[Dict[str, Any]] = []
+    seen = set()
+    for idx, citation in enumerate(citations or [], 1):
+        title = _friendly_source_title(citation.get("document_title") or citation.get("title"))
+        page = citation.get("page")
+        location = str(citation.get("legal_location") or citation.get("location") or "").strip()
+        key = (title, str(page or ""), location)
+        if key in seen:
+            continue
+        seen.add(key)
+        badge = "Nguồn nội bộ"
+        if citation.get("document_id") and citation.get("chunk_id"):
+            badge = "Tài liệu RAG"
+        if any(token in title.lower() for token in ["thông tư", "nghị định", "luật"]):
+            badge = "Văn bản pháp lý"
+        cards.append({
+            "index": len(cards) + 1,
+            "title": title,
+            "badge": badge,
+            "page": page,
+            "location": location or (f"Trang {page}" if page else "Kho kiến thức Finiip"),
+            "excerpt": _clean_rag_text(citation.get("excerpt") or "", max_len=320),
+            "document_id": citation.get("document_id"),
+            "chunk_id": citation.get("chunk_id"),
+        })
+    return cards[:8]
+
+
 def _answer_mode_from_question(question: str, answer_mode: str = "auto") -> str:
     mode = (answer_mode or "auto").strip().lower()
     allowed = {"auto", "short", "detailed", "chief_accountant", "with_example", "with_journal", "risk", "source_only"}
@@ -672,7 +764,8 @@ def _combine_history(server_history: str, browser_history: str) -> str:
     parts = [p.strip() for p in [server_history, browser_history] if p and p.strip()]
     if not parts:
         return ""
-    return "\n\n".join(parts)[-2200:]
+    max_chars = max(3000, min(int(os.getenv("FINIIP_CHAT_CONTEXT_CHARS", "10000")), 30000))
+    return "\n\n".join(parts)[-max_chars:]
 
 
 
@@ -734,9 +827,9 @@ def list_supabase_chat_memory(workspace_id: str = "default", conversation_id: st
 
 def _format_memory_for_retrieval(items: List[Dict[str, Any]]) -> str:
     out = []
-    for item in items[-10:]:
+    for item in items[-20:]:
         role = item.get("role") or "user"
-        content = _clean_rag_text(item.get("content") or "", max_len=600)
+        content = _clean_rag_text(item.get("content") or "", max_len=1200)
         if content:
             out.append(f"{role}: {content}")
     return "\n".join(out)
@@ -1283,7 +1376,7 @@ def _expand_query_text(query: str, history: str = "") -> str:
 
     followup_terms = ["dieu do", "noi tren", "cai tren", "cau truoc", "truoc do", "van de do"]
     if history and any(t in qn for t in followup_terms):
-        additions.append("Ngữ cảnh hội thoại trước: " + str(history)[-900:])
+        additions.append("Ngữ cảnh hội thoại trước: " + str(history)[-2500:])
 
     unique: List[str] = []
     for item in [base, *additions]:
@@ -1939,15 +2032,11 @@ def _build_account_lookup_answer(
         return None
 
     answer = "\n\n".join(answer_blocks)
-    if citations:
-        answer += "\n\nNguồn RAG hỗ trợ:"
-        for citation in citations:
-            answer += (
-                f"\n[{citation['index']}] {citation.get('document_title') or 'Tài liệu RAG'}"
-                f" — {citation.get('location') or 'chunk RAG'}."
-            )
-    elif local_source_names:
-        answer += f"\n\nNguồn nội bộ: {local_source_names[0]}."
+    if not citations and local_source_names:
+        citations = [
+            _citation_from_local_source(name, index=index)
+            for index, name in enumerate(local_source_names[:3], 1)
+        ]
 
     return {
         "answer": answer,
@@ -2375,10 +2464,6 @@ def _build_rag_answer_from_sources(question: str, sources: List[Dict[str, Any]],
         for w in conflict_warnings:
             answer_lines.append(f"- {w}")
 
-    answer_lines.extend(["", "Nguồn:"])
-    for c in citations:
-        title = c.get("document_title") or c.get("title") or "Tài liệu RAG"
-        answer_lines.append(f"[{c['index']}] {title} — {c.get('location') or 'chunk RAG'}.")
     if _needs_accounting_human_review_warning(question):
         answer_lines.extend([
             "",
@@ -2919,9 +3004,18 @@ def _last_user_message(items: List[Dict[str, Any]], browser_history: str = "") -
     for item in reversed(items or []):
         if str(item.get("role") or "").lower() == "user" and str(item.get("content") or "").strip():
             return str(item.get("content")).strip()
-    # Browser history format: [1] Q: ...\nA: ...
+    # Supported frontend history formats:
+    # - [1] Q: ...\nA: ...
+    # - user: ...\nassistant: ... (product chat API)
     matches = re.findall(r"(?:^|\n)(?:\[\d+\]\s*)?Q:\s*(.+?)(?=\nA:|\n\n|$)", browser_history or "", flags=re.I | re.S)
-    return matches[-1].strip() if matches else ""
+    if matches:
+        return matches[-1].strip()
+    role_matches = re.findall(
+        r"(?:^|\n)user:\s*(.+?)(?=\n(?:assistant|user):|$)",
+        browser_history or "",
+        flags=re.I | re.S,
+    )
+    return role_matches[-1].strip() if role_matches else ""
 
 
 def _is_followup_question(question: str) -> bool:
@@ -2934,7 +3028,11 @@ def _is_followup_question(question: str) -> bool:
         return True
     if len(tokens) <= 9 and any(term in q for term in ["thi sao", "the nao", "cai do", "o tren", "tiep di", "con nua", "khac gi"]):
         return True
-    if len(tokens) <= 5 and (_account_codes_from_question(question) or re.fullmatch(r"(?:con\s+)?\d{3,4}(?:\s+thi\s+sao)?[?!.]*", q)):
+    bare_account_followup = re.fullmatch(
+        r"(?:(?:con|tk|tai khoan)\s+)?\d{3,4}(?:\s+thi\s+sao)?[?!.]*",
+        q,
+    )
+    if len(tokens) <= 5 and bare_account_followup:
         return True
     return False
 
@@ -3000,23 +3098,36 @@ def _conversation_route(question: str) -> Dict[str, Any]:
 
     if any(term in q for term in ["met qua", "mệt quá", "stress", "ap luc", "áp lực", "chan qua", "chán quá", "roi qua", "rối quá", "khong biet lam sao", "không biết làm sao"]):
         return {"route": "emotional_support", "confidence": 0.94, "reason": "emotion_signal"}
-    if q in {"chao", "xin chao", "hello", "hi", "alo", "hey"} or (len(tokens) <= 3 and q.startswith("chao")):
+    if q in {"chao", "xin chao", "hello", "hi", "alo", "hey", "chao finiip", "xin chao finiip"} or (len(tokens) <= 3 and q.startswith("chao")):
         return {"route": "greeting", "confidence": 0.99, "reason": "greeting"}
     if any(q == term or q.startswith(term + " ") for term in ["cam on", "cảm ơn", "thanks", "thank you"]):
         return {"route": "thanks", "confidence": 0.99, "reason": "thanks"}
     if any(q == term or q.startswith(term + " ") for term in ["tam biet", "tạm biệt", "bye", "hen gap lai"]):
         return {"route": "goodbye", "confidence": 0.99, "reason": "goodbye"}
-    if any(term in q for term in ["ban lam duoc gi", "bạn làm được gì", "giup toi", "giúp tôi", "huong dan su dung"]):
+    if any(term in q for term in ["ban la ai", "finiip la ai", "gioi thieu ve ban", "ten ban la gi"]):
+        return {"route": "identity", "confidence": 0.99, "reason": "identity_question"}
+    if any(term in q for term in ["ban lam duoc gi", "ban co the lam gi", "co the giup gi", "ho tro duoc gi", "giup toi", "huong dan su dung", "co chuc nang gi"]):
         return {"route": "help", "confidence": 0.9, "reason": "capability_question"}
     if len(tokens) <= 2:
         return {"route": "clarify", "confidence": 0.72, "reason": "too_short"}
-    return {"route": "knowledge_rag", "confidence": 0.62, "reason": "default_knowledge"}
+    return {"route": "general_knowledge", "confidence": 0.62, "reason": "default_general_question"}
 
 
 def _natural_conversation_answer(route: str, question: str, previous_question: str = "") -> str:
     q = _normalized_text(question)
     if route == "greeting":
-        return "Chào bạn, mình ở đây. Bạn cứ gửi tình huống kế toán, câu hỏi về tài liệu/RAG hoặc lỗi đang gặp; mình sẽ cùng bạn xử lý từng bước."
+        return (
+            "Xin chào, tôi là Finiip — trợ lý AI thuộc CTCP IIP Việt Nam. "
+            "Tôi có thể hỗ trợ bạn về kế toán, thuế, hóa đơn, định khoản, tính toán nghiệp vụ, "
+            "đọc và phân tích tài liệu, lập hoặc xuất báo cáo, kiểm tra rủi ro và hướng dẫn quy trình từng bước.\n\n"
+            "Bạn đang muốn xử lý công việc nào trước?"
+        )
+    if route == "identity":
+        return (
+            "Tôi là Finiip, trợ lý AI thuộc CTCP IIP Việt Nam, được xây dựng để hỗ trợ công việc kế toán và vận hành doanh nghiệp. "
+            "Tôi có thể ghi nhớ mạch hội thoại trong cùng cuộc trò chuyện, phân tích câu hỏi dài, tính toán, gợi ý bút toán, "
+            "đọc tài liệu và lập báo cáo. Với nội dung pháp lý hoặc số liệu quan trọng, tôi sẽ ưu tiên căn cứ từ tài liệu đã được nạp và nói rõ khi chưa đủ dữ liệu."
+        )
     if route == "thanks":
         return "Không có gì nhé. Mình sẽ giữ đúng ngữ cảnh đang làm để bạn không phải nhắc lại từ đầu."
     if route == "goodbye":
@@ -3027,11 +3138,17 @@ def _natural_conversation_answer(route: str, question: str, previous_question: s
         return "Nghe có vẻ bạn đang khá mệt và áp lực. Mình ở đây; mình có thể chia việc thành từng bước nhỏ để bạn xử lý nhẹ hơn."
     if route == "help":
         return (
-            "Mình có thể hỗ trợ 4 nhóm chính: hỏi đáp theo tài liệu RAG có nguồn; gợi ý định khoản và kiểm tra Nợ/Có; "
-            "đọc file để tóm tắt/review; và hỗ trợ kiểm tra lỗi hệ thống. Bạn chỉ cần nói việc đang muốn làm bằng câu tự nhiên."
+            "Tôi có thể hỗ trợ bạn các nhóm công việc chính sau:\n\n"
+            "1. Kế toán nghiệp vụ: giải thích tài khoản, gợi ý định khoản, kiểm tra Nợ/Có, công nợ, kho, tài sản cố định, CCDC, lương và khóa sổ.\n"
+            "2. Thuế và hóa đơn: VAT, điều kiện khấu trừ, chi phí được trừ, chứng từ cần có và cảnh báo rủi ro.\n"
+            "3. Tính toán: VAT xuôi/ngược, khấu hao, phân bổ, giá vốn, lợi nhuận và các bài toán có số liệu.\n"
+            "4. Báo cáo: đọc dữ liệu, phân tích báo cáo tài chính, lập bản tóm tắt, checklist và xuất báo cáo theo yêu cầu.\n"
+            "5. Tài liệu và RAG: đọc PDF/Word/Excel, trả lời theo nguồn, tóm tắt văn bản và hướng dẫn quy trình dài.\n"
+            "6. Hỗ trợ hệ thống: phân tích lỗi backend/frontend, API, database và hướng dẫn triển khai từng bước.\n\n"
+            "Bạn chỉ cần mô tả công việc bằng câu tự nhiên, kể cả câu hỏi dài hoặc câu hỏi nối tiếp."
         )
     if route == "clarify":
-        return "Mình chưa đủ ngữ cảnh để hiểu chính xác. Bạn đang muốn hỏi nghiệp vụ kế toán, hỏi theo tài liệu RAG, hay xử lý một lỗi trong hệ thống?"
+        return "Tôi chưa đủ ngữ cảnh để hiểu chính xác. Bạn đang muốn hỏi nghiệp vụ kế toán, tính toán, hỏi theo tài liệu, lập báo cáo hay xử lý một lỗi trong hệ thống?"
     return ""
 
 
@@ -3133,7 +3250,7 @@ def _apply_conversation_persona(question: str, answer: str, *, confidence: str =
     raw = str(answer or "").strip()
     if not raw:
         return raw
-    if route in {"greeting", "thanks", "goodbye", "emotional_support", "help", "clarify"}:
+    if route in {"greeting", "identity", "thanks", "goodbye", "emotional_support", "help", "clarify"}:
         return raw
 
     q = _normalized_text(question)
@@ -3170,6 +3287,128 @@ def _apply_conversation_persona(question: str, answer: str, *, confidence: str =
     return text.strip()
 
 
+def _contextual_followup_prompt(question: str, route: str, answer_mode: str = "") -> str:
+    q = _normalized_text(question)
+    if route == "formula":
+        return "Tôi còn có thể giúp bạn kiểm tra lại công thức, thay số khác hoặc trình bày thành bảng tính."
+    if any(term in q for term in ["hach toan", "dinh khoan", "but toan", "tai khoan", "tk "]):
+        return "Tôi còn có thể giúp bạn lập bút toán theo số tiền cụ thể, kiểm tra chứng từ và chỉ ra rủi ro thường gặp."
+    if any(term in q for term in ["bao cao", "bctc", "loi nhuan", "doanh thu", "chi phi", "dong tien"]):
+        return "Tôi còn có thể giúp bạn chuyển phần này thành checklist, bảng phân tích hoặc nội dung báo cáo."
+    if any(term in q for term in ["thue", "vat", "gtgt", "hoa don", "thong tu", "nghi dinh", "quy dinh"]):
+        return "Tôi còn có thể giúp bạn đối chiếu điều kiện áp dụng, hồ sơ cần lưu và các điểm rủi ro."
+    if str(answer_mode or "").lower() in {"chief_accountant", "detailed", "risk", "with_example"}:
+        return "Tôi còn có thể giúp bạn rút gọn nội dung này thành quy trình thực hiện hoặc checklist kiểm soát."
+    return "Tôi còn có thể giúp bạn làm rõ phần nào hoặc tiếp tục xử lý bước tiếp theo?"
+
+
+def _append_contextual_followup(question: str, answer: str, *, route: str, answer_mode: str = "", confidence: str = "") -> str:
+    text = str(answer or "").strip()
+    if not text or route in {"greeting", "identity", "thanks", "goodbye", "emotional_support", "help", "clarify"}:
+        return text
+    normalized = _normalized_text(text)
+    if any(term in normalized[-260:] for term in ["toi con co the giup", "ban muon toi", "ban can toi"]):
+        return text
+    if str(confidence or "").lower().startswith("low"):
+        return text
+    return text + "\n\n" + _contextual_followup_prompt(question, route, answer_mode)
+
+
+def _llm_mode() -> str:
+    mode = str(os.getenv("FINIIP_LLM_MODE", "auto") or "auto").strip().lower()
+    return mode if mode in {"auto", "always", "off"} else "auto"
+
+
+def _llm_available() -> bool:
+    return bool(os.getenv("OPENAI_API_KEY")) and _llm_mode() != "off"
+
+
+def _llm_should_run(route: str, answer_mode: str, citations: List[Dict[str, Any]]) -> bool:
+    if not _llm_available():
+        return False
+    if _llm_mode() == "always":
+        return route not in {"formula", "greeting", "identity", "thanks", "goodbye", "emotional_support", "help", "clarify"}
+    return route == "general_knowledge" or bool(citations) or str(answer_mode or "").lower() in {
+        "detailed", "chief_accountant", "with_example", "risk"
+    }
+
+
+def _llm_source_context(citations: List[Dict[str, Any]]) -> str:
+    blocks: List[str] = []
+    for citation in (citations or [])[:8]:
+        idx = citation.get("index") or len(blocks) + 1
+        title = _friendly_source_title(citation.get("document_title") or citation.get("title"))
+        location = citation.get("legal_location") or citation.get("location") or ""
+        excerpt = _clean_rag_text(citation.get("excerpt") or "", max_len=1800)
+        blocks.append(f"[{idx}] {title} — {location}\n{excerpt}")
+    return "\n\n".join(blocks)
+
+
+def _maybe_llm_enhance(
+    *,
+    question: str,
+    resolved_question: str,
+    history: str,
+    route: str,
+    answer_mode: str,
+    deterministic_answer: str,
+    citations: List[Dict[str, Any]],
+) -> Optional[str]:
+    """Use the configured LLM as a synthesis/general-knowledge layer.
+
+    Official accounting/legal answers remain grounded in retrieved excerpts.
+    When no source exists, the model may answer general knowledge but must not
+    invent current laws, rates, deadlines or penalties.
+    """
+    if not _llm_should_run(route, answer_mode, citations):
+        return None
+    try:
+        from openai import OpenAI  # type: ignore
+
+        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        model = os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini")
+        sources = _llm_source_context(citations)
+        grounded = bool(sources.strip())
+        system = (
+            "Bạn là Finiip, trợ lý AI thuộc CTCP IIP Việt Nam. "
+            "Trả lời bằng tiếng Việt tự nhiên, tận tâm, rõ ràng và đúng trọng tâm. "
+            "Bạn giỏi kế toán, thuế, báo cáo, tính toán nghiệp vụ, phân tích tài liệu và hỗ trợ kỹ thuật. "
+            "Luôn ghi nhớ ngữ cảnh hội thoại được cung cấp. Với câu hỏi dài, hãy chia kết luận, cách làm, ví dụ và lưu ý. "
+            "Không tự bịa dữ kiện, văn bản, điều khoản, thuế suất, mức phạt hoặc thời hạn. "
+            "Không chèn đường dẫn file nội bộ hoặc mục 'Nguồn nội bộ' vào cuối câu trả lời; nguồn sẽ được giao diện hiển thị riêng. "
+            "Nếu có nguồn đánh số [1], [2], chỉ dùng thông tin trong nguồn và có thể gắn ký hiệu [n] ngay sau ý quan trọng."
+        )
+        if not grounded:
+            system += (
+                " Khi không có nguồn, bạn có thể trả lời kiến thức phổ thông và hỗ trợ suy luận; "
+                "nhưng với quy định hiện hành hoặc thông tin cần cập nhật, phải nói rõ cần kiểm tra nguồn chính thức."
+            )
+        user = (
+            f"NGỮ CẢNH GẦN ĐÂY:\n{str(history or '')[-5000:]}\n\n"
+            f"CÂU HỎI GỐC:\n{question}\n\n"
+            f"CÂU HỎI ĐÃ GIẢI NGỮ CẢNH:\n{resolved_question}\n\n"
+            f"CÂU TRẢ LỜI NỀN TỪ ENGINE:\n{deterministic_answer}\n\n"
+            f"NGUỒN ĐÃ TRUY XUẤT:\n{sources or '(không có nguồn RAG phù hợp)'}\n\n"
+            "Hãy viết câu trả lời cuối cùng. Không lặp lại danh sách nguồn ở cuối."
+        )
+        response = client.chat.completions.create(
+            model=model,
+            messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
+            temperature=0.2,
+        )
+        text = str(response.choices[0].message.content or "").strip()
+        if not text:
+            return None
+        if grounded:
+            markers = {int(x) for x in re.findall(r"\[(\d+)\]", text)}
+            valid = set(range(1, len(citations) + 1))
+            for marker in markers - valid:
+                text = text.replace(f"[{marker}]", "")
+        return text.strip()
+    except Exception:
+        return None
+
+
 def answer_with_supabase_rag(question: str, workspace_id: str = "default", limit: int = 6, history: str = "", answer_mode: str = "auto", conversation_id: str = "admin", save_memory: bool = True) -> Dict[str, Any]:
     """Unified conversational answer service for both Supabase and local mode.
 
@@ -3181,7 +3420,7 @@ def answer_with_supabase_rag(question: str, workspace_id: str = "default", limit
     memory_result = list_supabase_chat_memory(
         workspace_id=workspace_id,
         conversation_id=conversation_id,
-        limit=10,
+        limit=20,
     ) if save_memory else {"items": [], "storage_backend": "disabled"}
     memory_items = memory_result.get("items") or []
     server_history = _format_memory_for_retrieval(memory_items)
@@ -3219,6 +3458,9 @@ def answer_with_supabase_rag(question: str, workspace_id: str = "default", limit
             "conversation_memory_used": bool(combined_history),
             "persistent_memory_count": len(memory_items),
             "quality_gate": {"passed": True, "issues": [], "citation_count": 0},
+            "source_cards": [],
+            "source_presentation": "separate_cards",
+            "llm_used": False,
         }
         if save_memory:
             save_supabase_chat_message(workspace_id, conversation_id, "user", question, {"route": route})
@@ -3254,6 +3496,16 @@ def answer_with_supabase_rag(question: str, workspace_id: str = "default", limit
             "formula_result": formula.get("formula_result"),
         }
         result = _answer_quality_gate(question, resolved_question, result)
+        result["answer"] = _append_contextual_followup(
+            question,
+            result.get("answer") or "",
+            route="formula",
+            answer_mode=result.get("answer_mode") or "",
+            confidence=result.get("confidence") or "",
+        )
+        result["source_cards"] = []
+        result["source_presentation"] = "separate_cards"
+        result["llm_used"] = False
         if save_memory:
             save_supabase_chat_message(workspace_id, conversation_id, "user", question, {"route": "formula", "resolved_question": resolved_question})
             save_supabase_chat_message(workspace_id, conversation_id, "assistant", result["answer"], {"confidence": result["confidence"]})
@@ -3307,27 +3559,18 @@ def answer_with_supabase_rag(question: str, workspace_id: str = "default", limit
         source_titles = curated_answer.get("source_titles") or []
         citations = [
             {
-                "index": index, "title": title, "document_title": title, "document_id": title,
+                "index": index, "title": _friendly_source_title(title), "document_title": _friendly_source_title(title), "document_id": title,
                 "chunk_id": None, "chunk_no": None, "heading": None, "page": None,
-                "location": "nguồn nội bộ", "legal_location": "", "excerpt": "",
+                "location": "Kho kiến thức nghiệp vụ Finiip", "legal_location": "", "excerpt": "", "source_kind": "internal_knowledge",
             }
             for index, title in enumerate(source_titles, 1)
         ]
         answer_text = curated_answer["answer"]
-        if citations:
-            answer_text += "\n\nNguồn nội bộ:"
-            for citation in citations:
-                answer_text += f"\n[{citation['index']}] {citation['title']}."
         synthesized = {"answer": answer_text, "citations": citations, "answer_mode": curated_answer.get("answer_mode")}
         confidence = curated_answer.get("confidence") or "high_curated_accounting_knowledge"
     elif journal_answer:
         citations = _journal_support_citations(resolved_question, evidence_sources, max_items=3)
         answer_text = journal_answer["answer"]
-        if citations:
-            answer_text += f"\n\nNguồn hỗ trợ ({evidence_backend}):"
-            for citation in citations:
-                title = citation.get("document_title") or citation.get("title") or "Tài liệu"
-                answer_text += f"\n[{citation['index']}] {title} — {citation.get('location') or 'đoạn tài liệu'}."
         synthesized = {"answer": answer_text, "citations": citations, "answer_mode": journal_answer.get("answer_mode")}
         confidence = (
             "high_accounting_rule_with_grounded_sources"
@@ -3385,14 +3628,41 @@ def answer_with_supabase_rag(question: str, workspace_id: str = "default", limit
         "accounting_rule_id": journal_answer.get("rule_id") if journal_answer else None,
         "account_lookup_codes": _account_codes_from_question(resolved_question) if account_lookup else [],
     }
-    result["answer"] = _apply_conversation_persona(
+    enhanced = _maybe_llm_enhance(
+        question=question,
+        resolved_question=resolved_question,
+        history=combined_history,
+        route=route,
+        answer_mode=result.get("answer_mode") or selected_mode,
+        deterministic_answer=result.get("answer") or "",
+        citations=result.get("citations") or [],
+    )
+    if enhanced:
+        result["answer"] = enhanced
+        result["llm_used"] = True
+        result["llm_model"] = os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini")
+        if route == "general_knowledge" and not result.get("citations"):
+            result["confidence"] = "medium_llm_general_knowledge"
+            result["answer_mode"] = "llm_general_knowledge"
+    else:
+        result["llm_used"] = False
+        result["answer"] = _apply_conversation_persona(
+            question,
+            result.get("answer") or "",
+            confidence=result.get("confidence") or "",
+            answer_mode=result.get("answer_mode") or "",
+            route=route,
+        )
+    result = _answer_quality_gate(question, resolved_question, result)
+    result["answer"] = _append_contextual_followup(
         question,
         result.get("answer") or "",
-        confidence=result.get("confidence") or "",
-        answer_mode=result.get("answer_mode") or "",
         route=route,
+        answer_mode=result.get("answer_mode") or "",
+        confidence=result.get("confidence") or "",
     )
-    result = _answer_quality_gate(question, resolved_question, result)
+    result["source_cards"] = _source_cards(result.get("citations") or [])
+    result["source_presentation"] = "separate_cards"
 
     if save_memory:
         save_supabase_chat_message(

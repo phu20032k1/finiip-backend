@@ -6501,11 +6501,11 @@ def admin_rag_ui_api_capabilities(key: Optional[str] = Query(default="")):
 
 
 # ==============================================================
-# V106 - Conversational RAG: memory, follow-up, intent and quality gate
+# V109 - Smart conversational RAG: memory, intent, LLM synthesis and source cards
 # ==============================================================
 
 class V106ChatRequest(BaseModel):
-    message: str = Field(..., min_length=1)
+    message: str = Field(..., min_length=1, max_length=30000)
     workspace_id: str = Field(default="default")
     conversation_id: str = Field(default="default_chat")
     history: str = Field(default="")
@@ -6559,8 +6559,13 @@ def ai_v106_capabilities():
             "empathetic_conversation_style",
             "strict_relevance_and_answer_quality_gate",
             "stable_conversation_id",
+            "finiip_company_identity_and_capabilities",
+            "automatic_formula_engine",
+            "optional_openai_synthesis_and_general_knowledge",
+            "clean_separate_source_cards_without_internal_paths",
+            "long_question_and_extended_history_context",
         ],
-        "frontend_note": "Giữ nguyên conversation_id cho cả phiên chat; tạo ID mới khi người dùng bấm New chat.",
+        "frontend_note": "Giữ nguyên conversation_id cho cả phiên chat; hiển thị source_cards/citations ở khối nguồn thu gọn thay vì nối đường dẫn nguồn vào answer.",
     }
 
 

@@ -11,6 +11,12 @@ services:
         sync: false
       - key: OPENAI_API_KEY
         sync: false
+      - key: OPENAI_CHAT_MODEL
+        value: gpt-4o-mini
+      - key: FINIIP_LLM_MODE
+        value: auto
+      - key: FINIIP_CHAT_CONTEXT_CHARS
+        value: "10000"
       - key: DATABASE_URL
         sync: false
       - key: FINIIP_API_KEY

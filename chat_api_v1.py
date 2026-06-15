@@ -153,7 +153,30 @@ def _normalize_citations(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return normalized[:12]
 
 
-def _history_text(db: Session, conversation_id: str, ctx: Dict[str, str], limit: int = 12) -> str:
+def _source_cards_from_citations(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    cards: List[Dict[str, Any]] = []
+    for item in (items or [])[:8]:
+        title = str(item.get("title") or "Tài liệu tham chiếu")
+        lowered = title.lower()
+        badge = "Nguồn nội bộ"
+        if any(token in lowered for token in ["thông tư", "nghị định", "luật"]):
+            badge = "Văn bản pháp lý"
+        elif item.get("chunk_id"):
+            badge = "Tài liệu RAG"
+        cards.append({
+            "index": item.get("index") or len(cards) + 1,
+            "title": title,
+            "badge": badge,
+            "page": item.get("page"),
+            "location": item.get("section") or (f"Trang {item.get('page')}" if item.get("page") else "Kho kiến thức Finiip"),
+            "excerpt": str(item.get("excerpt") or "")[:320],
+            "document_id": item.get("document_id"),
+            "chunk_id": item.get("chunk_id"),
+        })
+    return cards
+
+
+def _history_text(db: Session, conversation_id: str, ctx: Dict[str, str], limit: int = 20) -> str:
     rows = (
         db.query(ChatMessage)
         .filter(
@@ -167,7 +190,8 @@ def _history_text(db: Session, conversation_id: str, ctx: Dict[str, str], limit:
         .all()
     )
     rows.reverse()
-    return "\n".join(f"{row.role}: {row.content[:1200]}" for row in rows)
+    text = "\n".join(f"{row.role}: {row.content[:2000]}" for row in rows)
+    return text[-12000:]
 
 
 def _attachment_context(rows: List[ChatAttachment]) -> str:
@@ -212,7 +236,7 @@ def _deterministic_attachment_answer(question: str, rows: List[ChatAttachment]) 
         except Exception:
             pass
 
-    parts.append("\nĐể có phần suy luận dài và đối chiếu chuyên sâu trực tiếp trên tệp, backend cần cấu hình mô hình AI qua biến OPENAI_API_KEY.")
+    parts.append("\nTôi còn có thể giúp bạn tóm tắt tệp thành checklist, kiểm tra rủi ro hoặc lập báo cáo từ nội dung này.")
     return "\n".join(parts)
 
 
@@ -226,7 +250,7 @@ def _direct_attachment_answer(question: str, attachment_context: str, history: s
         client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         model = os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini")
         system = (
-            "Bạn là Finiip Expert, trợ lý kế toán và pháp lý Việt Nam. "
+            "Bạn là Finiip, trợ lý AI thuộc CTCP IIP Việt Nam, chuyên hỗ trợ kế toán, thuế, báo cáo và phân tích tài liệu. "
             "Phân tích chủ yếu dựa trên nội dung tệp người dùng đính kèm. "
             "Không bịa dữ kiện không có trong tệp. Khi thiếu căn cứ hãy nói rõ. "
             "Trả lời bằng tiếng Việt, rõ ràng, có kết luận, căn cứ trong tệp, các bước xử lý và lưu ý rủi ro."
@@ -293,7 +317,7 @@ def chat_status():
     return {
         "ok": True,
         "service": "finiip-product-chat",
-        "version": "1.0.0",
+        "version": "1.9.0",
         "database": "configured" if os.getenv("DATABASE_URL") else "sqlite_default",
         "llm_configured": bool(os.getenv("OPENAI_API_KEY")),
         "endpoints": {
@@ -498,6 +522,7 @@ def send_message(
             raise HTTPException(status_code=502, detail=f"AI backend chưa trả lời được: {exc}") from exc
 
     citations = _normalize_citations(core_result.get("citations") or []) if payload.include_sources else []
+    source_cards = _source_cards_from_citations(citations)
     quality_gate = core_result.get("quality_gate") or {}
     assistant_message = ChatMessage(
         id=str(uuid.uuid4()),
@@ -513,6 +538,10 @@ def send_message(
                 "route": core_result.get("conversation_route"),
                 "quality": quality_gate,
                 "followup_context_used": core_result.get("followup_context_used", False),
+                "resolved_question": core_result.get("resolved_question"),
+                "source_presentation": "separate_cards",
+                "llm_used": bool(core_result.get("llm_used")),
+                "llm_model": core_result.get("llm_model"),
             }
         ),
         citations_json=_json_dump(citations),
@@ -536,7 +565,11 @@ def send_message(
         "user_message": _serialize_message(user_message),
         "message": _serialize_message(assistant_message),
         "citations": citations,
+        "source_cards": source_cards,
+        "source_presentation": "separate_cards",
         "confidence": assistant_message.confidence,
+        "llm_used": bool(core_result.get("llm_used")),
+        "followup_context_used": bool(core_result.get("followup_context_used")),
         "quality": {
             "status": "passed" if quality_gate.get("passed", True) else "review_recommended",
             "warnings": quality_gate.get("issues") or core_result.get("conflict_warnings") or [],

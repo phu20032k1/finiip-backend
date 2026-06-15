@@ -457,17 +457,18 @@ def search_documents(
 
 
 def answer_admin_rag_question(question: str, workspace_id: str = "default", limit: int = 6, history: str = "", answer_mode: str = "auto", conversation_id: str = "admin", save_memory: bool = True) -> Dict[str, Any]:
-    if supabase_is_active():
-        return answer_with_supabase_rag(question=question, workspace_id=workspace_id, limit=limit, history=history, answer_mode=answer_mode, conversation_id=conversation_id, save_memory=save_memory)
-    # Local fallback does not yet have Supabase hybrid memory, but appending a
-    # compact history helps follow-up questions during admin testing.
-    effective_question = question if not history else f"{question}\n\nNgữ cảnh trước:\n{history[-1200:]}"
-    result = local_answer_with_enterprise_rag(question=effective_question, workspace_id=workspace_id, limit=limit)
-    result["question"] = question
-    result["conversation_memory_used"] = bool(history)
-    result["answer_mode"] = answer_mode
-    result["storage_backend"] = "local"
-    return result
+    # V109 uses one conversational engine for both Supabase and local mode.
+    # This keeps greeting/help, formula solving, source cards and follow-up
+    # memory consistent across /ai/v106/chat, Admin UI and /api/v1/chat.
+    return answer_with_supabase_rag(
+        question=question,
+        workspace_id=workspace_id,
+        limit=limit,
+        history=history,
+        answer_mode=answer_mode,
+        conversation_id=conversation_id,
+        save_memory=save_memory,
+    )
 
 
 

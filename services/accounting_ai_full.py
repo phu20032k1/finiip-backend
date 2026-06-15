@@ -116,11 +116,20 @@ def parse_money(text: Any) -> Optional[float]:
         return float(text)
     raw = str(text)
     q = norm(raw).replace("vnd", "").replace("dong", "").replace("đ", "")
-    # 1.234.567, 1,234,567, 25tr, 25 triệu, 1.5 tỷ
-    candidates = re.findall(r"(\d+(?:[\.,]\d+)*(?:\s*)?)(ty|ti|ti dong|tỷ|trieu|triệu|tr|nghin|nghìn|k|m)?", raw.lower())
-    if not candidates:
-        candidates = re.findall(r"(\d+(?:[\.,]\d+)*)(ty|trieu|tr|nghin|k|m)?", q)
-    for number_text, unit in candidates:
+    # 1.234.567, 1,234,567, 25tr, 25 triệu, 1.5 tỷ.
+    # Keep spans so a percentage such as "VAT 10% của 100 triệu" does not
+    # accidentally become the money amount.
+    pattern = re.compile(
+        r"(?<![\w])(?P<number>\d+(?:[\.,]\d+)*)(?:\s*)(?P<unit>tỷ|tỉ|ty|ti(?:\s+dong)?|triệu|trieu|tr|nghìn|nghin|k|m)?",
+        flags=re.I,
+    )
+    candidates = []
+    for match in pattern.finditer(raw):
+        number_text = match.group("number")
+        unit = match.group("unit") or ""
+        tail = raw[match.end(): match.end() + 4].lstrip()
+        if tail.startswith("%"):
+            continue
         s = number_text.strip().replace(" ", "")
         if not s:
             continue
@@ -150,6 +159,36 @@ def parse_money(text: Any) -> Optional[float]:
         elif u in {"trieu", "tr", "m", "triệu"}:
             value *= 1_000_000
         elif u in {"nghin", "k", "nghìn"}:
+            value *= 1_000
+        around = norm(raw[max(0, match.start() - 28): min(len(raw), match.end() + 28)])
+        score = 0
+        if u:
+            score += 100
+        if any(term in around for term in ["gia", "so tien", "tong", "doanh thu", "chi phi", "nguyen gia", "luong", "cua"]):
+            score += 20
+        if value >= 1_000:
+            score += 5
+        candidates.append((score, value, match.start()))
+    if candidates:
+        # Prefer explicit money units/context, then the larger amount. Position
+        # is the final tie-breaker so the most recently stated amount wins.
+        candidates.sort(key=lambda row: (row[0], row[1], row[2]), reverse=True)
+        return float(candidates[0][1])
+
+    # Fallback to the accent-normalized text for unusual OCR output.
+    fallback = re.search(r"(\d+(?:[\.,]\d+)*)(ty|trieu|tr|nghin|k|m)?", q)
+    if fallback:
+        number_text, unit = fallback.group(1), fallback.group(2) or ""
+        try:
+            value = float(number_text.replace(".", "").replace(",", "."))
+        except Exception:
+            return None
+        u = norm(unit)
+        if u in {"ty", "ti"}:
+            value *= 1_000_000_000
+        elif u in {"trieu", "tr", "m"}:
+            value *= 1_000_000
+        elif u in {"nghin", "k"}:
             value *= 1_000
         return value
     return None

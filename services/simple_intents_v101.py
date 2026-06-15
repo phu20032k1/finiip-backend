@@ -9,7 +9,7 @@ import re
 import unicodedata
 from typing import Any, Dict, List, Tuple
 
-V101_INTENT_VERSION = "v106_conversation_intent_router"
+V101_INTENT_VERSION = "v109_smart_conversation_intent_router"
 
 
 def strip_accents(text: str) -> str:
@@ -26,10 +26,11 @@ INTENT_CATALOG: List[Dict[str, Any]] = [
     {"intent": "emotional_support", "action": "reply_with_empathy", "admin_only": False, "route_hint": "/ai/v106/chat", "keywords": ["mệt quá", "met qua", "stress", "áp lực", "ap luc", "rối quá", "roi qua", "chán quá", "chan qua", "không biết làm sao", "khong biet lam sao"]},
     {"intent": "conversation_followup", "action": "resolve_previous_context", "admin_only": False, "route_hint": "/ai/v106/chat", "keywords": ["còn cái này", "con cai nay", "thế thì sao", "the thi sao", "vậy nếu", "vay neu", "trường hợp trên", "truong hop tren", "còn 642", "con 642", "tiếp đi", "tiep di"]},
     {"intent": "conversation_chat", "action": "reply_naturally", "admin_only": False, "route_hint": "/ai/v106/chat", "keywords": ["nói chuyện", "noi chuyen", "tâm sự", "tam su", "giải thích dễ hiểu", "giai thich de hieu"]},
-    {"intent": "greeting", "action": "reply_greeting", "admin_only": False, "route_hint": None, "keywords": ["xin chao", "chao", "hello", "hi", "alo", "hey"]},
+    {"intent": "greeting", "action": "reply_greeting", "admin_only": False, "route_hint": None, "keywords": ["xin chao", "chao", "hello", "hi", "alo", "hey", "chao finiip", "xin chao finiip"]},
+    {"intent": "identity", "action": "reply_identity", "admin_only": False, "route_hint": None, "keywords": ["ban la ai", "bạn là ai", "finiip la ai", "gioi thieu ve ban", "giới thiệu về bạn", "ten ban la gi", "tên bạn là gì"]},
     {"intent": "thanks", "action": "reply_polite", "admin_only": False, "route_hint": None, "keywords": ["cam on", "thank", "thanks", "ok cam on", "cảm ơn"]},
     {"intent": "goodbye", "action": "reply_goodbye", "admin_only": False, "route_hint": None, "keywords": ["tam biet", "bye", "hen gap", "xong roi"]},
-    {"intent": "help", "action": "reply_capabilities", "admin_only": False, "route_hint": "/ai/accounting/full-capabilities", "keywords": ["giup", "huong dan", "lam duoc gi", "co chuc nang gi", "cach dung", "test sao"]},
+    {"intent": "help", "action": "reply_capabilities", "admin_only": False, "route_hint": "/ai/accounting/full-capabilities", "keywords": ["giup", "huong dan", "lam duoc gi", "ban co the lam gi", "bạn có thể làm gì", "co chuc nang gi", "cach dung", "test sao", "ho tro duoc gi", "hỗ trợ được gì"]},
 
     {"intent": "admin_rag_upload", "action": "open_admin_rag_upload", "admin_only": True, "route_hint": "/admin/rag-ui", "keywords": ["up rag", "upload rag", "nap rag", "tai lieu rag", "them tai lieu", "upload thong tu", "nap thong tu", "knowledge", "tri thuc", "quan ly rag", "index tai lieu"]},
     {"intent": "admin_rag_list", "action": "list_admin_rag_documents", "admin_only": True, "route_hint": "/admin/rag-ui/api/documents", "keywords": ["danh sach tai lieu", "tai lieu da up", "xem tai lieu rag", "co nhung tai lieu nao", "list docs", "documents"]},

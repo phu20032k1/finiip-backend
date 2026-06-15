@@ -1,0 +1,13 @@
+Finiip V109 changed files
+==========================
+services/rag_storage_v101.py
+services/rag_admin_ui_v100.py
+services/simple_intents_v101.py
+services/accounting_ai_full.py
+chat_api_v1.py
+main.py
+.env.example
+render.yaml
+tests/test_v109_smart_chat.py
+docs/V109_SMART_CHAT_UPGRADE.md
+MANIFEST_V109.txt
