@@ -1,0 +1,72 @@
+FINIIP BACKEND V112 — ACCOUNTING SUITE
+Generated: 2026-08-14
+
+GOAL
+- Extend the existing Finiip accounting core into a shared operational accounting suite.
+- Preserve existing V111 APIs and data models.
+- Do not copy proprietary MISA code, assets, branding or exact UI.
+
+NEW
+- accounting_suite_v112.py
+- main_v112.py
+
+CHANGED
+- Procfile: starts main_v112:app
+- Dockerfile: starts main_v112:app
+
+V112 API PREFIX
+/api/v112/accounting
+
+MODULES
+- Cash
+- Banking
+- Purchasing
+- Sales
+- Inventory
+- Fixed assets
+- Tools & prepaid expenses
+- Payroll
+- Tax
+- Costing
+- General ledger & closing
+- E-invoice
+- Reports
+- AI review & reconciliation
+
+PERSISTENCE
+- v112_accounting_documents: shared workflow document store
+- v112_accounting_masters: extensible master-data store
+
+DOCUMENT WORKFLOW
+- draft -> approved -> posted
+- draft/approved -> cancelled
+- posted documents cannot be edited/deleted directly
+- posting can create a real core Transaction and JournalEntry and link their IDs back to the V112 document
+- existing AccountingPeriod is respected when the period is already closed
+- all V112 document actions are written to existing AuditLog
+
+CORE INTEGRATION
+- Account
+- AccountingPeriod
+- AuditLog
+- AIReviewItem
+- JournalEntry
+- PurchaseInvoice
+- SalesInvoice
+- Transaction
+
+ENDPOINTS
+- GET  /api/v112/accounting/modules
+- GET  /api/v112/accounting/dashboard
+- GET  /api/v112/accounting/documents
+- POST /api/v112/accounting/documents
+- GET/PUT/DELETE /api/v112/accounting/documents/{id}
+- POST /api/v112/accounting/documents/{id}/approve
+- POST /api/v112/accounting/documents/{id}/cancel
+- POST /api/v112/accounting/documents/{id}/post
+- GET/POST /api/v112/accounting/masters/{entity_type}
+- PUT/DELETE /api/v112/accounting/masters/{entity_type}/{id}
+- GET /api/v112/accounting/reconciliation
+
+IMPORTANT
+This V112 layer provides a real shared persistence/workflow foundation for accounting domains that did not have dedicated models. It is not a claim of literal one-to-one parity with every MISA product, integration, licensed tax/e-invoice service or industry-specific workflow. Specialized tables and regulatory integrations can replace the shared document layer incrementally without breaking the V112 contract.
