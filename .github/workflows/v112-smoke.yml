@@ -1,0 +1,24 @@
+name: V112 Backend Smoke
+
+on:
+  pull_request:
+  push:
+    branches:
+      - agent/accounting-suite-v112
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile V112 app wrapper
+        run: python -m py_compile main_v112.py
+      - name: Compile V112 Accounting Suite
+        run: python -m py_compile accounting_suite_v112.py
+      - name: Compile existing main app
+        run: python -m py_compile main.py
