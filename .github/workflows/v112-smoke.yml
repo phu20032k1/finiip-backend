@@ -1,10 +1,11 @@
-name: V112 Backend Smoke
+name: V114 Backend Runtime Smoke
 
 on:
   pull_request:
   push:
     branches:
-      - agent/accounting-suite-v112
+      - main
+      - agent/fly-runtime-v114
 
 jobs:
   syntax-and-runtime:
@@ -12,38 +13,59 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Compile V112 app wrapper
-        run: python -m py_compile main_v112.py
-      - name: Compile V112 Accounting Suite
-        run: python -m py_compile accounting_suite_v112.py
-      - name: Compile existing main app
-        run: python -m py_compile main.py
+
+      - name: Compile backend entrypoints
+        run: |
+          python -m py_compile main.py
+          python -m py_compile main_v112.py
+          python -m py_compile accounting_suite_v112.py
+
+      - name: Verify Fly and Docker ports match
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          fly = Path('fly.toml').read_text(encoding='utf-8')
+          docker = Path('Dockerfile').read_text(encoding='utf-8')
+          assert 'internal_port = 8080' in fly
+          assert 'PORT = "8080"' in fly
+          assert 'EXPOSE 8080' in docker
+          assert '${PORT:-8080}' in docker
+          print('Fly/Docker port alignment OK: 8080')
+          PY
+
       - name: Install runtime dependencies
         run: python -m pip install -r requirements.txt
-      - name: HTTP smoke V112 accounting routes
+
+      - name: HTTP smoke chat + accounting APIs
         env:
-          DATABASE_URL: sqlite:///./ci_v112.db
+          DATABASE_URL: sqlite:///./ci_v114.db
+          FINIIP_API_KEY: ci-key
         run: |
           python - <<'PY'
           from fastapi.testclient import TestClient
           from main_v112 import app
 
           client = TestClient(app)
+          protected_headers = {
+              'X-API-Key': 'ci-key',
+              'X-Workspace-ID': 'ci-v114',
+              'X-User-ID': 'github-actions',
+          }
           checks = [
-              '/api/v112/accounting/modules',
-              '/api/v112/accounting/dashboard',
-              '/api/v112/accounting/documents?module=cash&limit=5',
-              '/api/v112/accounting/reconciliation',
+              ('/api/v1/health', {}),
+              ('/api/v1/chat/status', protected_headers),
+              ('/api/v112/accounting/modules', protected_headers),
+              ('/api/v112/accounting/dashboard', protected_headers),
+              ('/api/v112/accounting/documents?module=cash&limit=5', protected_headers),
+              ('/api/v112/accounting/reconciliation', protected_headers),
           ]
-          for path in checks:
-              response = client.get(path, headers={
-                  'X-Workspace-ID': 'ci-v112',
-                  'X-User-ID': 'github-actions',
-              })
+          for path, headers in checks:
+              response = client.get(path, headers=headers)
               assert response.status_code == 200, f'{path}: {response.status_code} {response.text[:500]}'
               print(f'OK {response.status_code} {path}')
           PY
