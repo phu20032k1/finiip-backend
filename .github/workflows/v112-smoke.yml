@@ -7,7 +7,7 @@ on:
       - agent/accounting-suite-v112
 
 jobs:
-  syntax:
+  syntax-and-runtime:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,3 +22,22 @@ jobs:
         run: python -m py_compile accounting_suite_v112.py
       - name: Compile existing main app
         run: python -m py_compile main.py
+      - name: Install runtime dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Import V112 app and verify routes
+        env:
+          DATABASE_URL: sqlite:///./ci_v112.db
+        run: |
+          python - <<'PY'
+          from main_v112 import app
+          paths = {route.path for route in app.routes}
+          required = {
+              '/api/v112/accounting/modules',
+              '/api/v112/accounting/dashboard',
+              '/api/v112/accounting/documents',
+              '/api/v112/accounting/reconciliation',
+          }
+          missing = required - paths
+          assert not missing, f'Missing V112 routes: {sorted(missing)}'
+          print(f'V112 app import OK: {len(paths)} routes, required accounting routes present')
+          PY
