@@ -69,3 +69,25 @@ jobs:
               assert response.status_code == 200, f'{path}: {response.status_code} {response.text[:500]}'
               print(f'OK {response.status_code} {path}')
           PY
+
+      - name: Live smoke Fly production after main push
+        if: github.ref == 'refs/heads/main'
+        run: |
+          set -e
+          BASE='https://finiip-backend.fly.dev'
+          ok=0
+          for attempt in $(seq 1 18); do
+            echo "Fly live smoke attempt ${attempt}/18"
+            if curl -fsS --max-time 20 "$BASE/api/v1/health" >/tmp/finiip-health.json; then
+              if curl -fsS --max-time 20 -H 'X-API-Key: finiip' -H 'X-Workspace-ID: ci-live' "$BASE/api/v1/chat/status" >/tmp/finiip-chat.json \
+                && curl -fsS --max-time 20 -H 'X-API-Key: finiip' -H 'X-Workspace-ID: ci-live' "$BASE/api/v112/accounting/modules" >/tmp/finiip-accounting.json; then
+                ok=1
+                break
+              fi
+            fi
+            sleep 10
+          done
+          test "$ok" = 1
+          echo 'Fly production health:' && cat /tmp/finiip-health.json
+          echo '\nFly Chat API: OK'
+          echo 'Fly Accounting API: OK'
