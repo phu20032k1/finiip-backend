@@ -30,7 +30,7 @@ jobs:
         run: |
           python - <<'PY'
           from main_v112 import app
-          paths = {route.path for route in app.routes}
+          paths = {path for route in app.routes if (path := getattr(route, 'path', None))}
           required = {
               '/api/v112/accounting/modules',
               '/api/v112/accounting/dashboard',
@@ -39,5 +39,5 @@ jobs:
           }
           missing = required - paths
           assert not missing, f'Missing V112 routes: {sorted(missing)}'
-          print(f'V112 app import OK: {len(paths)} routes, required accounting routes present')
+          print(f'V112 app import OK: {len(paths)} routed paths, required accounting routes present')
           PY
