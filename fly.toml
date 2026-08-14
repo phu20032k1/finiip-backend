@@ -1,11 +1,15 @@
 # Fly.io configuration for Finiip backend
-# Optimized for low idle cost on a small shared Machine.
+# Primary goal: low idle cost, reliable cold starts, and enough headroom for OCR/PDF bursts.
 
 app = "finiip-backend"
 primary_region = "sin"
+swap_size_mb = 512
 
 [build]
   dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8080"
 
 [http_service]
   internal_port = 8080
@@ -17,13 +21,13 @@ primary_region = "sin"
 
   [http_service.concurrency]
     type = "requests"
-    soft_limit = 10
-    hard_limit = 20
+    soft_limit = 4
+    hard_limit = 8
 
   [[http_service.checks]]
     interval = "30s"
-    timeout = "5s"
-    grace_period = "20s"
+    timeout = "10s"
+    grace_period = "60s"
     method = "GET"
     path = "/api/v1/health"
 
