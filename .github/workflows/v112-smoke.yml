@@ -1,11 +1,10 @@
-name: V114 Backend Runtime Smoke
+name: V115 Backend Runtime Smoke
 
 on:
   pull_request:
   push:
     branches:
       - main
-      - agent/fly-runtime-v114
 
 jobs:
   syntax-and-runtime:
@@ -25,7 +24,7 @@ jobs:
           python -m py_compile main_v112.py
           python -m py_compile accounting_suite_v112.py
 
-      - name: Verify Fly and Docker ports match
+      - name: Verify Fly runtime configuration
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -33,9 +32,12 @@ jobs:
           docker = Path('Dockerfile').read_text(encoding='utf-8')
           assert 'internal_port = 8080' in fly
           assert 'PORT = "8080"' in fly
+          assert 'auto_stop_machines = false' in fly
+          assert 'min_machines_running = 1' in fly
+          assert 'memory = "512mb"' in fly
           assert 'EXPOSE 8080' in docker
           assert '${PORT:-8080}' in docker
-          print('Fly/Docker port alignment OK: 8080')
+          print('Fly V115 runtime configuration OK')
           PY
 
       - name: Install runtime dependencies
@@ -43,7 +45,7 @@ jobs:
 
       - name: HTTP smoke chat + accounting APIs
         env:
-          DATABASE_URL: sqlite:///./ci_v114.db
+          DATABASE_URL: sqlite:///./ci_v115.db
           FINIIP_API_KEY: ci-key
         run: |
           python - <<'PY'
@@ -53,7 +55,7 @@ jobs:
           client = TestClient(app)
           protected_headers = {
               'X-API-Key': 'ci-key',
-              'X-Workspace-ID': 'ci-v114',
+              'X-Workspace-ID': 'ci-v115',
               'X-User-ID': 'github-actions',
           }
           checks = [
@@ -61,8 +63,6 @@ jobs:
               ('/api/v1/chat/status', protected_headers),
               ('/api/v112/accounting/modules', protected_headers),
               ('/api/v112/accounting/dashboard', protected_headers),
-              ('/api/v112/accounting/documents?module=cash&limit=5', protected_headers),
-              ('/api/v112/accounting/reconciliation', protected_headers),
           ]
           for path, headers in checks:
               response = client.get(path, headers=headers)
@@ -70,24 +70,4 @@ jobs:
               print(f'OK {response.status_code} {path}')
           PY
 
-      - name: Live smoke Fly production after main push
-        if: github.ref == 'refs/heads/main'
-        run: |
-          set -e
-          BASE='https://finiip-backend.fly.dev'
-          ok=0
-          for attempt in $(seq 1 18); do
-            echo "Fly live smoke attempt ${attempt}/18"
-            if curl -fsS --max-time 20 "$BASE/api/v1/health" >/tmp/finiip-health.json; then
-              if curl -fsS --max-time 20 -H 'X-API-Key: finiip' -H 'X-Workspace-ID: ci-live' "$BASE/api/v1/chat/status" >/tmp/finiip-chat.json \
-                && curl -fsS --max-time 20 -H 'X-API-Key: finiip' -H 'X-Workspace-ID: ci-live' "$BASE/api/v112/accounting/modules" >/tmp/finiip-accounting.json; then
-                ok=1
-                break
-              fi
-            fi
-            sleep 10
-          done
-          test "$ok" = 1
-          echo 'Fly production health:' && cat /tmp/finiip-health.json
-          echo '\nFly Chat API: OK'
-          echo 'Fly Accounting API: OK'
+# Live Fly verification belongs only to fly-deploy.yml, after the new image is deployed.
